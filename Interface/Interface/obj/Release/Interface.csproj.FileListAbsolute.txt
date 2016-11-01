@@ -76,3 +76,4 @@ D:\Data\C#\Projects\Koza\Interface\Interface\obj\Release\Interface.Properties.Re
 D:\Data\C#\Projects\Koza\Interface\Interface\obj\Release\Interface.csproj.GenerateResource.Cache
 D:\Data\C#\Projects\Koza\Interface\Interface\bin\Release\Koza.exe
 D:\Data\C#\Projects\Koza\Interface\Interface\obj\Release\Koza.exe
+D:\Data\C#\Projects\KozaDisk\Interface\Interface\obj\Release\Koza.exe
