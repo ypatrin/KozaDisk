@@ -1,0 +1,8 @@
+D:\Data\C#\KozaRequest\KozaRequest\bin\Release\KozaRequest.exe
+D:\Data\C#\KozaRequest\KozaRequest\bin\Release\KozaRequest.pdb
+D:\Data\C#\KozaRequest\KozaRequest\obj\Release\KozaRequest.Properties.Resources.resources
+D:\Data\C#\KozaRequest\KozaRequest\obj\Release\KozaRequest.csproj.GenerateResource.Cache
+D:\Data\C#\KozaRequest\KozaRequest\obj\Release\KozaRequest.exe
+D:\Data\C#\KozaRequest\KozaRequest\obj\Release\KozaRequest.pdb
+D:\Data\C#\KozaRequest\KozaRequest\obj\Release\KozaRequest.csprojResolveAssemblyReference.cache
+D:\Data\C#\KozaRequest\KozaRequest\bin\Release\KozaRequest.exe.config
