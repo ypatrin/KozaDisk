@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\jsCaller.cs" />
     <Compile Include="Class\Markers.cs" />
     <Compile Include="Class\TmplDocument.cs" />
     <Compile Include="Main.cs" />

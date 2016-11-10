@@ -1,4 +1,14 @@
-﻿if(document.getElementsByClassName) { // есть есть родная фукнция, используем ее
+﻿$(document).ready(function(){
+	$(".comment").hover(function(){
+		var comment = $(this).attr("comment");
+		window.external.showComment(comment);
+	});
+	
+});
+
+
+
+if(document.getElementsByClassName) { // есть есть родная фукнция, используем ее
 	getElementsByClass = function(classList, node) {    
 		return (node || document).getElementsByClassName(classList) // вызываем метод getElementsByClassName нужного узла.
 		// если  указан node, то будет произведен поиск в нем, иначе во всем документе
@@ -39,14 +49,14 @@ function procCalendar()
 	
 	dhtmlXCalendarObject.prototype.langData["ru"] = {
 		dateformat: '%d.%m.%Y',
-		monthesFNames: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
-		monthesSNames: ["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],
-		daysFNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
-		daysSNames: ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
+		monthesFNames: ["Січень","Лютий","Березень","Квітень","Травень","Червень","Липень","Сервень","Вересень","Жовтень","Листопад","Грудень"],
+		monthesSNames: ["Січ","Лют","Бер","Квіт","Трав","Чер","Лип","Сер","Вер","Жов","Лис","Гру"],
+		daysFNames: ["Неділя","Понеділок","Вівторок","Середа","Четвер","П'ятница","Субота"],
+		daysSNames: ["Нд","Пн","Вт","Ср","Чт","Пт","Сб"],
 		weekstart: 1,
 		weekname: "н",
-		today: "Сегодня",
-		clear: "Очистить"
+		today: "Сьгодні",
+		clear: "Очистити"
 	};
 	
 	calendar.loadUserLanguage("ru");

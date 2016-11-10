@@ -20,12 +20,21 @@ namespace templates
         {
             string markerName = MarkerNode.Attributes["name"].Value;
             string markerType = MarkerNode.Attributes["type"].Value;
+            string markerComment = "";
+
+            if (MarkerNode.Attributes["comment"] != null)
+            {
+                markerComment = MarkerNode.Attributes["comment"].Value;
+            }
 
             if (markerType == "text")
             {
                 html = html.Replace(
                     "$$" + markerName + "$$", 
-                    String.Format("<input type='text' name='{0}' id='{0}'>", markerName)
+                    String.Format(@"
+                        <input type='text' name='{0}' id='{0}'>
+                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
+                    ", markerName, markerComment, Environment.CurrentDirectory)
                 );
             }
 
@@ -33,7 +42,10 @@ namespace templates
             {
                 html = html.Replace(
                     "$$" + markerName + "$$", 
-                    String.Format("<input type='text' class='date' name='{0}' id='{0}'>", markerName)
+                    String.Format(@"
+                        <input type='text' class='date' name='{0}' id='{0}'>
+                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
+                    ", markerName, markerComment, Environment.CurrentDirectory)
                 );
             }
 
@@ -88,28 +100,33 @@ namespace templates
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><input type='text' name='{0}' id='{0}'>", markerName)
+                        String.Format(@"
+                            <input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>
+                            <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
+                            <input type='text' name='{0}' id='{0}'>
+                        ", 
+                        markerName, markerComment, Environment.CurrentDirectory)
                     );
                 }
                 if (type == "date")
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>{1}<input type='text' name='{0}' id='{0}' class='date'>", markerName)
+                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{1}\icon\comments\question.png'/><input type='text' name='{0}' id='{0}' class='date'>", markerName, Environment.CurrentDirectory)
                     );
                 }
                 if (type == "static")
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><input type='text' class='static' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val)
+                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{2}\icon\comments\question.png'/><input type='text' class='static' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val, Environment.CurrentDirectory)
                     );
                 }
                 if (type == "")
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>{1}<input type='text' style='display:none' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val)
+                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{2}\icon\comments\question.png'/>{1}<input type='text' style='display:none' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val, Environment.CurrentDirectory)
                     );
                 }
 

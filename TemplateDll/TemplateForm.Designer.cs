@@ -34,9 +34,12 @@
             this.saveBtn = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +73,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.webBrowser1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 29);
@@ -85,6 +89,29 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(815, 399);
             this.webBrowser1.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.webBrowser2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 338);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(815, 61);
+            this.panel3.TabIndex = 2;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.AllowNavigation = false;
+            this.webBrowser2.AllowWebBrowserDrop = false;
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.IsWebBrowserContextMenuEnabled = false;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.ScrollBarsEnabled = false;
+            this.webBrowser2.Size = new System.Drawing.Size(813, 59);
+            this.webBrowser2.TabIndex = 0;
             // 
             // TemplateForm
             // 
@@ -102,6 +129,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -113,5 +141,7 @@
         private System.Windows.Forms.ToolStripButton saveBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.WebBrowser webBrowser2;
     }
 }

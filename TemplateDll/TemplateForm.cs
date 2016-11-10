@@ -5,16 +5,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Windows.Forms;
 
 namespace templates
 {
+    [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+    [System.Runtime.InteropServices.ComVisible(true)]
     public partial class TemplateForm : Form
     {
         public TemplateForm()
         {
             InitializeComponent();
+
+            webBrowser1.AllowWebBrowserDrop = false;
+            webBrowser1.IsWebBrowserContextMenuEnabled = false;
+            webBrowser1.WebBrowserShortcutsEnabled = false;
+            webBrowser1.ObjectForScripting = this;
+            // Uncomment the following line when you are finished debugging.
+            webBrowser1.ScriptErrorsSuppressed = true;
         }
 
         public void loadHTML(string html)
@@ -57,6 +67,12 @@ namespace templates
             calendarCss.SetAttributeValue("href", Environment.CurrentDirectory + @"\js\lib\calendar\dhtmlxcalendar.css");
             head.AppendChild(calendarCss);
 
+            //inject jquery
+            HtmlNode jqueryJs = htmlDocument.CreateElement("script");
+            jqueryJs.SetAttributeValue("type", "text/javascript");
+            jqueryJs.SetAttributeValue("src", Environment.CurrentDirectory + @"\js\jquery.js");
+            head.AppendChild(jqueryJs);
+
             //inject page js
             HtmlNode pageJs = htmlDocument.CreateElement("script");
             pageJs.SetAttributeValue("type", "text/javascript");
@@ -75,6 +91,15 @@ namespace templates
             tmplDocument.setBrowser(webBrowser1);
             tmplDocument.processMarkers();
             tmplDocument.save();
+        }
+
+        public void showComment(String comment)
+        {
+            webBrowser2.Navigate("about:blank");
+            webBrowser2.DocumentText = "0";
+            webBrowser2.Document.OpenNew(true);
+            webBrowser2.Document.Write(comment);
+            webBrowser2.Refresh();
         }
     }
 }
