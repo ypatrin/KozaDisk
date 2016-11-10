@@ -60,7 +60,7 @@ namespace templates
 
             foreach (XmlNode marker in markers)
             {
-                html = this.markers.processMarkers(html, marker);
+                html = this.markers.processMarkers(html, marker, markers);
             }
 
             //open form

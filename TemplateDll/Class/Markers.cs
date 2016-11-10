@@ -16,7 +16,7 @@ namespace templates
             this.userDataXml = userDataXml;
         }
 
-        public string processMarkers(string html, XmlNode MarkerNode)
+        public string processMarkers(string html, XmlNode MarkerNode, XmlNodeList AllMarkers)
         {
             string markerName = MarkerNode.Attributes["name"].Value;
             string markerType = MarkerNode.Attributes["type"].Value;
@@ -45,19 +45,74 @@ namespace templates
                 );
             }
 
-            if (markerType == "no_marker")
+            if (markerType == "dynamic")
             {
                 string val = "";
+                string type = "";
 
                 if (MarkerNode.Attributes["value"] != null)
                 {
-                    val = MarkerNode.Attributes["value"].Value;
+                    val = MarkerNode.Attributes["value"].Value.Replace(@"$$","");
                 }
 
-                html = html.Replace(
-                    "$$" + markerName + "$$",
-                    String.Format("<br/>{1}<input type='text' name='{0}' id='{0}' style='display:none' val='{1}'>", markerName, val)
-                );
+                //search value from another markers
+                foreach (XmlNode marker in AllMarkers)
+                {
+                    if (marker.Attributes["name"] == null) continue;
+
+                    if (val == marker.Attributes["name"].Value)
+                    {
+                        //set type
+                        type = marker.Attributes["type"].Value;
+
+                        if (type == "text" || type == "date")
+                        {
+                            val = "";
+                        }
+
+                        if (type == "static")
+                        {
+                            if (this.userDataXml[marker.Attributes["field"].Value].InnerText != null)
+                            {
+                                val = this.userDataXml[marker.Attributes["field"].Value].InnerText;
+                            }
+                            else
+                            {
+                                val = "";
+                            }
+                        }   
+                    }
+                }
+
+                if (type == "text")
+                {
+                    html = html.Replace(
+                        "$$" + markerName + "$$",
+                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><input type='text' name='{0}' id='{0}'>", markerName)
+                    );
+                }
+                if (type == "date")
+                {
+                    html = html.Replace(
+                        "$$" + markerName + "$$",
+                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>{1}<input type='text' name='{0}' id='{0}' class='date'>", markerName)
+                    );
+                }
+                if (type == "static")
+                {
+                    html = html.Replace(
+                        "$$" + markerName + "$$",
+                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><input type='text' class='static' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val)
+                    );
+                }
+                if (type == "")
+                {
+                    html = html.Replace(
+                        "$$" + markerName + "$$",
+                        String.Format("<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>{1}<input type='text' style='display:none' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val)
+                    );
+                }
+
             }
 
             if (markerType == "static")

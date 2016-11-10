@@ -79,7 +79,29 @@ namespace templates
                     var name = input.GetAttribute("name");
                     var value = input.GetAttribute("value");
 
-                    this.markers.replaceInDocument(this.Doc.Document, name, value);
+                    // check dynamic markers checkboxes
+                    bool isHaveCheckbox = false;
+                    bool isChecked = false;
+
+                    foreach (HtmlElement cInput in elements)
+                    {
+                        //dynamic markers allready have checkbox. is this marker has checkbox?
+                        if (cInput.GetAttribute("type") == "checkbox" && cInput.GetAttribute("name") == name)
+                        {
+                            isHaveCheckbox = true;
+
+                            //if this marker have checkbox - this is dynamic marker, check if it checked
+                            if (cInput.GetAttribute("checked") == "True")
+                                isChecked = true;
+                        }
+                    }
+
+                    if (isHaveCheckbox && isChecked)
+                        this.markers.replaceInDocument(this.Doc.Document, name, value);
+                    if (isHaveCheckbox && !isChecked)
+                        this.markers.replaceInDocument(this.Doc.Document, name, "");
+                    if (!isHaveCheckbox)
+                        this.markers.replaceInDocument(this.Doc.Document, name, value);
                 }
             }
         }
