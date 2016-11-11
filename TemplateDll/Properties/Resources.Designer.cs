@@ -59,5 +59,50 @@ namespace templates.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки».
+        /// </summary>
+        internal static string comment_default_checkbox {
+            get {
+                return ResourceManager.GetString("comment_default_checkbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Виберіть необхідну дату за допомогою календаря, що розкривається..
+        /// </summary>
+        internal static string comment_default_date {
+            get {
+                return ResourceManager.GetString("comment_default_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Заповніть всі поля введення у цьому стовпці таблиці, написніть кнопку «Перегляд та друк». Математичні обчислення в цій чарунці з’являться автоматично..
+        /// </summary>
+        internal static string comment_default_formula {
+            get {
+                return ResourceManager.GetString("comment_default_formula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Проставляється автоматично з даних реєстраційної картки..
+        /// </summary>
+        internal static string comment_default_static {
+            get {
+                return ResourceManager.GetString("comment_default_static", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;b&gt;Заповніть&lt;/b&gt; порожнє поле введення..
+        /// </summary>
+        internal static string comment_default_text {
+            get {
+                return ResourceManager.GetString("comment_default_text", resourceCulture);
+            }
+        }
     }
 }

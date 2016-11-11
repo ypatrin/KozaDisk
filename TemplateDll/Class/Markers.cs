@@ -27,8 +27,29 @@ namespace templates
                 markerComment = MarkerNode.Attributes["comment"].Value;
             }
 
+            if (markerType == "comment")
+            {
+                string val = "";
+
+                if (MarkerNode.Attributes["value"] != null)
+                {
+                    val = MarkerNode.Attributes["value"].Value;
+                }
+
+                html = html.Replace(
+                    "$$" + markerName + "$$", 
+                    String.Format(@"
+                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
+                        <input type='text' name='{0}' id='{0}' val='' style='display:none'>
+                    ", markerName, val, Environment.CurrentDirectory)
+                );
+            }
+
             if (markerType == "text")
             {
+                if (markerComment == "")
+                    markerComment = Properties.Resources.comment_default_text;
+
                 html = html.Replace(
                     "$$" + markerName + "$$", 
                     String.Format(@"
@@ -40,6 +61,9 @@ namespace templates
 
             if (markerType == "date")
             {
+                if (markerComment == "")
+                    markerComment = Properties.Resources.comment_default_date;
+
                 html = html.Replace(
                     "$$" + markerName + "$$", 
                     String.Format(@"
@@ -49,11 +73,24 @@ namespace templates
                 );
             }
 
-            if (markerType == "checkbox")
+            if (markerType == "formula")
             {
+                if (markerComment == "")
+                    markerComment = Properties.Resources.comment_default_formula;
+
+                string val = "";
+
+                if (MarkerNode.Attributes["value"] != null)
+                {
+                    val = MarkerNode.Attributes["value"].Value;
+                }
+
                 html = html.Replace(
                     "$$" + markerName + "$$",
-                    String.Format("<input type='checkbox' name='{0}' id='{0}'>", markerName)
+                    String.Format(@"
+                        <input type='text' name='{1}' id='{1}' text_type='formula' formula='{3}' disabled='disabled'>
+                        <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
+                    ", Environment.CurrentDirectory, markerName, markerComment, val)
                 );
             }
 
@@ -61,6 +98,8 @@ namespace templates
             {
                 string val = "";
                 string type = "";
+
+                string markerCommentDyn = Properties.Resources.comment_default_checkbox;
 
                 if (MarkerNode.Attributes["value"] != null)
                 {
@@ -76,6 +115,11 @@ namespace templates
                     {
                         //set type
                         type = marker.Attributes["type"].Value;
+
+                        if (marker.Attributes["comment"] != null)
+                        {
+                            markerComment = marker.Attributes["comment"].Value;
+                        }
 
                         if (type == "text" || type == "date")
                         {
@@ -98,35 +142,60 @@ namespace templates
 
                 if (type == "text")
                 {
+                    if (markerComment == "")
+                        markerComment = Properties.Resources.comment_default_text;
+
                     html = html.Replace(
                         "$$" + markerName + "$$",
                         String.Format(@"
-                            <input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/>
-                            <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
-                            <input type='text' name='{0}' id='{0}'>
+                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
+                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
+                            <input type='text' name='{1}' id='{1}'>
+                            <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
                         ", 
-                        markerName, markerComment, Environment.CurrentDirectory)
+                        Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "date")
                 {
+                    if (markerComment == "")
+                        markerComment = Properties.Resources.comment_default_date;
+
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{1}\icon\comments\question.png'/><input type='text' name='{0}' id='{0}' class='date'>", markerName, Environment.CurrentDirectory)
+                        String.Format(@"
+                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
+                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
+                            <input type='text' name='{1}' id='{1}' class='date'>
+                            <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
+                        ", Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "static")
                 {
+                    if (markerComment == "")
+                        markerComment = Properties.Resources.comment_default_static;
+
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{2}\icon\comments\question.png'/><input type='text' class='static' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val, Environment.CurrentDirectory)
+                        String.Format(@"
+                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
+                            <img class='comment' comment='{4}' src='{0}\icon\comments\question.png'/>
+                            <input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>
+                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
+                        ", Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "")
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"<input type='checkbox' checked='checked' name='{0}' id='dyn_{0}'/><img class='comment' comment='На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»' src='{2}\icon\comments\question.png'/>{1}<input type='text' style='display:none' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val, Environment.CurrentDirectory)
+                        String.Format(@"
+                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
+                            <img class='comment' comment='{4}' src='{0}\icon\comments\question.png'/>
+                            {2}
+                            <input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{2}'>
+                        ", Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
 
@@ -136,14 +205,20 @@ namespace templates
             {
                 string val = "";
 
+                if (markerComment == "")
+                    markerComment = Properties.Resources.comment_default_static;
+
                 if (this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText != null)
                 {
                     val = this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText;
                 }
 
                 html = html.Replace(
-                    "$$" + markerName + "$$", 
-                    String.Format("<input type='text' class='static' disabled='disabled' name='{0}' id='{0}' value='{1}'>", markerName, val)
+                    "$$" + markerName + "$$",
+                    String.Format(@"
+                        <input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>
+                        <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
+                    ", Environment.CurrentDirectory, markerName, val, markerComment)
                 );
             }
 

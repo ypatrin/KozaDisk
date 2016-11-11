@@ -23,8 +23,13 @@ namespace templates
             webBrowser1.IsWebBrowserContextMenuEnabled = false;
             webBrowser1.WebBrowserShortcutsEnabled = false;
             webBrowser1.ObjectForScripting = this;
-            // Uncomment the following line when you are finished debugging.
             webBrowser1.ScriptErrorsSuppressed = true;
+
+            webBrowser2.AllowWebBrowserDrop = false;
+            webBrowser2.WebBrowserShortcutsEnabled = false;
+            webBrowser2.ObjectForScripting = this;
+            webBrowser2.ScriptErrorsSuppressed = true;
+            webBrowser2.IsWebBrowserContextMenuEnabled = false;
         }
 
         public void loadHTML(string html)
@@ -95,11 +100,20 @@ namespace templates
 
         public void showComment(String comment)
         {
+            string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body>{2}</body></html>",
+                Environment.CurrentDirectory + @"\js\jquery.js", Environment.CurrentDirectory + @"\js\comment.js", comment
+            );
+
             webBrowser2.Navigate("about:blank");
             webBrowser2.DocumentText = "0";
             webBrowser2.Document.OpenNew(true);
-            webBrowser2.Document.Write(comment);
+            webBrowser2.Document.Write(html);
             webBrowser2.Refresh();
+        }
+
+        public void openUrl(String url)
+        {
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

@@ -79,6 +79,52 @@ namespace templates
                     var name = input.GetAttribute("name");
                     var value = input.GetAttribute("value");
 
+                    // check if it's formula
+                    if (input.GetAttribute("text_type") != null && input.GetAttribute("text_type") == "formula")
+                    {
+                        var formula = input.GetAttribute("formula");
+                        int fn = 0;
+
+                        // plus formuls
+                        if (formula.Split('+').Length > 2)
+                        {
+                            foreach (string f in formula.Split('+'))
+                            {
+                                foreach (HtmlElement cInput in elements)
+                                {
+                                    if (f == cInput.GetAttribute("name"))
+                                    {
+                                        int n;
+                                        if (cInput.GetAttribute("value") != null && cInput.GetAttribute("value") != "" && int.TryParse(cInput.GetAttribute("value"), out n))
+                                        {
+                                            if (fn == 0) fn = Int32.Parse(cInput.GetAttribute("value"));
+                                            else fn += Int32.Parse(cInput.GetAttribute("value"));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // minus dormuls
+                        if (formula.Split('-').Length > 2)
+                        {
+                            foreach (string f in formula.Split('+'))
+                            {
+                                foreach (HtmlElement cInput in elements)
+                                {
+                                    if (f == cInput.GetAttribute("name"))
+                                    {
+                                        if (fn == 0) fn = Int32.Parse(cInput.GetAttribute("value"));
+                                        else fn -= Int32.Parse(cInput.GetAttribute("value"));
+                                    }
+                                }
+                            }
+                        }
+
+                        // set field value to formula resut
+                        value = fn.ToString();
+                    } 
+
                     // check dynamic markers checkboxes
                     bool isHaveCheckbox = false;
                     bool isChecked = false;
