@@ -94,10 +94,6 @@ D:\Data\C#\Projects\KozaDisk 2\App\App\bin\Debug\de\DevExpress.XtraLayout.v16.1.
 D:\Data\C#\Projects\KozaDisk 2\App\App\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk 2\App\App\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk 2\App\App\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
-D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.exe
-D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.pdb
-D:\Data\C#\Projects\KozaDisk\App\bin\Debug\App.exe
-D:\Data\C#\Projects\KozaDisk\App\bin\Debug\App.pdb
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\templates.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\DevExpress.RichEdit.v16.1.Core.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\DevExpress.XtraRichEdit.v16.1.dll
@@ -190,3 +186,7 @@ D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.csprojResolveAssemblyReference.ca
 D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.Form1.resources
 D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.Properties.Resources.resources
 D:\Data\C#\Projects\KozaDisk\App\obj\Debug\App.csproj.GenerateResource.Cache
+D:\Data\C#\Projects\KozaDisk\App\bin\Debug\Koza.exe
+D:\Data\C#\Projects\KozaDisk\App\bin\Debug\Koza.pdb
+D:\Data\C#\Projects\KozaDisk\App\obj\Debug\Koza.exe
+D:\Data\C#\Projects\KozaDisk\App\obj\Debug\Koza.pdb

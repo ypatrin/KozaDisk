@@ -143,11 +143,18 @@ namespace templates
                     }
 
                     if (isHaveCheckbox && isChecked)
+                    {
                         this.markers.replaceInDocument(this.Doc.Document, name, value);
+                    }
                     if (isHaveCheckbox && !isChecked)
+                    {
+                        this.markers.deleteLineInDocument(this.Doc.Document, name);
                         this.markers.replaceInDocument(this.Doc.Document, name, "");
+                    }
                     if (!isHaveCheckbox)
+                    {
                         this.markers.replaceInDocument(this.Doc.Document, name, value);
+                    }
                 }
             }
         }

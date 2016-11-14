@@ -243,5 +243,31 @@ namespace templates
             }
             return document;
         }
+
+        public Document deleteLineInDocument(Document document, string textToFind)
+        {
+            document.BeginUpdate();
+            try
+            {
+                
+                DocumentRange[] ranges = document.FindAll("$$" + textToFind + "$$", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges)
+                {
+                    //document.Replace(ranges[range.Length - 1], string.Empty);
+                    document.Delete(range);
+                    Paragraph pp = document.GetParagraph(range.Start);
+                    document.RemoveNumberingFromParagraph(pp);
+
+                    document.Delete(pp.Range);
+                }
+                
+            }
+            finally
+            {
+                document.EndUpdate();
+            }
+            return document;
+        }
     }
 }
