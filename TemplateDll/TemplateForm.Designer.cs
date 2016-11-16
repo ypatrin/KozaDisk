@@ -33,15 +33,15 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.saveBtn = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.panel4 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,14 +83,32 @@
             this.panel2.Size = new System.Drawing.Size(815, 399);
             this.panel2.TabIndex = 2;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.webBrowser1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(515, 399);
+            this.panel4.TabIndex = 3;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(515, 399);
+            this.webBrowser1.TabIndex = 2;
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.webBrowser2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 347);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(515, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(815, 52);
+            this.panel3.Size = new System.Drawing.Size(300, 399);
             this.panel3.TabIndex = 2;
             // 
             // webBrowser2
@@ -102,26 +120,8 @@
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(813, 50);
+            this.webBrowser2.Size = new System.Drawing.Size(298, 397);
             this.webBrowser2.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.webBrowser1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(815, 347);
-            this.panel4.TabIndex = 3;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(815, 347);
-            this.webBrowser1.TabIndex = 2;
             // 
             // TemplateForm
             // 
@@ -139,8 +139,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

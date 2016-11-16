@@ -46,6 +46,9 @@ namespace templates
 
         public void saveToHtml(string htmlFileName)
         {
+            Doc.Options.Export.Html.CssPropertiesExportType = DevExpress.XtraRichEdit.Export.Html.CssPropertiesExportType.Inline;
+            Doc.Options.Export.Html.HtmlNumberingListExportFormat = DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat.PlainTextFormat;
+            Doc.Options.Export.Html.UseHtml5 = true;
             Doc.SaveDocument(htmlFileName, DocumentFormat.Html);
         }
 

@@ -20,10 +20,10 @@ namespace templates
             InitializeComponent();
 
             webBrowser1.AllowWebBrowserDrop = false;
-            webBrowser1.IsWebBrowserContextMenuEnabled = false;
+            //webBrowser1.IsWebBrowserContextMenuEnabled = false;
             webBrowser1.WebBrowserShortcutsEnabled = false;
             webBrowser1.ObjectForScripting = this;
-            webBrowser1.ScriptErrorsSuppressed = true;
+            //webBrowser1.ScriptErrorsSuppressed = true;
 
             webBrowser2.AllowWebBrowserDrop = false;
             webBrowser2.WebBrowserShortcutsEnabled = false;
@@ -83,6 +83,12 @@ namespace templates
             pageJs.SetAttributeValue("type", "text/javascript");
             pageJs.SetAttributeValue("src", Environment.CurrentDirectory + @"\js\page.js");
             head.AppendChild(pageJs);
+
+            //inject page css
+            HtmlNode pageCss = htmlDocument.CreateElement("link");
+            pageCss.SetAttributeValue("rel", "stylesheet");
+            pageCss.SetAttributeValue("href", Environment.CurrentDirectory + @"\css\page.css");
+            head.AppendChild(pageCss);
 
             htmlDocument.Save(htmlFile);
         }

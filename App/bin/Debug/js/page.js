@@ -4,9 +4,8 @@
 		window.external.showComment(comment);
 	});
 	
+	
 });
-
-
 
 if(document.getElementsByClassName) { // есть есть родная фукнция, используем ее
 	getElementsByClass = function(classList, node) {    

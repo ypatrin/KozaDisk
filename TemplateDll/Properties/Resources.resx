@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="comment_default_checkbox" xml:space="preserve">
-    <value>На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, зніміть біля них «галочки»</value>
+    <value>На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, &lt;b&gt;зніміть&lt;/b&gt; біля них «галочки»</value>
   </data>
   <data name="comment_default_date" xml:space="preserve">
-    <value>Виберіть необхідну дату за допомогою календаря, що розкривається.</value>
+    <value>Виберіть необхідну &lt;b&gt;дату&lt;/b&gt; за допомогою календаря, що розкривається.</value>
   </data>
   <data name="comment_default_formula" xml:space="preserve">
-    <value>Заповніть всі поля введення у цьому стовпці таблиці, написніть кнопку «Перегляд та друк». Математичні обчислення в цій чарунці з’являться автоматично.</value>
+    <value>&lt;b&gt;Математичні обчислення&lt;/b&gt; в цій чарунці з’являться автоматично.</value>
   </data>
   <data name="comment_default_static" xml:space="preserve">
     <value>Проставляється автоматично з даних реєстраційної картки.</value>

@@ -38,10 +38,10 @@ namespace templates
 
                 html = html.Replace(
                     "$$" + markerName + "$$", 
-                    String.Format(@"
-                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
-                        <input type='text' name='{0}' id='{0}' val='' style='display:none'>
-                    ", markerName, val, Environment.CurrentDirectory)
+                    String.Format(""+
+                        "<img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\question.png'/>"+
+                        "<input type='text' name='{0}' id='{0}' val='' style='display:none'>"
+                    , markerName, val, Environment.CurrentDirectory)
                 );
             }
 
@@ -52,10 +52,10 @@ namespace templates
 
                 html = html.Replace(
                     "$$" + markerName + "$$", 
-                    String.Format(@"
-                        <input type='text' name='{0}' id='{0}'>
-                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
-                    ", markerName, markerComment, Environment.CurrentDirectory)
+                    String.Format(""+
+                        "<input type='text' name='{0}' id='{0}'>"+
+                        "<img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\question.png'/>"
+                    , markerName, markerComment, Environment.CurrentDirectory)
                 );
             }
 
@@ -66,10 +66,10 @@ namespace templates
 
                 html = html.Replace(
                     "$$" + markerName + "$$", 
-                    String.Format(@"
-                        <input type='text' class='date' name='{0}' id='{0}'>
-                        <img class='comment' comment='{1}' src='{2}\icon\comments\question.png'/>
-                    ", markerName, markerComment, Environment.CurrentDirectory)
+                    String.Format(""+
+                        "<input type='text' class='date' name='{0}' id='{0}' onfocus='this.blur()' readonly='readonly'>"+
+                        "<img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\calendar.png'/>"
+                    , markerName, markerComment, Environment.CurrentDirectory)
                 );
             }
 
@@ -87,10 +87,10 @@ namespace templates
 
                 html = html.Replace(
                     "$$" + markerName + "$$",
-                    String.Format(@"
-                        <input type='text' name='{1}' id='{1}' text_type='formula' formula='{3}' disabled='disabled'>
-                        <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
-                    ", Environment.CurrentDirectory, markerName, markerComment, val)
+                    String.Format(""+
+                        "<input type='text' name='{1}' id='{1}' text_type='formula' formula='{3}' disabled='disabled'>"+
+                        "<img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\formula.png'/>"
+                    , Environment.CurrentDirectory, markerName, markerComment, val)
                 );
             }
 
@@ -99,12 +99,12 @@ namespace templates
                 string val = "";
                 string type = "";
 
-                string markerCommentDyn = Properties.Resources.comment_default_checkbox;
-
                 if (MarkerNode.Attributes["value"] != null)
                 {
                     val = MarkerNode.Attributes["value"].Value.Replace(@"$$","");
                 }
+
+                string markerCommentDyn = Properties.Resources.comment_default_checkbox;
 
                 //search value from another markers
                 foreach (XmlNode marker in AllMarkers)
@@ -128,6 +128,8 @@ namespace templates
 
                         if (type == "static")
                         {
+                            markerComment = this.getStaticComment(marker.Attributes["field"].Value);
+
                             if (this.userDataXml[marker.Attributes["field"].Value].InnerText != null)
                             {
                                 val = this.userDataXml[marker.Attributes["field"].Value].InnerText;
@@ -147,13 +149,12 @@ namespace templates
 
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"
-                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
-                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
-                            <input type='text' name='{1}' id='{1}'>
-                            <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
-                        ", 
-                        Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
+                        String.Format(""+
+                            "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
+                            "<img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/>"+
+                            "<input type='text' name='{1}' id='{1}'>"+
+                            "<img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\question.png'/>"
+                        , Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "date")
@@ -163,39 +164,41 @@ namespace templates
 
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"
-                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
-                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
-                            <input type='text' name='{1}' id='{1}' class='date'>
-                            <img class='comment' comment='{2}' src='{0}\icon\comments\question.png'/>
-                        ", Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
+                        String.Format(""+
+                            "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
+                            "<img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/>"+
+                            "<input type='text' name='{1}' id='{1}' class='date' onfocus='this.blur()' readonly='readonly'>"+
+                            "<img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\calendar.png'/>"
+                        , Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "static")
                 {
+                    
                     if (markerComment == "")
                         markerComment = Properties.Resources.comment_default_static;
 
+
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"
-                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
-                            <img class='comment' comment='{4}' src='{0}\icon\comments\question.png'/>
-                            <input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>
-                            <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
-                        ", Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
+                        String.Format(""+
+                            "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
+                            "<img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/>"+
+                            "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
+                            "<img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/>"
+                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "")
                 {
                     html = html.Replace(
                         "$$" + markerName + "$$",
-                        String.Format(@"
-                            <input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>
-                            <img class='comment' comment='{4}' src='{0}\icon\comments\question.png'/>
-                            {2}
-                            <input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{2}'>
-                        ", Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
+                        String.Format(""+
+                            "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
+                            "<img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/>"+
+                            "{2}"+
+                            "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{2}'>"
+                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
 
@@ -206,7 +209,7 @@ namespace templates
                 string val = "";
 
                 if (markerComment == "")
-                    markerComment = Properties.Resources.comment_default_static;
+                    markerComment = this.getStaticComment(MarkerNode.Attributes["field"].Value);
 
                 if (this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText != null)
                 {
@@ -215,14 +218,49 @@ namespace templates
 
                 html = html.Replace(
                     "$$" + markerName + "$$",
-                    String.Format(@"
-                        <input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>
-                        <img class='comment' comment='{3}' src='{0}\icon\comments\question.png'/>
-                    ", Environment.CurrentDirectory, markerName, val, markerComment)
+                    String.Format(""+
+                        "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
+                        "<img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/>"
+                    , Environment.CurrentDirectory, markerName, val, markerComment)
                 );
             }
 
             return html;
+        }
+
+        private string getStaticComment(string fieldName)
+        {
+            string val = Properties.Resources.comment_default_static;
+
+            if (fieldName == "full_name") val = "<b>Повна назва організації</b> проставляється автоматично з даних реєстраційної картки. Назва організації — автора документа — має відповідати назві, зазначеній в установчих документах (статуті, положенні про організацію).";
+            if (fieldName == "full_name_genitive") val = "<b>Повна назва</b> організації в родовому відмінку (з малої літери) проставляється автоматично з даних реєстраційної картки. ";
+            if (fieldName == "abbreviation") val = "<b>Скорочена назва</b> організації проставляється автоматично з даних реєстраційної картки. Скорочену назву організації зазначають тоді, коли її офіційно зафіксовано в статуті (положенні про організацію).";
+            if (fieldName == "abbreviation_genitive") val = "<b>Скорочена назва</b> навчального закладу в родовому відмінку проставляється автоматично з даних реєстраційної картки. ";
+            if (fieldName == "subordination") val = "<b>Назва організації вищого рівня</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "subordination_genitive") val = "<b>Назва організації вищого рівня</b> у родовому відмінку проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "unit") val = "<b>Назва структурного підроздіту організації</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "place") val = "<b>Місце складання документа</b> проставляється автоматично з даних реєстраційної картки. Якщо відомості про географічне місцезнаходження входять до назви навчального закладу, то реквізит «місце складання документа» не зазначають. ";
+            if (fieldName == "code") val = "<b>Код ЄДРПОУ</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "bank") val = "<b>Банківські реквізити</b> (номер банківського рахунку, назва установи банку, її код) проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "legal_address") val = "<b>Юридична адреса</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_name") val = "<b>Прізвище, ім’я, по батькові</b> керівника проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_name_genitive") val = "<b>Прізвище, імя, по батькові керівника</b> у родовому відмінку проставляються автоматично з даних реєстраційної картки";
+            if (fieldName == "chief_surname") val = "<b>Прізвище та ініціали керівника</b> проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_surname_dative") val = "<b>Прізвище та ініціали керівника</b> у давальному відмінку проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_initials") val = "<b>Ініціали та прізвище керівника</b> навчального закладу проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_position") val = "<b>Посада керівника</b> навчального закладу (з великої літери) проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_position_dative") val = "<b>Посада керівника у давальному відмінку</b> (з великої літери) проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "chief_position_lower") val = "<b>Посада керівника у родовому відмінку</b> (з малої літери) проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "position_cadre") val = "<b>Назва посади керівника кадрової служби</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "position_cadre_genitive") val = "<b>Назва посади керівника кадрової служби</b> в родовому відмінку проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "initials_cadre") val = "<b>Ініціали та прізвище керівника кадрової служби</b> проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "surname_cadre") val = "<b>Прізвище, ініціали керівника кадрової служби</b> проставляються автоматично з даних реєстраційної картки.";
+            if (fieldName == "address") val = "<b>Поштова адреса</b> організації проставляється автоматично з даних реєстраційної картки. Реквізити поштової адреси у реєстраційній картці слід зазначати у <b>такій послідовності:</b> назва вулиці, номер будинку, назва населеного пункту, району, області, поштовий індекс.";
+            if (fieldName == "tel") val = "<b>Номер телефону</b> організації проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "fax") val = "<b>Номер факсу</b> організації проставляється автоматично з даних реєстраційної картки.";
+            if (fieldName == "e-mail") val = "<b>Електронна адреса</b> організації проставляється автоматично з даних реєстраційної картки.";
+
+            return val;
         }
 
         public Document replaceInDocument(Document document, string from, string to)

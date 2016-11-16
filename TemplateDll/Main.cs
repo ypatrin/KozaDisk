@@ -43,6 +43,8 @@ namespace templates
             //read html
             string html = System.IO.File.ReadAllText(this.htmlFilePath, Encoding.GetEncoding("windows-1251"));
 
+            html = html.Replace(@"margin:0pt 0pt 0pt 50pt", @"margin:0pt 0pt 0pt 7pt");
+
             //destroy temp html file
             File.Delete(this.htmlFilePath);
 
