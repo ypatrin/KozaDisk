@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -37,11 +38,13 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel3 = new System.Windows.Forms.Panel();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.chartRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,6 +126,10 @@
             this.webBrowser2.Size = new System.Drawing.Size(298, 397);
             this.webBrowser2.TabIndex = 0;
             // 
+            // chartRecordBindingSource
+            // 
+            this.chartRecordBindingSource.DataSource = typeof(templates.ChartRecord);
+            // 
             // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +148,7 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,5 +163,6 @@
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.BindingSource chartRecordBindingSource;
     }
 }

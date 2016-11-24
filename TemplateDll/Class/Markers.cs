@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using DevExpress.XtraRichEdit.API.Native;
+using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
 
 namespace templates
 {
@@ -41,6 +44,38 @@ namespace templates
                     String.Format(""+
                         "<img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\question.png'/>"+
                         "<input type='text' name='{0}' id='{0}' val='' style='display:none'>"
+                    , markerName, val, Environment.CurrentDirectory)
+                );
+            }
+
+            if (markerType == "chart")
+            {
+                string val = "";
+
+                int count_rows = 1;
+                XmlNodeList rows = MarkerNode.SelectNodes("rows/row");
+
+                foreach(XmlNode row in rows)
+                {
+                    val += count_rows + ":";
+                    foreach (XmlNode col in row.SelectNodes("col"))
+                    {
+                       val += col.InnerText + ",";
+                    }
+
+                    val = val.Trim(',');
+
+                    val += ";";
+
+                    count_rows++;
+                }
+
+                val = val.Trim(';');
+
+                html = html.Replace(
+                    "$$" + markerName + "$$",
+                    String.Format("" +
+                        "<input type='text' name='{0}' id='{0}' text_type='chart' value='{1}' style='display:none'>"
                     , markerName, val, Environment.CurrentDirectory)
                 );
             }
@@ -273,6 +308,27 @@ namespace templates
                 foreach (DocumentRange range in ranges)
                 {
                     document.Replace(range, to);
+                }
+            }
+            finally
+            {
+                document.EndUpdate();
+            }
+            return document;
+        }
+
+        public Document replaceImgInDocument(Document document, string from, Image chart)
+        {
+            document.BeginUpdate();
+
+            try
+            {
+                DocumentRange[] ranges = document.FindAll("$$" + from + "$$", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges)
+                {
+                    document.Replace(range, "");
+                    document.Images.Insert(range.Start, chart);
                 }
             }
             finally
