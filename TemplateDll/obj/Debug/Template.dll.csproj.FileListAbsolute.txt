@@ -226,3 +226,12 @@ D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.XtraNavBar.v16.
 D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll.licenses
+D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintForm.resources
+D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintRibbonControllerResources.resources
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\DevExpress.BonusSkins.v16.1.dll
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\DevExpress.XtraRichEdit.v16.1.Extensions.dll
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\DevExpress.XtraRichEdit.v16.1.Extensions.xml
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\de\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
+D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll

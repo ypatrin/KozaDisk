@@ -1,4 +1,8 @@
-﻿using HtmlAgilityPack;
+﻿using DevExpress.Office.Utils;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraRichEdit;
+using DevExpress.XtraRichEdit.API.Native;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +19,9 @@ namespace templates
     [System.Runtime.InteropServices.ComVisible(true)]
     public partial class TemplateForm : Form
     {
+        PrintableComponentLink link;
+        RichEditControl richEditControl;
+
         public TemplateForm()
         {
             InitializeComponent();
@@ -120,6 +127,53 @@ namespace templates
         public void openUrl(String url)
         {
             System.Diagnostics.Process.Start(url);
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            TmplDocument tmplDocument = TmplDocument.getInstance();
+            Markers markers = new Markers();
+
+            // set browser
+            tmplDocument.setBrowser(webBrowser1);
+            // process markers
+            tmplDocument.processMarkers();
+            // get richedit control
+            this.richEditControl = tmplDocument.getRichEditControl();
+
+            //printing
+            this.richEditControl.ShowPrintDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+                  
+            TmplDocument tmplDocument = TmplDocument.getInstance();
+            Markers markers = new Markers();
+
+            // set browser
+            tmplDocument.setBrowser(webBrowser1);
+            // process markers
+            tmplDocument.processMarkers();
+            // get richedit control
+            this.richEditControl = tmplDocument.getRichEditControl();
+            
+
+            PrintForm printForm = new PrintForm(this.richEditControl);
+            printForm.Show();
+
+            /*
+            //open preview window
+            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+            link.Component = richEditControl;
+            link.ShowRibbonPreviewDialog(richEditControl.LookAndFeel);
+            */
         }
     }
 }

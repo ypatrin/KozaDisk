@@ -48,6 +48,11 @@ namespace templates
             return Doc.Document;
         }
 
+        public RichEditControl getRichEditControl()
+        {
+            return this.Doc;
+        }
+
         public void saveToHtml(string htmlFileName)
         {
             Doc.Options.Export.Html.CssPropertiesExportType = DevExpress.XtraRichEdit.Export.Html.CssPropertiesExportType.Inline;
