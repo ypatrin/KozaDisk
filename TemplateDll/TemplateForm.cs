@@ -27,10 +27,10 @@ namespace templates
             InitializeComponent();
 
             webBrowser1.AllowWebBrowserDrop = false;
-            //webBrowser1.IsWebBrowserContextMenuEnabled = false;
+            webBrowser1.IsWebBrowserContextMenuEnabled = false;
             webBrowser1.WebBrowserShortcutsEnabled = false;
             webBrowser1.ObjectForScripting = this;
-            //webBrowser1.ScriptErrorsSuppressed = true;
+            webBrowser1.ScriptErrorsSuppressed = true;
 
             webBrowser2.AllowWebBrowserDrop = false;
             webBrowser2.WebBrowserShortcutsEnabled = false;
@@ -167,13 +167,11 @@ namespace templates
 
             PrintForm printForm = new PrintForm(this.richEditControl);
             printForm.Show();
+        }
 
-            /*
-            //open preview window
-            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
-            link.Component = richEditControl;
-            link.ShowRibbonPreviewDialog(richEditControl.LookAndFeel);
-            */
+        private void TemplateForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
