@@ -19,20 +19,7 @@ namespace templates
         private TmplDocument tmplDocument = TmplDocument.getInstance();
         private Markers markers = new Markers();
 
-        private Progress progress = new Progress();
-
-        /*
-        delegate void StatusDelegate();
-        StatusDelegate StatusFormDelegate = new StatusDelegate(UpdateProgressStatus);
-        StatusDelegate CloseFormDelegate = new StatusDelegate(CloseProgressForm);
-        StatusDelegate SetMaxFormDelegate = new StatusDelegate(SetMaxProgressStatus);
-
-        Thread threadProgressForm;
-        Thread workThread;
-
-        static volatile int progressStatus = 0;
-        static private ProgressForm progressForm = new ProgressForm(); 
-        */
+        private Progress progress = Progress.getInstance();
 
         public void setTemplate(String TemplateFilePath, String XmlFilePath)
         {
@@ -47,33 +34,8 @@ namespace templates
 
         public void open()
         {
-            //threadProgressForm = new Thread(OpenProgressForm);
-            //threadProgressForm.Start();
-
             openProc();
         }
-
-        /*
-        public void OpenProgressForm()
-        {
-            progressForm.ShowDialog();
-        }
-
-        static void CloseProgressForm()
-        {
-            progressForm.Close();
-        }
-
-        static void UpdateProgressStatus()
-        {
-            progressForm.setProgress(progressStatus);
-        }
-
-        static void SetMaxProgressStatus()
-        {
-            progressForm.setMax(12);
-        }
-        */
 
         private string getRandomString(int length)
         {

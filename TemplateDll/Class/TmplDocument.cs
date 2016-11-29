@@ -17,10 +17,11 @@ namespace templates
     class TmplDocument
     {
         private static TmplDocument instance;
-        private RichEditControl Doc = new RichEditControl();
+        private RichEditControl Doc = new RichEditControl(), newDoc = null;
         private WebBrowser browser;
         private Markers markers = new Markers();
         private string templateName;
+        private string templatePath = "";
 
         private TmplDocument()
         { }
@@ -32,10 +33,11 @@ namespace templates
             return instance;
         }
 
-        public void setDocument(string documentPath)
+        public void setDocument(string templatePath)
         {
-            this.Doc.LoadDocument(documentPath);
-            this.templateName = Path.GetFileName(documentPath);
+            this.templatePath = templatePath;
+            this.Doc.LoadDocument(templatePath);
+            this.templateName = Path.GetFileName(templatePath);
         }
 
         public void setBrowser(WebBrowser browser)
@@ -45,12 +47,22 @@ namespace templates
 
         public Document getDocument()
         {
-            return Doc.Document;
+            return this.newDoc.Document;
+        }
+
+        public void prepareDocument()
+        {
+            //clear
+            this.newDoc = null;
+            this.newDoc = new RichEditControl();
+
+            //open template
+            this.newDoc.LoadDocument(this.templatePath);
         }
 
         public RichEditControl getRichEditControl()
         {
-            return this.Doc;
+            return this.newDoc;
         }
 
         public void saveToHtml(string htmlFileName)
@@ -63,7 +75,9 @@ namespace templates
 
         public void processMarkers()
         {
+            this.newDoc.BeginUpdate();
             this.processTextMarkers();
+            this.newDoc.EndUpdate();
         }
 
         public void save()
@@ -74,7 +88,8 @@ namespace templates
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                this.Doc.Document.SaveDocument(saveDialog.FileName, DocumentFormat.OpenXml);
+                this.newDoc.Document.SaveDocument(saveDialog.FileName, DocumentFormat.OpenXml);
+                MessageBox.Show("Документ успішно збережений!", "Koza Disk", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -159,7 +174,7 @@ namespace templates
                         }
 
 
-                        this.markers.replaceImgInDocument(this.Doc.Document, name, image);
+                        this.markers.replaceImgInDocument(this.newDoc.Document, name, image);
                         
                     }
 
@@ -212,6 +227,7 @@ namespace templates
                     // check dynamic markers checkboxes
                     bool isHaveCheckbox = false;
                     bool isChecked = false;
+                    bool isEmptyTextBox = false;
 
                     foreach (HtmlElement cInput in elements)
                     {
@@ -224,20 +240,31 @@ namespace templates
                             if (cInput.GetAttribute("checked") == "True")
                                 isChecked = true;
                         }
+
+                        if (cInput.GetAttribute("type") == "text" && cInput.GetAttribute("name") == name)
+                        {
+                            if (cInput.GetAttribute("value") == "")
+                                isEmptyTextBox = true;
+                        }
                     }
 
                     if (isHaveCheckbox && isChecked)
                     {
-                        this.markers.replaceInDocument(this.Doc.Document, name, value);
+                        this.markers.replaceInDocument(this.newDoc.Document, name, value);
                     }
-                    if (isHaveCheckbox && !isChecked)
+                    if (isHaveCheckbox && !isChecked && !isEmptyTextBox)
                     {
-                        this.markers.deleteLineInDocument(this.Doc.Document, name);
-                        this.markers.replaceInDocument(this.Doc.Document, name, "");
+                        //this.markers.deleteLineInDocument(this.newDoc.Document, name);
+                        this.markers.replaceInDocument(this.newDoc.Document, name, "");
+                    }
+                    if (isHaveCheckbox && !isChecked && isEmptyTextBox)
+                    {
+                        this.markers.deleteLineInDocument(this.newDoc.Document, name);
+                        this.markers.replaceInDocument(this.newDoc.Document, name, "");
                     }
                     if (!isHaveCheckbox)
                     {
-                        this.markers.replaceInDocument(this.Doc.Document, name, value);
+                        this.markers.replaceInDocument(this.newDoc.Document, name, value);
                     }
                 }
             }

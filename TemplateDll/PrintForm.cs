@@ -12,33 +12,36 @@ using DevExpress.XtraPrinting;
 
 namespace templates
 {
-    public partial class PrintForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class PrintForm : DevExpress.XtraEditors.XtraForm
     {
-        RichEditControl richEditControl;
+        RichEditControl richEditControl = null;
+        PrintableComponentLink link = null;
 
         public PrintForm(RichEditControl richEditControl)
         {
             InitializeComponent();
-
-            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+            printingSystem1.ClearContent();
+            link = new PrintableComponentLink(new PrintingSystem());
             link.Component = richEditControl;
-
             printingSystem1.Links.Add(link);
-        }
-
-        private void printPreviewBarItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
         private void PrintForm_Load(object sender, EventArgs e)
         {
             
+
+            //documentViewer1.Update();
+            //documentViewer1.Refresh();
+            //documentViewer1.InitiateDocumentCreation();
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            link = null;
+            printingSystem1.Links.Clear();
+            printingSystem1.ClearContent();
 
+            this.richEditControl = null;
         }
     }
 }

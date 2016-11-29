@@ -21,6 +21,7 @@ namespace templates
     {
         PrintableComponentLink link;
         RichEditControl richEditControl;
+        Progress progress = Progress.getInstance();
 
         public TemplateForm()
         {
@@ -102,13 +103,24 @@ namespace templates
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            this.progress.Open();
+            this.progress.setMax(4);
+            this.progress.setCurrent(0);
+
             TmplDocument tmplDocument = TmplDocument.getInstance();
             Markers markers = new Markers();
 
-            // set browser
+            tmplDocument.prepareDocument();
+            this.progress.setCurrent(1);
+
             tmplDocument.setBrowser(webBrowser1);
+            this.progress.setCurrent(2);
+
             tmplDocument.processMarkers();
+            this.progress.setCurrent(3);
+
             tmplDocument.save();
+            this.progress.Close();
         }
 
         public void showComment(String comment)
@@ -129,49 +141,53 @@ namespace templates
             System.Diagnostics.Process.Start(url);
         }
 
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             TmplDocument tmplDocument = TmplDocument.getInstance();
             Markers markers = new Markers();
 
+            this.progress.Open();
+            this.progress.setMax(4);
+            this.progress.setCurrent(0);
+
+            //prepare document
+            tmplDocument.prepareDocument();
+            this.progress.setCurrent(1);
             // set browser
             tmplDocument.setBrowser(webBrowser1);
+            this.progress.setCurrent(2);
             // process markers
             tmplDocument.processMarkers();
-            // get richedit control
-            this.richEditControl = tmplDocument.getRichEditControl();
-
+            this.progress.setCurrent(3);
             //printing
-            this.richEditControl.ShowPrintDialog();
+            this.progress.Close();
+            tmplDocument.getRichEditControl().ShowPrintDialog();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-                  
+            this.progress.Open();
+            this.progress.setMax(4);
+            this.progress.setCurrent(0);
+
             TmplDocument tmplDocument = TmplDocument.getInstance();
             Markers markers = new Markers();
+            
+            //prepare document
+            tmplDocument.prepareDocument();
+            this.progress.setCurrent(1);
 
             // set browser
             tmplDocument.setBrowser(webBrowser1);
+            this.progress.setCurrent(2);
+
             // process markers
             tmplDocument.processMarkers();
-            // get richedit control
-            this.richEditControl = tmplDocument.getRichEditControl();
-            
+            this.progress.setCurrent(3);
 
-            PrintForm printForm = new PrintForm(this.richEditControl);
-            printForm.Show();
-        }
-
-        private void TemplateForm_Load(object sender, EventArgs e)
-        {
-
+            PrintForm printForm = new PrintForm(tmplDocument.getRichEditControl());
+            this.progress.Close();
+            printForm.ShowDialog();
         }
     }
 }

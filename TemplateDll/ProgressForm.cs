@@ -25,5 +25,10 @@ namespace templates
         {
             progressBar1.Maximum = val;
         }
+
+        public void setText(string Text)
+        {
+            labelControl1.Text = Text;
+        }
     }
 }
