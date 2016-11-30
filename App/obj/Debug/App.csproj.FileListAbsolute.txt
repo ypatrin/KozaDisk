@@ -223,3 +223,4 @@ D:\Data\C#\Projects\KozaDisk\App\bin\Debug\de\DevExpress.XtraNavBar.v16.1.resour
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\es\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\ja\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Debug\ru\DevExpress.XtraNavBar.v16.1.resources.dll
+D:\Data\C#\Projects\KozaDisk\App\bin\Debug\Koza.exe.config

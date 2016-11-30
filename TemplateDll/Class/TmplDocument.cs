@@ -182,7 +182,9 @@ namespace templates
                     if (input.GetAttribute("text_type") != null && input.GetAttribute("text_type") == "formula")
                     {
                         var formula = input.GetAttribute("formula");
-                        int fn = 0;
+                        value = input.GetAttribute("value");
+                        /*
+                        float fn = 0;
 
                         // plus formuls
                         if (formula.Split('+').Length > 2)
@@ -196,8 +198,17 @@ namespace templates
                                         int n;
                                         if (cInput.GetAttribute("value") != null && cInput.GetAttribute("value") != "" && int.TryParse(cInput.GetAttribute("value"), out n))
                                         {
-                                            if (fn == 0) fn = Int32.Parse(cInput.GetAttribute("value"));
-                                            else fn += Int32.Parse(cInput.GetAttribute("value"));
+                                            if (fn == 0)
+                                            {
+                                                float num_float;
+
+                                                bool isFloat = float.TryParse(cInput.GetAttribute("value"), out num_float);
+
+                                                if (isFloat)
+                                                {
+                                                    fn += float.Parse(cInput.GetAttribute("value"));
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -213,8 +224,16 @@ namespace templates
                                 {
                                     if (f == cInput.GetAttribute("name"))
                                     {
-                                        if (fn == 0) fn = Int32.Parse(cInput.GetAttribute("value"));
-                                        else fn -= Int32.Parse(cInput.GetAttribute("value"));
+                                        float num_float;
+                                        bool isFloat = float.TryParse(cInput.GetAttribute("value"), out num_float);
+
+                                        if (isFloat)
+                                        {
+                                            if (fn == 0)
+                                                fn = float.Parse(cInput.GetAttribute("value"));
+                                            else
+                                                fn -= float.Parse(cInput.GetAttribute("value"));
+                                        }  
                                     }
                                 }
                             }
@@ -222,7 +241,9 @@ namespace templates
 
                         // set field value to formula resut
                         value = fn.ToString();
+                        */
                     } 
+                    
 
                     // check dynamic markers checkboxes
                     bool isHaveCheckbox = false;

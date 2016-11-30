@@ -4,7 +4,62 @@
 		window.external.showComment(comment);
 	});
 	
+	var upFormulaTimeout = setTimeout(updateFormula, 1000);
 	
+	function updateFormula()
+	{		
+		$("input[text_type=formula]").each(function(){
+		var formula = $(this);
+		
+		if (formula)
+		{
+			var formulaVal = formula.attr("formula");
+			
+			if (formulaVal && formulaVal != '')
+			{
+				var formulaResult = 0;
+				
+				//plus
+				var formulaPlusParts = formulaVal.split("+");
+				
+				if (formulaPlusParts.length > 1)
+				{
+					$.each(formulaPlusParts, function(index, val){
+						var partValue = $("#"+val).val();
+						
+						//if integer
+						if (partValue == parseInt(partValue)) {
+							formulaResult += parseInt(partValue);
+						} else if (partValue == parseFloat(partValue)) {
+							formulaResult += parseFloat(partValue);
+						}
+					}); 
+				}
+
+				//minus
+				var formulaMinusParts = formulaVal.split("-");
+				
+				if (formulaMinusParts.length > 1)
+				{
+					$.each(formulaMinusParts, function(index, val){
+						var partValue = $("#"+val).val();
+						
+						//if integer
+						if (partValue == parseInt(partValue)) {
+							formulaResult -= parseInt(partValue);
+						}
+						if (partValue == parseFloat(partValue)) {
+							formulaResult -= parseFloat(partValue);
+						}
+					}); 
+				}
+			}
+		}
+		
+		formula.val(formulaResult);
+		});
+		pFormulaTimeout = setTimeout(updateFormula, 1000);
+	}
 });
 
 if(document.getElementsByClassName) { // есть есть родная фукнция, используем ее

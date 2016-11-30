@@ -235,3 +235,4 @@ D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.XtraRichEdit.v1
 D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
 D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\templates.ProgressForm.resources
+D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csprojResolveAssemblyReference.cache

@@ -127,3 +127,4 @@ D:\Data\C#\Projects\KozaDisk\App\bin\Release\de\DevExpress.XtraNavBar.v16.1.reso
 D:\Data\C#\Projects\KozaDisk\App\bin\Release\es\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Release\ja\DevExpress.XtraNavBar.v16.1.resources.dll
 D:\Data\C#\Projects\KozaDisk\App\bin\Release\ru\DevExpress.XtraNavBar.v16.1.resources.dll
+D:\Data\C#\Projects\KozaDisk\App\bin\Release\Koza.exe.config
