@@ -1,0 +1,7 @@
+﻿  main.cpp
+main.cpp(5): warning C4101: i: неиспользованная локальная переменная
+  Создание кода
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  launcher.vcxproj -> D:\Data\C#\Projects\KozaDisk\Release\launcher.exe
+  launcher.vcxproj -> D:\Data\C#\Projects\KozaDisk\Release\launcher.pdb (Full PDB)

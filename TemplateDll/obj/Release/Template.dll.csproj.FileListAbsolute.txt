@@ -138,3 +138,4 @@ D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Release\ru\DevExpress.XtraRichEdit.
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Release\templates.PrintForm.resources
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Release\templates.PrintRibbonControllerResources.resources
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Release\templates.ProgressForm.resources
+D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Release\Template.dll.csprojResolveAssemblyReference.cache
