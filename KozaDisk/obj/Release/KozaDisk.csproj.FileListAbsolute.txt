@@ -1,0 +1,5 @@
+D:\Data\C#\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe.config
+D:\Data\C#\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe
+D:\Data\C#\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.pdb
+D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.exe
+D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.pdb
