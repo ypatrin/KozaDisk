@@ -83,5 +83,10 @@ namespace KozaDisk
                 this.Close();
             }
         }
+
+        private void CreateUserBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

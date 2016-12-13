@@ -29,8 +29,11 @@ namespace KozaDisk
 
         private void CreateLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var addUserForm = new AddUserForm();
-            addUserForm.ShowDialog();
+            //var addUserForm = new AddUserForm();
+            //addUserForm.ShowDialog();
+
+            var autoFillForm = new Forms.AutofillForm();
+            autoFillForm.ShowDialog();
 
             usersBox.Items.Clear();
             Users users = new Users();

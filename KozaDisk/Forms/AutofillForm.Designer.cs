@@ -1,0 +1,727 @@
+﻿namespace KozaDisk.Forms
+{
+    partial class AutofillForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutofillForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.CreateUserBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.TabButton3 = new System.Windows.Forms.Button();
+            this.TabButton2 = new System.Windows.Forms.Button();
+            this.TabButton1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Tabs = new TablessControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.PlaceBox = new System.Windows.Forms.TextBox();
+            this.UserNameBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.CodeBox = new System.Windows.Forms.TextBox();
+            this.UnitBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BankBox = new System.Windows.Forms.TextBox();
+            this.FaxBox = new System.Windows.Forms.TextBox();
+            this.AddressBox = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.TelephoneBox = new System.Windows.Forms.TextBox();
+            this.LegalAddressBox = new System.Windows.Forms.TextBox();
+            this.AbbreviationGenitiveBox = new System.Windows.Forms.TextBox();
+            this.SubordinationGenitiveBox = new System.Windows.Forms.TextBox();
+            this.SubordinationBox = new System.Windows.Forms.TextBox();
+            this.AbbreviationBox = new System.Windows.Forms.TextBox();
+            this.FullNameGenitiveBox = new System.Windows.Forms.TextBox();
+            this.FullNameBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel8 = new System.Windows.Forms.Label();
+            this.metroLabel27 = new System.Windows.Forms.Label();
+            this.metroLabel29 = new System.Windows.Forms.Label();
+            this.metroLabel26 = new System.Windows.Forms.Label();
+            this.metroLabel28 = new System.Windows.Forms.Label();
+            this.metroLabel15 = new System.Windows.Forms.Label();
+            this.metroLabel5 = new System.Windows.Forms.Label();
+            this.metroLabel7 = new System.Windows.Forms.Label();
+            this.metroLabel6 = new System.Windows.Forms.Label();
+            this.metroLabel4 = new System.Windows.Forms.Label();
+            this.metroLabel3 = new System.Windows.Forms.Label();
+            this.metroLabel2 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.InitialsCadreBox = new System.Windows.Forms.TextBox();
+            this.ChiefPositionBox = new System.Windows.Forms.TextBox();
+            this.ChiefInitialsBox = new System.Windows.Forms.TextBox();
+            this.ChiefSurnameDativeBox = new System.Windows.Forms.TextBox();
+            this.SurnameCadreBox = new System.Windows.Forms.TextBox();
+            this.PositionCadreGenitiveBox = new System.Windows.Forms.TextBox();
+            this.ChiefNameGenitiveBox = new System.Windows.Forms.TextBox();
+            this.ChiefNameBox = new System.Windows.Forms.TextBox();
+            this.ChiefSurnameBox = new System.Windows.Forms.TextBox();
+            this.PositionCadreBox = new System.Windows.Forms.TextBox();
+            this.ChiefPositionLowerBox = new System.Windows.Forms.TextBox();
+            this.ChiefPositionDativeBox = new System.Windows.Forms.TextBox();
+            this.metroLabel24 = new System.Windows.Forms.Label();
+            this.metroLabel17 = new System.Windows.Forms.Label();
+            this.metroLabel18 = new System.Windows.Forms.Label();
+            this.metroLabel19 = new System.Windows.Forms.Label();
+            this.metroLabel30 = new System.Windows.Forms.Label();
+            this.metroLabel23 = new System.Windows.Forms.Label();
+            this.metroLabel13 = new System.Windows.Forms.Label();
+            this.metroLabel14 = new System.Windows.Forms.Label();
+            this.metroLabel22 = new System.Windows.Forms.Label();
+            this.metroLabel21 = new System.Windows.Forms.Label();
+            this.metroLabel20 = new System.Windows.Forms.Label();
+            this.metroLabel12 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.Tabs.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.panel6);
+            this.panel8.Controls.Add(this.panel2);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.panel9);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.Tabs);
+            resources.ApplyResources(this.panel10, "panel10");
+            this.panel10.Name = "panel10";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.CancelButton);
+            this.panel9.Controls.Add(this.CreateUserBtn);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.White;
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CancelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.CancelButton, "CancelButton");
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // CreateUserBtn
+            // 
+            this.CreateUserBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.CreateUserBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CreateUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.CreateUserBtn, "CreateUserBtn");
+            this.CreateUserBtn.ForeColor = System.Drawing.Color.White;
+            this.CreateUserBtn.Name = "CreateUserBtn";
+            this.CreateUserBtn.UseVisualStyleBackColor = false;
+            this.CreateUserBtn.Click += new System.EventHandler(this.CreateUserBtn_Click);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.TabButton3);
+            this.panel7.Controls.Add(this.TabButton2);
+            this.panel7.Controls.Add(this.TabButton1);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // TabButton3
+            // 
+            this.TabButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
+            this.TabButton3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TabButton3.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.TabButton3, "TabButton3");
+            this.TabButton3.ForeColor = System.Drawing.Color.White;
+            this.TabButton3.Name = "TabButton3";
+            this.TabButton3.UseVisualStyleBackColor = false;
+            this.TabButton3.Click += new System.EventHandler(this.TabButton3_Click);
+            // 
+            // TabButton2
+            // 
+            this.TabButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
+            this.TabButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TabButton2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.TabButton2, "TabButton2");
+            this.TabButton2.ForeColor = System.Drawing.Color.White;
+            this.TabButton2.Name = "TabButton2";
+            this.TabButton2.UseVisualStyleBackColor = false;
+            this.TabButton2.Click += new System.EventHandler(this.TabButton2_Click);
+            // 
+            // TabButton1
+            // 
+            this.TabButton1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.TabButton1, "TabButton1");
+            this.TabButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TabButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.TabButton1.Name = "TabButton1";
+            this.TabButton1.UseVisualStyleBackColor = false;
+            this.TabButton1.Click += new System.EventHandler(this.TabButton1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // Tabs
+            // 
+            this.Tabs.Controls.Add(this.tabPage1);
+            this.Tabs.Controls.Add(this.tabPage2);
+            this.Tabs.Controls.Add(this.tabPage3);
+            resources.ApplyResources(this.Tabs, "Tabs");
+            this.Tabs.Name = "Tabs";
+            this.Tabs.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.PlaceBox);
+            this.tabPage1.Controls.Add(this.UserNameBox);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.metroLabel1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // PlaceBox
+            // 
+            this.PlaceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.PlaceBox, "PlaceBox");
+            this.PlaceBox.Name = "PlaceBox";
+            // 
+            // UserNameBox
+            // 
+            this.UserNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.UserNameBox, "UserNameBox");
+            this.UserNameBox.Name = "UserNameBox";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // metroLabel1
+            // 
+            resources.ApplyResources(this.metroLabel1, "metroLabel1");
+            this.metroLabel1.Name = "metroLabel1";
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Controls.Add(this.CodeBox);
+            this.tabPage2.Controls.Add(this.UnitBox);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.BankBox);
+            this.tabPage2.Controls.Add(this.FaxBox);
+            this.tabPage2.Controls.Add(this.AddressBox);
+            this.tabPage2.Controls.Add(this.EmailBox);
+            this.tabPage2.Controls.Add(this.TelephoneBox);
+            this.tabPage2.Controls.Add(this.LegalAddressBox);
+            this.tabPage2.Controls.Add(this.AbbreviationGenitiveBox);
+            this.tabPage2.Controls.Add(this.SubordinationGenitiveBox);
+            this.tabPage2.Controls.Add(this.SubordinationBox);
+            this.tabPage2.Controls.Add(this.AbbreviationBox);
+            this.tabPage2.Controls.Add(this.FullNameGenitiveBox);
+            this.tabPage2.Controls.Add(this.FullNameBox);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.metroLabel8);
+            this.tabPage2.Controls.Add(this.metroLabel27);
+            this.tabPage2.Controls.Add(this.metroLabel29);
+            this.tabPage2.Controls.Add(this.metroLabel26);
+            this.tabPage2.Controls.Add(this.metroLabel28);
+            this.tabPage2.Controls.Add(this.metroLabel15);
+            this.tabPage2.Controls.Add(this.metroLabel5);
+            this.tabPage2.Controls.Add(this.metroLabel7);
+            this.tabPage2.Controls.Add(this.metroLabel6);
+            this.tabPage2.Controls.Add(this.metroLabel4);
+            this.tabPage2.Controls.Add(this.metroLabel3);
+            this.tabPage2.Controls.Add(this.metroLabel2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // CodeBox
+            // 
+            this.CodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.CodeBox, "CodeBox");
+            this.CodeBox.Name = "CodeBox";
+            // 
+            // UnitBox
+            // 
+            this.UnitBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.UnitBox, "UnitBox");
+            this.UnitBox.Name = "UnitBox";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // BankBox
+            // 
+            this.BankBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.BankBox, "BankBox");
+            this.BankBox.Name = "BankBox";
+            // 
+            // FaxBox
+            // 
+            this.FaxBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.FaxBox, "FaxBox");
+            this.FaxBox.Name = "FaxBox";
+            // 
+            // AddressBox
+            // 
+            this.AddressBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.AddressBox, "AddressBox");
+            this.AddressBox.Name = "AddressBox";
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.EmailBox, "EmailBox");
+            this.EmailBox.Name = "EmailBox";
+            // 
+            // TelephoneBox
+            // 
+            this.TelephoneBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.TelephoneBox, "TelephoneBox");
+            this.TelephoneBox.Name = "TelephoneBox";
+            // 
+            // LegalAddressBox
+            // 
+            this.LegalAddressBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.LegalAddressBox, "LegalAddressBox");
+            this.LegalAddressBox.Name = "LegalAddressBox";
+            // 
+            // AbbreviationGenitiveBox
+            // 
+            this.AbbreviationGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.AbbreviationGenitiveBox, "AbbreviationGenitiveBox");
+            this.AbbreviationGenitiveBox.Name = "AbbreviationGenitiveBox";
+            // 
+            // SubordinationGenitiveBox
+            // 
+            this.SubordinationGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.SubordinationGenitiveBox, "SubordinationGenitiveBox");
+            this.SubordinationGenitiveBox.Name = "SubordinationGenitiveBox";
+            // 
+            // SubordinationBox
+            // 
+            this.SubordinationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.SubordinationBox, "SubordinationBox");
+            this.SubordinationBox.Name = "SubordinationBox";
+            // 
+            // AbbreviationBox
+            // 
+            this.AbbreviationBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.AbbreviationBox, "AbbreviationBox");
+            this.AbbreviationBox.Name = "AbbreviationBox";
+            // 
+            // FullNameGenitiveBox
+            // 
+            this.FullNameGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.FullNameGenitiveBox, "FullNameGenitiveBox");
+            this.FullNameGenitiveBox.Name = "FullNameGenitiveBox";
+            // 
+            // FullNameBox
+            // 
+            this.FullNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            resources.ApplyResources(this.FullNameBox, "FullNameBox");
+            this.FullNameBox.Name = "FullNameBox";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // metroLabel8
+            // 
+            resources.ApplyResources(this.metroLabel8, "metroLabel8");
+            this.metroLabel8.Name = "metroLabel8";
+            // 
+            // metroLabel27
+            // 
+            resources.ApplyResources(this.metroLabel27, "metroLabel27");
+            this.metroLabel27.Name = "metroLabel27";
+            // 
+            // metroLabel29
+            // 
+            resources.ApplyResources(this.metroLabel29, "metroLabel29");
+            this.metroLabel29.Name = "metroLabel29";
+            // 
+            // metroLabel26
+            // 
+            resources.ApplyResources(this.metroLabel26, "metroLabel26");
+            this.metroLabel26.Name = "metroLabel26";
+            // 
+            // metroLabel28
+            // 
+            resources.ApplyResources(this.metroLabel28, "metroLabel28");
+            this.metroLabel28.Name = "metroLabel28";
+            // 
+            // metroLabel15
+            // 
+            resources.ApplyResources(this.metroLabel15, "metroLabel15");
+            this.metroLabel15.Name = "metroLabel15";
+            // 
+            // metroLabel5
+            // 
+            resources.ApplyResources(this.metroLabel5, "metroLabel5");
+            this.metroLabel5.Name = "metroLabel5";
+            // 
+            // metroLabel7
+            // 
+            resources.ApplyResources(this.metroLabel7, "metroLabel7");
+            this.metroLabel7.Name = "metroLabel7";
+            // 
+            // metroLabel6
+            // 
+            resources.ApplyResources(this.metroLabel6, "metroLabel6");
+            this.metroLabel6.Name = "metroLabel6";
+            // 
+            // metroLabel4
+            // 
+            resources.ApplyResources(this.metroLabel4, "metroLabel4");
+            this.metroLabel4.Name = "metroLabel4";
+            // 
+            // metroLabel3
+            // 
+            resources.ApplyResources(this.metroLabel3, "metroLabel3");
+            this.metroLabel3.Name = "metroLabel3";
+            // 
+            // metroLabel2
+            // 
+            resources.ApplyResources(this.metroLabel2, "metroLabel2");
+            this.metroLabel2.Name = "metroLabel2";
+            // 
+            // tabPage3
+            // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Controls.Add(this.InitialsCadreBox);
+            this.tabPage3.Controls.Add(this.ChiefPositionBox);
+            this.tabPage3.Controls.Add(this.ChiefInitialsBox);
+            this.tabPage3.Controls.Add(this.ChiefSurnameDativeBox);
+            this.tabPage3.Controls.Add(this.SurnameCadreBox);
+            this.tabPage3.Controls.Add(this.PositionCadreGenitiveBox);
+            this.tabPage3.Controls.Add(this.ChiefNameGenitiveBox);
+            this.tabPage3.Controls.Add(this.ChiefNameBox);
+            this.tabPage3.Controls.Add(this.ChiefSurnameBox);
+            this.tabPage3.Controls.Add(this.PositionCadreBox);
+            this.tabPage3.Controls.Add(this.ChiefPositionLowerBox);
+            this.tabPage3.Controls.Add(this.ChiefPositionDativeBox);
+            this.tabPage3.Controls.Add(this.metroLabel24);
+            this.tabPage3.Controls.Add(this.metroLabel17);
+            this.tabPage3.Controls.Add(this.metroLabel18);
+            this.tabPage3.Controls.Add(this.metroLabel19);
+            this.tabPage3.Controls.Add(this.metroLabel30);
+            this.tabPage3.Controls.Add(this.metroLabel23);
+            this.tabPage3.Controls.Add(this.metroLabel13);
+            this.tabPage3.Controls.Add(this.metroLabel14);
+            this.tabPage3.Controls.Add(this.metroLabel22);
+            this.tabPage3.Controls.Add(this.metroLabel21);
+            this.tabPage3.Controls.Add(this.metroLabel20);
+            this.tabPage3.Controls.Add(this.metroLabel12);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // InitialsCadreBox
+            // 
+            resources.ApplyResources(this.InitialsCadreBox, "InitialsCadreBox");
+            this.InitialsCadreBox.Name = "InitialsCadreBox";
+            // 
+            // ChiefPositionBox
+            // 
+            resources.ApplyResources(this.ChiefPositionBox, "ChiefPositionBox");
+            this.ChiefPositionBox.Name = "ChiefPositionBox";
+            // 
+            // ChiefInitialsBox
+            // 
+            resources.ApplyResources(this.ChiefInitialsBox, "ChiefInitialsBox");
+            this.ChiefInitialsBox.Name = "ChiefInitialsBox";
+            // 
+            // ChiefSurnameDativeBox
+            // 
+            resources.ApplyResources(this.ChiefSurnameDativeBox, "ChiefSurnameDativeBox");
+            this.ChiefSurnameDativeBox.Name = "ChiefSurnameDativeBox";
+            // 
+            // SurnameCadreBox
+            // 
+            resources.ApplyResources(this.SurnameCadreBox, "SurnameCadreBox");
+            this.SurnameCadreBox.Name = "SurnameCadreBox";
+            // 
+            // PositionCadreGenitiveBox
+            // 
+            resources.ApplyResources(this.PositionCadreGenitiveBox, "PositionCadreGenitiveBox");
+            this.PositionCadreGenitiveBox.Name = "PositionCadreGenitiveBox";
+            // 
+            // ChiefNameGenitiveBox
+            // 
+            resources.ApplyResources(this.ChiefNameGenitiveBox, "ChiefNameGenitiveBox");
+            this.ChiefNameGenitiveBox.Name = "ChiefNameGenitiveBox";
+            // 
+            // ChiefNameBox
+            // 
+            resources.ApplyResources(this.ChiefNameBox, "ChiefNameBox");
+            this.ChiefNameBox.Name = "ChiefNameBox";
+            // 
+            // ChiefSurnameBox
+            // 
+            resources.ApplyResources(this.ChiefSurnameBox, "ChiefSurnameBox");
+            this.ChiefSurnameBox.Name = "ChiefSurnameBox";
+            // 
+            // PositionCadreBox
+            // 
+            resources.ApplyResources(this.PositionCadreBox, "PositionCadreBox");
+            this.PositionCadreBox.Name = "PositionCadreBox";
+            // 
+            // ChiefPositionLowerBox
+            // 
+            resources.ApplyResources(this.ChiefPositionLowerBox, "ChiefPositionLowerBox");
+            this.ChiefPositionLowerBox.Name = "ChiefPositionLowerBox";
+            // 
+            // ChiefPositionDativeBox
+            // 
+            resources.ApplyResources(this.ChiefPositionDativeBox, "ChiefPositionDativeBox");
+            this.ChiefPositionDativeBox.Name = "ChiefPositionDativeBox";
+            // 
+            // metroLabel24
+            // 
+            resources.ApplyResources(this.metroLabel24, "metroLabel24");
+            this.metroLabel24.Name = "metroLabel24";
+            // 
+            // metroLabel17
+            // 
+            resources.ApplyResources(this.metroLabel17, "metroLabel17");
+            this.metroLabel17.Name = "metroLabel17";
+            // 
+            // metroLabel18
+            // 
+            resources.ApplyResources(this.metroLabel18, "metroLabel18");
+            this.metroLabel18.Name = "metroLabel18";
+            // 
+            // metroLabel19
+            // 
+            resources.ApplyResources(this.metroLabel19, "metroLabel19");
+            this.metroLabel19.Name = "metroLabel19";
+            // 
+            // metroLabel30
+            // 
+            resources.ApplyResources(this.metroLabel30, "metroLabel30");
+            this.metroLabel30.Name = "metroLabel30";
+            // 
+            // metroLabel23
+            // 
+            resources.ApplyResources(this.metroLabel23, "metroLabel23");
+            this.metroLabel23.Name = "metroLabel23";
+            // 
+            // metroLabel13
+            // 
+            resources.ApplyResources(this.metroLabel13, "metroLabel13");
+            this.metroLabel13.Name = "metroLabel13";
+            // 
+            // metroLabel14
+            // 
+            resources.ApplyResources(this.metroLabel14, "metroLabel14");
+            this.metroLabel14.Name = "metroLabel14";
+            // 
+            // metroLabel22
+            // 
+            resources.ApplyResources(this.metroLabel22, "metroLabel22");
+            this.metroLabel22.Name = "metroLabel22";
+            // 
+            // metroLabel21
+            // 
+            resources.ApplyResources(this.metroLabel21, "metroLabel21");
+            this.metroLabel21.Name = "metroLabel21";
+            // 
+            // metroLabel20
+            // 
+            resources.ApplyResources(this.metroLabel20, "metroLabel20");
+            this.metroLabel20.Name = "metroLabel20";
+            // 
+            // metroLabel12
+            // 
+            resources.ApplyResources(this.metroLabel12, "metroLabel12");
+            this.metroLabel12.Name = "metroLabel12";
+            // 
+            // AutofillForm
+            // 
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AutofillForm";
+            this.panel1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.Tabs.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button TabButton3;
+        private System.Windows.Forms.Button TabButton2;
+        private System.Windows.Forms.Button TabButton1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel10;
+        private TablessControl Tabs;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox PlaceBox;
+        private System.Windows.Forms.TextBox UserNameBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label metroLabel1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox BankBox;
+        private System.Windows.Forms.TextBox FaxBox;
+        private System.Windows.Forms.TextBox AddressBox;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.TextBox TelephoneBox;
+        private System.Windows.Forms.TextBox LegalAddressBox;
+        private System.Windows.Forms.TextBox AbbreviationGenitiveBox;
+        private System.Windows.Forms.TextBox SubordinationGenitiveBox;
+        private System.Windows.Forms.TextBox SubordinationBox;
+        private System.Windows.Forms.TextBox AbbreviationBox;
+        private System.Windows.Forms.TextBox FullNameGenitiveBox;
+        private System.Windows.Forms.TextBox FullNameBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label metroLabel8;
+        private System.Windows.Forms.Label metroLabel27;
+        private System.Windows.Forms.Label metroLabel29;
+        private System.Windows.Forms.Label metroLabel26;
+        private System.Windows.Forms.Label metroLabel28;
+        private System.Windows.Forms.Label metroLabel15;
+        private System.Windows.Forms.Label metroLabel5;
+        private System.Windows.Forms.Label metroLabel7;
+        private System.Windows.Forms.Label metroLabel6;
+        private System.Windows.Forms.Label metroLabel4;
+        private System.Windows.Forms.Label metroLabel3;
+        private System.Windows.Forms.Label metroLabel2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox InitialsCadreBox;
+        private System.Windows.Forms.TextBox ChiefPositionBox;
+        private System.Windows.Forms.TextBox ChiefInitialsBox;
+        private System.Windows.Forms.TextBox ChiefSurnameDativeBox;
+        private System.Windows.Forms.TextBox SurnameCadreBox;
+        private System.Windows.Forms.TextBox PositionCadreGenitiveBox;
+        private System.Windows.Forms.TextBox ChiefNameGenitiveBox;
+        private System.Windows.Forms.TextBox ChiefNameBox;
+        private System.Windows.Forms.TextBox ChiefSurnameBox;
+        private System.Windows.Forms.TextBox PositionCadreBox;
+        private System.Windows.Forms.TextBox ChiefPositionLowerBox;
+        private System.Windows.Forms.TextBox ChiefPositionDativeBox;
+        private System.Windows.Forms.Label metroLabel24;
+        private System.Windows.Forms.Label metroLabel17;
+        private System.Windows.Forms.Label metroLabel18;
+        private System.Windows.Forms.Label metroLabel19;
+        private System.Windows.Forms.Label metroLabel30;
+        private System.Windows.Forms.Label metroLabel23;
+        private System.Windows.Forms.Label metroLabel13;
+        private System.Windows.Forms.Label metroLabel14;
+        private System.Windows.Forms.Label metroLabel22;
+        private System.Windows.Forms.Label metroLabel21;
+        private System.Windows.Forms.Label metroLabel20;
+        private System.Windows.Forms.Label metroLabel12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button CreateUserBtn;
+        private System.Windows.Forms.TextBox CodeBox;
+        private System.Windows.Forms.TextBox UnitBox;
+        private System.Windows.Forms.Label label3;
+    }
+}
