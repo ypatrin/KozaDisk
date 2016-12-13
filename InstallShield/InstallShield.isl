@@ -2792,7 +2792,6 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_683D0075_F8B9_4780_823B_C91BE8FFB934_</td><td>Internet Explorer 8.0 for Windows XP (x86).prq</td><td/><td/><td/></row>
 		<row><td>_89AD3C95_F359_4058_B562_C748780CCF83_</td><td>Microsoft .NET Framework 4.0 Full.prq</td><td>0</td><td/><td/></row>
 	</table>
 
@@ -4183,7 +4182,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{3181A929-36FB-4D3C-BBDB-0A440EB139CA}</td></row>
 		<row><td>ISUSSignature</td><td>{5C01876E-8EDA-4C0B-A53B-10836F398C6F}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpgradePaths,viewUpdateService,viewSystemSearch,viewRelease,viewCustomActions,viewObjects</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpgradePaths,viewUpdateService,viewSystemSearch,viewRelease,viewCustomActions,viewObjects,viewRegistry,viewAppFiles</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4632,7 +4631,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S0">Value</col>
 		<col def="s72">Component_</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>Registry1</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>InstallPath</td><td>[INSTALLDIR]</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
+		<row><td>Registry1</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>InstallPath</td><td>[INSTALLDIR]Koza.exe</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
 		<row><td>Registry3</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>Version</td><td>[ProductVersion]</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
 	</table>
 
