@@ -120,6 +120,9 @@ namespace KozaDisk
                     }
                 }
 
+                //copy db from cd
+
+
                 //open form
                 Program.openForm();
             }
