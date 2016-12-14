@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.usersBox = new System.Windows.Forms.ComboBox();
-            this.metroButton1 = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.CreateLink = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -43,13 +43,14 @@
             this.usersBox.Size = new System.Drawing.Size(452, 21);
             this.usersBox.TabIndex = 0;
             // 
-            // metroButton1
+            // LoginButton
             // 
-            this.metroButton1.Location = new System.Drawing.Point(348, 160);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(127, 28);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "Вхід";
+            this.LoginButton.Location = new System.Drawing.Point(348, 160);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(127, 28);
+            this.LoginButton.TabIndex = 1;
+            this.LoginButton.Text = "Вхід";
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // CreateLink
             // 
@@ -80,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(498, 208);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CreateLink);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.usersBox);
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -95,7 +96,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox usersBox;
-        private System.Windows.Forms.Button metroButton1;
+        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.LinkLabel CreateLink;
         private System.Windows.Forms.Label label1;
     }

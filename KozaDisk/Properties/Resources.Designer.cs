@@ -71,6 +71,75 @@ namespace KozaDisk.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
+        ///&lt;html&gt;
+        ///	&lt;head&gt;
+        ///	&lt;/head&gt;
+        ///	&lt;body bgcolor=&quot;#f9f9f9&quot; style=&quot;margin: 0&quot;&gt;
+        ///		&lt;style&gt;
+        ///			body {
+        ///				background-color: #f9f9f9;
+        ///			}
+        ///			
+        ///			.disk{
+        ///				width: 100%;
+        ///                height: 35px;
+        ///                border: 1px solid #f9f9f9;
+        ///                cursor: pointer;
+        ///                margin-top:15px;
+        ///
+        ///                //border-top: 1px solid black;
+        ///                //border-bottom: 1px solid #f9f9f9;
+        ///                //border-bottom: 1px solid black;
+        ///			}
+        ///
+        ///            .folder {
+        ///  [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string disk_tree {
+            get {
+                return ResourceManager.GetString("disk_tree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///&lt;/head&gt;
+        ///&lt;body bgcolor=&quot;#f9f9f9&quot;&gt;
+        ///    &lt;style&gt;
+        ///    &lt;/style&gt;
+        ///&lt;/body&gt;
+        ///&lt;/html&gt;.
+        /// </summary>
+        internal static string disk_tree_files {
+            get {
+                return ResourceManager.GetString("disk_tree_files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconName {
+            get {
+                object obj = ResourceManager.GetObject("iconName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
         internal static byte[] MyriadProRegular {

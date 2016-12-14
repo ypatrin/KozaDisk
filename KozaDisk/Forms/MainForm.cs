@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using KozaDisk.Forms;
 
 namespace KozaDisk
 {
@@ -29,9 +30,6 @@ namespace KozaDisk
 
         private void CreateLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //var addUserForm = new AddUserForm();
-            //addUserForm.ShowDialog();
-
             var autoFillForm = new Forms.AutofillForm();
             autoFillForm.ShowDialog();
 
@@ -42,6 +40,26 @@ namespace KozaDisk
             {
                 usersBox.Items.Add(user.UserName);
             }
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            string userName = usersBox.Text;
+
+            if (String.IsNullOrEmpty(userName))
+            {
+                MessageBox.Show("Оберіть будь ласка користувача.", "KozaDisk", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Users users = new Users();
+            User user = users.getUser(userName);
+
+            TemplatesList templatesList = new TemplatesList();
+            templatesList.setUserData(user);
+            templatesList.Show();
+
+            this.Hide();
         }
     }
 }

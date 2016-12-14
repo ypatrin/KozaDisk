@@ -11,5 +11,6 @@ namespace KozaDisk
         public static string OldKozaName = "RYBA";
         public static string TempIniFile = System.IO.Path.GetTempPath() + @"koza_temp.ini";
         public static string ApplcationStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\KozaDisk\";
+        public static string ApplcationPath = Environment.CurrentDirectory + @"\";
     }
 }

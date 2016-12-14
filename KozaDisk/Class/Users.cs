@@ -33,5 +33,22 @@ namespace KozaDisk
 
             return users.ToArray();
         }
+
+        public User getUser(string UserName)
+        {
+            string userStorage = Constant.ApplcationStorage;
+            string userDirectory = userStorage + @"users\" + UserName;
+
+            XmlSerializer serializer = new XmlSerializer(typeof(User));
+            User userObj;
+
+            using (var reader = File.OpenText(userDirectory + @"\userdata.xml"))
+            {
+                userObj = (User)serializer.Deserialize(reader);
+                userObj.UserName = Path.GetFileName(userDirectory);
+            }
+
+            return userObj;
+        }
     }
 }
