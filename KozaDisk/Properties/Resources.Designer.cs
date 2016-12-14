@@ -73,28 +73,28 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
         ///&lt;html&gt;
-        ///	&lt;head&gt;
-        ///	&lt;/head&gt;
-        ///	&lt;body bgcolor=&quot;#f9f9f9&quot; style=&quot;margin: 0&quot;&gt;
-        ///		&lt;style&gt;
-        ///			body {
-        ///				background-color: #f9f9f9;
-        ///			}
-        ///			
-        ///			.disk{
-        ///				width: 100%;
-        ///                height: 35px;
-        ///                border: 1px solid #f9f9f9;
-        ///                cursor: pointer;
-        ///                margin-top:15px;
+        ///&lt;head&gt;
+        ///&lt;/head&gt;
+        ///&lt;body bgcolor=&quot;#f9f9f9&quot; style=&quot;margin: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            background-color: #f9f9f9;
+        ///        }
         ///
-        ///                //border-top: 1px solid black;
-        ///                //border-bottom: 1px solid #f9f9f9;
-        ///                //border-bottom: 1px solid black;
-        ///			}
+        ///        .disk {
+        ///            width: 280px;
+        ///            height: 35px;
+        ///            cursor: pointer;
         ///
-        ///            .folder {
-        ///  [остаток строки не уместился]&quot;;.
+        ///            padding-top: 10px;
+        ///            padding-bottom: 10px;
+        ///
+        ///            border: 1px solid #f9f9f9;
+        ///            border-top: 1px solid black;
+        ///        }
+        ///
+        ///        .first {
+        ///            border-top: 1px solid  [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree {
             get {
@@ -107,11 +107,22 @@ namespace KozaDisk.Properties {
         ///&lt;html&gt;
         ///&lt;head&gt;
         ///&lt;/head&gt;
-        ///&lt;body bgcolor=&quot;#f9f9f9&quot;&gt;
+        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
         ///    &lt;style&gt;
-        ///    &lt;/style&gt;
-        ///&lt;/body&gt;
-        ///&lt;/html&gt;.
+        ///        .document_head {
+        ///            width: 100%;
+        ///            padding: 10px;
+        ///            background-color: #f9f9f9;
+        ///            margin-bottom: 15px;
+        ///        }
+        ///
+        ///        .document {
+        ///            width: 100%;
+        ///            padding: 10px;
+        ///            background-color: #f9f9f9;
+        ///            margin-bottom: 15px;
+        /// [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree_files {
             get {
@@ -132,9 +143,29 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Listing_focus {
+            get {
+                object obj = ResourceManager.GetObject("Listing-focus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu {
+            get {
+                object obj = ResourceManager.GetObject("menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

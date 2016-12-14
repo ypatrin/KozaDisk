@@ -1,7 +1,40 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 </head>
-<body bgcolor="#f9f9f9" style="margin: 0">
+<body bgcolor="" style="margin-top: 0; font-family: Minion Pro">
+    <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
+    <style>
+        .document_head {
+            width: 98%;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+        }
+
+        .document {
+            width: 98%;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .document:hover {
+            background-color: #F3F8F8;
+        }
+    </style>
+    <div class="document_head">Назва</div>
+    %templates%
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".document").click(function () {
+                var document_id = $(this).attr("id");
+                var db = $(this).attr("db");
+                window.external.openDocument(document_id, db);
+            });
+        });
+    </script>
 </body>
 </html>

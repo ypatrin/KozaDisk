@@ -6,9 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Permissions;
+using System.Data.Common;
+using System.Data.SQLite;
 
 namespace KozaDisk.Forms
 {
+    [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
+    [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TemplatesList : Form
     {
         User userData = null;
@@ -31,6 +36,17 @@ namespace KozaDisk.Forms
 
         private void TemplatesList_Load(object sender, EventArgs e)
         {
+            //prepare browser
+            TreeBrowser.AllowWebBrowserDrop = false;
+            TreeBrowser.IsWebBrowserContextMenuEnabled = false;
+            TreeBrowser.WebBrowserShortcutsEnabled = false;
+            TreeBrowser.ObjectForScripting = this;
+
+            FilesBrowser.AllowWebBrowserDrop = false;
+            FilesBrowser.IsWebBrowserContextMenuEnabled = false;
+            FilesBrowser.WebBrowserShortcutsEnabled = false;
+            FilesBrowser.ObjectForScripting = this;
+
             this.UserNameLabel.Text = this.userData.UserName;
 
             var disks = this.disks.getDisksList();
@@ -41,6 +57,7 @@ namespace KozaDisk.Forms
             string disksHtml = "";
 
             int count = 0;
+            int folders_count = 0;
 
             foreach(Disk disk in disks)
             {
@@ -58,19 +75,11 @@ namespace KozaDisk.Forms
                 disksHtml += $"<div class=\"folders\" id=\"folders_{count}\">";
                 foreach (Folder folder in folders)
                 {
-                    disksHtml += $"<div class=\"folder\" id=\"{folder.id}\">";
+                    folders_count = folders_count + 1;
+                    disksHtml += $"<div class=\"folder\" id=\"{folders_count}\" db=\"{disk.db}\">";
                     disksHtml += $"<div class=\"img\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder.png\"/></div>";
                     disksHtml += $"<div class=\"name\">{folder.name}</div>";
                     disksHtml += "</div>";
-
-                    //get list of documents
-                    var templates = new Templates();
-                    templates.setDB(disk.db);
-
-                    foreach (var template in templates.getDocuments(folder.id))
-                    {
-
-                    }                   
                 }
 
                 disksHtml += "</div>";
@@ -78,6 +87,7 @@ namespace KozaDisk.Forms
 
             treeHtml = treeHtml.Replace("%disks_tree%", disksHtml);
             treeHtml = treeHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            treeHtml = treeHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\",@"/"));
 
             this.TreeBrowser.Navigate("about:blank");
             this.TreeBrowser.DocumentText = "0";
@@ -95,6 +105,9 @@ namespace KozaDisk.Forms
             // FILES
 
             string filesHtml = Properties.Resources.disk_tree_files;
+            string templatesHtml = "";
+            filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            filesHtml = filesHtml.Replace("%templates%", templatesHtml);
 
             this.FilesBrowser.Navigate("about:blank");
             this.FilesBrowser.DocumentText = "0";
@@ -107,6 +120,53 @@ namespace KozaDisk.Forms
                 Application.DoEvents();
                 System.Threading.Thread.Sleep(5);
             }
+        }
+
+        public void openFolder(string folderId, string db)
+        {
+            var templates = new Templates();
+            templates.setDB(db);
+
+            string filesHtml = Properties.Resources.disk_tree_files;
+            string templatesHtml = "";
+            
+            foreach (var template in templates.getDocuments(folderId))
+            {
+                templatesHtml += $"<div class=\"document\" id=\"{template.id}\" db=\"{db}\">{template.name}</div>";
+            }
+
+            filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            filesHtml = filesHtml.Replace("%templates%", templatesHtml);
+
+            this.FilesBrowser.Navigate("about:blank");
+            this.FilesBrowser.DocumentText = "0";
+            this.FilesBrowser.Document.OpenNew(true);
+            this.FilesBrowser.Document.Write(filesHtml);
+            this.FilesBrowser.Refresh();
+        }
+
+        public void openDocument(string documentId, string db)
+        {
+            string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            reader.Read();
+
+            Template template = new Template();
+
+            template.id = (string)reader["id"].ToString();
+            template.structureId = (string)reader["structure_id"].ToString();
+            template.name = (string)reader["name"].ToString();
+            template.markersXML = (string)reader["markers_xml"].ToString();
+            template.template = (string)reader["template"].ToString();
+            template.type = (string)reader["type"].ToString();
+
+            MessageBox.Show($"Открывает документ id = {template.id}", "KozaDisk", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

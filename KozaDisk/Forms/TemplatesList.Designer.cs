@@ -42,13 +42,16 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.FilesBrowser = new System.Windows.Forms.WebBrowser();
             this.panel9 = new System.Windows.Forms.Panel();
             this.TreeBrowser = new System.Windows.Forms.WebBrowser();
             this.ListTab = new System.Windows.Forms.TabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.FilesBrowser = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -58,10 +61,13 @@
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tabs.SuspendLayout();
             this.TreeTab.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,6 +183,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 81);
@@ -215,6 +222,36 @@
             this.panel8.Size = new System.Drawing.Size(893, 416);
             this.panel8.TabIndex = 2;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox4);
+            this.panel11.Controls.Add(this.pictureBox3);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(832, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(61, 43);
+            this.panel11.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::KozaDisk.Properties.Resources.menu;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::KozaDisk.Properties.Resources.Listing_focus;
+            this.pictureBox3.Location = new System.Drawing.Point(32, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.TreeTab);
@@ -238,6 +275,25 @@
             this.TreeTab.Text = "TreeTab";
             this.TreeTab.UseVisualStyleBackColor = true;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.FilesBrowser);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(306, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(576, 381);
+            this.panel10.TabIndex = 1;
+            // 
+            // FilesBrowser
+            // 
+            this.FilesBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FilesBrowser.Location = new System.Drawing.Point(0, 0);
+            this.FilesBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.FilesBrowser.Name = "FilesBrowser";
+            this.FilesBrowser.ScriptErrorsSuppressed = true;
+            this.FilesBrowser.Size = new System.Drawing.Size(576, 381);
+            this.FilesBrowser.TabIndex = 0;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.TreeBrowser);
@@ -260,31 +316,13 @@
             // 
             // ListTab
             // 
-            this.ListTab.Location = new System.Drawing.Point(4, 25);
+            this.ListTab.Location = new System.Drawing.Point(4, 22);
             this.ListTab.Name = "ListTab";
             this.ListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ListTab.Size = new System.Drawing.Size(885, 387);
+            this.ListTab.Size = new System.Drawing.Size(885, 390);
             this.ListTab.TabIndex = 1;
             this.ListTab.Text = "ListTab";
             this.ListTab.UseVisualStyleBackColor = true;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.FilesBrowser);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(306, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(576, 381);
-            this.panel10.TabIndex = 1;
-            // 
-            // FilesBrowser
-            // 
-            this.FilesBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FilesBrowser.Location = new System.Drawing.Point(0, 0);
-            this.FilesBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.FilesBrowser.Name = "FilesBrowser";
-            this.FilesBrowser.Size = new System.Drawing.Size(576, 381);
-            this.FilesBrowser.TabIndex = 0;
             // 
             // TemplatesList
             // 
@@ -314,10 +352,13 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.Tabs.ResumeLayout(false);
             this.TreeTab.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -345,5 +386,8 @@
         private System.Windows.Forms.TabPage ListTab;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.WebBrowser FilesBrowser;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

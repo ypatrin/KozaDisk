@@ -2,7 +2,7 @@
 <html>
 <head>
 </head>
-<body bgcolor="#f9f9f9" style="margin: 0;">
+<body bgcolor="#f9f9f9" style="margin: 0; font-family: Minion Pro">
     <style>
         body {
             background-color: #f9f9f9;
@@ -26,6 +26,7 @@
 
         .folders {
             display: none;
+            margin-bottom: 15px;
         }
 
         .folders .folder {
@@ -95,6 +96,20 @@
                     $("#folders_" + id).hide();
                 }
                 
+            });
+
+            $(".folder").click(function () {
+                var folder_id = $(this).attr("id");
+                var db = $(this).attr("db");
+
+                window.external.openFolder(folder_id, db);
+
+                $(".folder").each(function () {
+                    var id = $(this).attr("id");
+                    $("div.folder#" + id + " img").attr("src", 'file:///%AppPathUrl%icon/iface/folder.png');
+                });
+
+                $("div.folder#" + folder_id + " img").attr("src", 'file:///%AppPathUrl%icon/iface/folder-open.png');
             });
         });  
     </script>
