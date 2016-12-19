@@ -13,3 +13,26 @@ D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.AutofillForm.uk
 D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.csproj.GenerateResource.Cache
 D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.exe.licenses
 D:\Data\C#\Projects\KozaDisk\KozaDisk\obj\Release\uk-UA\KozaDisk.resources.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe.config
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.exe
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.pdb
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.pdb
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\uk-UA\KozaDisk.resources.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\EntityFramework.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\EntityFramework.SqlServer.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\System.Data.SQLite.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\System.Data.SQLite.EF6.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\System.Data.SQLite.Linq.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\EntityFramework.xml
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\EntityFramework.SqlServer.xml
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\System.Data.SQLite.xml
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.csprojResolveAssemblyReference.cache
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.AutofillForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.MainForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.TemplatesList.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Properties.Resources.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.AutofillForm.uk-UA.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.csproj.GenerateResource.Cache
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.exe.licenses
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\uk-UA\KozaDisk.resources.dll

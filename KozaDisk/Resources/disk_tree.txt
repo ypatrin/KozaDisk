@@ -100,9 +100,10 @@
 
             $(".folder").click(function () {
                 var folder_id = $(this).attr("id");
+				var fid = $(this).attr("fid");
                 var db = $(this).attr("db");
 
-                window.external.openFolder(folder_id, db);
+                window.external.openFolder(fid, db);
 
                 $(".folder").each(function () {
                     var id = $(this).attr("id");

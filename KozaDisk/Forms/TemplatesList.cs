@@ -76,7 +76,7 @@ namespace KozaDisk.Forms
                 foreach (Folder folder in folders)
                 {
                     folders_count = folders_count + 1;
-                    disksHtml += $"<div class=\"folder\" id=\"{folders_count}\" db=\"{disk.db}\">";
+                    disksHtml += $"<div class=\"folder\" id=\"{folders_count}\" db=\"{disk.db}\" fid=\"{folder.id}\">";
                     disksHtml += $"<div class=\"img\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder.png\"/></div>";
                     disksHtml += $"<div class=\"name\">{folder.name}</div>";
                     disksHtml += "</div>";

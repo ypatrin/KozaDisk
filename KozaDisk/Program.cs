@@ -121,7 +121,48 @@ namespace KozaDisk
                 }
 
                 //copy db from cd
+                System.IO.DriveInfo[] drives = System.IO.DriveInfo.GetDrives();
+                foreach (System.IO.DriveInfo drive in drives)
+                {
+                    if (drive.DriveType == System.IO.DriveType.CDRom)
+                    {
+                        string diskFolder = drive.RootDirectory.ToString() + @"KozaDisk\";
+                        
+                        if (Directory.Exists(diskFolder))
+                        {
+                            string xmlFile = diskFolder + "disk.xml";
+                            XmlDocument doc = new XmlDocument();
+                            doc.Load(xmlFile);
 
+                            Disk disk = new Disk();
+
+                            disk.name = doc.DocumentElement.SelectSingleNode("/disk/name").InnerText;
+                            disk.description = doc.DocumentElement.SelectSingleNode("/disk/description").InnerText;
+                            disk.edition = doc.DocumentElement.SelectSingleNode("/disk/edition").InnerText; ;
+                            disk.db = doc.DocumentElement.SelectSingleNode("/disk/db").InnerText;
+
+                            string source_disk_db = diskFolder + disk.db;
+                            string destination_disk_db = Constant.ApplcationStorage + @"db\cd\" + disk.db;
+
+                            string source_disk_xml = diskFolder + "disk.xml";
+                            string destination_disk_xml = Constant.ApplcationStorage + @"db\xml\" + disk.edition + ".xml";
+
+                            if (!Directory.Exists(Constant.ApplcationStorage + @"db\cd\"))
+                                Directory.CreateDirectory(Constant.ApplcationStorage + @"db\cd\");
+
+                            if (!Directory.Exists(Constant.ApplcationStorage + @"db\xml\"))
+                                Directory.CreateDirectory(Constant.ApplcationStorage + @"db\xml\");
+
+                            //check if disk added
+                            if (!File.Exists(destination_disk_xml))
+                            {
+                                //copy
+                                File.Copy(source_disk_db, destination_disk_db);
+                                File.Copy(source_disk_xml, destination_disk_xml);
+                            }
+                        }
+                    }
+                }
 
                 //open form
                 Program.openForm();
