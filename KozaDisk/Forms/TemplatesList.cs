@@ -18,6 +18,7 @@ namespace KozaDisk.Forms
     {
         User userData = null;
         Disks disks = new Disks();
+        string view = "tree";
 
         public TemplatesList()
         {
@@ -36,6 +37,11 @@ namespace KozaDisk.Forms
 
         private void TemplatesList_Load(object sender, EventArgs e)
         {
+            this.load();
+        }
+
+        public void load()
+        {
             //prepare browser
             TreeBrowser.AllowWebBrowserDrop = false;
             TreeBrowser.IsWebBrowserContextMenuEnabled = false;
@@ -47,6 +53,11 @@ namespace KozaDisk.Forms
             FilesBrowser.WebBrowserShortcutsEnabled = false;
             FilesBrowser.ObjectForScripting = this;
 
+            DisksBlocksBrowser.AllowWebBrowserDrop = false;
+            DisksBlocksBrowser.IsWebBrowserContextMenuEnabled = false;
+            DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
+            DisksBlocksBrowser.ObjectForScripting = this;
+
             this.UserNameLabel.Text = this.userData.UserName;
 
             var disks = this.disks.getDisksList();
@@ -56,15 +67,19 @@ namespace KozaDisk.Forms
             string treeHtml = Properties.Resources.disk_tree;
             string disksHtml = "";
 
+            string blocksHtml = Properties.Resources.disk_blocks;
+            string disksBlockHtml = "";
+
             int count = 0;
             int folders_count = 0;
 
-            foreach(Disk disk in disks)
+            foreach (Disk disk in disks)
             {
-                count = count+1;
+                count = count + 1;
                 //get list of folders
                 List<Folder> folders = disk.getFolders();
 
+                //tree
                 if (count <= 1) disksHtml += $"<div class=\"disk first\" id=\"{count}\">";
                 else disksHtml += $"<div class=\"disk\" id=\"{count}\">";
 
@@ -82,18 +97,35 @@ namespace KozaDisk.Forms
                     disksHtml += "</div>";
                 }
 
+                //blocks
+                disksBlockHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\">";
+                disksBlockHtml += $"<div class=\"head\">{disk.name}</div>";
+                disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
+                disksBlockHtml += "</div>";
+
                 disksHtml += "</div>";
             }
 
             treeHtml = treeHtml.Replace("%disks_tree%", disksHtml);
             treeHtml = treeHtml.Replace("%AppPath%", Constant.ApplcationPath);
-            treeHtml = treeHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\",@"/"));
+            treeHtml = treeHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+            blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+            blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
 
             this.TreeBrowser.Navigate("about:blank");
             this.TreeBrowser.DocumentText = "0";
             this.TreeBrowser.Document.OpenNew(true);
             this.TreeBrowser.Document.Write(treeHtml);
             this.TreeBrowser.Refresh();
+
+            this.DisksBlocksBrowser.Navigate("about:blank");
+            this.DisksBlocksBrowser.DocumentText = "0";
+            this.DisksBlocksBrowser.Document.OpenNew(true);
+            this.DisksBlocksBrowser.Document.Write(blocksHtml);
+            this.DisksBlocksBrowser.Refresh();
 
             //Wait for document to finish loading
             while (this.TreeBrowser.ReadyState != WebBrowserReadyState.Complete)
@@ -122,6 +154,40 @@ namespace KozaDisk.Forms
             }
         }
 
+        public void openDisk(string db)
+        {
+            var disks = this.disks.getDisksList();
+
+            foreach (Disk disk in disks)
+            {
+                if (disk.db == db)
+                {
+                    List<Folder> folders = disk.getFolders();
+
+                    string blocksHtml = Properties.Resources.disk_blocks;
+                    string disksBlockHtml = "";
+
+                    foreach (Folder folder in folders)
+                    {
+                        disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\">";
+                        disksBlockHtml += $"<div class=\"head\">{folder.name}</div>";
+                        disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
+                        disksBlockHtml += "</div>";
+                    }
+
+                    blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+                    blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                    blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+                    this.DisksBlocksBrowser.Navigate("about:blank");
+                    this.DisksBlocksBrowser.DocumentText = "0";
+                    this.DisksBlocksBrowser.Document.OpenNew(true);
+                    this.DisksBlocksBrowser.Document.Write(blocksHtml);
+                    this.DisksBlocksBrowser.Refresh();
+                }
+            }
+        }
+
         public void openFolder(string folderId, string db)
         {
             var templates = new Templates();
@@ -138,11 +204,39 @@ namespace KozaDisk.Forms
             filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
             filesHtml = filesHtml.Replace("%templates%", templatesHtml);
 
-            this.FilesBrowser.Navigate("about:blank");
-            this.FilesBrowser.DocumentText = "0";
-            this.FilesBrowser.Document.OpenNew(true);
-            this.FilesBrowser.Document.Write(filesHtml);
-            this.FilesBrowser.Refresh();
+            //blocks
+            string blocksHtml = Properties.Resources.disk_blocks;
+            string disksBlockHtml = "";
+
+            foreach (var template in templates.getDocuments(folderId))
+            {
+                disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\">";
+                disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
+                disksBlockHtml += "</div>";
+            }
+
+            blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+            blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+            if (this.view == "tree")
+            {
+                this.FilesBrowser.Navigate("about:blank");
+                this.FilesBrowser.DocumentText = "0";
+                this.FilesBrowser.Document.OpenNew(true);
+                this.FilesBrowser.Document.Write(filesHtml);
+                this.FilesBrowser.Refresh();
+            }
+
+            if (this.view == "block")
+            {
+                this.DisksBlocksBrowser.Navigate("about:blank");
+                this.DisksBlocksBrowser.DocumentText = "0";
+                this.DisksBlocksBrowser.Document.OpenNew(true);
+                this.DisksBlocksBrowser.Document.Write(blocksHtml);
+                this.DisksBlocksBrowser.Refresh();
+            }
         }
 
         public void openDocument(string documentId, string db)
@@ -167,6 +261,32 @@ namespace KozaDisk.Forms
             template.type = (string)reader["type"].ToString();
 
             MessageBox.Show($"Открывает документ id = {template.id}", "KozaDisk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BlockViewBtn_Click(object sender, EventArgs e)
+        {
+            this.view = "block";
+
+            this.ListViewImg.Visible = false;
+            this.ListViewBtn.Visible = true;
+
+            this.BlockViewImg.Visible = true;
+            this.BlockViewBtn.Visible = false;
+
+            this.Tabs.SelectedIndex = 1;
+        }
+
+        private void ListViewBtn_Click(object sender, EventArgs e)
+        {
+            this.view = "tree";
+
+            this.ListViewImg.Visible = true;
+            this.ListViewBtn.Visible = false;
+
+            this.BlockViewImg.Visible = false;
+            this.BlockViewBtn.Visible = true;
+
+            this.Tabs.SelectedIndex = 0;
         }
     }
 }

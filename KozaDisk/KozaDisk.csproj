@@ -193,6 +193,9 @@
     <None Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Listing.png" />
+    <None Include="Resources\menu-focus.png" />
+    <None Include="Resources\BlockView.html.txt" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

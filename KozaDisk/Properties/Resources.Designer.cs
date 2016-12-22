@@ -71,6 +71,15 @@ namespace KozaDisk.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string disk_blocks {
+            get {
+                return ResourceManager.GetString("disk_blocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
         ///&lt;html&gt;
         ///&lt;head&gt;
@@ -111,18 +120,18 @@ namespace KozaDisk.Properties {
         ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
         ///    &lt;style&gt;
         ///        .document_head {
-        ///            width: 100%;
+        ///            width: 98%;
         ///            padding: 10px;
         ///            background-color: #f9f9f9;
         ///            margin-bottom: 15px;
         ///        }
         ///
         ///        .document {
-        ///            width: 100%;
+        ///            width: 98%;
         ///            padding: 10px;
         ///            background-color: #f9f9f9;
         ///            margin-bottom: 15px;
-        /// [остаток строки не уместился]&quot;;.
+        ///   [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree_files {
             get {
@@ -136,6 +145,16 @@ namespace KozaDisk.Properties {
         internal static System.Drawing.Bitmap iconName {
             get {
                 object obj = ResourceManager.GetObject("iconName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Listing {
+            get {
+                object obj = ResourceManager.GetObject("Listing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +185,16 @@ namespace KozaDisk.Properties {
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_focus {
+            get {
+                object obj = ResourceManager.GetObject("menu-focus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
