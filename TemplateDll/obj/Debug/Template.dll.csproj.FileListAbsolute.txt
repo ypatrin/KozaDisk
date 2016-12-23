@@ -367,7 +367,6 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\de\DevExpress.Sparkline.
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csprojResolveAssemblyReference.cache
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintRibbonControllerResources.resources
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.ProgressForm.resources
@@ -377,3 +376,12 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csproj.Gene
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll.licenses
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.pdb
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\templates.dll.config
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\EntityFramework.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\System.Data.SQLite.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\EntityFramework.xml
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\EntityFramework.SqlServer.xml
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\System.Data.SQLite.xml

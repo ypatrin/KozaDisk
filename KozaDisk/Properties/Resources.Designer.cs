@@ -71,7 +71,31 @@ namespace KozaDisk.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///&lt;/head&gt;
+        ///&lt;body style=&quot;margin: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;style&gt;
+        ///        .block
+        ///        {
+        ///            width: 200px;
+        ///            height: 180px;
+        ///            border: 1px solid #f4f4f4;
+        ///            margin: 10px;
+        ///            display:inline-block;
+        ///            float: left;
+        ///        }
+        ///
+        ///        .block:hover
+        ///        {
+        ///            border: 1px solid #DFDFDF;
+        ///            cursor: pointer;
+        ///        }
+        ///
+        ///        .block[type=document]
+        ///        {
+        ///            border: 1px s [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_blocks {
             get {
@@ -182,6 +206,16 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Magnifying_glass {
+            get {
+                object obj = ResourceManager.GetObject("Magnifying glass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
@@ -206,6 +240,16 @@ namespace KozaDisk.Properties {
             get {
                 object obj = ResourceManager.GetObject("MyriadProRegular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

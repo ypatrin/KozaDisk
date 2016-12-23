@@ -96,20 +96,32 @@ namespace KozaDisk
                             }
 
                             //save to xml
+                            /*
                             string xml = "";
-                            XmlSerializer serializer = new XmlSerializer(user.GetType());
+                            XmlSerializer serializer = new XmlSerializer(user.GetType(), );
 
                             using (var sww = new StringWriter())
                             {
                                 using (XmlWriter writer = XmlWriter.Create(sww))
                                 {
                                     serializer.Serialize(writer, user);
+                                    
                                     xml = sww.ToString();
                                 }
                             }
+                            */
+
+                            string xml = "";
+
+                            var serializer = new XmlSerializer(typeof(User));
+                            using (StringWriter writer = new Utf8StringWriter())
+                            {
+                                serializer.Serialize(writer, user);
+                                xml = writer.ToString();
+                            }
 
                             //save xml
-                            
+
                             if (!Directory.Exists(UserStorage))
                             {
                                 Directory.CreateDirectory(UserStorage);

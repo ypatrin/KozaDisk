@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Security.Permissions;
@@ -23,12 +24,17 @@ namespace templates
         RichEditControl richEditControl;
         Progress progress = Progress.getInstance();
 
+        string templateName = "";
+        string userName = "";
+        string dbName = "";
+        int docId = 0;
+
         public TemplateForm()
         {
             InitializeComponent();
 
             webBrowser1.AllowWebBrowserDrop = false;
-            webBrowser1.IsWebBrowserContextMenuEnabled = false;
+            webBrowser1.IsWebBrowserContextMenuEnabled = true;
             webBrowser1.WebBrowserShortcutsEnabled = false;
             webBrowser1.ObjectForScripting = this;
             webBrowser1.ScriptErrorsSuppressed = true;
@@ -40,6 +46,27 @@ namespace templates
             webBrowser2.IsWebBrowserContextMenuEnabled = false;
         }
 
+        public void setTemplateName(String templateName)
+        {
+            this.templateName = templateName;
+            this.TemplateNameLbl.Text = templateName;
+        }
+
+        public void setUserName(string userName)
+        {
+            this.userName = userName;
+        }
+
+        public void setDbName(string DbName)
+        {
+            this.dbName = DbName;
+        }
+
+        public void setDocId(int docId)
+        {
+            this.docId = docId;
+        }
+
         public void loadHTML(string html)
         {
             webBrowser1.Navigate("about:blank");
@@ -47,6 +74,12 @@ namespace templates
             webBrowser1.Document.OpenNew(true);
             webBrowser1.Document.Write(html);
             webBrowser1.Refresh();
+
+            webBrowser2.Navigate("about:blank");
+            webBrowser2.DocumentText = "0";
+            webBrowser2.Document.OpenNew(true);
+            webBrowser2.Document.Write("<html><body style=\"background: #F5F5F5\"></body></html>");
+            webBrowser2.Refresh();
 
             //Wait for document to finish loading
             while (webBrowser1.ReadyState != WebBrowserReadyState.Complete)
@@ -101,7 +134,7 @@ namespace templates
             htmlDocument.Save(htmlFile);
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void DownloadClick(object sender, EventArgs e)
         {
             this.progress.Open();
             this.progress.setMax(4);
@@ -119,13 +152,14 @@ namespace templates
             tmplDocument.processMarkers();
             this.progress.setCurrent(3);
 
+            tmplDocument.setName(this.templateName);
             tmplDocument.save();
             this.progress.Close();
         }
 
         public void showComment(String comment)
         {
-            string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body>{2}</body></html>",
+            string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body style=\"background: #F5F5F5\">{2}</body></html>",
                 Environment.CurrentDirectory + @"\js\jquery.js", Environment.CurrentDirectory + @"\js\comment.js", comment
             );
 
@@ -141,30 +175,7 @@ namespace templates
             System.Diagnostics.Process.Start(url);
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            TmplDocument tmplDocument = TmplDocument.getInstance();
-            Markers markers = new Markers();
-
-            this.progress.Open();
-            this.progress.setMax(4);
-            this.progress.setCurrent(0);
-
-            //prepare document
-            tmplDocument.prepareDocument();
-            this.progress.setCurrent(1);
-            // set browser
-            tmplDocument.setBrowser(webBrowser1);
-            this.progress.setCurrent(2);
-            // process markers
-            tmplDocument.processMarkers();
-            this.progress.setCurrent(3);
-            //printing
-            this.progress.Close();
-            tmplDocument.getRichEditControl().ShowPrintDialog();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void PrintClick(object sender, EventArgs e)
         {
             this.progress.Open();
             this.progress.setMax(4);
@@ -188,6 +199,76 @@ namespace templates
             PrintForm printForm = new PrintForm(tmplDocument.getRichEditControl());
             this.progress.Close();
             printForm.ShowDialog();
+        }
+
+        private void TemplateForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panel3.Size = new Size(30, 348);
+            panel13.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = true;
+
+            panel3.BackColor = Color.White;
+            panel3.BorderStyle = BorderStyle.None;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panel3.Size = new Size(300, 348);
+            panel13.Visible = true;
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = false;
+
+            panel3.BackColor = Color.FromArgb(245,245,245);
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string html = webBrowser1.DocumentText;
+            string encHtml = Base64Encode(html);
+
+            string AppStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"\\KozaDisk\\";
+            string DocumentsDB = AppStorage + $"users\\{this.userName}\\documents.db";
+            string db = this.dbName;
+            int docId = this.docId;
+
+            //save doc to DB
+
+            if (!System.IO.File.Exists(DocumentsDB))
+            {
+                SQLiteConnection.CreateFile(DocumentsDB);
+                SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
+                con.Open();
+                SQLiteCommand cmd = new SQLiteCommand("CREATE TABLE documents (id INTEGER PRIMARY KEY AUTOINCREMENT, db_name STRING(255), doc_id INTEGER(13), doc_name STRING(255), doc_html TEXT, created_at DATETIME); ", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
+            connection.Open();
+
+            //delete old
+            SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE doc_id = '{docId}' AND db_name = '{db}'", connection);
+            c.ExecuteNonQuery();
+
+            //add
+            string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.templateName}', '{encHtml}', datetime('now'))";
+
+            SQLiteCommand command = new SQLiteCommand(sql, connection);
+            command.ExecuteNonQuery();
+
+            MessageBox.Show("Шаблон успішно збережений!","Шаблон", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
         }
     }
 }

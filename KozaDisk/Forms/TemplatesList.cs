@@ -58,6 +58,11 @@ namespace KozaDisk.Forms
             DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
             DisksBlocksBrowser.ObjectForScripting = this;
 
+            MyDocsBrowser.AllowWebBrowserDrop = false;
+            MyDocsBrowser.IsWebBrowserContextMenuEnabled = false;
+            MyDocsBrowser.WebBrowserShortcutsEnabled = false;
+            MyDocsBrowser.ObjectForScripting = this;
+
             this.UserNameLabel.Text = this.userData.UserName;
 
             var disks = this.disks.getDisksList();
@@ -241,6 +246,7 @@ namespace KozaDisk.Forms
 
         public void openDocument(string documentId, string db)
         {
+            db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
             string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
 
             SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
@@ -260,7 +266,25 @@ namespace KozaDisk.Forms
             template.template = (string)reader["template"].ToString();
             template.type = (string)reader["type"].ToString();
 
-            MessageBox.Show($"Открывает документ id = {template.id}", "KozaDisk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
+            string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
+
+            //create template file
+            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
+            //create markers file
+            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
+
+            //loading template
+            templates.Templates templates = new templates.Templates();
+            templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
+            templates.setUserXmlFile(this.userData.XmlFilePath);
+            templates.setDbName(databaseName);
+            templates.setDocId(Int32.Parse(template.id));
+            templates.open();
+
+            //delete temp files
+            //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+            //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
         }
 
         private void BlockViewBtn_Click(object sender, EventArgs e)
@@ -287,6 +311,92 @@ namespace KozaDisk.Forms
             this.BlockViewBtn.Visible = true;
 
             this.Tabs.SelectedIndex = 0;
+        }
+
+        private void AutoFillBtn_Click(object sender, EventArgs e)
+        {
+            AutofillForm autoFillForm = new AutofillForm(this.userData);
+            autoFillForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.loadMyDocuments();
+        }
+
+        private void loadMyDocuments()
+        {
+            string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+
+            if (!System.IO.File.Exists(databaseName))
+            {
+                this.Tabs.SelectedIndex = 2;
+            }
+            else
+            {
+                //load documents
+                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+                connection.Open();
+
+                string sql = "SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents ORDER BY created_at";
+
+                SQLiteCommand command = new SQLiteCommand(sql, connection);
+                SQLiteDataReader r = command.ExecuteReader();
+
+                string blocksHtml = Properties.Resources.disk_blocks;
+                string disksBlockHtml = "";
+
+                while (r.Read())
+                {
+                    string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
+
+                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"{r["doc_id"].ToString()}\">";
+                    disksBlockHtml += $"<div class=\"head\">{r["doc_name"].ToString()}</div>";
+                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"btn\">";
+                    disksBlockHtml += $"<div class=\"date\">{r["created_at"].ToString()}</div>";
+                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
+                    disksBlockHtml += $"</div>";
+                    disksBlockHtml += "</div>";
+                }
+
+                blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+                blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+                MyDocsBrowser.Navigate("about:blank");
+                MyDocsBrowser.DocumentText = "0";
+                MyDocsBrowser.Document.OpenNew(true);
+                MyDocsBrowser.Document.Write(blocksHtml);
+                MyDocsBrowser.Refresh();
+
+                //open page
+                this.Tabs.SelectedIndex = 2;
+            }
+        }
+ 
+        public void deleteDocument(string id)
+        {
+            if (MessageBox.Show("Видалити документ?", "Видалення", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+
+                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+                connection.Open();
+
+                string sql = "DELETE FROM documents WHERE id = id";
+
+                SQLiteCommand command = new SQLiteCommand(sql, connection);
+                command.ExecuteNonQuery();
+
+                this.loadMyDocuments();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Tabs.SelectedIndex = 4;
         }
     }
 }

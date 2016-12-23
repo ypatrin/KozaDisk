@@ -289,5 +289,10 @@ namespace KozaDisk
             set { this.email = value; }
         }
 
+        public string XmlFilePath
+        {
+            get; set;
+        }
+
     }
 }

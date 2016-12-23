@@ -46,6 +46,7 @@ namespace KozaDisk
             {
                 userObj = (User)serializer.Deserialize(reader);
                 userObj.UserName = Path.GetFileName(userDirectory);
+                userObj.XmlFilePath = userDirectory + @"\userdata.xml";
             }
 
             return userObj;

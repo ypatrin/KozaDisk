@@ -61,6 +61,26 @@ namespace templates.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap com_arrow {
+            get {
+                object obj = ResourceManager.GetObject("com-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap com_arrow_left {
+            get {
+                object obj = ResourceManager.GetObject("com-arrow-left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на На друк виводитимуться лише ті пункти, які позначено «галочкою». Якщо пункти виявилися зайвими, &lt;b&gt;зніміть&lt;/b&gt; біля них «галочки».
         /// </summary>
         internal static string comment_default_checkbox {
@@ -102,6 +122,16 @@ namespace templates.Properties {
         internal static string comment_default_text {
             get {
                 return ResourceManager.GetString("comment_default_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

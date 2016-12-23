@@ -38,5 +38,15 @@ namespace KozaDisk
         /// Тип шаблона. 0 - докумен, 1 - файл
         /// </summary>
         public string type { get; set; }
+
+        internal void setDbName(string databaseName)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void setDocId(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

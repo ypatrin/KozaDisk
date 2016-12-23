@@ -1496,7 +1496,7 @@
             this.MinimizeBox = false;
             this.Name = "PrintForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "PrintForm";
+            this.Text = "Перегляд та друк";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrintForm_FormClosing);
             this.Load += new System.EventHandler(this.PrintForm_Load);

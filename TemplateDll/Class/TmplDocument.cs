@@ -33,11 +33,15 @@ namespace templates
             return instance;
         }
 
+        public void setName(string templateName)
+        {
+            this.templateName = templateName;
+        }
+
         public void setDocument(string templatePath)
         {
             this.templatePath = templatePath;
             this.Doc.LoadDocument(templatePath);
-            this.templateName = Path.GetFileName(templatePath);
         }
 
         public void setBrowser(WebBrowser browser)

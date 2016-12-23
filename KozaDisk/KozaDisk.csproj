@@ -57,6 +57,7 @@
     <ApplicationIcon>Коза48.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Class\Base64.cs" />
     <Compile Include="Class\Constant.cs" />
     <Compile Include="Class\Disk.cs" />
     <Compile Include="Class\Disks.cs" />
@@ -69,6 +70,7 @@
     </Compile>
     <Compile Include="Class\User.cs" />
     <Compile Include="Class\Users.cs" />
+    <Compile Include="Class\Utf8StringWriter.cs" />
     <Compile Include="Forms\AutofillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +126,10 @@
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
+    <Reference Include="templates, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TemplateDll\bin\Debug\templates.dll</HintPath>
+    </Reference>
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -196,6 +202,8 @@
     <None Include="Resources\Listing.png" />
     <None Include="Resources\menu-focus.png" />
     <None Include="Resources\BlockView.html.txt" />
+    <None Include="Resources\Magnifying glass.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

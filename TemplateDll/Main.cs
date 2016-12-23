@@ -15,21 +15,34 @@ namespace templates
     {
         private string templateFilePath = "", templateXmlFilePath = "", htmlFilePath = "", userXmlFilePath = "";
         private string tempPath = System.IO.Path.GetTempPath();
+        private string templateName, dbName;
+        private int docId;
 
         private TmplDocument tmplDocument = TmplDocument.getInstance();
         private Markers markers = new Markers();
 
         private Progress progress = Progress.getInstance();
 
-        public void setTemplate(String TemplateFilePath, String XmlFilePath)
+        public void setTemplate(String TemplateFilePath, String XmlFilePath, string TemplateName)
         {
             this.templateFilePath = TemplateFilePath;
             this.templateXmlFilePath = XmlFilePath;
+            this.templateName = TemplateName;
         }
 
         public void setUserXmlFile(String userXmlFilePath)
         {
             this.userXmlFilePath = userXmlFilePath;
+        }
+
+        public void setDbName(string DbName)
+        {
+            this.dbName = DbName;
+        }
+
+        public void setDocId(int docId)
+        {
+            this.docId = docId;
         }
 
         public void open()
@@ -55,6 +68,7 @@ namespace templates
         {
             this.progress.Open();
             TemplateForm template = new TemplateForm();
+            template.setTemplateName(this.templateName);
 
             this.progress.setMax(12);
             this.progress.setCurrent(0);
@@ -86,6 +100,7 @@ namespace templates
             XmlDocument userXml = new XmlDocument();
             userXml.Load(this.userXmlFilePath);
             XmlElement userDataXml = userXml.DocumentElement;
+            string userName = userDataXml.SelectSingleNode("/User/UserName").InnerText.ToString();
             this.progress.setCurrent(7);
 
             this.markers.setUserData(userDataXml);
@@ -102,6 +117,10 @@ namespace templates
                 html = this.markers.processMarkers(html, marker, markers);
             }
             this.progress.setCurrent(10);
+
+            template.setUserName(userName);
+            template.setDbName(this.dbName);
+            template.setDocId(this.docId);
 
             //open form
             template.loadHTML(html);

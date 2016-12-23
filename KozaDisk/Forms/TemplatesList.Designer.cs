@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplatesList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AutoFillBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -55,7 +58,13 @@
             this.TreeBrowser = new System.Windows.Forms.WebBrowser();
             this.ListTab = new System.Windows.Forms.TabPage();
             this.DisksBlocksBrowser = new System.Windows.Forms.WebBrowser();
+            this.MyDocsBlockTab = new System.Windows.Forms.TabPage();
+            this.MyDocsBrowser = new System.Windows.Forms.WebBrowser();
+            this.MyDocsListTab = new System.Windows.Forms.TabPage();
+            this.searchTab = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,6 +83,7 @@
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.ListTab.SuspendLayout();
+            this.MyDocsBlockTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,11 +101,31 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.textBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(408, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(285, 81);
             this.panel5.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::KozaDisk.Properties.Resources.search;
+            this.pictureBox3.Location = new System.Drawing.Point(249, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(244, 24);
+            this.textBox1.TabIndex = 0;
             // 
             // panel4
             // 
@@ -142,7 +172,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.AutoFillBtn);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -162,19 +192,21 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Мої документи";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // AutoFillBtn
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Minion Pro", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(110, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Автозаповнення";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AutoFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AutoFillBtn.Font = new System.Drawing.Font("Minion Pro", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoFillBtn.ForeColor = System.Drawing.Color.White;
+            this.AutoFillBtn.Location = new System.Drawing.Point(110, 25);
+            this.AutoFillBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.AutoFillBtn.Name = "AutoFillBtn";
+            this.AutoFillBtn.Size = new System.Drawing.Size(125, 26);
+            this.AutoFillBtn.TabIndex = 4;
+            this.AutoFillBtn.Text = "Автозаповнення";
+            this.AutoFillBtn.UseVisualStyleBackColor = true;
+            this.AutoFillBtn.Click += new System.EventHandler(this.AutoFillBtn_Click);
             // 
             // pictureBox1
             // 
@@ -288,6 +320,9 @@
             // 
             this.Tabs.Controls.Add(this.TreeTab);
             this.Tabs.Controls.Add(this.ListTab);
+            this.Tabs.Controls.Add(this.MyDocsBlockTab);
+            this.Tabs.Controls.Add(this.MyDocsListTab);
+            this.Tabs.Controls.Add(this.searchTab);
             this.Tabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tabs.Location = new System.Drawing.Point(0, 0);
             this.Tabs.Name = "Tabs";
@@ -369,6 +404,49 @@
             this.DisksBlocksBrowser.TabIndex = 0;
             this.DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
             // 
+            // MyDocsBlockTab
+            // 
+            this.MyDocsBlockTab.Controls.Add(this.MyDocsBrowser);
+            this.MyDocsBlockTab.Location = new System.Drawing.Point(4, 25);
+            this.MyDocsBlockTab.Name = "MyDocsBlockTab";
+            this.MyDocsBlockTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MyDocsBlockTab.Size = new System.Drawing.Size(885, 387);
+            this.MyDocsBlockTab.TabIndex = 2;
+            this.MyDocsBlockTab.Text = "MyDocsBlockTab";
+            this.MyDocsBlockTab.UseVisualStyleBackColor = true;
+            // 
+            // MyDocsBrowser
+            // 
+            this.MyDocsBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MyDocsBrowser.IsWebBrowserContextMenuEnabled = false;
+            this.MyDocsBrowser.Location = new System.Drawing.Point(3, 3);
+            this.MyDocsBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.MyDocsBrowser.Name = "MyDocsBrowser";
+            this.MyDocsBrowser.ScriptErrorsSuppressed = true;
+            this.MyDocsBrowser.Size = new System.Drawing.Size(879, 381);
+            this.MyDocsBrowser.TabIndex = 0;
+            this.MyDocsBrowser.WebBrowserShortcutsEnabled = false;
+            // 
+            // MyDocsListTab
+            // 
+            this.MyDocsListTab.Location = new System.Drawing.Point(4, 25);
+            this.MyDocsListTab.Name = "MyDocsListTab";
+            this.MyDocsListTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MyDocsListTab.Size = new System.Drawing.Size(885, 387);
+            this.MyDocsListTab.TabIndex = 3;
+            this.MyDocsListTab.Text = "MyDocsListTab";
+            this.MyDocsListTab.UseVisualStyleBackColor = true;
+            // 
+            // searchTab
+            // 
+            this.searchTab.Location = new System.Drawing.Point(4, 25);
+            this.searchTab.Name = "searchTab";
+            this.searchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.searchTab.Size = new System.Drawing.Size(885, 387);
+            this.searchTab.TabIndex = 4;
+            this.searchTab.Text = "searchTab";
+            this.searchTab.UseVisualStyleBackColor = true;
+            // 
             // TemplatesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -379,6 +457,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Minion Pro", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TemplatesList";
             this.Text = "KozaDisk 2.0";
@@ -386,6 +465,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TemplatesList_FormClosed);
             this.Load += new System.EventHandler(this.TemplatesList_Load);
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -407,6 +489,7 @@
             this.panel10.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.ListTab.ResumeLayout(false);
+            this.MyDocsBlockTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -419,7 +502,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AutoFillBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label UserNameLabel;
@@ -440,5 +523,11 @@
         private System.Windows.Forms.PictureBox ListViewBtn;
         private System.Windows.Forms.PictureBox BlockViewImg;
         private System.Windows.Forms.WebBrowser DisksBlocksBrowser;
+        private System.Windows.Forms.TabPage MyDocsBlockTab;
+        private System.Windows.Forms.WebBrowser MyDocsBrowser;
+        private System.Windows.Forms.TabPage MyDocsListTab;
+        private System.Windows.Forms.TabPage searchTab;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
