@@ -63,6 +63,26 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap active_clock {
+            get {
+                object obj = ResourceManager.GetObject("active-clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clock {
+            get {
+                object obj = ResourceManager.GetObject("clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closeBtn {
             get {
                 object obj = ResourceManager.GetObject("closeBtn", resourceCulture);
@@ -230,6 +250,34 @@ namespace KozaDisk.Properties {
             get {
                 object obj = ResourceManager.GetObject("menu-focus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///&lt;/head&gt;
+        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
+        ///    &lt;style&gt;
+        ///        .document_head {
+        ///            width: 98%;
+        ///            padding: 10px;
+        ///            background-color: #f9f9f9;
+        ///            margin-bottom: 15px;
+        ///        }
+        ///
+        ///        .document {
+        ///            width: 98%;
+        ///            padding: 10px;
+        ///            background-color: #f9f9f9;
+        ///            margin-bottom: 15px;
+        ///   [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string mydocs_tree {
+            get {
+                return ResourceManager.GetString("mydocs_tree", resourceCulture);
             }
         }
         

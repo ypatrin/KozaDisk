@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html>
+<head>
+</head>
+<body bgcolor="" style="margin-top: 0; font-family: Minion Pro">
+    <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
+    <style>
+        table.myDocs
+        {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        tr, td, th, table 
+        {
+            border: 0;
+        }
+
+        table.myDocs thead tr th
+        {
+            border-bottom: 1px solid black;
+            font-weight: bolder;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 0;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        table.myDocs tbody tr
+        {
+            height: 30px;
+            
+        }
+
+        table.myDocs tbody tr td
+        {
+            padding: 5px 10px;
+            background-color: #f4f4f4;
+            border-bottom: 3px solid white;
+            border-top: 3px solid white;
+        }
+
+        table.myDocs thead tr th.name, table.myDocs tbody tr th.name { width: 75%; }
+        table.myDocs thead tr th.date, table.myDocs tbody tr th.date { width: 20%; }
+        table.myDocs thead tr th.del, table.myDocs tbody tr th.del { width: 5%; }
+
+        .document, .delete { cursor: pointer; }
+        
+    </style>
+
+
+    <table class="myDocs">
+        <thead>
+            <tr>
+                <th class="name">Назва</th>
+                <th class="date">Дата</th>
+                <th class="del">Видалити</th>
+            </tr>
+        </thead>
+        <tbody>
+            %templates%
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".document").click(function () {
+                var document_id = $(this).attr("id");
+                var db = $(this).attr("db");
+                window.external.openDocument(document_id, db);
+            });
+
+            $(".delete").click(function () {
+                var id = $(this).attr("id");
+                window.external.deleteDocument(id);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

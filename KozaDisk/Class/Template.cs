@@ -39,6 +39,8 @@ namespace KozaDisk
         /// </summary>
         public string type { get; set; }
 
+        public string dbName { get; set; }
+
         internal void setDbName(string databaseName)
         {
             throw new NotImplementedException();

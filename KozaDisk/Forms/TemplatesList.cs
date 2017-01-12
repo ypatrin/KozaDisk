@@ -58,10 +58,20 @@ namespace KozaDisk.Forms
             DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
             DisksBlocksBrowser.ObjectForScripting = this;
 
-            MyDocsBrowser.AllowWebBrowserDrop = false;
-            MyDocsBrowser.IsWebBrowserContextMenuEnabled = false;
-            MyDocsBrowser.WebBrowserShortcutsEnabled = false;
-            MyDocsBrowser.ObjectForScripting = this;
+            MyDocsBlockBrowser.AllowWebBrowserDrop = false;
+            MyDocsBlockBrowser.IsWebBrowserContextMenuEnabled = false;
+            MyDocsBlockBrowser.WebBrowserShortcutsEnabled = false;
+            MyDocsBlockBrowser.ObjectForScripting = this;
+
+            MyDocsListBrowser.AllowWebBrowserDrop = false;
+            MyDocsListBrowser.IsWebBrowserContextMenuEnabled = false;
+            MyDocsListBrowser.WebBrowserShortcutsEnabled = false;
+            MyDocsListBrowser.ObjectForScripting = this;
+
+            SearchBrowser.AllowWebBrowserDrop = false;
+            SearchBrowser.IsWebBrowserContextMenuEnabled = false;
+            SearchBrowser.WebBrowserShortcutsEnabled = false;
+            SearchBrowser.ObjectForScripting = this;
 
             this.UserNameLabel.Text = this.userData.UserName;
 
@@ -132,31 +142,36 @@ namespace KozaDisk.Forms
             this.DisksBlocksBrowser.Document.Write(blocksHtml);
             this.DisksBlocksBrowser.Refresh();
 
-            //Wait for document to finish loading
-            while (this.TreeBrowser.ReadyState != WebBrowserReadyState.Complete)
+            try
             {
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
+                //Wait for document to finish loading
+                while (this.TreeBrowser.ReadyState != WebBrowserReadyState.Complete)
+                {
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(5);
+                }
+            
+
+                // FILES
+
+                string filesHtml = Properties.Resources.disk_tree_files;
+                string templatesHtml = "";
+                filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                filesHtml = filesHtml.Replace("%templates%", templatesHtml);
+
+                this.FilesBrowser.Navigate("about:blank");
+                this.FilesBrowser.DocumentText = "0";
+                this.FilesBrowser.Document.OpenNew(true);
+                this.FilesBrowser.Document.Write(filesHtml);
+                this.FilesBrowser.Refresh();
+
+                while (this.FilesBrowser.ReadyState != WebBrowserReadyState.Complete)
+                {
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(5);
+                }
             }
-
-            // FILES
-
-            string filesHtml = Properties.Resources.disk_tree_files;
-            string templatesHtml = "";
-            filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
-            filesHtml = filesHtml.Replace("%templates%", templatesHtml);
-
-            this.FilesBrowser.Navigate("about:blank");
-            this.FilesBrowser.DocumentText = "0";
-            this.FilesBrowser.Document.OpenNew(true);
-            this.FilesBrowser.Document.Write(filesHtml);
-            this.FilesBrowser.Refresh();
-
-            while (this.FilesBrowser.ReadyState != WebBrowserReadyState.Complete)
-            {
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(5);
-            }
+            catch (Exception e) { }
         }
 
         public void openDisk(string db)
@@ -321,16 +336,28 @@ namespace KozaDisk.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.loadMyDocuments();
+            this.panel11.Visible = false;
+            this.panel12.Visible = true;
+
+            //buttons
+            this.mdBlockViewDisabled.Visible = false;
+            this.mdListViewEnabled.Visible = false;
+            this.mdBlockViewEnabled.Visible = true;
+            this.mdListViewDisabled.Visible = true;
+            
+
+            this.loadMyDocuments(Constant.MyDocumentsBlockTab);
+
+            this.searchBox.Text = "";
         }
 
-        private void loadMyDocuments()
+        private void loadMyDocuments(int TabIndex)
         {
             string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
 
             if (!System.IO.File.Exists(databaseName))
             {
-                this.Tabs.SelectedIndex = 2;
+                this.Tabs.SelectedIndex = TabIndex;
             }
             else
             {
@@ -344,6 +371,9 @@ namespace KozaDisk.Forms
                 SQLiteDataReader r = command.ExecuteReader();
 
                 string blocksHtml = Properties.Resources.disk_blocks;
+                string treeHtml = Properties.Resources.mydocs_tree;
+
+                string disksTreeHtml = "";
                 string disksBlockHtml = "";
 
                 while (r.Read())
@@ -358,20 +388,37 @@ namespace KozaDisk.Forms
                     disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
                     disksBlockHtml += $"</div>";
                     disksBlockHtml += "</div>";
+
+                    disksTreeHtml += $"<tr>";
+                    disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\">{r["doc_name"].ToString()}</td>";
+                    disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
+                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\">X</td>";
+                    disksTreeHtml += "<tr>";
+
+                    //disksTreeHtml += $"<div class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\"></div>";
                 }
 
                 blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
                 blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
                 blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
 
-                MyDocsBrowser.Navigate("about:blank");
-                MyDocsBrowser.DocumentText = "0";
-                MyDocsBrowser.Document.OpenNew(true);
-                MyDocsBrowser.Document.Write(blocksHtml);
-                MyDocsBrowser.Refresh();
+                treeHtml = treeHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                treeHtml = treeHtml.Replace("%templates%", disksTreeHtml);
+
+                MyDocsBlockBrowser.Navigate("about:blank");
+                MyDocsBlockBrowser.DocumentText = "0";
+                MyDocsBlockBrowser.Document.OpenNew(true);
+                MyDocsBlockBrowser.Document.Write(blocksHtml);
+                MyDocsBlockBrowser.Refresh();
+
+                MyDocsListBrowser.Navigate("about:blank");
+                MyDocsListBrowser.DocumentText = "0";
+                MyDocsListBrowser.Document.OpenNew(true);
+                MyDocsListBrowser.Document.Write(treeHtml);
+                MyDocsListBrowser.Refresh();
 
                 //open page
-                this.Tabs.SelectedIndex = 2;
+                this.Tabs.SelectedIndex = TabIndex;
             }
         }
  
@@ -390,13 +437,123 @@ namespace KozaDisk.Forms
                 SQLiteCommand command = new SQLiteCommand(sql, connection);
                 command.ExecuteNonQuery();
 
-                this.loadMyDocuments();
+                this.loadMyDocuments(Constant.MyDocumentsBlockTab);
             }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void mdListViewDisabled_Click(object sender, EventArgs e)
+        {
+            //buttons
+            this.mdBlockViewDisabled.Visible = true;
+            this.mdListViewEnabled.Visible = true;
+            this.mdBlockViewEnabled.Visible = false;
+            this.mdListViewDisabled.Visible = false;
+
+            this.loadMyDocuments(Constant.MyDocumentsListTab);
+        }
+
+        private void mdBlockViewDisabled_Click(object sender, EventArgs e)
+        {
+            //buttons
+            this.mdBlockViewDisabled.Visible = false;
+            this.mdListViewEnabled.Visible = false;
+            this.mdBlockViewEnabled.Visible = true;
+            this.mdListViewDisabled.Visible = true;
+
+            this.loadMyDocuments(Constant.MyDocumentsBlockTab);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.panel11.Visible = true;
+            this.panel12.Visible = false;
+
+            this.view = "tree";
+
+            this.ListViewImg.Visible = true;
+            this.ListViewBtn.Visible = false;
+
+            this.BlockViewImg.Visible = false;
+            this.BlockViewBtn.Visible = true;
+
+            this.Tabs.SelectedIndex = 0;
+            this.searchBox.Text = "";
+
+            this.load();
+        }
+
+        private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (e.KeyChar == (char)13)
+            //{
+            //    this.doSearch();
+            //}
+        }
+
+        public void doSearch()
+        {
             this.Tabs.SelectedIndex = 4;
+
+            List<Template> findingTemplates = new List<Template>();
+            //search DB
+            var disks = this.disks.getDisksList();
+
+            foreach (Disk disk in disks)
+            {
+                //open disk
+                foreach (Template template in disk.serachDocs(searchBox.Text))
+                {
+                    findingTemplates.Add(template);
+                }
+            }
+
+            //display
+            string blocksHtml = Properties.Resources.disk_blocks;
+            string disksBlockHtml = "";
+
+            foreach (var template in findingTemplates)
+            {
+                disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\">";
+                disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
+                disksBlockHtml += "</div>";
+            }
+
+            blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+            blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+            this.SearchBrowser.Navigate("about:blank");
+            this.SearchBrowser.DocumentText = "0";
+            this.SearchBrowser.Document.OpenNew(true);
+            this.SearchBrowser.Document.Write(blocksHtml);
+            this.SearchBrowser.Refresh();
+
+            this.searchBox.Focus();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            string text = searchBox.Text;
+            if (text.Length >= 3)
+            {
+                this.doSearch();
+            }
+            else
+            {
+                MessageBox.Show("Кількість символів для пошуку повинно будти не менш 3", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            string text = searchBox.Text;
+            if (text.Length >= 3) this.doSearch();
         }
     }
 }

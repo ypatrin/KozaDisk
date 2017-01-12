@@ -60,5 +60,36 @@ namespace KozaDisk
 
             return folders;
         }
+
+        /// <summary>
+        /// Поиск документов по паттерну
+        /// </summary>
+        /// <param name="pattern">Паттерн для поиска</param>
+        public List<Template> serachDocs(String pattern)
+        {
+            string databaseName = Constant.ApplcationStorage + @"db\cd\" + this.db;
+            List<Template> templates = new List<Template>();
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE name_lower LIKE '%{pattern.ToLower()}%'", connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Template template = new Template();
+                template.id = (string)reader["id"].ToString();
+                template.name = (string)reader["name"].ToString();
+                template.markersXML = (string)reader["markers_xml"].ToString();
+                template.template = (string)reader["template"].ToString();
+                template.dbName = (string)this.db;
+
+                templates.Add(template);
+                template = null;
+            }
+
+            return templates;
+        }
     }
 }

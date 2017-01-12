@@ -204,6 +204,9 @@
     <None Include="Resources\BlockView.html.txt" />
     <None Include="Resources\Magnifying glass.png" />
     <None Include="Resources\search.png" />
+    <None Include="Resources\active-clock.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\disk_tree_files1.txt" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
