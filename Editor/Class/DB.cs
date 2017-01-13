@@ -287,13 +287,19 @@ namespace Editor.Class
                     string markerComment = dataReader["comment"].ToString().Trim();
                     string markerText = dataReader["text"].ToString().Trim();
 
+                    markerText = markerText.Replace("\n", "<br/>");
+                    markerText = markerText.Replace("<", "&lt;");
+                    markerText = markerText.Replace(">", "&gt;");
+                    markerText = markerText.Replace("\"", "&quot;");
+                    markerText = markerText.Replace("\t", "");
+
                     markerComment = markerComment.Replace("<", "&lt;");
                     markerComment = markerComment.Replace(">", "&gt;");
                     markerComment = markerComment.Replace("\"", "&quot;");
                     markerComment = markerComment.Replace("\n", "");
                     markerComment = markerComment.Replace("\t", "");
 
-                    xml += $"<marker name=\"dyn1\" type=\"dynamic\" value=\"$$s_5_subordination$$\" />";
+                    xml += $"<marker name=\"{markerName}\" type=\"dynamic\" value=\"{markerText}\" />";
                 }
 
                 //close Data Reader

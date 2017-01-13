@@ -338,8 +338,9 @@ namespace Editor
                     }
                 }
 
-                templateFile = File.ReadAllText(System.IO.Path.GetTempPath() + @"koza_templ.docx");
-                templateFileEnc = Editor.Class.Encrypt.base64Encode(templateFile);
+                //templateFile = File.ReadAllText(System.IO.Path.GetTempPath() + @"koza_templ.docx", Encoding.UTF8);
+                byte[] binarydata = File.ReadAllBytes(System.IO.Path.GetTempPath() + @"koza_templ.docx");
+                templateFileEnc = System.Convert.ToBase64String(binarydata, 0, binarydata.Length);
             }
             catch (Exception ex) { }
 

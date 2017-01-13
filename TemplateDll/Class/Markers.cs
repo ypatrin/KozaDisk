@@ -27,7 +27,7 @@ namespace templates
 
             if (MarkerNode.Attributes["comment"] != null)
             {
-                markerComment = MarkerNode.Attributes["comment"].Value;
+                markerComment = MarkerNode.Attributes["comment"].Value.Replace("\"", "'");
             }
 
             if (markerType == "comment")
@@ -153,7 +153,7 @@ namespace templates
 
                         if (marker.Attributes["comment"] != null)
                         {
-                            markerComment = marker.Attributes["comment"].Value;
+                            markerComment = marker.Attributes["comment"].Value.Replace("\"","'");
                         }
 
                         if (type == "text" || type == "date")
@@ -246,9 +246,12 @@ namespace templates
                 if (markerComment == "")
                     markerComment = this.getStaticComment(MarkerNode.Attributes["field"].Value);
 
-                if (this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText != null)
+                if (MarkerNode.Attributes["field"].Value != "")
                 {
-                    val = this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText;
+                    if (this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText != null)
+                    {
+                        val = this.userDataXml[MarkerNode.Attributes["field"].Value].InnerText;
+                    }
                 }
 
                 html = html.Replace(
