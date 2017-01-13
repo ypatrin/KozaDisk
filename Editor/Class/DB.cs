@@ -292,12 +292,14 @@ namespace Editor.Class
                     markerText = markerText.Replace(">", "&gt;");
                     markerText = markerText.Replace("\"", "&quot;");
                     markerText = markerText.Replace("\t", "");
+                    markerText = markerText.Replace("&nbsp;", " ");
 
                     markerComment = markerComment.Replace("<", "&lt;");
                     markerComment = markerComment.Replace(">", "&gt;");
                     markerComment = markerComment.Replace("\"", "&quot;");
                     markerComment = markerComment.Replace("\n", "");
                     markerComment = markerComment.Replace("\t", "");
+                    markerComment = markerComment.Replace("&nbsp;", " ");
 
                     xml += $"<marker name=\"{markerName}\" type=\"dynamic\" value=\"{markerText}\" />";
                 }
