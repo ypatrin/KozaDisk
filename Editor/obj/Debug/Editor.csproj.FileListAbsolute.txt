@@ -1,0 +1,21 @@
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.exe
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.pdb
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.Form1.resources
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.Properties.Resources.resources
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.exe
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.pdb
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\MySql.Data.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\MySql.Data.xml
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.exe.config
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\EntityFramework.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\System.Data.SQLite.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\EntityFramework.xml
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\EntityFramework.SqlServer.xml
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\System.Data.SQLite.xml
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\Renci.SshNet.dll
+D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\Renci.SshNet.xml
