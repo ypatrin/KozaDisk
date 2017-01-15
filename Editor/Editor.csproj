@@ -82,6 +82,7 @@
     <Compile Include="Class\DB.cs" />
     <Compile Include="Class\Document.cs" />
     <Compile Include="Class\Encrypt.cs" />
+    <Compile Include="Class\Serializer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

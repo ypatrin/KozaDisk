@@ -343,7 +343,19 @@ namespace Editor.Class
 
                     if (dataReader["type_id"].ToString() == "1")
                     {
-                        xml += $"<marker name=\"{markerAlias}\" type=\"formula\" value=\"{markerFormula}\" comment=\"{markerComment}\" />";
+                        Serializer serializer = new Serializer();
+                        Dictionary<System.Object, System.Object> phpFormula = (Dictionary<System.Object, System.Object>)serializer.Deserialize(markerFormula);
+
+                        Dictionary<System.Object, System.Object> args = (Dictionary<System.Object, System.Object>)phpFormula["args"];
+                        string formula = (string)args["commernt"];
+
+                        formula = formula.Replace("<", "&lt;");
+                        formula = formula.Replace(">", "&gt;");
+                        formula = formula.Replace("\"", "&quot;");
+                        formula = formula.Replace("\n", "");
+                        formula = formula.Replace("\t", "");
+
+                        xml += $"<marker name=\"{markerAlias}\" type=\"formula\" value=\"{formula}\" comment=\"{markerComment}\" />";
                     }
                     if (dataReader["type_id"].ToString() == "2")
                     {
@@ -359,7 +371,19 @@ namespace Editor.Class
                     }
                     if (dataReader["type_id"].ToString() == "5")
                     {
-                        xml += $"<marker name=\"{markerAlias}\" type=\"comment\" value=\"{markerComment}\" />";
+                        Serializer serializer = new Serializer();
+                        Dictionary<System.Object, System.Object> phpFormula = (Dictionary<System.Object, System.Object>)serializer.Deserialize(markerFormula);
+
+                        Dictionary<System.Object, System.Object> args = (Dictionary<System.Object, System.Object>)phpFormula["args"];
+                        string comment = (string)args["commernt"];
+
+                        comment = comment.Replace("<", "&lt;");
+                        comment = comment.Replace(">", "&gt;");
+                        comment = comment.Replace("\"", "&quot;");
+                        comment = comment.Replace("\n", "");
+                        comment = comment.Replace("\t", "");
+
+                        xml += $"<marker name=\"{markerAlias}\" type=\"comment\" value=\"{comment}\" />";
                     }
                 }
 
