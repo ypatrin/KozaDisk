@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplatesList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,12 +56,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.FilesBrowser = new System.Windows.Forms.WebBrowser();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.TreeBrowser = new System.Windows.Forms.WebBrowser();
+            this.DiskTree = new System.Windows.Forms.TreeView();
             this.ListTab = new System.Windows.Forms.TabPage();
             this.DisksBlocksBrowser = new System.Windows.Forms.WebBrowser();
             this.MyDocsBlockTab = new System.Windows.Forms.TabPage();
@@ -393,6 +395,15 @@
             this.panel8.Size = new System.Drawing.Size(893, 416);
             this.panel8.TabIndex = 2;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "disck.png");
+            this.imageList1.Images.SetKeyName(1, "disck-focus.png");
+            this.imageList1.Images.SetKeyName(2, "Folder-closed.png");
+            this.imageList1.Images.SetKeyName(3, "Folder-open.png");
+            // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.TreeTab);
@@ -440,23 +451,25 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.TreeBrowser);
+            this.panel9.Controls.Add(this.DiskTree);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(303, 381);
             this.panel9.TabIndex = 0;
             // 
-            // TreeBrowser
+            // DiskTree
             // 
-            this.TreeBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TreeBrowser.IsWebBrowserContextMenuEnabled = false;
-            this.TreeBrowser.Location = new System.Drawing.Point(0, 0);
-            this.TreeBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.TreeBrowser.Name = "TreeBrowser";
-            this.TreeBrowser.ScriptErrorsSuppressed = true;
-            this.TreeBrowser.Size = new System.Drawing.Size(303, 381);
-            this.TreeBrowser.TabIndex = 0;
+            this.DiskTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DiskTree.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiskTree.ImageIndex = 0;
+            this.DiskTree.ImageList = this.imageList1;
+            this.DiskTree.Location = new System.Drawing.Point(0, 0);
+            this.DiskTree.Name = "DiskTree";
+            this.DiskTree.SelectedImageIndex = 0;
+            this.DiskTree.Size = new System.Drawing.Size(303, 381);
+            this.DiskTree.TabIndex = 0;
+            this.DiskTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DiskTree_AfterSelect);
             // 
             // ListTab
             // 
@@ -619,7 +632,6 @@
         private TablessControl Tabs;
         private System.Windows.Forms.TabPage TreeTab;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.WebBrowser TreeBrowser;
         private System.Windows.Forms.TabPage ListTab;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.WebBrowser FilesBrowser;
@@ -642,5 +654,7 @@
         private System.Windows.Forms.PictureBox mdListViewDisabled;
         private System.Windows.Forms.WebBrowser MyDocsListBrowser;
         private System.Windows.Forms.WebBrowser SearchBrowser;
+        private System.Windows.Forms.TreeView DiskTree;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -40,14 +40,91 @@ namespace KozaDisk.Forms
             this.load();
         }
 
+        public void prepareTree()
+        {
+            this.DiskTree.Nodes.Clear();
+
+            var disks = this.disks.getDisksList();
+
+            foreach (Disk disk in disks)
+            {
+                Class.Objects.DiskTreeNode diskTreeNode = new Class.Objects.DiskTreeNode();
+                diskTreeNode.db = disk.db;
+                diskTreeNode.Name = disk.name;
+                diskTreeNode.Text = disk.name;
+                diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);
+
+                List<Folder> folders = disk.getFolders();
+
+                foreach (Folder folder in folders)
+                {
+                    Class.Objects.DiskTreeNode folderNode = new Class.Objects.DiskTreeNode();
+                    folderNode.db = disk.db;
+                    folderNode.id = folder.id;
+                    folderNode.Text = folder.name;
+                    folderNode.setType(Class.Objects.DiskTreeType.Folder);
+
+                    foreach (Folder subFolder in disk.getFolders(folderNode.id))
+                    {
+                        Class.Objects.DiskTreeNode subFolderNode = new Class.Objects.DiskTreeNode();
+                        subFolderNode.db = disk.db;
+                        subFolderNode.id = subFolder.id;
+                        subFolderNode.Text = subFolder.name;
+                        subFolderNode.setType(Class.Objects.DiskTreeType.Folder);
+
+                        foreach (Folder sub2Folder in disk.getFolders(folderNode.id))
+                        {
+                            Class.Objects.DiskTreeNode sub2FolderNode = new Class.Objects.DiskTreeNode();
+                            sub2FolderNode.db = disk.db;
+                            sub2FolderNode.id = sub2Folder.id;
+                            sub2FolderNode.Text = sub2Folder.name;
+                            sub2FolderNode.setType(Class.Objects.DiskTreeType.Folder);
+
+                            folderNode.Nodes.Add(sub2FolderNode);
+                        }
+
+                        folderNode.Nodes.Add(subFolderNode);
+                    }
+
+                    diskTreeNode.Nodes.Add(folderNode);
+                }
+
+                this.DiskTree.Nodes.Add(diskTreeNode);
+            }
+        }
+
+        public void prepareList()
+        {
+            string html = Properties.Resources.disk_blocks;
+            string nodeHtml = "";
+
+            var disks = this.disks.getDisksList();
+
+            foreach (Disk disk in disks)
+            {
+                //get list of folders
+                List<Folder> folders = disk.getFolders();
+
+                //blocks
+                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\">";
+                nodeHtml += $"<div class=\"head\">{disk.name}</div>";
+                nodeHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
+                nodeHtml += "</div>";
+            }
+
+            html = html.Replace("%disks_blocks%", nodeHtml);
+            html = html.Replace("%AppPath%", Constant.ApplcationPath);
+            html = html.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+            this.DisksBlocksBrowser.Navigate("about:blank");
+            this.DisksBlocksBrowser.DocumentText = "0";
+            this.DisksBlocksBrowser.Document.OpenNew(true);
+            this.DisksBlocksBrowser.Document.Write(html);
+            this.DisksBlocksBrowser.Refresh();
+        }
+
         public void load()
         {
-            //prepare browser
-            TreeBrowser.AllowWebBrowserDrop = false;
-            TreeBrowser.IsWebBrowserContextMenuEnabled = false;
-            TreeBrowser.WebBrowserShortcutsEnabled = false;
-            TreeBrowser.ObjectForScripting = this;
-
             FilesBrowser.AllowWebBrowserDrop = false;
             FilesBrowser.IsWebBrowserContextMenuEnabled = false;
             FilesBrowser.WebBrowserShortcutsEnabled = false;
@@ -75,103 +152,8 @@ namespace KozaDisk.Forms
 
             this.UserNameLabel.Text = this.userData.UserName;
 
-            var disks = this.disks.getDisksList();
-
-            // TREE
-
-            string treeHtml = Properties.Resources.disk_tree;
-            string disksHtml = "";
-
-            string blocksHtml = Properties.Resources.disk_blocks;
-            string disksBlockHtml = "";
-
-            int count = 0;
-            int folders_count = 0;
-
-            foreach (Disk disk in disks)
-            {
-                count = count + 1;
-                //get list of folders
-                List<Folder> folders = disk.getFolders();
-
-                //tree
-                if (count <= 1) disksHtml += $"<div class=\"disk first\" id=\"{count}\">";
-                else disksHtml += $"<div class=\"disk\" id=\"{count}\">";
-
-                disksHtml += $"<div class=\"img\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk.png\"/></div>";
-                disksHtml += $"<div class=\"name\">{disk.name}</div>";
-                disksHtml += "</div>";
-
-                disksHtml += $"<div class=\"folders\" id=\"folders_{count}\">";
-                foreach (Folder folder in folders)
-                {
-                    folders_count = folders_count + 1;
-                    disksHtml += $"<div class=\"folder\" id=\"{folders_count}\" db=\"{disk.db}\" fid=\"{folder.id}\">";
-                    disksHtml += $"<div class=\"img\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder.png\"/></div>";
-                    disksHtml += $"<div class=\"name\">{folder.name}</div>";
-                    disksHtml += "</div>";
-                }
-
-                //blocks
-                disksBlockHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\">";
-                disksBlockHtml += $"<div class=\"head\">{disk.name}</div>";
-                disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
-                disksBlockHtml += "</div>";
-
-                disksHtml += "</div>";
-            }
-
-            treeHtml = treeHtml.Replace("%disks_tree%", disksHtml);
-            treeHtml = treeHtml.Replace("%AppPath%", Constant.ApplcationPath);
-            treeHtml = treeHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
-
-            blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
-            blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
-            blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
-
-
-            this.TreeBrowser.Navigate("about:blank");
-            this.TreeBrowser.DocumentText = "0";
-            this.TreeBrowser.Document.OpenNew(true);
-            this.TreeBrowser.Document.Write(treeHtml);
-            this.TreeBrowser.Refresh();
-
-            this.DisksBlocksBrowser.Navigate("about:blank");
-            this.DisksBlocksBrowser.DocumentText = "0";
-            this.DisksBlocksBrowser.Document.OpenNew(true);
-            this.DisksBlocksBrowser.Document.Write(blocksHtml);
-            this.DisksBlocksBrowser.Refresh();
-
-            try
-            {
-                //Wait for document to finish loading
-                while (this.TreeBrowser.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(5);
-                }
-            
-
-                // FILES
-
-                string filesHtml = Properties.Resources.disk_tree_files;
-                string templatesHtml = "";
-                filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
-                filesHtml = filesHtml.Replace("%templates%", templatesHtml);
-
-                this.FilesBrowser.Navigate("about:blank");
-                this.FilesBrowser.DocumentText = "0";
-                this.FilesBrowser.Document.OpenNew(true);
-                this.FilesBrowser.Document.Write(filesHtml);
-                this.FilesBrowser.Refresh();
-
-                while (this.FilesBrowser.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(5);
-                }
-            }
-            catch (Exception e) { }
+            this.prepareTree();
+            this.prepareList();
         }
 
         public void openDisk(string db)
@@ -489,10 +471,7 @@ namespace KozaDisk.Forms
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (e.KeyChar == (char)13)
-            //{
-            //    this.doSearch();
-            //}
+
         }
 
         public void doSearch()
@@ -554,6 +533,21 @@ namespace KozaDisk.Forms
         {
             string text = searchBox.Text;
             if (text.Length >= 3) this.doSearch();
+        }
+
+        private void DiskTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            Class.Objects.DiskTreeNode selectedNode = (Class.Objects.DiskTreeNode)this.DiskTree.SelectedNode;
+
+            if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
+            {
+                return;
+            }
+
+            if (selectedNode.getType() == Class.Objects.DiskTreeType.Folder)
+            {
+                this.openFolder(selectedNode.id, selectedNode.db);
+            }
         }
     }
 }
