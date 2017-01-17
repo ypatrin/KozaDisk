@@ -8,34 +8,36 @@ namespace KozaDisk
     public class User
     {
         protected string username = null;
+        protected string user_email = "";
+        protected string user_phone = "";
 
-        protected string full_name = "";
-        protected string full_name_genitive = "";
-        protected string abbreviation = "";
-        protected string abbreviation_genitive = "";
-        protected string subordination = "";
-        protected string subordination_genitive = "";
-        protected string unit = "";
-        protected string place = "";
-        protected string code = "";
-        protected string bank = "";
-        protected string legal_address = "";
-        protected string chief_name = "";
-        protected string chief_name_genitive = "";
-        protected string chief_surname = "";
-        protected string chief_surname_dative = "";
-        protected string chief_initials = "";
-        protected string chief_position = "";
-        protected string chief_position_dative = "";
-        protected string chief_position_lower = "";
-        protected string position_cadre = "";
-        protected string position_cadre_genitive = "";
-        protected string initials_cadre = "";
-        protected string surname_cadre = "";
-        protected string address = "";
-        protected string tel = "";
-        protected string fax = "";
-        protected string email = "";
+        protected string full_name = " ";
+        protected string full_name_genitive = " ";
+        protected string abbreviation = " ";
+        protected string abbreviation_genitive = " ";
+        protected string subordination = " ";
+        protected string subordination_genitive = " ";
+        protected string unit = " ";
+        protected string place = " ";
+        protected string code = " ";
+        protected string bank = " ";
+        protected string legal_address = " ";
+        protected string chief_name = " ";
+        protected string chief_name_genitive = " ";
+        protected string chief_surname = " ";
+        protected string chief_surname_dative = " ";
+        protected string chief_initials = " ";
+        protected string chief_position = " ";
+        protected string chief_position_dative = " ";
+        protected string chief_position_lower = " ";
+        protected string position_cadre = " ";
+        protected string position_cadre_genitive = " ";
+        protected string initials_cadre = " ";
+        protected string surname_cadre = " ";
+        protected string address = " ";
+        protected string tel = " ";
+        protected string fax = " ";
+        protected string email = " ";
 
         /// <summary>
         /// Ім'я користувача
@@ -44,6 +46,24 @@ namespace KozaDisk
         {
             get { return this.username; }
             set { this.username = value; }
+        }
+
+        /// <summary>
+        /// Телефон користувача
+        /// </summary>
+        public string UserPhone
+        {
+            get { return this.user_phone; }
+            set { this.user_phone = value; }
+        }
+
+        /// <summary>
+        /// Email користувача
+        /// </summary>
+        public string UserEmail
+        {
+            get { return this.user_email; }
+            set { this.user_email = value; }
         }
 
         /// <summary>

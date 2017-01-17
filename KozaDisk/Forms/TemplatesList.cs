@@ -42,6 +42,7 @@ namespace KozaDisk.Forms
 
         public void prepareTree()
         {
+            KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
             this.DiskTree.Nodes.Clear();
 
             var disks = this.disks.getDisksList();
@@ -53,6 +54,22 @@ namespace KozaDisk.Forms
                 diskTreeNode.Name = disk.name;
                 diskTreeNode.Text = disk.name;
                 diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);
+
+                if (!activator.isActivated(disk.db))
+                {
+                    diskTreeNode.ImageIndex = 0;
+                    diskTreeNode.SelectedImageIndex = 0;
+                }
+                else
+                {
+                    diskTreeNode.ImageIndex = 1;
+                    diskTreeNode.SelectedImageIndex = 1;
+                }         
+                
+                if (!activator.isActivated(disk.db) && !activator.isTrial(disk.db))
+                {
+                    continue;
+                }    
 
                 List<Folder> folders = disk.getFolders();
 
@@ -158,6 +175,8 @@ namespace KozaDisk.Forms
 
         public void openDisk(string db)
         {
+            this.DisksBlocksBrowser.Stop();
+
             var disks = this.disks.getDisksList();
 
             foreach (Disk disk in disks)
@@ -181,11 +200,27 @@ namespace KozaDisk.Forms
                     blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
                     blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
 
+                    while (this.DisksBlocksBrowser.ReadyState != WebBrowserReadyState.Complete)
+                    {
+                        Application.DoEvents();
+                    }
+
                     this.DisksBlocksBrowser.Navigate("about:blank");
                     this.DisksBlocksBrowser.DocumentText = "0";
                     this.DisksBlocksBrowser.Document.OpenNew(true);
                     this.DisksBlocksBrowser.Document.Write(blocksHtml);
                     this.DisksBlocksBrowser.Refresh();
+
+                    KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
+                    if (!activator.isActivated(disk.db))
+                    {
+                        //display activation message
+                        KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate();
+                        activateForm.setDiskName(disk.name);
+                        activateForm.userData = this.userData;
+                        activateForm.db = disk.db;
+                        activateForm.ShowDialog();
+                    }
                 }
             }
         }
@@ -466,7 +501,8 @@ namespace KozaDisk.Forms
             this.Tabs.SelectedIndex = 0;
             this.searchBox.Text = "";
 
-            this.load();
+            this.prepareTree();
+            this.prepareList();
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -541,7 +577,25 @@ namespace KozaDisk.Forms
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
-                return;
+                KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
+                if (!activator.isActivated(selectedNode.db) && !selectedNode.isAtivateWindowDisplayed)
+                {
+                    //display activation message
+                    KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate();
+                    activateForm.setDiskName(selectedNode.Name);
+                    activateForm.userData = this.userData;
+                    activateForm.db = selectedNode.db;
+                    activateForm.ShowDialog();
+
+                    if (activator.isActivated(selectedNode.db))
+                    {
+                        this.prepareTree();
+                    }
+                    else
+                    {
+                        selectedNode.isAtivateWindowDisplayed = true;
+                    }
+                }
             }
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Folder)

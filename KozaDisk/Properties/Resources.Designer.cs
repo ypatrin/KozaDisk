@@ -73,6 +73,106 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_about {
+            get {
+                object obj = ResourceManager.GetObject("btn-about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_about1 {
+            get {
+                object obj = ResourceManager.GetObject("btn-about1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_about2 {
+            get {
+                object obj = ResourceManager.GetObject("btn-about2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_help {
+            get {
+                object obj = ResourceManager.GetObject("btn-help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_help1 {
+            get {
+                object obj = ResourceManager.GetObject("btn-help1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_wg {
+            get {
+                object obj = ResourceManager.GetObject("btn-wg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_wg1 {
+            get {
+                object obj = ResourceManager.GetObject("btn-wg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_wg2 {
+            get {
+                object obj = ResourceManager.GetObject("btn-wg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_wg3 {
+            get {
+                object obj = ResourceManager.GetObject("btn-wg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
@@ -261,19 +361,22 @@ namespace KozaDisk.Properties {
         ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
         ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
         ///    &lt;style&gt;
-        ///        .document_head {
-        ///            width: 98%;
-        ///            padding: 10px;
-        ///            background-color: #f9f9f9;
-        ///            margin-bottom: 15px;
+        ///        table.myDocs
+        ///        {
+        ///            width: 100%;
+        ///            border-collapse: separate;
+        ///            border-spacing: 0;
         ///        }
         ///
-        ///        .document {
-        ///            width: 98%;
-        ///            padding: 10px;
-        ///            background-color: #f9f9f9;
-        ///            margin-bottom: 15px;
-        ///   [остаток строки не уместился]&quot;;.
+        ///        tr, td, th, table 
+        ///        {
+        ///            border: 0;
+        ///        }
+        ///
+        ///        table.myDocs thead tr th
+        ///        {
+        ///            border-bottom: 1px solid black;
+        ///       [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string mydocs_tree {
             get {

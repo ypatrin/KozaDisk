@@ -162,3 +162,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.exe.licenses
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\uk-UA\KozaDisk.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.exe
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.pdb
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.Activate.resources
