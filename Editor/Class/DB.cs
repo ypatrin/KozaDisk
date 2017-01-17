@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Web;
 
 namespace Editor.Class
 {
@@ -294,12 +295,18 @@ namespace Editor.Class
                     markerText = markerText.Replace("\t", "");
                     markerText = markerText.Replace("&nbsp;", " ");
 
+                    if (markerText != "")
+                        markerText = System.Web.HttpUtility.HtmlEncode(markerText);
+
                     markerComment = markerComment.Replace("<", "&lt;");
                     markerComment = markerComment.Replace(">", "&gt;");
                     markerComment = markerComment.Replace("\"", "&quot;");
                     markerComment = markerComment.Replace("\n", "");
                     markerComment = markerComment.Replace("\t", "");
                     markerComment = markerComment.Replace("&nbsp;", " ");
+
+                    if (markerComment != "")
+                        markerComment = System.Web.HttpUtility.HtmlEncode(markerComment);
 
                     xml += $"<marker name=\"{markerName}\" type=\"dynamic\" value=\"{markerText}\" />";
                 }
@@ -341,6 +348,9 @@ namespace Editor.Class
                     markerComment = markerComment.Replace("\n", "");
                     markerComment = markerComment.Replace("\t", "");
 
+                    if (markerComment != "")
+                    markerComment = System.Web.HttpUtility.HtmlEncode(markerComment);
+
                     if (dataReader["type_id"].ToString() == "1")
                     {
                         Serializer serializer = new Serializer();
@@ -354,6 +364,7 @@ namespace Editor.Class
                         formula = formula.Replace("\"", "&quot;");
                         formula = formula.Replace("\n", "");
                         formula = formula.Replace("\t", "");
+                        formula = System.Web.HttpUtility.HtmlEncode(formula);
 
                         xml += $"<marker name=\"{markerAlias}\" type=\"formula\" value=\"{formula}\" comment=\"{markerComment}\" />";
                     }
@@ -382,6 +393,9 @@ namespace Editor.Class
                         comment = comment.Replace("\"", "&quot;");
                         comment = comment.Replace("\n", "");
                         comment = comment.Replace("\t", "");
+
+                        if (comment != "")
+                            comment = System.Web.HttpUtility.HtmlEncode(comment);
 
                         xml += $"<marker name=\"{markerAlias}\" type=\"comment\" value=\"{comment}\" />";
                     }

@@ -14,7 +14,7 @@ namespace KozaDisk.Forms
     {
         public User userData { get; set; }
         public string db { get; set; }
-        public string key = "hg74FbGdTfbv8295_";
+        public string key = "fbv8295_";
 
         public Activate()
         {
@@ -55,11 +55,11 @@ namespace KozaDisk.Forms
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
             xmlRequest += $"        <app_code>{cpuID}</app_code>"; // ID приложения (уникальное для каждого юзера)
             xmlRequest += "     </user>";
-            xmlRequest += "</ activation >";
+            xmlRequest += "</ activation>";
 
             string xmlEncoded = Class.CryptAesCBC.EncryptStringAES(xmlRequest, this.key);
 
-            //string activeAnswer = Class.Request.POST(@"http://kozaonline.com.ua/kozadisc/activation", "XML_DATA=" + xmlEncoded);
+            string activeAnswer = Class.Request.POST(@"http://kozaonline.com.ua/kozadisc/activation", "XML_DATA=" + xmlEncoded);
             //MessageBox.Show(activeAnswer);
 
             //activate OK

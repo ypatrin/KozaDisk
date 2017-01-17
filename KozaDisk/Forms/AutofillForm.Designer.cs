@@ -34,9 +34,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Tabs = new TablessControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.UserNameBox = new System.Windows.Forms.TextBox();
-            this.metroLabel1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.PlaceBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,7 +97,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.TabButton3 = new System.Windows.Forms.Button();
             this.TabButton2 = new System.Windows.Forms.Button();
-            this.TabButton1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -109,7 +105,6 @@
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
             this.Tabs.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -152,31 +147,11 @@
             // 
             // Tabs
             // 
-            this.Tabs.Controls.Add(this.tabPage1);
             this.Tabs.Controls.Add(this.tabPage2);
             this.Tabs.Controls.Add(this.tabPage3);
             resources.ApplyResources(this.Tabs, "Tabs");
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.UserNameBox);
-            this.tabPage1.Controls.Add(this.metroLabel1);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // UserNameBox
-            // 
-            this.UserNameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.UserNameBox, "UserNameBox");
-            this.UserNameBox.Name = "UserNameBox";
-            // 
-            // metroLabel1
-            // 
-            resources.ApplyResources(this.metroLabel1, "metroLabel1");
-            this.metroLabel1.Name = "metroLabel1";
             // 
             // tabPage2
             // 
@@ -579,7 +554,6 @@
             // 
             this.panel7.Controls.Add(this.TabButton3);
             this.panel7.Controls.Add(this.TabButton2);
-            this.panel7.Controls.Add(this.TabButton1);
             resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
@@ -604,16 +578,6 @@
             this.TabButton2.Name = "TabButton2";
             this.TabButton2.UseVisualStyleBackColor = false;
             this.TabButton2.Click += new System.EventHandler(this.TabButton2_Click);
-            // 
-            // TabButton1
-            // 
-            this.TabButton1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.TabButton1, "TabButton1");
-            this.TabButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.TabButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            this.TabButton1.Name = "TabButton1";
-            this.TabButton1.UseVisualStyleBackColor = false;
-            this.TabButton1.Click += new System.EventHandler(this.TabButton1_Click);
             // 
             // panel5
             // 
@@ -642,13 +606,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AutofillForm";
+            this.Load += new System.EventHandler(this.AutofillForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.Tabs.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -668,14 +631,10 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button TabButton3;
         private System.Windows.Forms.Button TabButton2;
-        private System.Windows.Forms.Button TabButton1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
         private TablessControl Tabs;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox UserNameBox;
-        private System.Windows.Forms.Label metroLabel1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox BankBox;
         private System.Windows.Forms.TextBox FaxBox;

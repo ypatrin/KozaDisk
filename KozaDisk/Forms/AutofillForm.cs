@@ -17,10 +17,10 @@ namespace KozaDisk.Forms
     public partial class AutofillForm : System.Windows.Forms.Form
     {
         private int mode = 0; //0 - create, 1 - modify
+        private User userData;
         public AutofillForm()
         {
             InitializeComponent();
-            this.UserNameBox.Enabled = true;
             this.mode = 0;
         }
 
@@ -28,13 +28,11 @@ namespace KozaDisk.Forms
         {
             InitializeComponent();
             this.setUser(user);
-            this.UserNameBox.Enabled = false;
             this.mode = 1;
         }
 
         public void setUser(User user)
         {
-            this.UserNameBox.Text = user.UserName;
             this.AbbreviationBox.Text = user.Abbreviation ;
             this.AbbreviationGenitiveBox.Text = user.AbbreviationGenitive;
             this.AddressBox.Text = user.Address;
@@ -62,6 +60,8 @@ namespace KozaDisk.Forms
             this.SurnameCadreBox.Text = user.SurnameCadre;
             this.TelephoneBox.Text = user.Telephone;
             this.UnitBox.Text = user.Unit;
+
+            this.userData = user;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -71,62 +71,38 @@ namespace KozaDisk.Forms
 
         private void TabButton1_Click(object sender, EventArgs e)
         {
-            this.Tabs.SelectedIndex = 0;
 
-            TabButton1.Enabled = false;
-            TabButton2.Enabled = true;
-            TabButton3.Enabled = true;
-
-            TabButton1.ForeColor = Color.FromArgb(27, 188, 155);
-            TabButton2.ForeColor = Color.White;
-            TabButton3.ForeColor = Color.White;
-
-            TabButton1.BackColor = Color.White;
-            TabButton2.BackColor = Color.FromArgb(21, 168, 139);
-            TabButton3.BackColor = Color.FromArgb(21, 168, 139);
-
-            TabButton1.FlatAppearance.BorderSize = 1;
-            TabButton2.FlatAppearance.BorderSize = 0;
-            TabButton3.FlatAppearance.BorderSize = 0;
         }
 
         private void TabButton2_Click(object sender, EventArgs e)
         {
-            this.Tabs.SelectedIndex = 1;
-            TabButton1.Enabled = true;
+            this.Tabs.SelectedIndex = 0;
             TabButton2.Enabled = false;
             TabButton3.Enabled = true;
 
-            TabButton1.ForeColor = Color.White;
             TabButton2.ForeColor = Color.FromArgb(27, 188, 155);
             TabButton3.ForeColor = Color.White;
 
-            TabButton1.BackColor = Color.FromArgb(21, 168, 139);
             TabButton2.BackColor = Color.White;
             TabButton3.BackColor = Color.FromArgb(21, 168, 139);
 
-            TabButton1.FlatAppearance.BorderSize = 0;
             TabButton2.FlatAppearance.BorderSize = 1;
             TabButton3.FlatAppearance.BorderSize = 0;
         }
 
         private void TabButton3_Click(object sender, EventArgs e)
         {
-            this.Tabs.SelectedIndex = 2;
+            this.Tabs.SelectedIndex = 1;
 
-            TabButton1.Enabled = true;
             TabButton2.Enabled = true;
             TabButton3.Enabled = false;
 
-            TabButton1.ForeColor = Color.White;
             TabButton2.ForeColor = Color.White;
             TabButton3.ForeColor = Color.FromArgb(27, 188, 155);
 
-            TabButton1.BackColor = Color.FromArgb(21, 168, 139);
             TabButton2.BackColor = Color.FromArgb(21, 168, 139);
             TabButton3.BackColor = Color.White;
 
-            TabButton1.FlatAppearance.BorderSize = 0;
             TabButton2.FlatAppearance.BorderSize = 0;
             TabButton3.FlatAppearance.BorderSize = 1;
         }
@@ -135,13 +111,10 @@ namespace KozaDisk.Forms
         {
             User user = new User();
 
-            if (String.IsNullOrEmpty(this.UserNameBox.Text))
-            {
-                MessageBox.Show("Ім'я користувача не може бути порожнім!", "Створення користувача", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }
-            else
-            {
-                user.UserName = this.UserNameBox.Text;
+            user.UserName = this.userData.UserName;
+            user.UserEmail = this.userData.UserEmail;
+            user.UserPhone = this.userData.UserPhone;
+
                 user.Abbreviation = this.AbbreviationBox.Text;
                 user.AbbreviationGenitive = this.AbbreviationGenitiveBox.Text;
                 user.Address = this.AddressBox.Text;
@@ -188,17 +161,30 @@ namespace KozaDisk.Forms
 
                 File.WriteAllText(UserStorage + @"\userdata.xml", xml);
 
-                if (this.mode == 0)
-                    MessageBox.Show("Користувача успішно створено.", "Створення користувача", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (this.mode == 1)
-                    MessageBox.Show("Дані користувача успішно сбережено.", "Автозаповнення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Дані користувача успішно сбережено.", "Автозаповнення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-            }
+            
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AutofillForm_Load(object sender, EventArgs e)
+        {
+            this.Tabs.SelectedIndex = 0;
+            TabButton2.Enabled = false;
+            TabButton3.Enabled = true;
+
+            TabButton2.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton3.ForeColor = Color.White;
+
+            TabButton2.BackColor = Color.White;
+            TabButton3.BackColor = Color.FromArgb(21, 168, 139);
+
+            TabButton2.FlatAppearance.BorderSize = 1;
+            TabButton3.FlatAppearance.BorderSize = 0;
         }
     }
 }

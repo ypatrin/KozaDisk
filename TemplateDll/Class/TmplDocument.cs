@@ -187,68 +187,8 @@ namespace templates
                     {
                         var formula = input.GetAttribute("formula");
                         value = input.GetAttribute("value");
-                        /*
-                        float fn = 0;
-
-                        // plus formuls
-                        if (formula.Split('+').Length > 2)
-                        {
-                            foreach (string f in formula.Split('+'))
-                            {
-                                foreach (HtmlElement cInput in elements)
-                                {
-                                    if (f == cInput.GetAttribute("name"))
-                                    {
-                                        int n;
-                                        if (cInput.GetAttribute("value") != null && cInput.GetAttribute("value") != "" && int.TryParse(cInput.GetAttribute("value"), out n))
-                                        {
-                                            if (fn == 0)
-                                            {
-                                                float num_float;
-
-                                                bool isFloat = float.TryParse(cInput.GetAttribute("value"), out num_float);
-
-                                                if (isFloat)
-                                                {
-                                                    fn += float.Parse(cInput.GetAttribute("value"));
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        // minus dormuls
-                        if (formula.Split('-').Length > 2)
-                        {
-                            foreach (string f in formula.Split('+'))
-                            {
-                                foreach (HtmlElement cInput in elements)
-                                {
-                                    if (f == cInput.GetAttribute("name"))
-                                    {
-                                        float num_float;
-                                        bool isFloat = float.TryParse(cInput.GetAttribute("value"), out num_float);
-
-                                        if (isFloat)
-                                        {
-                                            if (fn == 0)
-                                                fn = float.Parse(cInput.GetAttribute("value"));
-                                            else
-                                                fn -= float.Parse(cInput.GetAttribute("value"));
-                                        }  
-                                    }
-                                }
-                            }
-                        }
-
-                        // set field value to formula resut
-                        value = fn.ToString();
-                        */
                     } 
                     
-
                     // check dynamic markers checkboxes
                     bool isHaveCheckbox = false;
                     bool isChecked = false;
@@ -290,6 +230,120 @@ namespace templates
                     if (!isHaveCheckbox)
                     {
                         this.markers.replaceInDocument(this.newDoc.Document, name, value);
+                    }
+                }
+            }
+
+            foreach (HtmlElement input in elements)
+            {
+                // process only text elements
+                if (input.GetAttribute("type") == "text")
+                {
+                    var name = input.GetAttribute("name");
+                    var value = input.GetAttribute("value");
+
+                    //check if it's chart
+                    if (input.GetAttribute("text_type") != null && input.GetAttribute("text_type") == "chart")
+                    {
+                        ArrayList listDataSource = new ArrayList();
+
+                        ChartControl myChart = new ChartControl();
+                        myChart.DataSource = listDataSource;
+
+                        //prepare data
+                        foreach (string line in value.Split(';'))
+                        {
+                            string row_count = line.Split(':')[0];
+                            string cols = line.Split(':')[1];
+
+                            int col_count = 1;
+
+                            foreach (string col in cols.Split(','))
+                            {
+                                string colVal = this.getValueById(col);
+                                listDataSource.Add(new ChartRecord(Int32.Parse(row_count), Int32.Parse(colVal), col_count.ToString()));
+
+                                col_count++;
+                            }
+
+                            // Create a series, and add it to the chart. 
+                            Series chartSeries = new Series("My Series", ViewType.Line);
+                            myChart.Series.Add(chartSeries);
+
+                            // Adjust the series data members. 
+                            chartSeries.ArgumentDataMember = "name";
+                            chartSeries.ValueDataMembers.AddRange(new string[] { "val" });
+
+                            // Access the view-type-specific options of the series. 
+                            ((LineSeriesView)chartSeries.View).ColorEach = true;
+                            chartSeries.LegendPointOptions.Pattern = "{A}";
+                        }
+
+                        myChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+                        myChart.Width = 645;
+
+                        //export to image
+                        Image image = null;
+
+                        using (MemoryStream s = new MemoryStream())
+                        {
+                            myChart.ExportToImage(s, ImageFormat.Png);
+                            image = Image.FromStream(s);
+                        }
+
+
+                        this.markers.replaceImgInDocument(this.newDoc.Document, name, image);
+
+                    }
+
+                    // check if it's formula
+                    if (input.GetAttribute("text_type") != null && input.GetAttribute("text_type") == "formula")
+                    {
+                        var formula = input.GetAttribute("formula");
+                        value = input.GetAttribute("value");
+                    }
+
+                    // check dynamic markers checkboxes
+                    bool isHaveCheckbox = false;
+                    bool isChecked = false;
+                    bool isEmptyTextBox = false;
+
+                    foreach (HtmlElement cInput in elements)
+                    {
+                        //dynamic markers allready have checkbox. is this marker has checkbox?
+                        if (cInput.GetAttribute("type") == "checkbox" && cInput.GetAttribute("name") == name)
+                        {
+                            isHaveCheckbox = true;
+
+                            //if this marker have checkbox - this is dynamic marker, check if it checked
+                            if (cInput.GetAttribute("checked") == "True")
+                                isChecked = true;
+                        }
+
+                        if (cInput.GetAttribute("type") == "text" && cInput.GetAttribute("name") == name)
+                        {
+                            if (cInput.GetAttribute("value") == "")
+                                isEmptyTextBox = true;
+                        }
+                    }
+
+                    if (isHaveCheckbox && isChecked)
+                    {
+                        this.markers.replaceInDocument2(this.newDoc.Document, name, value);
+                    }
+                    if (isHaveCheckbox && !isChecked && !isEmptyTextBox)
+                    {
+                        //this.markers.deleteLineInDocument(this.newDoc.Document, name);
+                        this.markers.replaceInDocument2(this.newDoc.Document, name, "");
+                    }
+                    if (isHaveCheckbox && !isChecked && isEmptyTextBox)
+                    {
+                        this.markers.deleteLineInDocument(this.newDoc.Document, name);
+                        this.markers.replaceInDocument2(this.newDoc.Document, name, "");
+                    }
+                    if (!isHaveCheckbox)
+                    {
+                        this.markers.replaceInDocument2(this.newDoc.Document, name, value);
                     }
                 }
             }

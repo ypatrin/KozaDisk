@@ -116,6 +116,16 @@ namespace templates
             {
                 html = this.markers.processMarkers(html, marker, markers);
             }
+
+            foreach (XmlNode marker in markers)
+            {
+                html = this.markers.processMarkers(html, marker, markers);
+            }      
+
+            html = html.Replace("&rnbsp;", " ");
+            html = html.Replace("&nbsp;", " ");
+            html = html.Replace("'>'>", "'>");
+
             this.progress.setCurrent(10);
 
             template.setUserName(userName);

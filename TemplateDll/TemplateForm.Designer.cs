@@ -83,7 +83,7 @@
             this.SaveBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.SaveBtn.Location = new System.Drawing.Point(0, 0);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(815, 80);
+            this.SaveBtn.Size = new System.Drawing.Size(815, 86);
             this.SaveBtn.TabIndex = 1;
             // 
             // button4
@@ -91,9 +91,9 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(376, 24);
+            this.button4.Location = new System.Drawing.Point(376, 26);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 30);
+            this.button4.Size = new System.Drawing.Size(120, 32);
             this.button4.TabIndex = 4;
             this.button4.Text = "Зберегти";
             this.button4.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             this.DownloadBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DownloadBtn.ForeColor = System.Drawing.Color.White;
-            this.DownloadBtn.Location = new System.Drawing.Point(239, 24);
+            this.DownloadBtn.Location = new System.Drawing.Point(239, 26);
             this.DownloadBtn.Name = "DownloadBtn";
-            this.DownloadBtn.Size = new System.Drawing.Size(120, 30);
+            this.DownloadBtn.Size = new System.Drawing.Size(120, 32);
             this.DownloadBtn.TabIndex = 3;
             this.DownloadBtn.Text = "Завантажити";
             this.DownloadBtn.UseVisualStyleBackColor = true;
@@ -117,9 +117,9 @@
             this.PrintBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintBtn.ForeColor = System.Drawing.Color.White;
-            this.PrintBtn.Location = new System.Drawing.Point(102, 24);
+            this.PrintBtn.Location = new System.Drawing.Point(102, 26);
             this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(120, 30);
+            this.PrintBtn.Size = new System.Drawing.Size(120, 32);
             this.PrintBtn.TabIndex = 2;
             this.PrintBtn.Text = "Перегляд та друк";
             this.PrintBtn.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::templates.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -140,9 +140,9 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(815, 348);
+            this.panel2.Size = new System.Drawing.Size(815, 375);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -157,7 +157,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(515, 348);
+            this.panel4.Size = new System.Drawing.Size(515, 375);
             this.panel4.TabIndex = 3;
             // 
             // panel12
@@ -165,18 +165,18 @@
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.webBrowser1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(26, 86);
+            this.panel12.Location = new System.Drawing.Point(26, 92);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(459, 239);
+            this.panel12.Size = new System.Drawing.Size(459, 258);
             this.panel12.TabIndex = 5;
             // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(457, 237);
+            this.webBrowser1.Size = new System.Drawing.Size(457, 256);
             this.webBrowser1.TabIndex = 5;
             // 
             // panel8
@@ -185,9 +185,9 @@
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(26, 18);
+            this.panel8.Location = new System.Drawing.Point(26, 19);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(459, 68);
+            this.panel8.Size = new System.Drawing.Size(459, 73);
             this.panel8.TabIndex = 4;
             // 
             // panel11
@@ -195,27 +195,27 @@
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.TemplateNameLbl);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 10);
+            this.panel11.Location = new System.Drawing.Point(0, 11);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(459, 37);
+            this.panel11.Size = new System.Drawing.Size(459, 39);
             this.panel11.TabIndex = 2;
             // 
             // TemplateNameLbl
             // 
             this.TemplateNameLbl.AutoSize = true;
-            this.TemplateNameLbl.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TemplateNameLbl.Location = new System.Drawing.Point(5, 7);
+            this.TemplateNameLbl.Font = new System.Drawing.Font("Myriad Pro", 12F);
+            this.TemplateNameLbl.Location = new System.Drawing.Point(5, 8);
             this.TemplateNameLbl.Name = "TemplateNameLbl";
-            this.TemplateNameLbl.Size = new System.Drawing.Size(48, 22);
+            this.TemplateNameLbl.Size = new System.Drawing.Size(50, 19);
             this.TemplateNameLbl.TabIndex = 0;
             this.TemplateNameLbl.Text = "label1";
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 47);
+            this.panel10.Location = new System.Drawing.Point(0, 50);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(459, 21);
+            this.panel10.Size = new System.Drawing.Size(459, 23);
             this.panel10.TabIndex = 1;
             // 
             // panel9
@@ -223,31 +223,31 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(459, 10);
+            this.panel9.Size = new System.Drawing.Size(459, 11);
             this.panel9.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(26, 325);
+            this.panel7.Location = new System.Drawing.Point(26, 350);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(459, 23);
+            this.panel7.Size = new System.Drawing.Size(459, 25);
             this.panel7.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(485, 18);
+            this.panel6.Location = new System.Drawing.Point(485, 19);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(30, 330);
+            this.panel6.Size = new System.Drawing.Size(30, 356);
             this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 18);
+            this.panel5.Location = new System.Drawing.Point(0, 19);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 330);
+            this.panel5.Size = new System.Drawing.Size(26, 356);
             this.panel5.TabIndex = 1;
             // 
             // panel1
@@ -255,7 +255,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 18);
+            this.panel1.Size = new System.Drawing.Size(515, 19);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -267,16 +267,16 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(515, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 348);
+            this.panel3.Size = new System.Drawing.Size(300, 375);
             this.panel3.TabIndex = 2;
             // 
             // panel15
             // 
             this.panel15.Controls.Add(this.webBrowser2);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(31, 57);
+            this.panel15.Location = new System.Drawing.Point(31, 61);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(267, 289);
+            this.panel15.Size = new System.Drawing.Size(267, 312);
             this.panel15.TabIndex = 2;
             // 
             // webBrowser2
@@ -285,10 +285,10 @@
             this.webBrowser2.AllowWebBrowserDrop = false;
             this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(267, 289);
+            this.webBrowser2.Size = new System.Drawing.Size(267, 312);
             this.webBrowser2.TabIndex = 1;
             // 
             // panel14
@@ -297,15 +297,15 @@
             this.panel14.Controls.Add(this.pictureBox3);
             this.panel14.Controls.Add(this.pictureBox2);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 57);
+            this.panel14.Location = new System.Drawing.Point(0, 61);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(31, 289);
+            this.panel14.Size = new System.Drawing.Size(31, 312);
             this.panel14.TabIndex = 1;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::templates.Properties.Resources.com_arrow_left;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 140);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 151);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 57);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -317,7 +317,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::templates.Properties.Resources.com_arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 140);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 151);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -332,14 +332,14 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(298, 57);
+            this.panel13.Size = new System.Drawing.Size(298, 61);
             this.panel13.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Minion Pro Med", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 17);
+            this.label1.Location = new System.Drawing.Point(110, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 22);
             this.label1.TabIndex = 0;
@@ -351,11 +351,12 @@
             // 
             // TemplateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 428);
+            this.ClientSize = new System.Drawing.Size(815, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SaveBtn);
+            this.Font = new System.Drawing.Font("Myriad Pro", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TemplateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

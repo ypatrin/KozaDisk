@@ -136,7 +136,8 @@ namespace templates
 
                 if (MarkerNode.Attributes["value"] != null)
                 {
-                    val = MarkerNode.Attributes["value"].Value.Replace(@"$$","");
+                    //val = MarkerNode.Attributes["value"].Value.Replace(@"$$","");
+                    val = MarkerNode.Attributes["value"].Value;
                 }
 
                 string markerCommentDyn = Properties.Resources.comment_default_checkbox;
@@ -146,7 +147,7 @@ namespace templates
                 {
                     if (marker.Attributes["name"] == null) continue;
 
-                    if (val == marker.Attributes["name"].Value)
+                    if (val.Replace(@"$$", "") == marker.Attributes["name"].Value)
                     {
                         //set type
                         type = marker.Attributes["type"].Value;
@@ -232,8 +233,8 @@ namespace templates
                             "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
                             "<span class='marker'><img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/></span>" +
                             "{2}"+
-                            "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{2}'>"
-                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
+                            "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{5}'>"
+                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn, val.Replace("$$",""))
                     );
                 }
 
@@ -307,6 +308,25 @@ namespace templates
             try
             {
                 DocumentRange[] ranges = document.FindAll("$$" + from + "$$", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges)
+                {
+                    document.Replace(range, to);
+                }
+            }
+            finally
+            {
+                document.EndUpdate();
+            }
+            return document;
+        }
+
+        public Document replaceInDocument2(Document document, string from, string to)
+        {
+            document.BeginUpdate();
+            try
+            {
+                DocumentRange[] ranges = document.FindAll(from, SearchOptions.None);
 
                 foreach (DocumentRange range in ranges)
                 {
