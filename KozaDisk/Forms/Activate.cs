@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Management;
+using System.Xml;
 
 namespace KozaDisk.Forms
 {
@@ -28,6 +29,23 @@ namespace KozaDisk.Forms
 
         private void ActivateButton_Click(object sender, EventArgs e)
         {
+            //check code
+
+            if (this.ActivateCodeBox.Text.Length != 24)
+            {
+                MessageBox.Show("Невірний код активації.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (this.ActivateCodeBox.Text.Substring(4,1) != "-" && 
+                this.ActivateCodeBox.Text.Substring(9, 1) != "-" &&
+                this.ActivateCodeBox.Text.Substring(14, 1) != "-" &&
+                this.ActivateCodeBox.Text.Substring(19, 1) != "-" )
+            {
+                MessageBox.Show("Невірний код активації.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             //prepare key
             DateTime now = DateTime.Now;
             this.key = this.key + now.ToString("ddMMyyyy");
@@ -42,34 +60,62 @@ namespace KozaDisk.Forms
                 cpuID = mo["ProcessorID"].ToString();
             }
 
-            string xmlRequest = "";
-            xmlRequest += "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>";
+            string xmlRequest = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>";
             xmlRequest += "<activation>";
             xmlRequest += "     <disk>";
             xmlRequest += $"        <name>{this.DiskNameLabel.Text}</name>"; //имя диска
-            xmlRequest += "         <id>INT</id>"; // ID диска
-            xmlRequest += $"        <key>{this.ActivateCodeBox.Text}</key>"; // ключ диска, который ввел юзер в окне активации
+            xmlRequest += $"        <id>{this.db}</id>"; // ID диска
+            xmlRequest += $"        <key>{this.ActivateCodeBox.Text.Replace("-","")}</key>"; // ключ диска, который ввел юзер в окне активации
             xmlRequest += "     </disk>";
             xmlRequest += "     <user>";
             xmlRequest += $"        <email>{userData.Email}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
             xmlRequest += $"        <app_code>{cpuID}</app_code>"; // ID приложения (уникальное для каждого юзера)
             xmlRequest += "     </user>";
-            xmlRequest += "</ activation>";
+            xmlRequest += "</activation>";
 
-            string xmlEncoded = Class.CryptAesCBC.EncryptStringAES(xmlRequest, this.key);
+            string xmlEncoded = Class.CryptAes.Encrypt(xmlRequest, this.key);
 
-            string activeAnswer = Class.Request.POST(@"http://kozaonline.com.ua/kozadisc/activation", "XML_DATA=" + xmlEncoded);
-            //MessageBox.Show(activeAnswer);
+            try
+            {
+                //send request
+                string activeAnswer = Class.Request.POST(@"http://kozaonline.com.ua/kozadisc/activation", "XML_DATA=" + xmlEncoded);
+                //decrypt answer
+                string activeAnswerDecode = Class.CryptAes.Decrypt(activeAnswer, this.key);
 
-            //activate OK
+                //parse xml
+                XmlDocument answerXml = new XmlDocument();
+                answerXml.LoadXml(activeAnswerDecode);
 
-            KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
-            activator.activate(this.db, "1414-6817-4189-6510-2069");
+                XmlElement root = answerXml.DocumentElement;
+                XmlNode status = root.SelectSingleNode($"activate_status/status");
 
-            MessageBox.Show("Активацію успішно виконано!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string activateStatus = status.InnerText;
 
-            this.Close();
+                //activate
+                if (activateStatus == "Error")
+                {
+                    MessageBox.Show("Невірний код активації. Спробуйте ще раз!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (activateStatus == "Activated")
+                {
+                    MessageBox.Show("Цей код вже активовано. Введіть будь ласка інший код.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (activateStatus == "OK")
+                {
+                    XmlNode activationKey = root.SelectSingleNode($"activate_status/activation_key");
+
+                    KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
+                    activator.activate(this.db, activationKey.InnerText);
+
+                    MessageBox.Show("Активацію успішно виконано!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Помилка сервера активації. Спробуйте ще раз пізніше!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

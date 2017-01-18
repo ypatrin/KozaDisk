@@ -319,6 +319,66 @@ namespace KozaDisk.Forms
             //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
         }
 
+        public void openMyDocument(string documentId, string db)
+        {
+            db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
+            string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            reader.Read();
+
+            Template template = new Template();
+
+            template.id = (string)reader["id"].ToString();
+            template.structureId = (string)reader["structure_id"].ToString();
+            template.name = (string)reader["name"].ToString();
+            template.markersXML = (string)reader["markers_xml"].ToString();
+            template.template = (string)reader["template"].ToString();
+            template.type = (string)reader["type"].ToString();
+
+            string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
+            string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
+
+            connection.Close();
+
+            string myDocsDb = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+            SQLiteConnection myDocCn = new SQLiteConnection(string.Format("Data Source={0};", myDocsDb));
+            myDocCn.Open();
+
+            string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE doc_id = '{documentId}'";
+
+            SQLiteCommand MyDocCmd = new SQLiteCommand(sql, myDocCn);
+            SQLiteDataReader r = MyDocCmd.ExecuteReader();
+            r.Read();
+            string html = r["doc_html"].ToString();
+            html = Encrypt.Base64.Decode(html);
+
+            myDocCn.Close();
+
+            //create template file
+            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
+            //create markers file
+            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
+
+            //loading template
+            templates.Templates templates = new templates.Templates();
+            templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
+            templates.setUserXmlFile(this.userData.XmlFilePath);
+            templates.setDbName(databaseName);
+            templates.setDocId(Int32.Parse(template.id));
+            templates.open(html);
+            
+
+            //delete temp files
+            //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+            //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
+        }
+
         private void BlockViewBtn_Click(object sender, EventArgs e)
         {
             this.view = "block";
@@ -349,6 +409,10 @@ namespace KozaDisk.Forms
         {
             AutofillForm autoFillForm = new AutofillForm(this.userData);
             autoFillForm.ShowDialog();
+
+            Users users = new Users();
+            User user = users.getUser(this.userData.UserName);
+            this.userData = user;
         }
 
         private void button2_Click(object sender, EventArgs e)

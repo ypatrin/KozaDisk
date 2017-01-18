@@ -341,45 +341,43 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{52A49E46-8CF2-463C-8765-1E0792E69893}</td><td>CSS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{75847CB7-03B3-4261-AC9B-B508936E5A5A}</td><td>ICON</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{F812B68C-B1D0-44B1-AD89-07A742EF55A3}</td><td>FONTS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{0B259CFC-61DD-4989-B621-F4E098FFB510}</td><td>LESS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{805F26CF-8FA8-48AF-AF9F-5F91D19E99D5}</td><td>SCSS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{4790A6D3-40C7-4887-89B3-79EC01474009}</td><td>FONT_ROBOTO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{F1CDF644-7D98-4FDA-A718-46F3C2EDD069}</td><td>IMGS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{BFD256B9-590A-4AB1-9F3B-875FC70BF560}</td><td>DHXCALENDAR_MATERIAL</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{B5D8A0AA-1275-43D8-8FEB-E62ABA70AC84}</td><td>X64</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{6DFEE1F1-1B03-4BF2-87A7-E14318473582}</td><td>X86</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{4826AF8D-F684-4C46-A6D8-078A82E1C6C6}</td><td>DIRECTORY</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td>{484A61A9-B76A-462B-881D-A83A4F4355AF}</td><td>DIRECTORY1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{6D08EF6D-5802-4A9B-9132-B40CCA611692}</td><td>COMMENTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT20</td><td>{64A59B68-E57F-4379-A02C-51B6F804BE7E}</td><td>DIRECTORY2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td>{C7B11FA3-B8E2-4E56-BDAA-36307D979C4E}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.sqlserver.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>EntityFramework.dll</td><td>{1CF09E85-FE77-404E-B9ED-EEEF26635315}</td><td>INSTALLDIR</td><td>2</td><td/><td>entityframework.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{F49B5364-F49E-47C0-989F-0A724F01F61E}</td><td>CSS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{26A58A94-66ED-4C02-9086-80DED3A7E4AF}</td><td>ICON</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{DCEFD883-1477-4C4C-AF45-F61695D54BDB}</td><td>FONTS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{4E82C9C6-FAD4-4909-BC5E-BB916A481D6F}</td><td>LESS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{8D588A7D-6DC0-4C69-ADDD-ED1103EF989B}</td><td>SCSS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{32CC500B-44DA-4D35-8F91-CCAA7DA69F80}</td><td>FONT_ROBOTO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{3EEC96FB-225F-490F-AB83-F8D536CF1C82}</td><td>IMGS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{39F0E222-E11E-458B-8027-04C744221DE5}</td><td>DHXCALENDAR_MATERIAL</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{3D5B1FF0-191E-4BA8-8839-CD7C890276AB}</td><td>UK_UA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{C90F5DFC-5E0A-40F1-8C2F-B1267F0ECD2E}</td><td>X64</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{A05483E3-C265-49B8-8346-529B7561AAF6}</td><td>X86</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{A49333B7-1201-415F-B76F-116982E241BE}</td><td>COMMENTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT21</td><td>{945189F5-FBB4-420B-87BD-8E8AB071793E}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT22</td><td>{9342B2CD-C044-4DB1-9E8C-2637F2A4AF03}</td><td>DIRECTORY3</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT23</td><td>{756114EF-380A-411F-9E1B-BDBBF88435A0}</td><td>DIRECTORY4</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT24</td><td>{C9DA95C5-D055-4C4B-83B4-E90984AFF465}</td><td>DIRECTORY5</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT25</td><td>{6108F2D9-648D-40E2-B6B9-BE3D816E6AE8}</td><td>KOZADISK1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT26</td><td>{C3C97634-4FAB-418E-AF75-4E07433DA780}</td><td>DB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT27</td><td>{C1E5FAC1-F63B-42A1-95A5-5756A75E09A3}</td><td>CD</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT28</td><td>{7BC5E9A7-C4F9-4527-B0B5-64131C2561AC}</td><td>XML</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT29</td><td>{BE6F6C5E-1934-4E2A-8B33-737309F43E24}</td><td>USERS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{85E49B53-516E-4CE9-A5F6-EA514A33560E}</td><td>IFACE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{F237F101-51D3-469F-ABE7-2C3627A990CE}</td><td>IFACE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT30</td><td>{1002EC3A-DFDC-4E06-BF6B-2D00879A9FC3}</td><td>FontsFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT31</td><td>{24E455F9-2A11-4F89-B4AE-046276BA45B5}</td><td>DesktopFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{D30BD8D0-6098-4383-AA48-BC124D8468B8}</td><td>JS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{DEB72C68-0B2E-4B81-BEF4-6AAF6CBE1E83}</td><td>LIB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{8F704722-B401-4EF7-876E-A675949978A5}</td><td>CALENDAR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{57B25B83-F5CE-4E70-B95F-4C8FED384A61}</td><td>FONTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{066826CC-DE16-4671-95C7-7E682A35CDF4}</td><td>FONT_AWESOME</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{67981A97-2A79-47DC-9DAA-B7914CAFEC2C}</td><td>CSS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Koza.exe</td><td>{B8790056-851F-41F7-A3E1-37EF758CFE5A}</td><td>INSTALLDIR</td><td>2</td><td/><td>koza.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SQLite.Interop.dll</td><td>{767A100E-F0B6-460B-8100-B8B02099B348}</td><td>X64</td><td>2</td><td/><td>sqlite.interop.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SQLite.Interop.dll1</td><td>{2711121B-7B0F-475B-8B06-ADFB30E6FEAA}</td><td>X86</td><td>2</td><td/><td>sqlite.interop.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Data.SQLite.EF6.dll</td><td>{E016984C-B49E-496E-B842-8CF8E8C30AB1}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.ef6.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Data.SQLite.Linq.dll</td><td>{1D4E6FAA-5664-48D2-82BF-AC410A290BDF}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.linq.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Data.SQLite.dll</td><td>{A5E3ECB8-FC44-48D4-A78C-1339FBD800F3}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>templates.dll</td><td>{52A7FC2E-6164-4A9F-83DE-323E342A6B4F}</td><td>INSTALLDIR</td><td>2</td><td/><td>templates.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{471FF9C5-B504-4081-A0FA-90D93008EA3A}</td><td>JS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{F9479B23-828A-4D41-8C8E-529BC685082E}</td><td>LIB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{CA13D0ED-C813-4122-A13E-7431E72AD9E4}</td><td>CALENDAR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{938BFD59-75DB-4051-BB0F-A5258D5B6682}</td><td>FONTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{8AF7DC9C-D607-401D-A96C-97D9FF992391}</td><td>FONT_AWESOME</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{E5F6C13E-7CCF-414B-88C7-9DC2F84F6498}</td><td>CSS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>KozaDisk.exe</td><td>{8ACCB2D8-2DE6-4BAB-A3ED-4AF8F93D5F68}</td><td>INSTALLDIR</td><td>2</td><td/><td>kozadisk.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>KozaDisk.resources.dll</td><td>{9786B118-61FF-42D8-84EB-AACFED517F55}</td><td>UK_UA</td><td>2</td><td/><td>kozadisk.resources.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SQLite.Interop.dll</td><td>{154424D1-70AF-4C14-A0C4-67D27410642B}</td><td>X64</td><td>2</td><td/><td>sqlite.interop.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SQLite.Interop.dll1</td><td>{CB89BAA5-14D5-4FBE-8345-CFD172D4F57C}</td><td>X86</td><td>2</td><td/><td>sqlite.interop.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.EF6.dll</td><td>{4EBEF7D7-E280-4CA5-9ABC-F28C6107B4D1}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.ef6.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.Linq.dll</td><td>{09171E62-1B76-4F82-822D-47F333F5989A}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.linq.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.dll</td><td>{DB5E5025-1154-43FA-A56C-E999160F0DB4}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>templates.dll</td><td>{840DFF12-56D1-46A4-8F91-1DC1A5D9D395}</td><td>INSTALLDIR</td><td>2</td><td/><td>templates.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1096,12 +1094,6 @@
 		<row><td>CSS1</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>DB</td><td>ISX_DEFAULTCOMPONENT26</td></row>
 		<row><td>DHXCALENDAR_MATERIAL</td><td>ISX_DEFAULTCOMPONENT15</td></row>
-		<row><td>DIRECTORY</td><td>ISX_DEFAULTCOMPONENT18</td></row>
-		<row><td>DIRECTORY1</td><td>ISX_DEFAULTCOMPONENT19</td></row>
-		<row><td>DIRECTORY2</td><td>ISX_DEFAULTCOMPONENT20</td></row>
-		<row><td>DIRECTORY3</td><td>ISX_DEFAULTCOMPONENT22</td></row>
-		<row><td>DIRECTORY4</td><td>ISX_DEFAULTCOMPONENT23</td></row>
-		<row><td>DIRECTORY5</td><td>ISX_DEFAULTCOMPONENT24</td></row>
 		<row><td>DesktopFolder</td><td>ISX_DEFAULTCOMPONENT31</td></row>
 		<row><td>FONTS</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>FONTS1</td><td>ISX_DEFAULTCOMPONENT10</td></row>
@@ -1111,6 +1103,8 @@
 		<row><td>ICON</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>IFACE</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>IMGS</td><td>ISX_DEFAULTCOMPONENT14</td></row>
+		<row><td>INSTALLDIR</td><td>EntityFramework.SqlServer.dll</td></row>
+		<row><td>INSTALLDIR</td><td>EntityFramework.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT10</td></row>
@@ -1122,13 +1116,8 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT16</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT17</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT18</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT19</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT20</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT21</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT22</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT23</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT24</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT25</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT26</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT27</td></row>
@@ -1143,7 +1132,8 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT9</td></row>
-		<row><td>INSTALLDIR</td><td>Koza.exe</td></row>
+		<row><td>INSTALLDIR</td><td>KozaDisk.exe</td></row>
+		<row><td>INSTALLDIR</td><td>KozaDisk.resources.dll</td></row>
 		<row><td>INSTALLDIR</td><td>SQLite.Interop.dll</td></row>
 		<row><td>INSTALLDIR</td><td>SQLite.Interop.dll1</td></row>
 		<row><td>INSTALLDIR</td><td>System.Data.SQLite.EF6.dll</td></row>
@@ -1155,10 +1145,12 @@
 		<row><td>LESS</td><td>ISX_DEFAULTCOMPONENT11</td></row>
 		<row><td>LIB</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>SCSS</td><td>ISX_DEFAULTCOMPONENT12</td></row>
+		<row><td>UK_UA</td><td>ISX_DEFAULTCOMPONENT16</td></row>
+		<row><td>UK_UA</td><td>KozaDisk.resources.dll</td></row>
 		<row><td>USERS</td><td>ISX_DEFAULTCOMPONENT29</td></row>
-		<row><td>X64</td><td>ISX_DEFAULTCOMPONENT16</td></row>
+		<row><td>X64</td><td>ISX_DEFAULTCOMPONENT17</td></row>
 		<row><td>X64</td><td>SQLite.Interop.dll</td></row>
-		<row><td>X86</td><td>ISX_DEFAULTCOMPONENT17</td></row>
+		<row><td>X86</td><td>ISX_DEFAULTCOMPONENT18</td></row>
 		<row><td>X86</td><td>SQLite.Interop.dll1</td></row>
 		<row><td>XML</td><td>ISX_DEFAULTCOMPONENT28</td></row>
 	</table>
@@ -1254,12 +1246,6 @@
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DB</td><td>KOZADISK1</td><td>db</td><td/><td>0</td><td/></row>
 		<row><td>DHXCALENDAR_MATERIAL</td><td>IMGS</td><td>DHXCAL~1|dhxcalendar_material</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY</td><td>INSTALLDIR</td><td>Шаблоны</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY1</td><td>DIRECTORY</td><td>1-АВТО~1|1 - Автовведення</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY2</td><td>DIRECTORY</td><td>2-ПОЛЯ~1|2 - Поля введення та Календар</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY3</td><td>DIRECTORY</td><td>3-ДИНА~1|3 - Динамічний рядок</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY4</td><td>DIRECTORY</td><td>4-КОМЕ~1|4 - Коментар и Формула</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY5</td><td>DIRECTORY</td><td>5-ГРАФ~1|5 - Графік</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
 		<row><td>FONTS</td><td>CALENDAR</td><td>fonts</td><td/><td>0</td><td/></row>
 		<row><td>FONTS1</td><td>FONT_AWESOME</td><td>fonts</td><td/><td>0</td><td/></row>
@@ -1303,6 +1289,7 @@
 		<row><td>TARGETDIR</td><td/><td>SourceDir</td><td/><td>0</td><td/></row>
 		<row><td>TempFolder</td><td>TARGETDIR</td><td>.:Temp</td><td/><td>0</td><td/></row>
 		<row><td>TemplateFolder</td><td>TARGETDIR</td><td>.:ShellNew</td><td/><td>0</td><td/></row>
+		<row><td>UK_UA</td><td>INSTALLDIR</td><td>uk-UA</td><td/><td>0</td><td/></row>
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>USERS</td><td>KOZADISK1</td><td>users</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
@@ -1310,7 +1297,7 @@
 		<row><td>X64</td><td>INSTALLDIR</td><td>x64</td><td/><td>0</td><td/></row>
 		<row><td>X86</td><td>INSTALLDIR</td><td>x86</td><td/><td>0</td><td/></row>
 		<row><td>XML</td><td>DB</td><td>xml</td><td/><td>0</td><td/></row>
-		<row><td>kozadisk</td><td>mcfr</td><td>KozaDisk</td><td/><td>1</td><td/></row>
+		<row><td>kozadisk</td><td>mcfr</td><td>-66C7~1|Коза-Диск</td><td/><td>1</td><td/></row>
 		<row><td>mcfr</td><td>ProgramMenuFolder</td><td>MCFR</td><td/><td>1</td><td/></row>
 	</table>
 
@@ -2003,6 +1990,8 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>EntityFramework.SqlServer.dll</td></row>
+		<row><td>AlwaysInstall</td><td>EntityFramework.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT10</td></row>
@@ -2014,13 +2003,8 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT16</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT17</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT18</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT19</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT20</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT21</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT22</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT23</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT24</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT25</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT26</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT27</td></row>
@@ -2035,7 +2019,8 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
-		<row><td>AlwaysInstall</td><td>Koza.exe</td></row>
+		<row><td>AlwaysInstall</td><td>KozaDisk.exe</td></row>
+		<row><td>AlwaysInstall</td><td>KozaDisk.resources.dll</td></row>
 		<row><td>AlwaysInstall</td><td>SQLite.Interop.dll</td></row>
 		<row><td>AlwaysInstall</td><td>SQLite.Interop.dll1</td></row>
 		<row><td>AlwaysInstall</td><td>System.Data.SQLite.EF6.dll</td></row>
@@ -2056,11 +2041,6 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File</td><td>ISX_DEFAULTCOMPONENT19</td><td>BE11~1.DOC|Наказ про затвердження штатного розпису.docx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\1 - Автовведення\Наказ про затвердження штатного розпису.docx</td><td>1</td><td/></row>
-		<row><td>File1</td><td>ISX_DEFAULTCOMPONENT20</td><td>2A65~1.DOC|Лист про участь у засіданні педагогічної ради.docx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\2 - Поля введення та Календар\Лист про участь у засіданні педагогічної ради.docx</td><td>1</td><td/></row>
-		<row><td>File2</td><td>ISX_DEFAULTCOMPONENT22</td><td>2051~1.DOC|Положення про педагогічну раду.docx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\3 - Динамічний рядок\Положення про педагогічну раду.docx</td><td>1</td><td/></row>
-		<row><td>File3</td><td>ISX_DEFAULTCOMPONENT23</td><td>_2B0A~1.DOC|Журнал щоденного обліку роботи практичного психолога, соціального педагога.docx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\4 - Коментар и Формула\Журнал щоденного обліку роботи практичного психолога, соціального педагога.docx</td><td>1</td><td/></row>
-		<row><td>File4</td><td>ISX_DEFAULTCOMPONENT24</td><td>8DAD~1.DOC|Фізіологічна крива за методом пульсометрії при правильно побудованому занятті з фізкультури.docx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\5 - Графік\Фізіологічна крива за методом пульсометрії при правильно побудованому занятті з фізкультури.docx</td><td>1</td><td/></row>
 		<row><td>_2n2p__y08sg57cnwqfknveszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>-2N2P-~1.WOF|-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>_animated.scss</td><td>ISX_DEFAULTCOMPONENT12</td><td>_ANIMA~1.SCS|_animated.scss</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\scss\_animated.scss</td><td>1</td><td/></row>
 		<row><td>_bordered_pulled.scss</td><td>ISX_DEFAULTCOMPONENT12</td><td>_BORDE~1.SCS|_bordered-pulled.scss</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\scss\_bordered-pulled.scss</td><td>1</td><td/></row>
@@ -2075,12 +2055,14 @@
 		<row><td>_stacked.scss</td><td>ISX_DEFAULTCOMPONENT12</td><td>_STACK~1.SCS|_stacked.scss</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\scss\_stacked.scss</td><td>1</td><td/></row>
 		<row><td>_variables.scss</td><td>ISX_DEFAULTCOMPONENT12</td><td>_VARIA~1.SCS|_variables.scss</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\scss\_variables.scss</td><td>1</td><td/></row>
 		<row><td>animated.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>ANIMAT~1.LES|animated.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\animated.less</td><td>1</td><td/></row>
+		<row><td>autofill.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>autofill.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\autofill.png</td><td>1</td><td/></row>
 		<row><td>bordered_pulled.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>BORDER~1.LES|bordered-pulled.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\bordered-pulled.less</td><td>1</td><td/></row>
 		<row><td>calendar.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>calendar.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\calendar.png</td><td>1</td><td/></row>
 		<row><td>comment.js</td><td>ISX_DEFAULTCOMPONENT4</td><td>comment.js</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\comment.js</td><td>1</td><td/></row>
 		<row><td>core.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>CORE~1.LES|core.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\core.less</td><td>1</td><td/></row>
 		<row><td>cwb0xya8bzo0ksthx0utua.woff2</td><td>ISX_DEFAULTCOMPONENT13</td><td>CWB0XY~1.WOF|CWB0XYA8bzo0kSThX0UTuA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\CWB0XYA8bzo0kSThX0UTuA.woff2</td><td>1</td><td/></row>
 		<row><td>d_6iyplofoccackzxwxsoftxra8t</td><td>ISX_DEFAULTCOMPONENT13</td><td>D-6IYP~1.WOF|d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2</td><td>1</td><td/></row>
+		<row><td>delete.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>delete.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\delete.png</td><td>1</td><td/></row>
 		<row><td>dhtmlxcalendar.css</td><td>ISX_DEFAULTCOMPONENT6</td><td>DHTMLX~1.CSS|dhtmlxcalendar.css</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\dhtmlxcalendar.css</td><td>1</td><td/></row>
 		<row><td>dhtmlxcalendar.js</td><td>ISX_DEFAULTCOMPONENT6</td><td>DHTMLX~1.JS|dhtmlxcalendar.js</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\dhtmlxcalendar.js</td><td>1</td><td/></row>
 		<row><td>dhtmlxcalendar_deprecated.js</td><td>ISX_DEFAULTCOMPONENT6</td><td>DHTMLX~1.JS|dhtmlxcalendar_deprecated.js</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\dhtmlxcalendar_deprecated.js</td><td>1</td><td/></row>
@@ -2091,10 +2073,15 @@
 		<row><td>dhxcalendar_selector_bottom.</td><td>ISX_DEFAULTCOMPONENT15</td><td>DHXCAL~1.GIF|dhxcalendar_selector_bottom.gif</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\imgs\dhxcalendar_material\dhxcalendar_selector_bottom.gif</td><td>1</td><td/></row>
 		<row><td>dhxcalendar_selector_top.gif</td><td>ISX_DEFAULTCOMPONENT15</td><td>DHXCAL~1.GIF|dhxcalendar_selector_top.gif</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\imgs\dhxcalendar_material\dhxcalendar_selector_top.gif</td><td>1</td><td/></row>
 		<row><td>disk.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>disk.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\disk.png</td><td>1</td><td/></row>
+		<row><td>disk_big.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>disk_big.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\disk_big.png</td><td>1</td><td/></row>
+		<row><td>doc.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>doc.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\doc.png</td><td>1</td><td/></row>
 		<row><td>ek4gzz_gexapcsbhtceqi_eszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>EK4GZZ~1.WOF|ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
+		<row><td>entityframework.dll</td><td>EntityFramework.dll</td><td>ENTITY~1.DLL|EntityFramework.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\EntityFramework.dll</td><td>1</td><td/></row>
+		<row><td>entityframework.sqlserver.dl</td><td>EntityFramework.SqlServer.dll</td><td>ENTITY~1.DLL|EntityFramework.SqlServer.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\EntityFramework.SqlServer.dll</td><td>1</td><td/></row>
 		<row><td>fcx7wwv8ozt71a3e1xoajveszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>FCX7WW~1.WOF|Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>fixed_width.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>FIXED-~1.LES|fixed-width.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\fixed-width.less</td><td>1</td><td/></row>
 		<row><td>folder.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>folder.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\folder.png</td><td>1</td><td/></row>
+		<row><td>folder_big.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>FOLDER~1.PNG|folder_big.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\folder_big.png</td><td>1</td><td/></row>
 		<row><td>folder_open.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>FOLDER~1.PNG|folder-open.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\folder-open.png</td><td>1</td><td/></row>
 		<row><td>font_awesome.css</td><td>ISX_DEFAULTCOMPONENT9</td><td>FONT-A~1.CSS|font-awesome.css</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\css\font-awesome.css</td><td>1</td><td/></row>
 		<row><td>font_awesome.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>FONT-A~1.LES|font-awesome.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\font-awesome.less</td><td>1</td><td/></row>
@@ -2110,22 +2097,20 @@
 		<row><td>formula.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>formula.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\formula.png</td><td>1</td><td/></row>
 		<row><td>icons.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>ICONS~1.LES|icons.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\icons.less</td><td>1</td><td/></row>
 		<row><td>jquery.js</td><td>ISX_DEFAULTCOMPONENT4</td><td>jquery.js</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\jquery.js</td><td>1</td><td/></row>
-		<row><td>koza.exe</td><td>Koza.exe</td><td>Koza.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Koza.exe</td><td>1</td><td/></row>
+		<row><td>kozadisk.exe</td><td>KozaDisk.exe</td><td>KozaDisk.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>1</td><td/></row>
+		<row><td>kozadisk.resources.dll</td><td>KozaDisk.resources.dll</td><td>KOZADI~1.DLL|KozaDisk.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\uk-UA\KozaDisk.resources.dll</td><td>1</td><td/></row>
 		<row><td>larger.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>LARGER~1.LES|larger.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\larger.less</td><td>1</td><td/></row>
 		<row><td>license_2.0.txt</td><td>ISX_DEFAULTCOMPONENT13</td><td>LICENS~1.TXT|LICENSE-2.0.txt</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\LICENSE-2.0.txt</td><td>1</td><td/></row>
 		<row><td>list.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>LIST~1.LES|list.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\list.less</td><td>1</td><td/></row>
-		<row><td>markers.xml</td><td>ISX_DEFAULTCOMPONENT19</td><td>markers.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\1 - Автовведення\markers.xml</td><td>1</td><td/></row>
-		<row><td>markers.xml1</td><td>ISX_DEFAULTCOMPONENT20</td><td>markers.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\2 - Поля введення та Календар\markers.xml</td><td>1</td><td/></row>
-		<row><td>markers.xml2</td><td>ISX_DEFAULTCOMPONENT22</td><td>markers.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\3 - Динамічний рядок\markers.xml</td><td>1</td><td/></row>
-		<row><td>markers.xml3</td><td>ISX_DEFAULTCOMPONENT23</td><td>markers.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\4 - Коментар и Формула\markers.xml</td><td>1</td><td/></row>
-		<row><td>markers.xml4</td><td>ISX_DEFAULTCOMPONENT24</td><td>markers.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\Шаблоны\5 - Графік\markers.xml</td><td>1</td><td/></row>
 		<row><td>mervlbyg_cxg3rlvuskt_feszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>MERVLB~1.WOF|mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>mixins.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>MIXINS~1.LES|mixins.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\mixins.less</td><td>1</td><td/></row>
-		<row><td>myriadpro_regular.otf</td><td>ISX_DEFAULTCOMPONENT30</td><td>MYRIAD~1.OTF|MyriadPro-Regular.otf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\Myriad Pro\MyriadPro-Regular.otf</td><td>1</td><td/></row>
+		<row><td>myriadpro_light.otf</td><td>ISX_DEFAULTCOMPONENT30</td><td>MYRIAD~1.OTF|MyriadPro-Light.otf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KozaDisk\FontToIntall\MyriadPro-Light.otf</td><td>1</td><td/></row>
+		<row><td>myriadpro_regular.otf</td><td>ISX_DEFAULTCOMPONENT30</td><td>MYRIAD~1.OTF|MyriadPro-Regular.otf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KozaDisk\FontToIntall\MyriadPro-Regular.otf</td><td>1</td><td/></row>
 		<row><td>ndf9mtnoplzo_nomog0mipeszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>NDF9MT~1.WOF|NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>page.css</td><td>ISX_DEFAULTCOMPONENT</td><td>page.css</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\css\page.css</td><td>1</td><td/></row>
 		<row><td>page.js</td><td>ISX_DEFAULTCOMPONENT4</td><td>page.js</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\page.js</td><td>1</td><td/></row>
 		<row><td>path.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>PATH~1.LES|path.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\path.less</td><td>1</td><td/></row>
+		<row><td>pencil.png</td><td>ISX_DEFAULTCOMPONENT3</td><td>pencil.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\pencil.png</td><td>1</td><td/></row>
 		<row><td>question.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>question.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\question.png</td><td>1</td><td/></row>
 		<row><td>roboto.css</td><td>ISX_DEFAULTCOMPONENT13</td><td>roboto.css</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_roboto\roboto.css</td><td>1</td><td/></row>
 		<row><td>rotated_flipped.less</td><td>ISX_DEFAULTCOMPONENT11</td><td>ROTATE~1.LES|rotated-flipped.less</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\fonts\font_awesome\less\rotated-flipped.less</td><td>1</td><td/></row>
@@ -2136,7 +2121,9 @@
 		<row><td>system.data.sqlite.dll</td><td>System.Data.SQLite.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\System.Data.SQLite.dll</td><td>1</td><td/></row>
 		<row><td>system.data.sqlite.ef6.dll</td><td>System.Data.SQLite.EF6.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.EF6.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\System.Data.SQLite.EF6.dll</td><td>1</td><td/></row>
 		<row><td>system.data.sqlite.linq.dll</td><td>System.Data.SQLite.Linq.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.Linq.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\System.Data.SQLite.Linq.dll</td><td>1</td><td/></row>
-		<row><td>templates.dll</td><td>templates.dll</td><td>TEMPLA~1.DLL|templates.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\templates.dll</td><td>1</td><td/></row>
+		<row><td>system.data.sqlite.xml</td><td>ISX_DEFAULTCOMPONENT21</td><td>SYSTEM~1.XML|System.Data.SQLite.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\System.Data.SQLite.xml</td><td>1</td><td/></row>
+		<row><td>templates.dll</td><td>templates.dll</td><td>TEMPLA~1.DLL|templates.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Release\templates.dll</td><td>1</td><td/></row>
+		<row><td>text.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>text.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\text.png</td><td>1</td><td/></row>
 		<row><td>thumbs.db</td><td>ISX_DEFAULTCOMPONENT2</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\comments\Thumbs.db</td><td>1</td><td/></row>
 		<row><td>thumbs.db1</td><td>ISX_DEFAULTCOMPONENT3</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\icon\iface\Thumbs.db</td><td>1</td><td/></row>
 		<row><td>thumbs.db2</td><td>ISX_DEFAULTCOMPONENT15</td><td>Thumbs.db</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\KD\js\lib\calendar\imgs\dhxcalendar_material\Thumbs.db</td><td>1</td><td/></row>
@@ -2154,6 +2141,7 @@
 		<col def="S128">FontTitle</col>
 		<row><td>fontawesome.otf</td><td/></row>
 		<row><td>fontawesome_webfont.ttf</td><td/></row>
+		<row><td>myriadpro_light.otf</td><td/></row>
 		<row><td>myriadpro_regular.otf</td><td/></row>
 	</table>
 
@@ -2288,45 +2276,43 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_D20DFF2E_DED7_4418_A064_34943826ABEA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_D582B475_9EDF_4671_8C5C_8571C56A3FF8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_D503A76B_B90D_4EDA_B909_84397276865E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_A8FDF495_7ED0_4E01_814E_C19CBC40FB79_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_A91949A3_2881_4713_A820_739DA96970AF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_0079C978_64F4_499E_8580_62BCB45CBA99_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_26BF4474_981D_41E0_8016_A5FA70B9F895_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_636F72F3_ABD2_4319_879C_A0AED349CE06_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_8164314A_2E41_447E_AED4_8545BB5E5578_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_34D84FFC_FAA7_4A99_B121_7D18AFAEA807_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_5EA085B7_1119_4CE5_A03C_DDB2938CC048_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td/><td/><td>_ECA89834_582A_4682_876A_6756F6802E31_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_023C07B4_D454_4769_8576_980373844B57_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT20</td><td/><td/><td>_A8D45D6A_E0B0_4D31_8D8C_91E09F150B6A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.SqlServer.dll</td><td/><td/><td>_DD32DFBB_0EDA_4C11_8BA7_85F0FB1E60D5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>EntityFramework.dll</td><td/><td/><td>_1AAD6110_128C_49C3_842D_8B690DF78083_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_CC2D68C0_FE09_41B4_9812_DD9207A80B1A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_5F663BD9_C567_4895_8697_1EEC650863BE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_B26F7A65_8848_4581_94F2_59FC828EB355_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_3F1ED37C_439C_4E3B_B61C_41151052A9EC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_839F8EC0_B091_420E_BBE2_B5CC4891EB73_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_EBCFA2F0_74BA_43CE_9EBD_5ED5D409A8D4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_8E0F0D4F_6291_4B70_AA9B_D0F95289FAEA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_ECB554EA_E195_4A23_B8DC_09F40314530C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_8F65AA7A_A6F6_4C1B_8DBC_8FBF27C0A9F6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_DD77398B_34B1_4B94_878F_E07CCCAED546_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_FCED7E60_5860_48D7_AB7B_9872A2A3D3E9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_7BD0045C_230B_4487_A811_A8EA08D144FE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT21</td><td/><td/><td>_67F5BBA6_0C76_4862_BDAE_40D44F2DE639_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT22</td><td/><td/><td>_DC69A13E_853C_414E_B436_53A8346C3B43_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT23</td><td/><td/><td>_663517E9_B0C2_4E57_BCDC_8981B40D6248_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT24</td><td/><td/><td>_A88DC122_B45E_47EB_BCEA_C1981A73DE12_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT25</td><td/><td/><td>_4CE07953_F279_47B9_8B16_480A9BF09848_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT26</td><td/><td/><td>_B80983F6_92A8_4846_A7E1_9BC779CFCAA8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT27</td><td/><td/><td>_C3F0F4CA_253D_48B7_8E32_CD1BA025C597_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT28</td><td/><td/><td>_0270B781_C67E_46F3_B53E_EEC59E023B70_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT29</td><td/><td/><td>_E7805297_606C_4F60_BD1E_F5D9BCBC270D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_9ABC40BF_5DA7_48FD_92A1_4E885E0E6C02_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_58397F00_CEC7_4439_9CC4_1059950B9F99_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT30</td><td/><td/><td>_0F448EAD_5CD7_4E76_A1AC_8CE40149BA57_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT31</td><td/><td/><td>_79873C10_C6B0_45E9_B83D_90FBB2DD1B1D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_2554DC86_0939_4966_8706_426AFDD508F2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_FB8112DD_F16D_4DBE_B252_A24C6DF961FC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_46634848_51D0_4FE2_A467_F7FFABDE815E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_15F7023F_5162_4152_8B97_62E6AC9C9076_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_FB517E4B_1C6C_4929_AAD6_88F961F660E2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_1AA1D0E2_CEBF_479C_B6D9_DB61680DD81B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Koza.exe</td><td/><td/><td>_F1D31561_BF63_4229_A07E_4FC4D981C1BE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SQLite.Interop.dll</td><td/><td/><td>_A47EA2A2_E06A_41E1_A0F0_DBEBD00829FA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SQLite.Interop.dll1</td><td/><td/><td>_588386C6_687D_400B_8DA7_F90BA056E4DF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Data.SQLite.EF6.dll</td><td/><td/><td>_3BCFCBB7_5935_4350_9F68_43242689660F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Data.SQLite.Linq.dll</td><td/><td/><td>_BDA29739_0602_4845_98A5_E75A46C11EB5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_621FF83E_6BF7_4D8D_A09E_68D7D4E6BCAD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>templates.dll</td><td/><td/><td>_70B472E9_397A_488A_971F_9370AA6CC54F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_D7DDE91D_1B0D_48D6_9471_746A4D49820B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_228EA4C7_8796_426D_8C48_44B782F0D2F7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_77C71FA9_1BFE_4DB6_A7AE_0390919937F3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_0367C705_67F2_49DC_ADCB_769E782F4B0E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_532572B1_CE3E_421E_AF11_303F00EA7697_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_D6C78A86_FD35_46C1_8121_AFD2DAE39316_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>KozaDisk.exe</td><td/><td/><td>_39D122D3_B2B5_4174_8584_92871CCCEC71_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>KozaDisk.resources.dll</td><td/><td/><td>_6C2817AB_7975_40A9_9AF9_85EA4C5E96C3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SQLite.Interop.dll</td><td/><td/><td>_A11F9615_3B72_484B_B0D2_80E8BB3E6BD1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SQLite.Interop.dll1</td><td/><td/><td>_EB86B0AF_EBCC_43A3_8ABF_2CCE961FE729_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.EF6.dll</td><td/><td/><td>_9AD07350_9DCB_49AA_A920_A00152ED64AF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.Linq.dll</td><td/><td/><td>_76971679_EFA0_40EA_8C32_BDB9B3BBA6EC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_8EECF518_FEC8_4BF8_A46F_06C9B476DB7D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>templates.dll</td><td/><td/><td>_CCF41028_6BB3_436E_AC12_72443B3044B3_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2672,7 +2658,7 @@
 		<row><td>DVD-18</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>15.83</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1049</td><td>0</td><td>2</td><td>Intel</td><td/><td>1049</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>7.95</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1049</td><td>0</td><td>1</td><td>Intel</td><td/><td>1049</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
+		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1049</td><td>0</td><td>1</td><td>Intel</td><td/><td>1049</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108701</td><td/><td/><td/><td>3</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>4</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>124941</td><td/><td/><td/><td>3</td></row>
 	</table>
 
@@ -2882,6 +2868,7 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
+		<row><td>_42B363AC_5822_4DB4_A37B_897C6AC17841_</td><td>Internet Explorer 8.0 for Windows XP (x86).prq</td><td/><td/><td/></row>
 		<row><td>_89AD3C95_F359_4058_B562_C748780CCF83_</td><td>Microsoft .NET Framework 4.0 Full.prq</td><td>0</td><td/><td/></row>
 	</table>
 
@@ -4020,6 +4007,14 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1049</td><td>Объем памяти ОЗУ не достаточен для работы [ProductName].</td><td>0</td><td/><td>1713644269</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1049</td><td>Разрешение экрана не подходит для работы [ProductName].</td><td>0</td><td/><td>1713644269</td></row>
 		<row><td>ID_STRING1</td><td>1049</td><td/><td>0</td><td/><td>1713644269</td></row>
+		<row><td>ID_STRING10</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-2002423538</td></row>
+		<row><td>ID_STRING10</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002419442</td></row>
+		<row><td>ID_STRING11</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-2002409202</td></row>
+		<row><td>ID_STRING11</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002401010</td></row>
+		<row><td>ID_STRING12</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-2002449519</td></row>
+		<row><td>ID_STRING12</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002439279</td></row>
+		<row><td>ID_STRING13</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-2002414703</td></row>
+		<row><td>ID_STRING13</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002406511</td></row>
 		<row><td>ID_STRING2</td><td>1049</td><td>http://mcfr.ua</td><td>0</td><td/><td>1713644269</td></row>
 		<row><td>ID_STRING3</td><td>1049</td><td>MCFR</td><td>0</td><td/><td>1713644269</td></row>
 		<row><td>ID_STRING4</td><td>1049</td><td>KozaDisk</td><td>0</td><td/><td>1713644269</td></row>
@@ -4027,6 +4022,12 @@
 		<row><td>ID_STRING5</td><td>1049</td><td>64DC~1|КозаДиск</td><td>0</td><td/><td>1982075118</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>1982108110</td></row>
 		<row><td>ID_STRING6</td><td>1049</td><td>64DC~1|КозаДиск</td><td>0</td><td/><td>1982114254</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-2002394099</td></row>
+		<row><td>ID_STRING7</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002449363</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-2002428883</td></row>
+		<row><td>ID_STRING8</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-2002424787</td></row>
+		<row><td>ID_STRING9</td><td>1033</td><td>Коза-Диск 2.0</td><td>0</td><td/><td>-2002428851</td></row>
+		<row><td>ID_STRING9</td><td>1049</td><td>Коза-Диск 2.0</td><td>0</td><td/><td>-2002428851</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1049</td><td>Данный компонент не будет удален.</td><td>0</td><td/><td>1713644269</td></row>
 	</table>
 
@@ -4145,7 +4146,13 @@
 		<row><td>Koza.exe_33DA8AA9814C4FBC91E47E24F6E2F281.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
 		<row><td>Koza.exe_928C50CB6DC04F71A9D5783C7C31AAF5.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_10ACE4E38D244336BB4434B1970BB815.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_24975967FBF04996959E04883869486B.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_90EE1C4302E24B52AB137EBBEED29E40.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_E76C0CF430FF4799912B899EE25FA608.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_E8B0A95492C148FAB627E8E1775BECCB.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_2A05A24603D043F994E1D008F2DBEAD5.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_40BC1A5CB13946E2BD965E0AE63077C9.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_6F8848C72FA348A3AE752210A292DFAD.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4278,7 +4285,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{3181A929-36FB-4D3C-BBDB-0A440EB139CA}</td></row>
 		<row><td>ISUSSignature</td><td>{5C01876E-8EDA-4C0B-A53B-10836F398C6F}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpgradePaths,viewUpdateService,viewSystemSearch,viewRelease,viewCustomActions,viewObjects,viewRegistry,viewAppFiles,viewShortcuts</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewUpgradePaths,viewUpdateService,viewSystemSearch,viewRelease,viewCustomActions,viewObjects,viewRegistry,viewAppFiles,viewShortcuts,viewUI,viewTextMessages</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4625,8 +4632,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>IS_SQLSERVER_USERNAME</td><td>sa</td><td/></row>
 		<row><td>InstallChoice</td><td>AR</td><td/></row>
 		<row><td>LAUNCHPROGRAM</td><td>1</td><td/></row>
-		<row><td>LAUNCHPROGRAMCOMPCODE</td><td>{E2A71090-0877-44F5-9AC8-F2A1F8CD5FE8}</td><td/></row>
-		<row><td>LAUNCHPROGRAMFILEKEY</td><td>koza.exe</td><td/></row>
+		<row><td>LAUNCHPROGRAMCOMPCODE</td><td>{1055886A-D6C9-41FA-B0BE-BA55C12C07BB}</td><td/></row>
+		<row><td>LAUNCHPROGRAMFILEKEY</td><td>kozadisk.exe</td><td/></row>
 		<row><td>LAUNCHREADME</td><td>1</td><td/></row>
 		<row><td>MSIFASTINSTALL</td><td>1</td><td/></row>
 		<row><td>Manufacturer</td><td>##COMPANY_NAME##</td><td/></row>
@@ -4655,7 +4662,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]Koza.exe</td><td/></row>
+		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]KozaDisk.exe</td><td/></row>
 		<row><td>ProductCode</td><td>{8CD6E16A-5074-4342-853C-836E810B947C}</td><td/></row>
 		<row><td>ProductName</td><td>KozaDisk</td><td/></row>
 		<row><td>ProductVersion</td><td>2.0</td><td/></row>
@@ -4727,7 +4734,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S0">Value</col>
 		<col def="s72">Component_</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>Registry1</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>InstallPath</td><td>[INSTALLDIR]Koza.exe</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
+		<row><td>Registry1</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>InstallPath</td><td>[INSTALLDIR]KozaDisk.exe</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
 		<row><td>Registry3</td><td>2</td><td>SOFTWARE\MCFR\KozaDisk</td><td>Version</td><td>[ProductVersion]</td><td>ISX_DEFAULTCOMPONENT21</td><td>0</td></row>
 	</table>
 
@@ -4737,6 +4744,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
+		<row><td>NewShortcut1</td><td>KozaDisk.exe</td><td/><td>kozadisk</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4822,7 +4830,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>NewShortcut1</td><td>DesktopFolder</td><td>##ID_STRING6##</td><td>Koza.exe</td><td>[INSTALLDIR]Koza.exe</td><td/><td/><td/><td>NewShortcut1_E8B0A95492C148FAB627E8E1775BECCB.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>kozadisk</td><td>##ID_STRING12##</td><td>KozaDisk.exe</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut1_24975967FBF04996959E04883869486B.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING13##</td><td>KozaDisk.exe</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut2_2A05A24603D043F994E1D008F2DBEAD5.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

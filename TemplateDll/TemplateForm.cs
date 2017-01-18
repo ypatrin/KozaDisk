@@ -49,7 +49,7 @@ namespace templates
         public void setTemplateName(String templateName)
         {
             this.templateName = templateName;
-            this.TemplateNameLbl.Text = templateName;
+            this.TemplateNameBox.Text = templateName;
         }
 
         public void setUserName(string userName)
@@ -89,6 +89,37 @@ namespace templates
             }
 
             this.runJs();
+        }
+
+        public void loadHtmlElementsValue(string documentHtmlValues)
+        {
+            foreach (string htmlElement in documentHtmlValues.Split(';'))
+            {
+                if (htmlElement == "")
+                    continue;
+
+                string[] element = htmlElement.Split(':');
+
+                string type = element[0];
+                string name = element[1];
+                string val = element[2];
+
+                foreach (HtmlElement HtmlElement1 in webBrowser1.Document.Body.All)
+                {
+                    if (HtmlElement1.Name == name)
+                    {
+                        if (type == "text")
+                        {
+                            HtmlElement1.SetAttribute("value", val);
+                        }
+                        if (type == "checkbox")
+                        {
+                            if (val == "False")
+                                HtmlElement1.SetAttribute("checked", "");
+                        }
+                    }
+                }
+            }
         }
 
         public void runJs()
@@ -152,7 +183,7 @@ namespace templates
             tmplDocument.processMarkers();
             this.progress.setCurrent(3);
 
-            tmplDocument.setName(this.templateName);
+            tmplDocument.setName(this.TemplateNameBox.Text);
             tmplDocument.save();
             this.progress.Close();
         }
@@ -229,8 +260,24 @@ namespace templates
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string html = webBrowser1.DocumentText;
-            string encHtml = Base64Encode(html);
+            string htmlElements = "";
+            var elements = webBrowser1.Document.GetElementsByTagName("input");
+
+            foreach (HtmlElement element in elements)
+            {
+                if (element.GetAttribute("type") == "text")
+                {
+                    htmlElements += $"text:{element.Name}:{element.GetAttribute("value")};";
+                }
+
+                if (element.GetAttribute("type") == "checkbox")
+                {
+                    string isChecked = element.GetAttribute("checked");
+                    htmlElements += $"checkbox:{element.Name}:{isChecked};";
+                }
+            }
+
+            string encHtml = Base64Encode(htmlElements);
 
             string AppStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"\\KozaDisk\\";
             string DocumentsDB = AppStorage + $"users\\{this.userName}\\documents.db";
@@ -257,7 +304,7 @@ namespace templates
             c.ExecuteNonQuery();
 
             //add
-            string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.templateName}', '{encHtml}', datetime('now'))";
+            string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";
 
             SQLiteCommand command = new SQLiteCommand(sql, connection);
             command.ExecuteNonQuery();

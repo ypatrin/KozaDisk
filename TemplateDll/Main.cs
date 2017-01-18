@@ -50,6 +50,11 @@ namespace templates
             openProc();
         }
 
+        public void open(string html)
+        {
+            openProc(html);
+        }
+
         private string getRandomString(int length)
         {
             string ch = "qwertyuiopasdfghjklzxcvbnm0123456789";
@@ -135,6 +140,86 @@ namespace templates
             //open form
             template.loadHTML(html);
             this.progress.setCurrent(11);
+            template.Show();
+            this.progress.setCurrent(12);
+            this.progress.Close();
+        }
+
+        void openProc(string documentHtmlValues)
+        {
+            this.progress.Open();
+            TemplateForm template = new TemplateForm();
+            template.setTemplateName(this.templateName);
+
+            this.progress.setMax(12);
+            this.progress.setCurrent(0);
+
+            //prepare html file path
+            this.htmlFilePath = this.tempPath + this.getRandomString(10) + ".html";
+            this.progress.setCurrent(1);
+
+            //load document and save to html
+            this.tmplDocument.setDocument(this.templateFilePath);
+            this.progress.setCurrent(2);
+            this.tmplDocument.saveToHtml(this.htmlFilePath);
+            this.progress.setCurrent(3);
+
+            //inject JS
+            template.injectModules(this.htmlFilePath);
+            this.progress.setCurrent(4);
+
+            //read html
+            string html = System.IO.File.ReadAllText(this.htmlFilePath, Encoding.GetEncoding("windows-1251"));
+            html = html.Replace(@"margin:0pt 0pt 0pt 50pt", @"margin:0pt 0pt 0pt 7pt");
+            this.progress.setCurrent(5);
+
+            //destroy temp html file
+            File.Delete(this.htmlFilePath);
+            this.progress.setCurrent(6);
+
+            //read user xml
+            XmlDocument userXml = new XmlDocument();
+            userXml.Load(this.userXmlFilePath);
+            XmlElement userDataXml = userXml.DocumentElement;
+            string userName = userDataXml.SelectSingleNode("/User/UserName").InnerText.ToString();
+            this.progress.setCurrent(7);
+
+            this.markers.setUserData(userDataXml);
+            this.progress.setCurrent(8);
+
+            //read template xml
+            XmlDocument doc = new XmlDocument();
+            doc.Load(this.templateXmlFilePath);
+            XmlNodeList markers = doc.DocumentElement.SelectNodes("/markers/marker");
+            this.progress.setCurrent(9);
+
+            foreach (XmlNode marker in markers)
+            {
+                html = this.markers.processMarkers(html, marker, markers);
+            }
+
+            foreach (XmlNode marker in markers)
+            {
+                html = this.markers.processMarkers(html, marker, markers);
+            }
+
+            html = html.Replace("&rnbsp;", " ");
+            html = html.Replace("&nbsp;", " ");
+            html = html.Replace("'>'>", "'>");
+
+            this.progress.setCurrent(10);
+
+            template.setUserName(userName);
+            template.setDbName(this.dbName);
+            template.setDocId(this.docId);
+
+            //open form
+            template.loadHTML(html);
+            this.progress.setCurrent(11);
+
+            //process html values
+            template.loadHtmlElementsValue(documentHtmlValues);
+          
             template.Show();
             this.progress.setCurrent(12);
             this.progress.Close();

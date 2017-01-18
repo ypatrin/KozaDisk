@@ -5,8 +5,65 @@ using System.Text;
 
 namespace KozaDisk.Class
 {
-    class CryptAesCBC
+    class CryptAes
     {
+        public static string Encrypt(string plainText, string key)
+        {
+            string cipherText;
+            var rijndael = new RijndaelManaged()
+            {
+                Key = Encoding.UTF8.GetBytes(key),
+                Mode = CipherMode.ECB,
+                BlockSize = 128,
+                Padding = PaddingMode.Zeros,
+            };
+            ICryptoTransform encryptor = rijndael.CreateEncryptor(rijndael.Key, null);
+
+            using (var memoryStream = new MemoryStream())
+            {
+                using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                {
+                    using (var streamWriter = new StreamWriter(cryptoStream))
+                    {
+                        streamWriter.Write(plainText);
+                        streamWriter.Flush();
+                    }
+                    //cipherText = Convert.ToBase64String(Encoding.UTF8.GetBytes(Encoding.UTF8.GetString(memoryStream.ToArray())));
+                    cipherText = Convert.ToBase64String(memoryStream.ToArray());
+                    //cryptoStream.FlushFinalBlock();
+                }
+            }
+            return cipherText;
+        }
+
+
+        public static string Decrypt(string cipherText, string key)
+        {
+            string plainText;
+            byte[] cipherArray = Convert.FromBase64String(cipherText);
+            var rijndael = new RijndaelManaged()
+            {
+                Key = Encoding.UTF8.GetBytes(key),
+                Mode = CipherMode.ECB,
+                BlockSize = 128,
+                Padding = PaddingMode.Zeros,
+            };
+            ICryptoTransform decryptor = rijndael.CreateDecryptor(rijndael.Key, rijndael.IV);
+
+            using (var memoryStream = new MemoryStream(cipherArray))
+            {
+                using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                {
+                    using (var streamReader = new StreamReader(cryptoStream))
+                    {
+                        plainText = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            return plainText;
+        }
+
+        /*
         /// <summary>
         /// Encrypt the given string using AES.  The string can be decrypted using 
         /// DecryptStringAES().  The sharedSecret parameters must match.
@@ -164,5 +221,6 @@ namespace KozaDisk.Class
 
             return buffer;
         }
+        */
     }
 }

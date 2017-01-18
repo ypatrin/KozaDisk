@@ -232,6 +232,7 @@
     <None Include="Resources\btn-wg3.png" />
     <None Include="Resources\btn-about2.png" />
     <None Include="Resources\btn-help1.png" />
+    <None Include="Resources\inner-logo.png" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

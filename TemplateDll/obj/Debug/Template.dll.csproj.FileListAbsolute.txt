@@ -236,13 +236,6 @@ D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.XtraRichEdit.v1
 D:\Data\C#\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.XtraRichEdit.v16.1.Extensions.resources.dll
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\templates.ProgressForm.resources
 D:\Data\C#\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csprojResolveAssemblyReference.cache
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintForm.resources
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintRibbonControllerResources.resources
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.ProgressForm.resources
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.Properties.Resources.resources
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.TemplateForm.resources
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csproj.GenerateResource.Cache
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll.licenses
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\templates.dll.config
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\templates.pdb
@@ -412,5 +405,12 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\de\DevExpress.Xpo.v16.2.
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.Xpo.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.Xpo.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.Xpo.v16.2.resources.dll
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.PrintRibbonControllerResources.resources
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.ProgressForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.Properties.Resources.resources
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.TemplateForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csproj.GenerateResource.Cache
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll.licenses
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.pdb

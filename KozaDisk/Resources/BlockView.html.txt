@@ -108,7 +108,12 @@
                 if (type == "document")
                 {
                     var id = $(this).attr("id");
-                    window.external.openDocument(id, db);
+
+                    if ($(this).hasClass("mydoc")) {
+                        window.external.openMyDocument(id, db);
+                    } else {
+                        window.external.openDocument(id, db);
+                    }
                 }
             });
         });

@@ -69,7 +69,7 @@
             $(".document").click(function () {
                 var document_id = $(this).attr("id");
                 var db = $(this).attr("db");
-                window.external.openDocument(document_id, db);
+                window.external.openMyDocument(document_id, db);
             });
 
             $(".delete").click(function () {

@@ -41,7 +41,6 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.TemplateNameLbl = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -57,6 +56,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.chartRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TemplateNameBox = new System.Windows.Forms.TextBox();
             this.SaveBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,7 +91,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(376, 26);
+            this.button4.Location = new System.Drawing.Point(485, 23);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 32);
             this.button4.TabIndex = 4;
@@ -104,7 +104,7 @@
             this.DownloadBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DownloadBtn.ForeColor = System.Drawing.Color.White;
-            this.DownloadBtn.Location = new System.Drawing.Point(239, 26);
+            this.DownloadBtn.Location = new System.Drawing.Point(348, 23);
             this.DownloadBtn.Name = "DownloadBtn";
             this.DownloadBtn.Size = new System.Drawing.Size(120, 32);
             this.DownloadBtn.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.PrintBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintBtn.ForeColor = System.Drawing.Color.White;
-            this.PrintBtn.Location = new System.Drawing.Point(102, 26);
+            this.PrintBtn.Location = new System.Drawing.Point(211, 23);
             this.PrintBtn.Name = "PrintBtn";
             this.PrintBtn.Size = new System.Drawing.Size(120, 32);
             this.PrintBtn.TabIndex = 2;
@@ -127,10 +127,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::templates.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Image = global::templates.Properties.Resources.inner_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 52);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -193,22 +193,12 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.TemplateNameLbl);
+            this.panel11.Controls.Add(this.TemplateNameBox);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 11);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(459, 39);
             this.panel11.TabIndex = 2;
-            // 
-            // TemplateNameLbl
-            // 
-            this.TemplateNameLbl.AutoSize = true;
-            this.TemplateNameLbl.Font = new System.Drawing.Font("Myriad Pro", 12F);
-            this.TemplateNameLbl.Location = new System.Drawing.Point(5, 8);
-            this.TemplateNameLbl.Name = "TemplateNameLbl";
-            this.TemplateNameLbl.Size = new System.Drawing.Size(50, 19);
-            this.TemplateNameLbl.TabIndex = 0;
-            this.TemplateNameLbl.Text = "label1";
             // 
             // panel10
             // 
@@ -349,6 +339,16 @@
             // 
             this.chartRecordBindingSource.DataSource = typeof(templates.ChartRecord);
             // 
+            // TemplateNameBox
+            // 
+            this.TemplateNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TemplateNameBox.Font = new System.Drawing.Font("Myriad Pro", 12F);
+            this.TemplateNameBox.Location = new System.Drawing.Point(5, 8);
+            this.TemplateNameBox.Name = "TemplateNameBox";
+            this.TemplateNameBox.Size = new System.Drawing.Size(436, 20);
+            this.TemplateNameBox.TabIndex = 1;
+            this.TemplateNameBox.Text = "Document name";
+            // 
             // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -400,7 +400,6 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label TemplateNameLbl;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
@@ -414,5 +413,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox TemplateNameBox;
     }
 }

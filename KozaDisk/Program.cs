@@ -171,6 +171,9 @@ namespace KozaDisk
                                 //copy
                                 File.Copy(source_disk_db, destination_disk_db);
                                 File.Copy(source_disk_xml, destination_disk_xml);
+
+                                File.SetAttributes(destination_disk_db, FileAttributes.Normal);
+                                File.SetAttributes(destination_disk_xml, FileAttributes.Normal);
                             }
                         }
                     }

@@ -29,7 +29,6 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\EntityFramework.SqlServer.d
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\System.Data.SQLite.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\System.Data.SQLite.EF6.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\System.Data.SQLite.Linq.dll
-D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\DevExpress.RichEdit.v16.2.Core.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\DevExpress.XtraRichEdit.v16.2.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\DevExpress.XtraCharts.v16.2.UI.dll
@@ -163,3 +162,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\uk-UA\KozaDisk.resources.dl
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.exe
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.pdb
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.Activate.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\templates.dll
