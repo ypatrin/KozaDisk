@@ -68,8 +68,9 @@ namespace KozaDisk.Forms
             xmlRequest += $"        <key>{this.ActivateCodeBox.Text.Replace("-","")}</key>"; // ключ диска, который ввел юзер в окне активации
             xmlRequest += "     </disk>";
             xmlRequest += "     <user>";
-            xmlRequest += $"        <email>{userData.Email}</email>"; // Мыло юзера
+            xmlRequest += $"        <email>{userData.UserEmail}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
+            xmlRequest += $"        <phone>{userData.UserPhone}</phone>"; // ФИО юзера
             xmlRequest += $"        <app_code>{cpuID}</app_code>"; // ID приложения (уникальное для каждого юзера)
             xmlRequest += "     </user>";
             xmlRequest += "</activation>";
