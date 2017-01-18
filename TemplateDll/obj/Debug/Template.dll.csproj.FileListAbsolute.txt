@@ -414,3 +414,4 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csproj.Gene
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll.licenses
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\templates.pdb
+D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csprojResolveAssemblyReference.cache
