@@ -172,7 +172,12 @@ namespace KozaDisk.Forms
             SearchBrowser.ScriptErrorsSuppressed = false;
             SearchBrowser.ObjectForScripting = this;
 
+
+            NaviBrowser.ObjectForScripting = this;
+
             this.UserNameLabel.Text = this.userData.UserName;
+
+            this.writeNavigation(new List<Class.Objects.Navigation>());
 
             this.prepareTree();
             this.prepareList();
@@ -217,6 +222,20 @@ namespace KozaDisk.Forms
                     this.DisksBlocksBrowser.Document.Write(blocksHtml);
                     this.DisksBlocksBrowser.Refresh();
 
+                    //write navigation
+                    List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+                    KozaDisk.Class.Objects.Navigation cd = new Class.Objects.Navigation();
+
+                    cd.db = disk.db;
+                    cd.text = disk.name;
+                    cd.isDisk = true;
+                    cd.isFolder = false;
+                    cd.isMyDocs = false;
+
+                    navi.Add(cd);
+
+                    writeNavigation(navi);
+
                     KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
                     if (!activator.isActivated(disk.db))
                     {
@@ -227,12 +246,52 @@ namespace KozaDisk.Forms
                         activateForm.db = disk.db;
                         activateForm.ShowDialog();
                     }
+
+
                 }
             }
         }
 
         public void openFolder(string folderId, string db)
         {
+            //write navigation
+            List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+            KozaDisk.Class.Objects.Navigation cd = new Class.Objects.Navigation();
+            KozaDisk.Class.Objects.Navigation folder = new Class.Objects.Navigation();
+
+            //search disk info
+            var disks = this.disks.getDisksList();
+
+            foreach (Disk disk in disks)
+            {
+                if (disk.db == db)
+                {
+                    cd.db = disk.db;
+                    cd.text = disk.name;
+                    cd.isDisk = true;
+                    cd.isFolder = false;
+                    cd.isMyDocs = false;
+
+                    foreach (Folder cdFolder in disk.getFolders())
+                    {
+                        if (cdFolder.id == folderId)
+                        {
+                            folder.id = cdFolder.id;
+                            folder.db = disk.db;
+                            folder.text = cdFolder.name;
+                            folder.isDisk = false;
+                            folder.isFolder = true;
+                            folder.isMyDocs = false;
+                        }
+                    }
+                }
+            }
+
+            navi.Add(cd);
+            navi.Add(folder);
+
+            this.writeNavigation(navi);
+
             var templates = new Templates();
             templates.setDB(db);
 
@@ -324,6 +383,7 @@ namespace KozaDisk.Forms
             template.markersXML = (string)reader["markers_xml"].ToString();
             template.template = (string)reader["template"].ToString();
             template.type = (string)reader["type"].ToString();
+            template.fileExt = (string)reader["file_ext"].ToString();
 
             string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
             string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
@@ -345,11 +405,13 @@ namespace KozaDisk.Forms
             }
             if (template.type == "1")
             {
+                /*
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.FileName = template.name + ".pdf";
                 sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 sfd.Filter = "PDF File|*.pdf";
                 sfd.Title = "Зберегти документ " + template.name;
+
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.File.WriteAllBytes(sfd.FileName, Convert.FromBase64String(template.template));
@@ -359,11 +421,11 @@ namespace KozaDisk.Forms
                         System.Diagnostics.Process.Start(sfd.FileName);
                     }
                 }
-            }
+                */
 
-            //delete temp files
-            System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
-            System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
+                System.IO.File.WriteAllBytes(Constant.TempPath + template.name + template.fileExt, Convert.FromBase64String(template.template));
+                System.Diagnostics.Process.Start(Constant.TempPath + template.name + template.fileExt);
+            }
         }
 
         public void openMyDocument(string documentId, string db)
@@ -464,6 +526,11 @@ namespace KozaDisk.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MyDocsLink();
+        }
+
+        public void MyDocsLink()
+        {
             this.panel11.Visible = false;
             this.panel12.Visible = true;
 
@@ -471,12 +538,24 @@ namespace KozaDisk.Forms
             this.mdBlockViewDisabled.Visible = false;
             this.mdListViewEnabled.Visible = false;
             this.mdBlockViewEnabled.Visible = true;
-            this.mdListViewDisabled.Visible = true;
-            
+            this.mdListViewDisabled.Visible = true;         
 
             this.loadMyDocuments(Constant.MyDocumentsBlockTab);
 
             this.searchBox.Text = "";
+
+            //write navigation
+            List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+            KozaDisk.Class.Objects.Navigation myDoc = new Class.Objects.Navigation();
+
+            myDoc.text = "Мої документи";
+            myDoc.isDisk = false;
+            myDoc.isFolder = false;
+            myDoc.isMyDocs = true;
+
+            navi.Add(myDoc);
+
+            writeNavigation(navi);
         }
 
         private void loadMyDocuments(int TabIndex)
@@ -513,14 +592,14 @@ namespace KozaDisk.Forms
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
                     disksBlockHtml += $"<div class=\"date\">{r["created_at"].ToString()}</div>";
-                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
                     disksBlockHtml += $"</div>";
                     disksBlockHtml += "</div>";
 
                     disksTreeHtml += $"<tr>";
                     disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\">{r["doc_name"].ToString()}</td>";
                     disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
-                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\">X</td>";
+                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\">X</td>";
                     disksTreeHtml += "<tr>";
 
                     //disksTreeHtml += $"<div class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\"></div>";
@@ -596,7 +675,7 @@ namespace KozaDisk.Forms
             this.loadMyDocuments(Constant.MyDocumentsBlockTab);
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void NaviMainLink()
         {
             this.panel11.Visible = true;
             this.panel12.Visible = false;
@@ -614,6 +693,52 @@ namespace KozaDisk.Forms
 
             this.prepareList();
             this.prepareTree();
+
+            this.writeNavigation(new List<Class.Objects.Navigation>());
+        }
+
+        private void writeNavigation(List<KozaDisk.Class.Objects.Navigation> navigationLinks)
+        {
+            string links = "";
+            string separator = " <span style=\"font-family: sans-serif; font-size: 12px; color: #797979;\">&gt;</span> ";
+            string style = "font-family: 'Miriad Pro'; font-size: 15px; cursor: pointer; color: 00bd9c;";
+
+            //write home
+            links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.NaviMainLink()\">Головна</a>";
+
+            foreach(KozaDisk.Class.Objects.Navigation navigationLink in navigationLinks)
+            {
+                //add separator
+                links += separator;
+
+                //write link
+                if (navigationLink.isDisk)
+                {
+                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openDisk('{navigationLink.db}');\">{navigationLink.text}</a>";
+                }
+
+                if (navigationLink.isFolder)
+                {
+                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openFolder('{navigationLink.id}', '{navigationLink.db}');\">{navigationLink.text}</a>";
+                }
+
+                if (navigationLink.isMyDocs)
+                {
+                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.MyDocsLink();\">{navigationLink.text}</a>";
+                }
+            }
+
+            NaviBrowser.Navigate("about:blank");
+            NaviBrowser.DocumentText = "0";
+            NaviBrowser.Document.OpenNew(true);
+            NaviBrowser.Document.Write(links);
+            NaviBrowser.Refresh();
+
+            while (NaviBrowser.ReadyState != WebBrowserReadyState.Complete)
+            {
+                Application.DoEvents();
+            }
+
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)

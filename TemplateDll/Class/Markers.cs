@@ -12,6 +12,7 @@ namespace templates
 {
     class Markers
     {
+        string ApplicationPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath) + @"\";
         private XmlElement userDataXml;
 
         public void setUserData(XmlElement userDataXml)
@@ -44,7 +45,7 @@ namespace templates
                     String.Format(""+
                         "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\question.png'/></span>" +
                         "<input type='text' name='{0}' id='{0}' val='' style='display:none'>"
-                    , markerName, val, Environment.CurrentDirectory)
+                    , markerName, val, ApplicationPath)
                 );
             }
 
@@ -76,7 +77,7 @@ namespace templates
                     "$$" + markerName + "$$",
                     String.Format("" +
                         "<input type='text' name='{0}' id='{0}' text_type='chart' value='{1}' style='display:none'>"
-                    , markerName, val, Environment.CurrentDirectory)
+                    , markerName, val, ApplicationPath)
                 );
             }
 
@@ -90,7 +91,7 @@ namespace templates
                     String.Format(""+
                         "<input type='text' name='{0}' id='{0}'>"+
                         "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\text.png'/></span>"
-                    , markerName, markerComment, Environment.CurrentDirectory)
+                    , markerName, markerComment, ApplicationPath)
                 );
             }
 
@@ -104,7 +105,7 @@ namespace templates
                     String.Format(""+
                         "<input type='text' class='date' name='{0}' id='{0}' onfocus='this.blur()' readonly='readonly'>"+
                         "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\calendar.png'/></span>"
-                    , markerName, markerComment, Environment.CurrentDirectory)
+                    , markerName, markerComment, ApplicationPath)
                 );
             }
 
@@ -125,7 +126,7 @@ namespace templates
                     String.Format(""+
                         "<input type='text' name='{1}' id='{1}' text_type='formula' formula='{3}' disabled='disabled'>"+
                         "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\formula.png'/></span>"
-                    , Environment.CurrentDirectory, markerName, markerComment, val)
+                    , ApplicationPath, markerName, markerComment, val)
                 );
             }
 
@@ -190,7 +191,7 @@ namespace templates
                             "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/></span>" +
                             "<input type='text' name='{1}' id='{1}'>"+
                             "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\text.png'/></span>"
-                        , Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
+                        , ApplicationPath, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "date")
@@ -205,7 +206,7 @@ namespace templates
                             "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/></span>" +
                             "<input type='text' name='{1}' id='{1}' class='date' onfocus='this.blur()' readonly='readonly'>"+
                             "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\calendar.png'/></span>"
-                        , Environment.CurrentDirectory, markerName, markerComment, markerCommentDyn)
+                        , ApplicationPath, markerName, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "static")
@@ -222,7 +223,7 @@ namespace templates
                             "<span class='marker'><img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/></span>" +
                             "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
                             "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\autofill.png'/></span>"
-                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn)
+                        , ApplicationPath, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
                 if (type == "")
@@ -234,7 +235,7 @@ namespace templates
                             "<span class='marker'><img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/></span>" +
                             "{2}"+
                             "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{5}'>"
-                        , Environment.CurrentDirectory, markerName, val, markerComment, markerCommentDyn, val.Replace("$$",""))
+                        , ApplicationPath, markerName, val, markerComment, markerCommentDyn, val.Replace("$$",""))
                     );
                 }
 
@@ -260,7 +261,7 @@ namespace templates
                     String.Format(""+
                         "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
                         "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\autofill.png'/></span>"
-                    , Environment.CurrentDirectory, markerName, val, markerComment)
+                    , ApplicationPath, markerName, val, markerComment)
                 );
             }
 

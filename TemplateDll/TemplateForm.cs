@@ -20,6 +20,8 @@ namespace templates
     [System.Runtime.InteropServices.ComVisible(true)]
     public partial class TemplateForm : Form
     {
+        string ApplicationPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath) + @"\";
+
         PrintableComponentLink link;
         RichEditControl richEditControl;
         Progress progress = Progress.getInstance();
@@ -136,30 +138,30 @@ namespace templates
             // inject calendar module
             HtmlNode calendarJs = htmlDocument.CreateElement("script");
             calendarJs.SetAttributeValue("type", "text/javascript");
-            calendarJs.SetAttributeValue("src", Environment.CurrentDirectory + @"\js\lib\calendar\dhtmlxcalendar.js");
+            calendarJs.SetAttributeValue("src", ApplicationPath + @"\js\lib\calendar\dhtmlxcalendar.js");
             head.AppendChild(calendarJs);
 
             HtmlNode calendarCss = htmlDocument.CreateElement("link");
             calendarCss.SetAttributeValue("rel", "stylesheet");
-            calendarCss.SetAttributeValue("href", Environment.CurrentDirectory + @"\js\lib\calendar\dhtmlxcalendar.css");
+            calendarCss.SetAttributeValue("href", ApplicationPath + @"\js\lib\calendar\dhtmlxcalendar.css");
             head.AppendChild(calendarCss);
 
             //inject jquery
             HtmlNode jqueryJs = htmlDocument.CreateElement("script");
             jqueryJs.SetAttributeValue("type", "text/javascript");
-            jqueryJs.SetAttributeValue("src", Environment.CurrentDirectory + @"\js\jquery.js");
+            jqueryJs.SetAttributeValue("src", ApplicationPath + @"\js\jquery.js");
             head.AppendChild(jqueryJs);
 
             //inject page js
             HtmlNode pageJs = htmlDocument.CreateElement("script");
             pageJs.SetAttributeValue("type", "text/javascript");
-            pageJs.SetAttributeValue("src", Environment.CurrentDirectory + @"\js\page.js");
+            pageJs.SetAttributeValue("src", ApplicationPath + @"\js\page.js");
             head.AppendChild(pageJs);
 
             //inject page css
             HtmlNode pageCss = htmlDocument.CreateElement("link");
             pageCss.SetAttributeValue("rel", "stylesheet");
-            pageCss.SetAttributeValue("href", Environment.CurrentDirectory + @"\css\page.css");
+            pageCss.SetAttributeValue("href", ApplicationPath + @"\css\page.css");
             head.AppendChild(pageCss);
 
             htmlDocument.Save(htmlFile);
@@ -191,7 +193,7 @@ namespace templates
         public void showComment(String comment)
         {
             string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body style=\"background: #F5F5F5\">{2}</body></html>",
-                Environment.CurrentDirectory + @"\js\jquery.js", Environment.CurrentDirectory + @"\js\comment.js", comment
+                ApplicationPath + @"\js\jquery.js", ApplicationPath + @"\js\comment.js", comment
             );
 
             webBrowser2.Navigate("about:blank");

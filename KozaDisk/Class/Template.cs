@@ -20,6 +20,11 @@ namespace KozaDisk
         public string structureId { get; set; }
 
         /// <summary>
+        /// Расширение файла
+        /// </summary>
+        public string fileExt { get; set; }
+
+        /// <summary>
         /// Имя шаблона
         /// </summary>
         public string name { get; set; }

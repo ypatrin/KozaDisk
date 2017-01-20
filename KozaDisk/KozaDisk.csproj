@@ -64,6 +64,7 @@
     <Compile Include="Class\Disk.cs" />
     <Compile Include="Class\Disks.cs" />
     <Compile Include="Class\Objects\DiskTree.cs" />
+    <Compile Include="Class\Objects\Navigation.cs" />
     <Compile Include="Class\Request.cs" />
     <Compile Include="Class\Template.cs" />
     <Compile Include="Class\Templates.cs" />

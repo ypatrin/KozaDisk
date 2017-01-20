@@ -394,7 +394,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{1B25D78B-1D67-4E00-AA5B-C2520206BD13}</td><td>FONT_AWESOME</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{B3CB26F6-ADCA-4DCD-8409-6B6141828083}</td><td>CSS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>KozaDisk.exe</td><td>{F5017CC7-9846-4F7A-AB18-B2E051A0FA25}</td><td>DATABASEDIR</td><td>2</td><td/><td>kozadisk.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>KozaDisk.exe1</td><td>{5D395CC2-3CDE-4479-A731-ECBBAAB08B3D}</td><td>INSTALLDIR</td><td>2</td><td/><td>kozadisk.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>KozaDisk.exe1</td><td>{6ED816C4-E1C7-49D5-89F6-A6D0CDE2CBF9}</td><td>INSTALLDIR</td><td>2</td><td/><td>kozadisk.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>KozaDisk.resources.dll</td><td>{F0751DEC-0A63-4CED-9AB4-D2C949A8CE74}</td><td>UK_UA</td><td>2</td><td/><td>kozadisk.resources.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>KozaDisk.resources.dll1</td><td>{EC27C0B5-43A5-4A72-AFBE-75DDD13A5D34}</td><td>UK_UA1</td><td>2</td><td/><td>kozadisk.resources.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>SQLite.Interop.dll</td><td>{8B8DC4F7-29CB-42A6-B200-C075EAC8BE3A}</td><td>X64</td><td>2</td><td/><td>sqlite.interop.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -2185,8 +2185,6 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>_017.1.db</td><td>ISX_DEFAULTCOMPONENT27</td><td>20171~1.DB|2017.1.db</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\User\AppData\Roaming\KozaDisk\db\cd\2017.1.db</td><td>1</td><td/></row>
-		<row><td>_017.1.xml</td><td>ISX_DEFAULTCOMPONENT28</td><td>20171~1.XML|2017.1.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\User\AppData\Roaming\KozaDisk\db\xml\2017.1.xml</td><td>1</td><td/></row>
 		<row><td>_2n2p__y08sg57cnwqfknveszw2x</td><td>ISX_DEFAULTCOMPONENT13</td><td>-2N2P-~1.WOF|-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_roboto\-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>_2n2p__y08sg57cnwqfknveszw2x1</td><td>ISX_DEFAULTCOMPONENT41</td><td>-2N2P-~1.WOF|-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_roboto\-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>_animated.scss</td><td>ISX_DEFAULTCOMPONENT12</td><td>_ANIMA~1.SCS|_animated.scss</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_awesome\scss\_animated.scss</td><td>1</td><td/></row>
@@ -2582,7 +2580,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_DADF28FC_2FD9_44D5_A0A7_0BD312475C67_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_48AE4A64_3380_4367_82BC_16185C8E1CB2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>KozaDisk.exe</td><td/><td/><td>_8FB44543_859E_4C85_990B_2314810FD050_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>KozaDisk.exe1</td><td/><td/><td>_1D4A3DA8_6D4E_4D2A_A21C_5F42A7595FAD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>KozaDisk.exe1</td><td/><td/><td>_9E27DCBB_8C67_4248_99EA_0E268D716666_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>KozaDisk.resources.dll</td><td/><td/><td>_6A0EBF46_B068_4AE3_8801_57A94341B183_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>KozaDisk.resources.dll1</td><td/><td/><td>_8A515DA8_DC08_4E3F_9EEA_CC7F8B648444_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>SQLite.Interop.dll</td><td/><td/><td>_C8AE2502_B528_46A2_AF1D_C927516E1D0F_FILTER</td><td/><td/><td/><td/></row>
@@ -4322,7 +4320,19 @@
 		<row><td>ID_STRING23</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599768117</td></row>
 		<row><td>ID_STRING24</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1599761973</td></row>
 		<row><td>ID_STRING24</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599757877</td></row>
+		<row><td>ID_STRING25</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-1599765908</td></row>
+		<row><td>ID_STRING25</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599761812</td></row>
+		<row><td>ID_STRING26</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1599755668</td></row>
+		<row><td>ID_STRING26</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599751572</td></row>
+		<row><td>ID_STRING27</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-1599759092</td></row>
+		<row><td>ID_STRING27</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599754996</td></row>
+		<row><td>ID_STRING28</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1599748852</td></row>
+		<row><td>ID_STRING28</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599742708</td></row>
+		<row><td>ID_STRING29</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>-1599748500</td></row>
+		<row><td>ID_STRING29</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599742356</td></row>
 		<row><td>ID_STRING3</td><td>1049</td><td>MCFR</td><td>0</td><td/><td>1713644269</td></row>
+		<row><td>ID_STRING30</td><td>1033</td><td>NEWSHO~1|NewShortcut2</td><td>0</td><td/><td>-1599797620</td></row>
+		<row><td>ID_STRING30</td><td>1049</td><td>-66C7~1|Коза-Диск</td><td>0</td><td/><td>-1599791476</td></row>
 		<row><td>ID_STRING4</td><td>1049</td><td>KozaDisk</td><td>0</td><td/><td>1713644269</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>NEWSHO~1|NewShortcut1</td><td>0</td><td/><td>1982130382</td></row>
 		<row><td>ID_STRING5</td><td>1049</td><td>64DC~1|КозаДиск</td><td>0</td><td/><td>1982075118</td></row>
@@ -4451,16 +4461,20 @@
 		<row><td>Koza.exe1_89A1203D963F406FA32B3B0F82B63FC0.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
 		<row><td>Koza.exe_33DA8AA9814C4FBC91E47E24F6E2F281.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
 		<row><td>Koza.exe_928C50CB6DC04F71A9D5783C7C31AAF5.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_0A3934A7347A4B8B9F4154C7733F442E.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_10ACE4E38D244336BB4434B1970BB815.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_18E2F40CD13242688CAE1CABC331F347.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_24975967FBF04996959E04883869486B.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_57EE8F5A93D641E0825994BD2BD45867.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_90EE1C4302E24B52AB137EBBEED29E40.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_922B7F959A4E4EA88A1EE1C0A5F1E557.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_98F1E88746C4480C860C5BC7D9FFB8AA.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_CCFF08491034431EADE1D54BEAEDD92E.exe</td><td/><td>D:\MCFR\Koza Disk\App\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_CE4056B24F924234BB5714190BFFAFC9.exe</td><td/><td>D:\MCFR\Koza Disk\App\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_E76C0CF430FF4799912B899EE25FA608.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_E8B0A95492C148FAB627E8E1775BECCB.exe</td><td/><td>E:\Desktop\KD\Koza.exe</td><td>0</td></row>
 		<row><td>NewShortcut1_E93345D9465043E6B00AB94F3F952336.exe</td><td/><td>D:\MCFR\Koza Disk\App\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_17ED7920462440618D3E1568ACC7C267.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_1A77F3E895854FC498D4096DDF9661F0.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_2A05A24603D043F994E1D008F2DBEAD5.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_32371A9FA02945F5B7336A3D53D959AD.exe</td><td/><td>D:\MCFR\Koza Disk\App\KozaDisk.exe</td><td>0</td></row>
@@ -4468,7 +4482,9 @@
 		<row><td>NewShortcut2_40BC1A5CB13946E2BD965E0AE63077C9.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_63DC1AC7EDDF4217BBAD1BF24FDC7EAB.exe</td><td/><td>D:\MCFR\Koza Disk\App\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_6F8848C72FA348A3AE752210A292DFAD.exe</td><td/><td>E:\Desktop\KD\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_9B17FEC101E44C2495AAAA5D005A6389.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 		<row><td>NewShortcut2_EF4EF2B823DA4F7CB089DE2A03C8FA1E.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
+		<row><td>NewShortcut2_FE20C40D7BD54419A8A6F11D0E49E509.exe</td><td/><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -5147,8 +5163,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>NewShortcut1</td><td>kozadisk</td><td>##ID_STRING23##</td><td>KozaDisk.exe1</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut1_98F1E88746C4480C860C5BC7D9FFB8AA.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING24##</td><td>KozaDisk.exe1</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut2_1A77F3E895854FC498D4096DDF9661F0.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>kozadisk</td><td>##ID_STRING29##</td><td>KozaDisk.exe1</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut1_922B7F959A4E4EA88A1EE1C0A5F1E557.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut2</td><td>DesktopFolder</td><td>##ID_STRING30##</td><td>KozaDisk.exe1</td><td>[INSTALLDIR]KozaDisk.exe</td><td/><td/><td/><td>NewShortcut2_17ED7920462440618D3E1568ACC7C267.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
