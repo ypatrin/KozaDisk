@@ -20,6 +20,8 @@ namespace KozaDisk.Forms
         Disks disks = new Disks();
         string view = "tree";
 
+        bool isNoNavigation = false;
+
         public TemplatesList()
         {
             InitializeComponent();
@@ -499,6 +501,7 @@ namespace KozaDisk.Forms
             this.BlockViewBtn.Visible = false;
 
             this.Tabs.SelectedIndex = 1;
+            this.isNoNavigation = false;
         }
 
         private void ListViewBtn_Click(object sender, EventArgs e)
@@ -512,6 +515,9 @@ namespace KozaDisk.Forms
             this.BlockViewBtn.Visible = true;
 
             this.Tabs.SelectedIndex = 0;
+
+            this.isNoNavigation = true;
+            this.writeNavigation(new List<Class.Objects.Navigation>());
         }
 
         private void AutoFillBtn_Click(object sender, EventArgs e)
@@ -706,25 +712,28 @@ namespace KozaDisk.Forms
             //write home
             links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.NaviMainLink()\">Головна</a>";
 
-            foreach(KozaDisk.Class.Objects.Navigation navigationLink in navigationLinks)
+            if (!this.isNoNavigation)
             {
-                //add separator
-                links += separator;
-
-                //write link
-                if (navigationLink.isDisk)
+                foreach (KozaDisk.Class.Objects.Navigation navigationLink in navigationLinks)
                 {
-                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openDisk('{navigationLink.db}');\">{navigationLink.text}</a>";
-                }
+                    //add separator
+                    links += separator;
 
-                if (navigationLink.isFolder)
-                {
-                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openFolder('{navigationLink.id}', '{navigationLink.db}');\">{navigationLink.text}</a>";
-                }
+                    //write link
+                    if (navigationLink.isDisk)
+                    {
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openDisk('{navigationLink.db}');\">{navigationLink.text}</a>";
+                    }
 
-                if (navigationLink.isMyDocs)
-                {
-                    links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.MyDocsLink();\">{navigationLink.text}</a>";
+                    if (navigationLink.isFolder)
+                    {
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openFolder('{navigationLink.id}', '{navigationLink.db}');\">{navigationLink.text}</a>";
+                    }
+
+                    if (navigationLink.isMyDocs)
+                    {
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.MyDocsLink();\">{navigationLink.text}</a>";
+                    }
                 }
             }
 
@@ -734,10 +743,12 @@ namespace KozaDisk.Forms
             NaviBrowser.Document.Write(links);
             NaviBrowser.Refresh();
 
+            /*
             while (NaviBrowser.ReadyState != WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
             }
+            */
 
         }
 
