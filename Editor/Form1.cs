@@ -258,7 +258,7 @@ namespace Editor
 
             string sql = "";
 
-            sql = "CREATE TABLE templates (id INTEGER PRIMARY KEY AUTOINCREMENT, structure_id INTEGER(10) NOT NULL, name STRING(255), name_lower STRING(255), markers_xml TEXT, template TEXT, type INTEGER(1) NOT NULL DEFAULT(0));";
+            sql = "CREATE TABLE templates (id INTEGER PRIMARY KEY AUTOINCREMENT, structure_id INTEGER(10) NOT NULL, file_ext VARCHAR (255), name STRING(255), name_lower STRING(255), markers_xml TEXT, template TEXT, type INTEGER(1) NOT NULL DEFAULT(0));";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
 
@@ -322,7 +322,9 @@ namespace Editor
             methods.Add(new PasswordAuthenticationMethod("yury.patrin", "ClearMeaN"));
             methods.Add(new PrivateKeyAuthenticationMethod("yury.patrin", keyFiles));
 
-            string serverPath = @"/srv/hosts/kozaonline.com.ua/htdocs/data/document_templates/" + this.DataBase.getTemplateFileName(documentNode.Name);
+            string fileName = this.DataBase.getTemplateFileName(documentNode.Name);
+            string serverPath = @"/srv/hosts/kozaonline.com.ua/htdocs/data/document_templates/" + fileName;
+            string localPath = System.IO.Path.GetTempPath() + fileName;
 
             try
             {
@@ -331,27 +333,35 @@ namespace Editor
                 {
                     client.Connect();
 
-                    using (var fs = new FileStream(System.IO.Path.GetTempPath() + @"koza_templ.docx", FileMode.Create))
+                    using (var fs = new FileStream(localPath, FileMode.Create))
                     {
                         client.DownloadFile(serverPath, fs);
                         fs.Close();
                     }
                 }
 
-                //templateFile = File.ReadAllText(System.IO.Path.GetTempPath() + @"koza_templ.docx", Encoding.UTF8);
-                byte[] binarydata = File.ReadAllBytes(System.IO.Path.GetTempPath() + @"koza_templ.docx");
+
+                byte[] binarydata = File.ReadAllBytes(localPath);
                 templateFileEnc = System.Convert.ToBase64String(binarydata, 0, binarydata.Length);
             }
             catch (Exception ex) { }
 
+            string templateType = "0";
+
+            // if that pdf file?
+            string ext = Path.GetExtension(localPath);
+
+            if (ext != ".docx" && ext != ".doc")
+                templateType = "1";
+
             //insert document
-            string sql = $"INSERT INTO templates (structure_id,name,name_lower,markers_xml,template,type) VALUES('{categoryId}', '{documentNode.Text}', '{documentNode.Text.ToLower()}', '{markersXmlEnc}', '{templateFileEnc}', '0');";
+            string sql = $"INSERT INTO templates (structure_id,file_ext,name,name_lower,markers_xml,template,type) VALUES('{categoryId}', '{ext}', '{documentNode.Text}', '{documentNode.Text.ToLower()}', '{markersXmlEnc}', '{templateFileEnc}', '{templateType}');";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
 
-            if (File.Exists(System.IO.Path.GetTempPath() + @"koza_templ.docx"))
+            if (File.Exists(localPath))
             {
-                File.Delete(System.IO.Path.GetTempPath() + @"koza_templ.docx");
+                File.Delete(localPath);
             }
         }
     }

@@ -28,118 +28,120 @@ namespace KozaDisk
 
             if(!Directory.Exists(oldKozaPath))
             {
+                copyDbFromCd();
                 Program.openForm();
             }
             else
             {
-                //if old koza have users path
-                if (Directory.Exists(oldKozaPath + @"UserFiles\"))
+                try
                 {
-                    //search folders
-                    string[] directories = Directory.GetDirectories(oldKozaPath + @"UserFiles\");
-
-                    foreach(string directory in directories)
+                    //if old koza have users path
+                    if (Directory.Exists(oldKozaPath + @"UserFiles\"))
                     {
-                        string userName = Path.GetFileName(directory);
+                        //search folders
+                        string[] directories = Directory.GetDirectories(oldKozaPath + @"UserFiles\");
 
-                        string UserStorage = Constant.ApplcationStorage + @"users\" + userName;
-
-                        if (Directory.Exists(UserStorage))
-                            continue;
-
-                        if (File.Exists(directory + @"\constants.ini"))
+                        foreach (string directory in directories)
                         {
-                            //init user object
-                            var user = new User();
-                            user.UserName = userName;
+                            string userName = Path.GetFileName(directory);
 
-                            string[] constLines = System.IO.File.ReadAllLines(directory + @"\constants.ini");
+                            string UserStorage = Constant.ApplcationStorage + @"users\" + userName;
 
-                            foreach(string constLine in constLines)
+                            if (Directory.Exists(UserStorage))
+                                continue;
+
+                            if (File.Exists(directory + @"\constants.ini"))
                             {
-                                string constName = constLine.Split('=')[0] ?? "";
-                                string constVal = constLine.Split('=')[1] ?? "";
+                                //init user object
+                                var user = new User();
+                                user.UserName = userName;
 
-                                switch (constName)
+                                string[] constLines = System.IO.File.ReadAllLines(directory + @"\constants.ini");
+
+                                foreach (string constLine in constLines)
                                 {
-                                    case "Повна назва організації":
-                                        user.FullName = constVal;
-                                        break;
-                                    case "Повна назва організації у родовому відмінку з малої літери":
-                                        user.FullNameGenitive = constVal;
-                                        break;
-                                    case "Скорочена назва організації у родовому відмінку":
-                                        user.AbbreviationGenitive = constVal;
-                                        break;
-                                    case "Назва організації вищого рівня":
-                                        user.Subordination = constVal;
-                                        break;
-                                    case "Назва організації вищого рівня у родовому відмінку":
-                                        user.SubordinationGenitive = constVal;
-                                        break;
-                                    case "Місце складання документів":
-                                        user.Place = constVal;
-                                        break;
-                                    case "Прізвище та ініціали керівника":
-                                        user.ChiefSurname = constVal;
-                                        break;
-                                    case "Ініціали та прізвище керівника":
-                                        user.ChiefInitials = constVal;
-                                        break;
-                                    case "Посада керівника з великої літери":
-                                        user.ChiefPosition = constVal;
-                                        break;
-                                    case "Посада керівника з малої літери в родовому відмінку":
-                                        user.ChiefPositionLower = constVal;
-                                        break;
+                                    string constName = constLine.Split('=')[0] ?? "";
+                                    string constVal = constLine.Split('=')[1] ?? "";
+
+                                    switch (constName)
+                                    {
+                                        case "Повна назва організації":
+                                            user.FullName = constVal;
+                                            break;
+                                        case "Повна назва організації у родовому відмінку з малої літери":
+                                            user.FullNameGenitive = constVal;
+                                            break;
+                                        case "Скорочена назва організації у родовому відмінку":
+                                            user.AbbreviationGenitive = constVal;
+                                            break;
+                                        case "Назва організації вищого рівня":
+                                            user.Subordination = constVal;
+                                            break;
+                                        case "Назва організації вищого рівня у родовому відмінку":
+                                            user.SubordinationGenitive = constVal;
+                                            break;
+                                        case "Місце складання документів":
+                                            user.Place = constVal;
+                                            break;
+                                        case "Прізвище та ініціали керівника":
+                                            user.ChiefSurname = constVal;
+                                            break;
+                                        case "Ініціали та прізвище керівника":
+                                            user.ChiefInitials = constVal;
+                                            break;
+                                        case "Посада керівника з великої літери":
+                                            user.ChiefPosition = constVal;
+                                            break;
+                                        case "Посада керівника з малої літери в родовому відмінку":
+                                            user.ChiefPositionLower = constVal;
+                                            break;
+                                    }
                                 }
-                            }
 
-                            //save to xml
-                            /*
-                            string xml = "";
-                            XmlSerializer serializer = new XmlSerializer(user.GetType(), );
+                                //save to xml
+                                string xml = "";
 
-                            using (var sww = new StringWriter())
-                            {
-                                using (XmlWriter writer = XmlWriter.Create(sww))
+                                var serializer = new XmlSerializer(typeof(User));
+                                using (StringWriter writer = new Utf8StringWriter())
                                 {
                                     serializer.Serialize(writer, user);
-                                    
-                                    xml = sww.ToString();
+                                    xml = writer.ToString();
                                 }
+
+                                //save xml
+
+                                if (!Directory.Exists(UserStorage))
+                                {
+                                    Directory.CreateDirectory(UserStorage);
+                                }
+
+                                File.WriteAllText(UserStorage + @"\userdata.xml", xml);
                             }
-                            */
-
-                            string xml = "";
-
-                            var serializer = new XmlSerializer(typeof(User));
-                            using (StringWriter writer = new Utf8StringWriter())
-                            {
-                                serializer.Serialize(writer, user);
-                                xml = writer.ToString();
-                            }
-
-                            //save xml
-
-                            if (!Directory.Exists(UserStorage))
-                            {
-                                Directory.CreateDirectory(UserStorage);
-                            }
-
-                            File.WriteAllText(UserStorage + @"\userdata.xml", xml);
                         }
                     }
                 }
+                catch (Exception ex) { }
 
                 //copy db from cd
-                System.IO.DriveInfo[] drives = System.IO.DriveInfo.GetDrives();
-                foreach (System.IO.DriveInfo drive in drives)
+                copyDbFromCd();
+
+                //open form
+                Program.openForm();
+            }
+        }
+
+        static void copyDbFromCd()
+        {
+            //copy db from cd
+            System.IO.DriveInfo[] drives = System.IO.DriveInfo.GetDrives();
+            foreach (System.IO.DriveInfo drive in drives)
+            {
+                try
                 {
                     if (drive.DriveType == System.IO.DriveType.CDRom)
                     {
                         string diskFolder = drive.RootDirectory.ToString() + @"KozaDisk\";
-                        
+
                         if (Directory.Exists(diskFolder))
                         {
                             string xmlFile = diskFolder + "disk.xml";
@@ -178,9 +180,7 @@ namespace KozaDisk
                         }
                     }
                 }
-
-                //open form
-                Program.openForm();
+                catch (Exception ex) { }
             }
         }
 

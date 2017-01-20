@@ -17,7 +17,7 @@ namespace KozaDisk
             foreach (string diskXml in disksXml)
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(diskXml);
+                doc.Load(diskXml.Trim());
 
                 Disk disk = new Disk();
 

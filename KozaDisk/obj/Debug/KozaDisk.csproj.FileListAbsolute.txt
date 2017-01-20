@@ -150,7 +150,6 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\de\DevExpress.XtraNavBar.v1
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\es\DevExpress.XtraNavBar.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\ja\DevExpress.XtraNavBar.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\ru\DevExpress.XtraNavBar.v16.2.resources.dll
-D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.csprojResolveAssemblyReference.cache
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.AutofillForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.MainForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.TemplatesList.resources
@@ -163,3 +162,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.exe
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.pdb
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.Activate.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\templates.dll
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.csprojResolveAssemblyReference.cache

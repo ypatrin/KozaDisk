@@ -48,7 +48,7 @@
 
         .block .image img
         {
-            height: 50px;
+            height: 70px;
             display: block;
             margin: auto;
             vertical-align: middle;
@@ -77,10 +77,14 @@
             background-color: gray;
         }
     </style>
+
+    <!--
     <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
+        -->
     %disks_blocks%
 
     <script type="text/javascript">
+        /*
         $(document).ready(function () {
             $(".btn .delete").click(function () {
                 var id = $(this).attr("id");
@@ -117,6 +121,7 @@
                 }
             });
         });
+        */
     </script>
 </body>
 </html>

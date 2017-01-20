@@ -13,6 +13,15 @@ namespace KozaDisk
         public User[] getUsers()
         {
             string userStorage = Constant.ApplcationStorage;
+
+            if (!Directory.Exists(userStorage))
+            {
+                Directory.CreateDirectory(userStorage + @"users\");
+                Directory.CreateDirectory(userStorage + @"db\");
+                Directory.CreateDirectory(userStorage + @"xml\");
+                Directory.CreateDirectory(userStorage + @"cd\");
+            }
+
             string[] usersDirectories = Directory.GetDirectories(userStorage + @"users\");
 
             List<User> users = new List<User>();

@@ -82,10 +82,13 @@
             width: 190px;
         }
     </style>
+    <!--
     <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
+        -->
     %disks_tree%
 
     <script type="text/javascript">
+        /*
         $(document).ready(function(){
             $("div.disk").click(function () {
                 var id = $(this).attr("id");
@@ -113,6 +116,7 @@
                 $("div.folder#" + folder_id + " img").attr("src", 'file:///%AppPathUrl%icon/iface/folder-open.png');
             });
         });  
+        */
     </script>
 </body>
 </html>

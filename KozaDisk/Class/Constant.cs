@@ -13,7 +13,7 @@ namespace KozaDisk
         public static string TempDocxFile = System.IO.Path.GetTempPath() + @"template.docx";
         public static string TempXmlFile = System.IO.Path.GetTempPath() + @"template.xml";
         public static string ApplcationStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\KozaDisk\";
-        public static string ApplcationPath = System.Windows.Forms.Application.StartupPath + @"\";
+        public static string ApplcationPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath) + @"\";
 
         //my documents
         public static int MyDocumentsBlockTab = 2;

@@ -3,7 +3,9 @@
 <head>
 </head>
 <body bgcolor="" style="margin-top: 0; font-family: Minion Pro">
+    <!--
     <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
+        -->
     <style>
         .document_head {
             width: 98%;
@@ -28,6 +30,7 @@
     %templates%
 
     <script type="text/javascript">
+        /*
         $(document).ready(function () {
             $(".document").click(function () {
                 var document_id = $(this).attr("id");
@@ -35,6 +38,7 @@
                 window.external.openDocument(document_id, db);
             });
         });
+        */
     </script>
 </body>
 </html>

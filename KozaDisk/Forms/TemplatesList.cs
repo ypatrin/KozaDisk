@@ -123,7 +123,7 @@ namespace KozaDisk.Forms
                 List<Folder> folders = disk.getFolders();
 
                 //blocks
-                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\">";
+                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\">";
                 nodeHtml += $"<div class=\"head\">{disk.name}</div>";
                 nodeHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
                 nodeHtml += "</div>";
@@ -145,26 +145,31 @@ namespace KozaDisk.Forms
             FilesBrowser.AllowWebBrowserDrop = false;
             FilesBrowser.IsWebBrowserContextMenuEnabled = false;
             FilesBrowser.WebBrowserShortcutsEnabled = false;
+            FilesBrowser.ScriptErrorsSuppressed = false;
             FilesBrowser.ObjectForScripting = this;
 
             DisksBlocksBrowser.AllowWebBrowserDrop = false;
             DisksBlocksBrowser.IsWebBrowserContextMenuEnabled = false;
             DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
+            DisksBlocksBrowser.ScriptErrorsSuppressed = false;
             DisksBlocksBrowser.ObjectForScripting = this;
 
             MyDocsBlockBrowser.AllowWebBrowserDrop = false;
             MyDocsBlockBrowser.IsWebBrowserContextMenuEnabled = false;
             MyDocsBlockBrowser.WebBrowserShortcutsEnabled = false;
+            MyDocsBlockBrowser.ScriptErrorsSuppressed = false;
             MyDocsBlockBrowser.ObjectForScripting = this;
 
             MyDocsListBrowser.AllowWebBrowserDrop = false;
             MyDocsListBrowser.IsWebBrowserContextMenuEnabled = false;
             MyDocsListBrowser.WebBrowserShortcutsEnabled = false;
+            MyDocsListBrowser.ScriptErrorsSuppressed = false;
             MyDocsListBrowser.ObjectForScripting = this;
 
             SearchBrowser.AllowWebBrowserDrop = false;
             SearchBrowser.IsWebBrowserContextMenuEnabled = false;
             SearchBrowser.WebBrowserShortcutsEnabled = false;
+            SearchBrowser.ScriptErrorsSuppressed = false;
             SearchBrowser.ObjectForScripting = this;
 
             this.UserNameLabel.Text = this.userData.UserName;
@@ -190,7 +195,7 @@ namespace KozaDisk.Forms
 
                     foreach (Folder folder in folders)
                     {
-                        disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\">";
+                        disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
                         disksBlockHtml += $"<div class=\"head\">{folder.name}</div>";
                         disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
                         disksBlockHtml += "</div>";
@@ -203,6 +208,7 @@ namespace KozaDisk.Forms
                     while (this.DisksBlocksBrowser.ReadyState != WebBrowserReadyState.Complete)
                     {
                         Application.DoEvents();
+                        this.DisksBlocksBrowser.Stop();
                     }
 
                     this.DisksBlocksBrowser.Navigate("about:blank");
@@ -235,7 +241,7 @@ namespace KozaDisk.Forms
             
             foreach (var template in templates.getDocuments(folderId))
             {
-                templatesHtml += $"<div class=\"document\" id=\"{template.id}\" db=\"{db}\">{template.name}</div>";
+                templatesHtml += $"<div class=\"document\" id=\"{template.id}\" db=\"{db}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">{template.name}</div>";
             }
 
             filesHtml = filesHtml.Replace("%AppPath%", Constant.ApplcationPath);
@@ -247,10 +253,23 @@ namespace KozaDisk.Forms
 
             foreach (var template in templates.getDocuments(folderId))
             {
-                disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\">";
-                disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
-                disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
-                disksBlockHtml += "</div>";
+                // document
+                if (template.type == "0")
+                {
+                    disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
+                    disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
+                    disksBlockHtml += "</div>";
+                }
+
+                //file
+                if (template.type == "1")
+                {
+                    disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
+                    disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\file.png\"/></div>";
+                    disksBlockHtml += "</div>";
+                }
             }
 
             blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
@@ -264,6 +283,14 @@ namespace KozaDisk.Forms
                 this.FilesBrowser.Document.OpenNew(true);
                 this.FilesBrowser.Document.Write(filesHtml);
                 this.FilesBrowser.Refresh();
+            }
+
+            this.DisksBlocksBrowser.Stop();
+
+            while (this.DisksBlocksBrowser.ReadyState != WebBrowserReadyState.Complete)
+            {
+                Application.DoEvents();
+                
             }
 
             if (this.view == "block")
@@ -306,17 +333,37 @@ namespace KozaDisk.Forms
             //create markers file
             System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
 
-            //loading template
-            templates.Templates templates = new templates.Templates();
-            templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
-            templates.setUserXmlFile(this.userData.XmlFilePath);
-            templates.setDbName(databaseName);
-            templates.setDocId(Int32.Parse(template.id));
-            templates.open();
+            if (template.type == "0")
+            {
+                //loading template
+                templates.Templates templates = new templates.Templates();
+                templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
+                templates.setUserXmlFile(this.userData.XmlFilePath);
+                templates.setDbName(databaseName);
+                templates.setDocId(Int32.Parse(template.id));
+                templates.open();
+            }
+            if (template.type == "1")
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.FileName = template.name + ".pdf";
+                sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                sfd.Filter = "PDF File|*.pdf";
+                sfd.Title = "Зберегти документ " + template.name;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    System.IO.File.WriteAllBytes(sfd.FileName, Convert.FromBase64String(template.template));
+                    
+                    if (MessageBox.Show("Документ успішно збережений! Відкрити?", "Збереження документа", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(sfd.FileName);
+                    }
+                }
+            }
 
             //delete temp files
-            //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
-            //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
+            System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+            System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
         }
 
         public void openMyDocument(string documentId, string db)
@@ -461,7 +508,7 @@ namespace KozaDisk.Forms
                 {
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
-                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"{r["doc_id"].ToString()}\">";
+                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"{r["doc_id"].ToString()}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\">";
                     disksBlockHtml += $"<div class=\"head\">{r["doc_name"].ToString()}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
@@ -565,8 +612,8 @@ namespace KozaDisk.Forms
             this.Tabs.SelectedIndex = 0;
             this.searchBox.Text = "";
 
-            this.prepareTree();
             this.prepareList();
+            this.prepareTree();
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
