@@ -162,4 +162,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.exe
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.pdb
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.Activate.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\templates.dll
-D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.csprojResolveAssemblyReference.cache
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.HelpForm.resources

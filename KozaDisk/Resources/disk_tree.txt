@@ -88,35 +88,7 @@
     %disks_tree%
 
     <script type="text/javascript">
-        /*
-        $(document).ready(function(){
-            $("div.disk").click(function () {
-                var id = $(this).attr("id");
-               
-                if ($("#folders_" + id).css('display') == "none") {
-                    $("#folders_" + id).show();
-                } else {
-                    $("#folders_" + id).hide();
-                }
-                
-            });
-
-            $(".folder").click(function () {
-                var folder_id = $(this).attr("id");
-				var fid = $(this).attr("fid");
-                var db = $(this).attr("db");
-
-                window.external.openFolder(fid, db);
-
-                $(".folder").each(function () {
-                    var id = $(this).attr("id");
-                    $("div.folder#" + id + " img").attr("src", 'file:///%AppPathUrl%icon/iface/folder.png');
-                });
-
-                $("div.folder#" + folder_id + " img").attr("src", 'file:///%AppPathUrl%icon/iface/folder-open.png');
-            });
-        });  
-        */
+        
     </script>
 </body>
 </html>

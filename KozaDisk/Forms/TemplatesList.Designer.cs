@@ -32,13 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplatesList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.SearchBtn = new System.Windows.Forms.PictureBox();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.UserNameLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SearchBtn = new System.Windows.Forms.PictureBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.AutoFillBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,9 +53,9 @@
             this.BlockViewBtn = new System.Windows.Forms.PictureBox();
             this.ListViewImg = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.NaviBrowser = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.NaviBrowser = new System.Windows.Forms.WebBrowser();
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -73,10 +72,9 @@
             this.SearchBrowser = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -106,7 +104,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -117,119 +114,121 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.SearchBtn);
-            this.panel5.Controls.Add(this.searchBox);
+            this.panel5.Controls.Add(this.panel4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(467, 0);
+            this.panel5.Location = new System.Drawing.Point(611, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(354, 81);
+            this.panel5.Size = new System.Drawing.Size(409, 81);
             this.panel5.TabIndex = 2;
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.Image = global::KozaDisk.Properties.Resources.search;
-            this.SearchBtn.Location = new System.Drawing.Point(265, 26);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(24, 22);
-            this.SearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SearchBtn.TabIndex = 1;
-            this.SearchBtn.TabStop = false;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(46, 25);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(244, 23);
-            this.searchBox.TabIndex = 0;
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBox_KeyPress);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(821, 0);
+            this.panel4.Location = new System.Drawing.Point(80, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 81);
-            this.panel4.TabIndex = 1;
+            this.panel4.Size = new System.Drawing.Size(329, 81);
+            this.panel4.TabIndex = 0;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(125)))), ((int)(((byte)(144)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.UserNameLabel);
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(16, 21);
+            this.panel6.Controls.Add(this.SearchBtn);
+            this.panel6.Controls.Add(this.searchBox);
+            this.panel6.Location = new System.Drawing.Point(3, 24);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(172, 39);
-            this.panel6.TabIndex = 1;
+            this.panel6.Size = new System.Drawing.Size(308, 32);
+            this.panel6.TabIndex = 0;
             // 
-            // UserNameLabel
+            // SearchBtn
             // 
-            this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Font = new System.Drawing.Font("Minion Pro", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.ForeColor = System.Drawing.Color.White;
-            this.UserNameLabel.Location = new System.Drawing.Point(40, 10);
-            this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(39, 18);
-            this.UserNameLabel.TabIndex = 2;
-            this.UserNameLabel.Text = "label1";
+            this.SearchBtn.Image = global::KozaDisk.Properties.Resources.search;
+            this.SearchBtn.Location = new System.Drawing.Point(275, 4);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(29, 25);
+            this.SearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SearchBtn.TabIndex = 3;
+            this.SearchBtn.TabStop = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click_1);
             // 
-            // pictureBox2
+            // searchBox
             // 
-            this.pictureBox2.Image = global::KozaDisk.Properties.Resources.iconName;
-            this.pictureBox2.Location = new System.Drawing.Point(7, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchBox.Font = new System.Drawing.Font("Myriad Pro", 12F);
+            this.searchBox.Location = new System.Drawing.Point(3, 3);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(302, 27);
+            this.searchBox.TabIndex = 2;
+            this.searchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyPress);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.AutoFillBtn);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 81);
+            this.panel3.Size = new System.Drawing.Size(611, 81);
             this.panel3.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.button1.Location = new System.Drawing.Point(508, 24);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 34);
+            this.button1.TabIndex = 6;
+            this.button1.TabStop = false;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Minion Pro", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(336, 24);
+            this.button2.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.button2.Location = new System.Drawing.Point(360, 23);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 26);
+            this.button2.Size = new System.Drawing.Size(125, 34);
             this.button2.TabIndex = 5;
+            this.button2.TabStop = false;
             this.button2.Text = "Мої документи";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // AutoFillBtn
             // 
+            this.AutoFillBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.AutoFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AutoFillBtn.Font = new System.Drawing.Font("Minion Pro", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AutoFillBtn.ForeColor = System.Drawing.Color.White;
-            this.AutoFillBtn.Location = new System.Drawing.Point(185, 24);
+            this.AutoFillBtn.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.AutoFillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.AutoFillBtn.Location = new System.Drawing.Point(210, 24);
             this.AutoFillBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.AutoFillBtn.Name = "AutoFillBtn";
-            this.AutoFillBtn.Size = new System.Drawing.Size(125, 26);
+            this.AutoFillBtn.Size = new System.Drawing.Size(125, 34);
             this.AutoFillBtn.TabIndex = 4;
+            this.AutoFillBtn.TabStop = false;
             this.AutoFillBtn.Text = "Автозаповнення";
             this.AutoFillBtn.UseVisualStyleBackColor = true;
             this.AutoFillBtn.Click += new System.EventHandler(this.AutoFillBtn_Click);
+            this.AutoFillBtn.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.AutoFillBtn.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::KozaDisk.Properties.Resources.inner_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 20);
@@ -373,6 +372,21 @@
             this.panel7.Size = new System.Drawing.Size(821, 43);
             this.panel7.TabIndex = 0;
             // 
+            // NaviBrowser
+            // 
+            this.NaviBrowser.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.NaviBrowser.AllowWebBrowserDrop = false;
+            this.NaviBrowser.CausesValidation = false;
+            this.NaviBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NaviBrowser.IsWebBrowserContextMenuEnabled = false;
+            this.NaviBrowser.Location = new System.Drawing.Point(0, 0);
+            this.NaviBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.NaviBrowser.Name = "NaviBrowser";
+            this.NaviBrowser.ScrollBarsEnabled = false;
+            this.NaviBrowser.Size = new System.Drawing.Size(821, 43);
+            this.NaviBrowser.TabIndex = 1;
+            this.NaviBrowser.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.Tabs);
@@ -390,21 +404,6 @@
             this.imageList1.Images.SetKeyName(1, "disck-focus_2.png");
             this.imageList1.Images.SetKeyName(2, "Folder-closed_2.png");
             this.imageList1.Images.SetKeyName(3, "Folder-open_2.png");
-            // 
-            // NaviBrowser
-            // 
-            this.NaviBrowser.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.NaviBrowser.AllowWebBrowserDrop = false;
-            this.NaviBrowser.CausesValidation = false;
-            this.NaviBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NaviBrowser.IsWebBrowserContextMenuEnabled = false;
-            this.NaviBrowser.Location = new System.Drawing.Point(0, 0);
-            this.NaviBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.NaviBrowser.Name = "NaviBrowser";
-            this.NaviBrowser.ScrollBarsEnabled = false;
-            this.NaviBrowser.Size = new System.Drawing.Size(821, 43);
-            this.NaviBrowser.TabIndex = 1;
-            this.NaviBrowser.TabStop = false;
             // 
             // Tabs
             // 
@@ -462,20 +461,23 @@
             // 
             // DiskTree
             // 
+            this.DiskTree.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DiskTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DiskTree.Font = new System.Drawing.Font("Myriad Pro", 12F);
-            this.DiskTree.FullRowSelect = true;
+            this.DiskTree.HideSelection = false;
             this.DiskTree.ImageIndex = 0;
             this.DiskTree.ImageList = this.imageList1;
+            this.DiskTree.Indent = 30;
             this.DiskTree.Location = new System.Drawing.Point(0, 0);
             this.DiskTree.Name = "DiskTree";
             this.DiskTree.SelectedImageIndex = 0;
-            this.DiskTree.ShowLines = false;
+            this.DiskTree.ShowNodeToolTips = true;
             this.DiskTree.ShowPlusMinus = false;
             this.DiskTree.ShowRootLines = false;
             this.DiskTree.Size = new System.Drawing.Size(303, 380);
             this.DiskTree.TabIndex = 0;
             this.DiskTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DiskTree_AfterSelect);
+            this.DiskTree.Validating += new System.ComponentModel.CancelEventHandler(this.DiskTree_Validating);
             // 
             // ListTab
             // 
@@ -587,12 +589,10 @@
             this.Load += new System.EventHandler(this.TemplatesList_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -626,14 +626,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button AutoFillBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label UserNameLabel;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private TablessControl Tabs;
@@ -651,8 +647,6 @@
         private System.Windows.Forms.WebBrowser MyDocsBlockBrowser;
         private System.Windows.Forms.TabPage MyDocsListTab;
         private System.Windows.Forms.TabPage searchTab;
-        private System.Windows.Forms.TextBox searchBox;
-        private System.Windows.Forms.PictureBox SearchBtn;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox mdBlockViewDisabled;
         private System.Windows.Forms.PictureBox mdBlockViewEnabled;
@@ -664,5 +658,10 @@
         private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.WebBrowser DisksBlocksBrowser;
         public System.Windows.Forms.WebBrowser NaviBrowser;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox SearchBtn;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button button1;
     }
 }

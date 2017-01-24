@@ -10,20 +10,22 @@
         .document_head {
             width: 98%;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             margin-bottom: 15px;
         }
 
         .document {
             width: 98%;
             padding: 10px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             margin-bottom: 15px;
             cursor: pointer;
         }
 
         .document:hover {
-            background-color: #F3F8F8;
+            border: 1px solid black;
+            font-weight: bolder;
+            color: black;
         }
     </style>
     <div class="document_head">Назва</div>

@@ -155,3 +155,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\es\DevExpress.XtraNavBar.
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\ja\DevExpress.XtraNavBar.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\ru\DevExpress.XtraNavBar.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.Activate.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.HelpForm.resources

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Security.Permissions;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.Threading;
 
 namespace KozaDisk.Forms
 {
@@ -57,6 +58,7 @@ namespace KozaDisk.Forms
                 diskTreeNode.Text = disk.name;
                 diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);
 
+                /*
                 if (!activator.isActivated(disk.db))
                 {
                     diskTreeNode.ImageIndex = 0;
@@ -66,7 +68,8 @@ namespace KozaDisk.Forms
                 {
                     diskTreeNode.ImageIndex = 1;
                     diskTreeNode.SelectedImageIndex = 1;
-                }         
+                }   
+                */      
                 
                 if (!activator.isActivated(disk.db) && !activator.isTrial(disk.db))
                 {
@@ -123,11 +126,13 @@ namespace KozaDisk.Forms
             {
                 //get list of folders
                 List<Folder> folders = disk.getFolders();
+                int countTemplates = disk.getCoutTemplates();
 
                 //blocks
                 nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\">";
                 nodeHtml += $"<div class=\"head\">{disk.name}</div>";
                 nodeHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
+                nodeHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                 nodeHtml += "</div>";
             }
 
@@ -177,8 +182,6 @@ namespace KozaDisk.Forms
 
             NaviBrowser.ObjectForScripting = this;
 
-            this.UserNameLabel.Text = this.userData.UserName;
-
             this.writeNavigation(new List<Class.Objects.Navigation>());
 
             this.prepareTree();
@@ -202,9 +205,12 @@ namespace KozaDisk.Forms
 
                     foreach (Folder folder in folders)
                     {
+                        int countTemplates = disk.getCoutTemplates(Int32.Parse(folder.id));
+
                         disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
                         disksBlockHtml += $"<div class=\"head\">{folder.name}</div>";
                         disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
+                        disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                         disksBlockHtml += "</div>";
                     }
 
@@ -314,11 +320,18 @@ namespace KozaDisk.Forms
 
             foreach (var template in templates.getDocuments(folderId))
             {
+                string docName = template.name;
+                string docNameFull = template.name;
+
+                if (docName.Length > 47)
+                {
+                    docName = docName.Substring(0, 38) + "...";
+                }
                 // document
                 if (template.type == "0")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                    disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }
@@ -327,7 +340,7 @@ namespace KozaDisk.Forms
                 if (template.type == "1")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                    disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\file.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }
@@ -591,22 +604,32 @@ namespace KozaDisk.Forms
 
                 while (r.Read())
                 {
+                    DateTime createdAt = DateTime.Parse(r["created_at"].ToString());
+                    string docName = r["doc_name"].ToString();
+                    string docNameFull = r["doc_name"].ToString();
+
+                    if (docName.Length > 47)
+                    {
+                        docName = docName.Substring(0, 47) + "...";
+                    }
+
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
                     disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"{r["doc_id"].ToString()}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\">{r["doc_name"].ToString()}</div>";
-                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"head\" full_name=\"\" short_name=\"{docName}\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
-                    disksBlockHtml += $"<div class=\"date\">{r["created_at"].ToString()}</div>";
-                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"edit\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"date\">{createdAt.ToString("dd.MM.yyyy")}</div>";
+                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
                     disksBlockHtml += $"</div>";
                     disksBlockHtml += "</div>";
 
                     disksTreeHtml += $"<tr>";
                     disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\">{r["doc_name"].ToString()}</td>";
                     disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
-                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\">X</td>";
-                    disksTreeHtml += "<tr>";
+                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\">&nbsp;&nbsp;&nbsp;<img src=\"{Constant.ApplcationPath}icon\\iface\\delete-list.png\"/></td>";
+                    disksTreeHtml += "</tr>";
 
                     //disksTreeHtml += $"<div class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\"></div>";
                 }
@@ -645,7 +668,7 @@ namespace KozaDisk.Forms
                 SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
                 connection.Open();
 
-                string sql = "DELETE FROM documents WHERE id = id";
+                string sql = $"DELETE FROM documents WHERE id = {id}";
 
                 SQLiteCommand command = new SQLiteCommand(sql, connection);
                 command.ExecuteNonQuery();
@@ -737,24 +760,27 @@ namespace KozaDisk.Forms
                 }
             }
 
-            NaviBrowser.Navigate("about:blank");
-            NaviBrowser.DocumentText = "0";
-            NaviBrowser.Document.OpenNew(true);
-            NaviBrowser.Document.Write(links);
-            NaviBrowser.Refresh();
+            try
+            {
+                NaviBrowser.Navigate("about:blank");
+                NaviBrowser.DocumentText = "0";
+                NaviBrowser.Document.OpenNew(true);
+                NaviBrowser.Document.Write(links);
+                NaviBrowser.Refresh();
+            }
+            catch(Exception ex) { }
 
             /*
             while (NaviBrowser.ReadyState != WebBrowserReadyState.Complete)
             {
-                Application.DoEvents();
+                
             }
             */
-
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            this.doSearch();
         }
 
         public void doSearch()
@@ -821,6 +847,7 @@ namespace KozaDisk.Forms
         private void DiskTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
             Class.Objects.DiskTreeNode selectedNode = (Class.Objects.DiskTreeNode)this.DiskTree.SelectedNode;
+            selectedNode.Expand();
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
@@ -849,6 +876,35 @@ namespace KozaDisk.Forms
             {
                 this.openFolder(selectedNode.id, selectedNode.db);
             }
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BackColor = Color.FromArgb(0, 189, 156);
+            button.ForeColor = Color.White;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BackColor = Color.FromArgb(27, 30, 37);
+            button.ForeColor = Color.FromArgb(227, 227, 229);
+        }
+
+        private void searchBox_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (this.searchBox.Text.Length > 3)
+            this.doSearch();
+        }
+
+        private void SearchBtn_Click_1(object sender, EventArgs e)
+        {
+            this.doSearch();
+        }
+
+        private void DiskTree_Validating(object sender, CancelEventArgs e)
+        {
         }
     }
 }

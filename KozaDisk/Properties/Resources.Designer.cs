@@ -83,6 +83,26 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_cover {
+            get {
+                object obj = ResourceManager.GetObject("bg-cover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg1 {
+            get {
+                object obj = ResourceManager.GetObject("bg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_about {
             get {
                 object obj = ResourceManager.GetObject("btn-about", resourceCulture);
@@ -183,6 +203,26 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close1 {
+            get {
+                object obj = ResourceManager.GetObject("close1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closeBtn {
             get {
                 object obj = ResourceManager.GetObject("closeBtn", resourceCulture);
@@ -261,25 +301,36 @@ namespace KozaDisk.Properties {
         ///&lt;head&gt;
         ///&lt;/head&gt;
         ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;!--
         ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
+        ///        --&gt;
         ///    &lt;style&gt;
         ///        .document_head {
         ///            width: 98%;
         ///            padding: 10px;
-        ///            background-color: #f9f9f9;
+        ///            background-color: #f4f4f4;
         ///            margin-bottom: 15px;
         ///        }
         ///
         ///        .document {
         ///            width: 98%;
         ///            padding: 10px;
-        ///            background-color: #f9f9f9;
-        ///            margin-bottom: 15px;
-        ///   [остаток строки не уместился]&quot;;.
+        ///            background-color: #f4f4f4;
+        ///            m [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree_files {
             get {
                 return ResourceManager.GetString("disk_tree_files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downl {
+            get {
+                object obj = ResourceManager.GetObject("downl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -336,6 +387,66 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap m_contact {
+            get {
+                object obj = ResourceManager.GetObject("m-contact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_help {
+            get {
+                object obj = ResourceManager.GetObject("m-help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_logo {
+            get {
+                object obj = ResourceManager.GetObject("m-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("m-logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_logo2 {
+            get {
+                object obj = ResourceManager.GetObject("m-logo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m_logo3 {
+            get {
+                object obj = ResourceManager.GetObject("m-logo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Magnifying_glass {
             get {
                 object obj = ResourceManager.GetObject("Magnifying glass", resourceCulture);
@@ -369,13 +480,16 @@ namespace KozaDisk.Properties {
         ///&lt;head&gt;
         ///&lt;/head&gt;
         ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
+        ///    &lt;!--
         ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
+        ///        --&gt;
         ///    &lt;style&gt;
         ///        table.myDocs
         ///        {
         ///            width: 100%;
         ///            border-collapse: separate;
         ///            border-spacing: 0;
+        ///            font-size: 15px;
         ///        }
         ///
         ///        tr, td, th, table 
@@ -384,23 +498,11 @@ namespace KozaDisk.Properties {
         ///        }
         ///
         ///        table.myDocs thead tr th
-        ///        {
-        ///            border-bottom: 1px solid black;
-        ///       [остаток строки не уместился]&quot;;.
+        ///        { [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string mydocs_tree {
             get {
                 return ResourceManager.GetString("mydocs_tree", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] MyriadProRegular {
-            get {
-                object obj = ResourceManager.GetObject("MyriadProRegular", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

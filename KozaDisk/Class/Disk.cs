@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.Common;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using System.Data;
 
 namespace KozaDisk
 {
@@ -59,6 +60,34 @@ namespace KozaDisk
             connection.Close();
 
             return folders;
+        }
+
+        public int getCoutTemplates()
+        {
+            string databaseName = Constant.ApplcationStorage + @"db\cd\" + this.db;
+            int count = 0;
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            SQLiteCommand command = new SQLiteCommand("SELECT count(*) FROM templates", connection);
+            count = Convert.ToInt32(command.ExecuteScalar());
+
+            return count;
+        }
+
+        public int getCoutTemplates(int folderId)
+        {
+            string databaseName = Constant.ApplcationStorage + @"db\cd\" + this.db;
+            int count = 0;
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            SQLiteCommand command = new SQLiteCommand("SELECT count(*) FROM templates WHERE structure_id = " + folderId, connection);
+            count = Convert.ToInt32(command.ExecuteScalar());
+
+            return count;
         }
 
         /// <summary>
