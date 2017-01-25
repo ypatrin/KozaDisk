@@ -122,9 +122,9 @@ namespace KozaDisk.Forms
                 string diskName = disk.name;
                 string diskNameFull = disk.name;
 
-                if (diskName.Length > 58)
+                if (diskName.Length > 55)
                 {
-                    diskName = diskName.Substring(0, 58) + "...";
+                    diskName = diskName.Substring(0, 55) + "...";
                 }
 
                 //blocks
@@ -210,9 +210,9 @@ namespace KozaDisk.Forms
                         string folderName = folder.name;
                         string folderNameFull = folder.name;
 
-                        if (folderName.Length > 58)
+                        if (folderName.Length > 55)
                         {
-                            folderName = folderName.Substring(0, 58) + "...";
+                            folderName = folderName.Substring(0, 55) + "...";
                         }
 
                         disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
@@ -342,9 +342,9 @@ namespace KozaDisk.Forms
                 string docName = template.name;
                 string docNameFull = template.name;
 
-                if (docName.Length > 58)
+                if (docName.Length > 55)
                 {
-                    docName = docName.Substring(0, 58) + "...";
+                    docName = docName.Substring(0, 55) + "...";
                 }
                 // document
                 if (template.type == "0")
@@ -627,9 +627,9 @@ namespace KozaDisk.Forms
                     string docName = r["doc_name"].ToString();
                     string docNameFull = r["doc_name"].ToString();
 
-                    if (docName.Length > 58)
+                    if (docName.Length > 55)
                     {
-                        docName = docName.Substring(0, 58) + "...";
+                        docName = docName.Substring(0, 55) + "...";
                     }
 
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
@@ -835,9 +835,9 @@ namespace KozaDisk.Forms
                 string docName = template.name;
                 string docNameFull = template.name;
 
-                if (docName.Length > 58)
+                if (docName.Length > 55)
                 {
-                    docName = docName.Substring(0, 58) + "...";
+                    docName = docName.Substring(0, 55) + "...";
                 }
 
                 disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{template.dbName}');\">";
