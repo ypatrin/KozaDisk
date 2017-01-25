@@ -163,6 +163,7 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
     <None Include="Resources\inner-logo.png" />
+    <None Include="Resources\logo1.png" />
     <Content Include="Коза48.ico" />
     <None Include="Resources\com-arrow-left.png" />
     <None Include="Resources\com-arrow.png" />

@@ -17,9 +17,13 @@ namespace KozaDisk.Forms
         public string db { get; set; }
         public string key = "fbv8295_";
 
-        public Activate()
+        public Activate(string days)
         {
             InitializeComponent();
+            if (Int32.Parse(days) <= 0)
+            {
+                this.button1.Enabled = false;
+            }
         }
 
         public void setDiskName(string diskName)
@@ -29,11 +33,17 @@ namespace KozaDisk.Forms
 
         private void ActivateButton_Click(object sender, EventArgs e)
         {
+            ActivateErrorForm activateError = new ActivateErrorForm();
+            ActivateOkForm activateOk = new ActivateOkForm();
+
             //check code
 
             if (this.ActivateCodeBox.Text.Length != 24)
             {
-                MessageBox.Show("Невірний код активації.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Visible = false;
+                activateError.ShowDialog();
+                this.Visible = true;
+                
                 return;
             }
 
@@ -42,7 +52,10 @@ namespace KozaDisk.Forms
                 this.ActivateCodeBox.Text.Substring(14, 1) != "-" &&
                 this.ActivateCodeBox.Text.Substring(19, 1) != "-" )
             {
-                MessageBox.Show("Невірний код активації.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Visible = false;
+                activateError.ShowDialog();
+                this.Visible = true;
+
                 return;
             }
 
@@ -96,11 +109,15 @@ namespace KozaDisk.Forms
                 //activate
                 if (activateStatus == "Error")
                 {
-                    MessageBox.Show("Невірний код активації. Спробуйте ще раз!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Visible = false;
+                    activateError.ShowDialog();
+                    this.Visible = true;
                 }
                 if (activateStatus == "Activated")
                 {
-                    MessageBox.Show("Цей код вже активовано. Введіть будь ласка інший код.", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Visible = false;
+                    activateError.ShowDialog();
+                    this.Visible = true;
                 }
                 if (activateStatus == "OK")
                 {
@@ -109,14 +126,21 @@ namespace KozaDisk.Forms
                     KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
                     activator.activate(this.db, activationKey.InnerText);
 
-                    MessageBox.Show("Активацію успішно виконано!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    this.Visible = false;
+                    activateOk.ShowDialog();
                     this.Close();
                 }
             } catch(Exception ex)
             {
-                MessageBox.Show("Помилка сервера активації. Спробуйте ще раз пізніше!", "Активація", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Visible = false;
+                activateError.ShowDialog();
+                this.Visible = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -55,13 +55,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.NaviBrowser = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.FilesBrowser = new System.Windows.Forms.WebBrowser();
             this.panel9 = new System.Windows.Forms.Panel();
             this.DiskTree = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ListTab = new System.Windows.Forms.TabPage();
             this.DisksBlocksBrowser = new System.Windows.Forms.WebBrowser();
             this.MyDocsBlockTab = new System.Windows.Forms.TabPage();
@@ -107,44 +107,45 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1020, 81);
+            this.panel1.Size = new System.Drawing.Size(1014, 91);
             this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(611, 0);
+            this.panel5.Location = new System.Drawing.Point(644, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(409, 81);
+            this.panel5.Size = new System.Drawing.Size(370, 91);
             this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(80, 0);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(329, 81);
+            this.panel4.Size = new System.Drawing.Size(370, 91);
             this.panel4.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.SearchBtn);
             this.panel6.Controls.Add(this.searchBox);
-            this.panel6.Location = new System.Drawing.Point(3, 24);
+            this.panel6.Location = new System.Drawing.Point(9, 26);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(308, 32);
+            this.panel6.Size = new System.Drawing.Size(349, 28);
             this.panel6.TabIndex = 0;
             // 
             // SearchBtn
             // 
             this.SearchBtn.Image = global::KozaDisk.Properties.Resources.search;
-            this.SearchBtn.Location = new System.Drawing.Point(275, 4);
+            this.SearchBtn.Location = new System.Drawing.Point(315, 2);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(29, 25);
+            this.SearchBtn.Size = new System.Drawing.Size(26, 22);
             this.SearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SearchBtn.TabIndex = 3;
             this.SearchBtn.TabStop = false;
@@ -153,11 +154,13 @@
             // searchBox
             // 
             this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBox.Font = new System.Drawing.Font("Myriad Pro", 12F);
-            this.searchBox.Location = new System.Drawing.Point(3, 3);
+            this.searchBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.searchBox.Location = new System.Drawing.Point(0, 0);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(302, 27);
+            this.searchBox.Size = new System.Drawing.Size(349, 26);
             this.searchBox.TabIndex = 2;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged_1);
             this.searchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyPress);
             // 
             // panel3
@@ -169,23 +172,24 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(611, 81);
+            this.panel3.Size = new System.Drawing.Size(644, 91);
             this.panel3.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
-            this.button1.Location = new System.Drawing.Point(508, 24);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Location = new System.Drawing.Point(572, 26);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 34);
+            this.button1.Size = new System.Drawing.Size(28, 38);
             this.button1.TabIndex = 6;
             this.button1.TabStop = false;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -193,12 +197,12 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
-            this.button2.Location = new System.Drawing.Point(360, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button2.Location = new System.Drawing.Point(405, 26);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 34);
+            this.button2.Size = new System.Drawing.Size(141, 38);
             this.button2.TabIndex = 5;
             this.button2.TabStop = false;
             this.button2.Text = "Мої документи";
@@ -211,12 +215,12 @@
             // 
             this.AutoFillBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
             this.AutoFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AutoFillBtn.Font = new System.Drawing.Font("Myriad Pro Light", 10F);
+            this.AutoFillBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.AutoFillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
-            this.AutoFillBtn.Location = new System.Drawing.Point(210, 24);
-            this.AutoFillBtn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.AutoFillBtn.Location = new System.Drawing.Point(237, 26);
+            this.AutoFillBtn.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.AutoFillBtn.Name = "AutoFillBtn";
-            this.AutoFillBtn.Size = new System.Drawing.Size(125, 34);
+            this.AutoFillBtn.Size = new System.Drawing.Size(141, 38);
             this.AutoFillBtn.TabIndex = 4;
             this.AutoFillBtn.TabStop = false;
             this.AutoFillBtn.Text = "Автозаповнення";
@@ -227,12 +231,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::KozaDisk.Properties.Resources.inner_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox1.Image = global::KozaDisk.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(190, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -242,10 +246,10 @@
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 91);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1020, 43);
+            this.panel2.Size = new System.Drawing.Size(1014, 48);
             this.panel2.TabIndex = 1;
             // 
             // panel12
@@ -255,18 +259,18 @@
             this.panel12.Controls.Add(this.mdBlockViewEnabled);
             this.panel12.Controls.Add(this.mdBlockViewDisabled);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(881, 0);
+            this.panel12.Location = new System.Drawing.Point(857, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(73, 43);
+            this.panel12.Size = new System.Drawing.Size(82, 48);
             this.panel12.TabIndex = 4;
             this.panel12.Visible = false;
             // 
             // mdListViewDisabled
             // 
             this.mdListViewDisabled.Image = global::KozaDisk.Properties.Resources.clock;
-            this.mdListViewDisabled.Location = new System.Drawing.Point(42, 10);
+            this.mdListViewDisabled.Location = new System.Drawing.Point(48, 11);
             this.mdListViewDisabled.Name = "mdListViewDisabled";
-            this.mdListViewDisabled.Size = new System.Drawing.Size(17, 18);
+            this.mdListViewDisabled.Size = new System.Drawing.Size(19, 20);
             this.mdListViewDisabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mdListViewDisabled.TabIndex = 11;
             this.mdListViewDisabled.TabStop = false;
@@ -275,10 +279,10 @@
             // 
             // mdListViewEnabled
             // 
-            this.mdListViewEnabled.Image = global::KozaDisk.Properties.Resources.active_clock;
-            this.mdListViewEnabled.Location = new System.Drawing.Point(42, 10);
+            this.mdListViewEnabled.Image = global::KozaDisk.Properties.Resources.clock1;
+            this.mdListViewEnabled.Location = new System.Drawing.Point(46, 8);
             this.mdListViewEnabled.Name = "mdListViewEnabled";
-            this.mdListViewEnabled.Size = new System.Drawing.Size(17, 18);
+            this.mdListViewEnabled.Size = new System.Drawing.Size(25, 25);
             this.mdListViewEnabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mdListViewEnabled.TabIndex = 10;
             this.mdListViewEnabled.TabStop = false;
@@ -286,10 +290,10 @@
             // 
             // mdBlockViewEnabled
             // 
-            this.mdBlockViewEnabled.Image = global::KozaDisk.Properties.Resources.menu_focus;
-            this.mdBlockViewEnabled.Location = new System.Drawing.Point(17, 10);
+            this.mdBlockViewEnabled.Image = global::KozaDisk.Properties.Resources.block;
+            this.mdBlockViewEnabled.Location = new System.Drawing.Point(15, 8);
             this.mdBlockViewEnabled.Name = "mdBlockViewEnabled";
-            this.mdBlockViewEnabled.Size = new System.Drawing.Size(17, 18);
+            this.mdBlockViewEnabled.Size = new System.Drawing.Size(25, 25);
             this.mdBlockViewEnabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mdBlockViewEnabled.TabIndex = 9;
             this.mdBlockViewEnabled.TabStop = false;
@@ -297,10 +301,10 @@
             // 
             // mdBlockViewDisabled
             // 
-            this.mdBlockViewDisabled.Image = global::KozaDisk.Properties.Resources.menu;
-            this.mdBlockViewDisabled.Location = new System.Drawing.Point(17, 10);
+            this.mdBlockViewDisabled.Image = global::KozaDisk.Properties.Resources.block2;
+            this.mdBlockViewDisabled.Location = new System.Drawing.Point(15, 8);
             this.mdBlockViewDisabled.Name = "mdBlockViewDisabled";
-            this.mdBlockViewDisabled.Size = new System.Drawing.Size(17, 18);
+            this.mdBlockViewDisabled.Size = new System.Drawing.Size(25, 25);
             this.mdBlockViewDisabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mdBlockViewDisabled.TabIndex = 8;
             this.mdBlockViewDisabled.TabStop = false;
@@ -314,17 +318,17 @@
             this.panel11.Controls.Add(this.BlockViewBtn);
             this.panel11.Controls.Add(this.ListViewImg);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(954, 0);
+            this.panel11.Location = new System.Drawing.Point(939, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(66, 43);
+            this.panel11.Size = new System.Drawing.Size(75, 48);
             this.panel11.TabIndex = 3;
             // 
             // BlockViewImg
             // 
             this.BlockViewImg.Image = global::KozaDisk.Properties.Resources.menu_focus;
-            this.BlockViewImg.Location = new System.Drawing.Point(8, 10);
+            this.BlockViewImg.Location = new System.Drawing.Point(9, 11);
             this.BlockViewImg.Name = "BlockViewImg";
-            this.BlockViewImg.Size = new System.Drawing.Size(17, 18);
+            this.BlockViewImg.Size = new System.Drawing.Size(19, 20);
             this.BlockViewImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BlockViewImg.TabIndex = 6;
             this.BlockViewImg.TabStop = false;
@@ -333,9 +337,9 @@
             // ListViewBtn
             // 
             this.ListViewBtn.Image = global::KozaDisk.Properties.Resources.Listing;
-            this.ListViewBtn.Location = new System.Drawing.Point(31, 10);
+            this.ListViewBtn.Location = new System.Drawing.Point(35, 11);
             this.ListViewBtn.Name = "ListViewBtn";
-            this.ListViewBtn.Size = new System.Drawing.Size(17, 18);
+            this.ListViewBtn.Size = new System.Drawing.Size(19, 20);
             this.ListViewBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ListViewBtn.TabIndex = 5;
             this.ListViewBtn.TabStop = false;
@@ -345,9 +349,9 @@
             // BlockViewBtn
             // 
             this.BlockViewBtn.Image = global::KozaDisk.Properties.Resources.menu;
-            this.BlockViewBtn.Location = new System.Drawing.Point(8, 10);
+            this.BlockViewBtn.Location = new System.Drawing.Point(9, 11);
             this.BlockViewBtn.Name = "BlockViewBtn";
-            this.BlockViewBtn.Size = new System.Drawing.Size(17, 18);
+            this.BlockViewBtn.Size = new System.Drawing.Size(19, 20);
             this.BlockViewBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BlockViewBtn.TabIndex = 4;
             this.BlockViewBtn.TabStop = false;
@@ -356,9 +360,9 @@
             // ListViewImg
             // 
             this.ListViewImg.Image = global::KozaDisk.Properties.Resources.Listing_focus;
-            this.ListViewImg.Location = new System.Drawing.Point(31, 10);
+            this.ListViewImg.Location = new System.Drawing.Point(35, 11);
             this.ListViewImg.Name = "ListViewImg";
-            this.ListViewImg.Size = new System.Drawing.Size(17, 18);
+            this.ListViewImg.Size = new System.Drawing.Size(19, 20);
             this.ListViewImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ListViewImg.TabIndex = 3;
             this.ListViewImg.TabStop = false;
@@ -369,7 +373,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(821, 43);
+            this.panel7.Size = new System.Drawing.Size(924, 48);
             this.panel7.TabIndex = 0;
             // 
             // NaviBrowser
@@ -380,10 +384,10 @@
             this.NaviBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NaviBrowser.IsWebBrowserContextMenuEnabled = false;
             this.NaviBrowser.Location = new System.Drawing.Point(0, 0);
-            this.NaviBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.NaviBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.NaviBrowser.Name = "NaviBrowser";
             this.NaviBrowser.ScrollBarsEnabled = false;
-            this.NaviBrowser.Size = new System.Drawing.Size(821, 43);
+            this.NaviBrowser.Size = new System.Drawing.Size(924, 48);
             this.NaviBrowser.TabIndex = 1;
             this.NaviBrowser.TabStop = false;
             // 
@@ -391,19 +395,10 @@
             // 
             this.panel8.Controls.Add(this.Tabs);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 124);
+            this.panel8.Location = new System.Drawing.Point(0, 139);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1020, 415);
+            this.panel8.Size = new System.Drawing.Size(1014, 472);
             this.panel8.TabIndex = 2;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "disck_2.png");
-            this.imageList1.Images.SetKeyName(1, "disck-focus_2.png");
-            this.imageList1.Images.SetKeyName(2, "Folder-closed_2.png");
-            this.imageList1.Images.SetKeyName(3, "Folder-open_2.png");
             // 
             // Tabs
             // 
@@ -416,17 +411,17 @@
             this.Tabs.Location = new System.Drawing.Point(0, 0);
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
-            this.Tabs.Size = new System.Drawing.Size(1020, 415);
+            this.Tabs.Size = new System.Drawing.Size(1014, 472);
             this.Tabs.TabIndex = 3;
             // 
             // TreeTab
             // 
             this.TreeTab.Controls.Add(this.panel10);
             this.TreeTab.Controls.Add(this.panel9);
-            this.TreeTab.Location = new System.Drawing.Point(4, 25);
+            this.TreeTab.Location = new System.Drawing.Point(4, 27);
             this.TreeTab.Name = "TreeTab";
             this.TreeTab.Padding = new System.Windows.Forms.Padding(3);
-            this.TreeTab.Size = new System.Drawing.Size(1012, 386);
+            this.TreeTab.Size = new System.Drawing.Size(1006, 441);
             this.TreeTab.TabIndex = 0;
             this.TreeTab.Text = "TreeTab";
             this.TreeTab.UseVisualStyleBackColor = true;
@@ -435,19 +430,19 @@
             // 
             this.panel10.Controls.Add(this.FilesBrowser);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(306, 3);
+            this.panel10.Location = new System.Drawing.Point(344, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(703, 380);
+            this.panel10.Size = new System.Drawing.Size(659, 435);
             this.panel10.TabIndex = 1;
             // 
             // FilesBrowser
             // 
             this.FilesBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilesBrowser.Location = new System.Drawing.Point(0, 0);
-            this.FilesBrowser.MinimumSize = new System.Drawing.Size(20, 21);
+            this.FilesBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.FilesBrowser.Name = "FilesBrowser";
             this.FilesBrowser.ScriptErrorsSuppressed = true;
-            this.FilesBrowser.Size = new System.Drawing.Size(703, 380);
+            this.FilesBrowser.Size = new System.Drawing.Size(659, 435);
             this.FilesBrowser.TabIndex = 0;
             // 
             // panel9
@@ -456,36 +451,48 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(303, 380);
+            this.panel9.Size = new System.Drawing.Size(341, 435);
             this.panel9.TabIndex = 0;
             // 
             // DiskTree
             // 
             this.DiskTree.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DiskTree.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiskTree.Font = new System.Drawing.Font("Myriad Pro", 12F);
-            this.DiskTree.HideSelection = false;
+            this.DiskTree.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.DiskTree.Font = new System.Drawing.Font("Arial", 12F);
             this.DiskTree.ImageIndex = 0;
             this.DiskTree.ImageList = this.imageList1;
             this.DiskTree.Indent = 30;
             this.DiskTree.Location = new System.Drawing.Point(0, 0);
+            this.DiskTree.Margin = new System.Windows.Forms.Padding(5);
             this.DiskTree.Name = "DiskTree";
             this.DiskTree.SelectedImageIndex = 0;
             this.DiskTree.ShowNodeToolTips = true;
             this.DiskTree.ShowPlusMinus = false;
             this.DiskTree.ShowRootLines = false;
-            this.DiskTree.Size = new System.Drawing.Size(303, 380);
+            this.DiskTree.Size = new System.Drawing.Size(341, 435);
             this.DiskTree.TabIndex = 0;
+            this.DiskTree.TabStop = false;
+            this.DiskTree.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.DiskTree_DrawNode);
             this.DiskTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DiskTree_AfterSelect);
             this.DiskTree.Validating += new System.ComponentModel.CancelEventHandler(this.DiskTree_Validating);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "disk.png");
+            this.imageList1.Images.SetKeyName(1, "disk-op.png");
+            this.imageList1.Images.SetKeyName(2, "folder.png");
+            this.imageList1.Images.SetKeyName(3, "folder-open.png");
             // 
             // ListTab
             // 
             this.ListTab.Controls.Add(this.DisksBlocksBrowser);
-            this.ListTab.Location = new System.Drawing.Point(4, 22);
+            this.ListTab.Location = new System.Drawing.Point(4, 27);
             this.ListTab.Name = "ListTab";
             this.ListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ListTab.Size = new System.Drawing.Size(1012, 389);
+            this.ListTab.Size = new System.Drawing.Size(1006, 441);
             this.ListTab.TabIndex = 1;
             this.ListTab.Text = "ListTab";
             this.ListTab.UseVisualStyleBackColor = true;
@@ -498,20 +505,20 @@
             this.DisksBlocksBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DisksBlocksBrowser.IsWebBrowserContextMenuEnabled = false;
             this.DisksBlocksBrowser.Location = new System.Drawing.Point(3, 3);
-            this.DisksBlocksBrowser.MinimumSize = new System.Drawing.Size(20, 21);
+            this.DisksBlocksBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.DisksBlocksBrowser.Name = "DisksBlocksBrowser";
             this.DisksBlocksBrowser.ScriptErrorsSuppressed = true;
-            this.DisksBlocksBrowser.Size = new System.Drawing.Size(1006, 383);
+            this.DisksBlocksBrowser.Size = new System.Drawing.Size(1000, 435);
             this.DisksBlocksBrowser.TabIndex = 0;
             this.DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
             // 
             // MyDocsBlockTab
             // 
             this.MyDocsBlockTab.Controls.Add(this.MyDocsBlockBrowser);
-            this.MyDocsBlockTab.Location = new System.Drawing.Point(4, 22);
+            this.MyDocsBlockTab.Location = new System.Drawing.Point(4, 27);
             this.MyDocsBlockTab.Name = "MyDocsBlockTab";
             this.MyDocsBlockTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyDocsBlockTab.Size = new System.Drawing.Size(1012, 389);
+            this.MyDocsBlockTab.Size = new System.Drawing.Size(1006, 441);
             this.MyDocsBlockTab.TabIndex = 2;
             this.MyDocsBlockTab.Text = "MyDocsBlockTab";
             this.MyDocsBlockTab.UseVisualStyleBackColor = true;
@@ -521,20 +528,20 @@
             this.MyDocsBlockBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyDocsBlockBrowser.IsWebBrowserContextMenuEnabled = false;
             this.MyDocsBlockBrowser.Location = new System.Drawing.Point(3, 3);
-            this.MyDocsBlockBrowser.MinimumSize = new System.Drawing.Size(20, 21);
+            this.MyDocsBlockBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.MyDocsBlockBrowser.Name = "MyDocsBlockBrowser";
             this.MyDocsBlockBrowser.ScriptErrorsSuppressed = true;
-            this.MyDocsBlockBrowser.Size = new System.Drawing.Size(1006, 383);
+            this.MyDocsBlockBrowser.Size = new System.Drawing.Size(1000, 435);
             this.MyDocsBlockBrowser.TabIndex = 0;
             this.MyDocsBlockBrowser.WebBrowserShortcutsEnabled = false;
             // 
             // MyDocsListTab
             // 
             this.MyDocsListTab.Controls.Add(this.MyDocsListBrowser);
-            this.MyDocsListTab.Location = new System.Drawing.Point(4, 22);
+            this.MyDocsListTab.Location = new System.Drawing.Point(4, 27);
             this.MyDocsListTab.Name = "MyDocsListTab";
             this.MyDocsListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyDocsListTab.Size = new System.Drawing.Size(1012, 389);
+            this.MyDocsListTab.Size = new System.Drawing.Size(1006, 441);
             this.MyDocsListTab.TabIndex = 3;
             this.MyDocsListTab.Text = "MyDocsListTab";
             this.MyDocsListTab.UseVisualStyleBackColor = true;
@@ -543,19 +550,19 @@
             // 
             this.MyDocsListBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyDocsListBrowser.Location = new System.Drawing.Point(3, 3);
-            this.MyDocsListBrowser.MinimumSize = new System.Drawing.Size(20, 21);
+            this.MyDocsListBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.MyDocsListBrowser.Name = "MyDocsListBrowser";
             this.MyDocsListBrowser.ScriptErrorsSuppressed = true;
-            this.MyDocsListBrowser.Size = new System.Drawing.Size(1006, 383);
+            this.MyDocsListBrowser.Size = new System.Drawing.Size(1000, 435);
             this.MyDocsListBrowser.TabIndex = 0;
             // 
             // searchTab
             // 
             this.searchTab.Controls.Add(this.SearchBrowser);
-            this.searchTab.Location = new System.Drawing.Point(4, 22);
+            this.searchTab.Location = new System.Drawing.Point(4, 27);
             this.searchTab.Name = "searchTab";
             this.searchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.searchTab.Size = new System.Drawing.Size(1012, 389);
+            this.searchTab.Size = new System.Drawing.Size(1006, 441);
             this.searchTab.TabIndex = 4;
             this.searchTab.Text = "searchTab";
             this.searchTab.UseVisualStyleBackColor = true;
@@ -564,29 +571,30 @@
             // 
             this.SearchBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchBrowser.Location = new System.Drawing.Point(3, 3);
-            this.SearchBrowser.MinimumSize = new System.Drawing.Size(20, 21);
+            this.SearchBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.SearchBrowser.Name = "SearchBrowser";
             this.SearchBrowser.ScriptErrorsSuppressed = true;
-            this.SearchBrowser.Size = new System.Drawing.Size(1006, 383);
+            this.SearchBrowser.Size = new System.Drawing.Size(1000, 435);
             this.SearchBrowser.TabIndex = 0;
             // 
             // TemplatesList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1020, 539);
+            this.ClientSize = new System.Drawing.Size(1014, 611);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Myriad Pro", 10F);
+            this.Font = new System.Drawing.Font("Arial", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "TemplatesList";
-            this.Text = "KozaDisk 2.0";
+            this.Text = "КОЗА-ДИСК";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TemplatesList_FormClosed);
             this.Load += new System.EventHandler(this.TemplatesList_Load);
+            this.Resize += new System.EventHandler(this.TemplatesList_Resize);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -594,7 +602,6 @@
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel12.ResumeLayout(false);

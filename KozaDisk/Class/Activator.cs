@@ -22,6 +22,8 @@ namespace KozaDisk.Class
         /// </summary>
         string ConfigFile = KozaDisk.Constant.ApplcationStorage + @"db\acd\disk.xml";
 
+        private Dictionary<string, bool> daw = new Dictionary<string, bool>();
+
         public Activator()
         {
             this._loadConfig();
@@ -44,7 +46,7 @@ namespace KozaDisk.Class
             catch(Exception ex)
             {
                 DateTime startDate = DateTime.Now;
-                DateTime endDate = startDate.AddDays(14);
+                DateTime endDate = startDate.AddDays(31);
 
                 //create db node
                 XmlElement dbElem = this.Config.CreateElement("db_"+db);
@@ -57,6 +59,63 @@ namespace KozaDisk.Class
 
                 return false;
             }
+        }
+
+        public void hideActivateWindows(string db)
+        {
+            this.daw[db] = false;
+        }
+
+        public bool isVisibleActivateWindow(string db)
+        {
+            try
+            {
+                return this.daw[db];
+            }
+            catch(Exception ex)
+            {
+                this.daw.Add(db, false);
+                return true;
+            }
+
+            return true;
+        }
+
+        public string getTrialDays(string db)
+        {
+            string days = "0";
+            XmlElement root = this.Config.DocumentElement;
+
+            try
+            {
+                DateTime now = DateTime.Now;
+                XmlNode disk = root.SelectSingleNode($"db_{db}");
+                string endDateStr = disk.SelectSingleNode("endDate").InnerText.ToString();
+                DateTime endDate = Convert.ToDateTime(endDateStr);
+
+                days = (endDate - now).TotalDays.ToString();
+
+                if (days.IndexOf(',') != -1)
+                    days = days.Remove(days.IndexOf(','));
+
+            }
+            catch (Exception ex)
+            {
+                DateTime startDate = DateTime.Now;
+                DateTime endDate = startDate.AddDays(31);
+
+                //create db node
+                XmlElement dbElem = this.Config.CreateElement("db_" + db);
+                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key><startDate>{startDate.ToString("dd/MM/yyyy")}</startDate><endDate>{endDate.ToString("dd/MM/yyyy")}</endDate>";
+
+                //add db to config xml
+                root.AppendChild(dbElem);
+
+                this._saveConfig();
+                days = "30";
+            }
+
+            return days;
         }
 
         public bool isTrial(string db)
@@ -84,7 +143,7 @@ namespace KozaDisk.Class
             catch (Exception ex)
             {
                 DateTime startDate = DateTime.Now;
-                DateTime endDate = startDate.AddDays(14);
+                DateTime endDate = startDate.AddDays(31);
 
                 //create db node
                 XmlElement dbElem = this.Config.CreateElement("db_" + db);

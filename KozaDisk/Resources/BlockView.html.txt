@@ -2,12 +2,12 @@
 <html>
 <head>
 </head>
-<body style="margin: 0; font-family: Minion Pro">
+<body style="margin: 0; font-family: Arial; font-size: 16px;">
     <style>
         .block
         {
             width: 200px;
-            height: 200px;
+            height: 230px;
             border: 1px solid #f4f4f4;
             margin: 10px;
             display:inline-block;
@@ -35,7 +35,7 @@
         .block .head
         {
             width: 190px;
-            height: 45px;
+            height: 55px;
             background-color: #f4f4f4;
             padding: 5px;
             text-align: center;
@@ -44,7 +44,7 @@
         .block .image
         {
             width: 100%;
-            height: 90px;
+            height: 103px;
             padding-top: 25px;
         }
 
@@ -86,7 +86,8 @@
             width: 16px;
             padding: 4px;
             height: 15px;
-            background-color: gray;
+            margin-left: 5px;
+            background-color: #bebebe;
             border-radius: 5px;
         }
 
@@ -103,11 +104,12 @@
         .btn .date
         {
             float: left;
-            width: 143px;
-            height: 20px;
-            color: gray;
+            width: 133px;
+            height: 21px;
+            line-height: 21px;
+            color: #7a7a7a;
             text-align:center;
-            font-size: 15px;
+            font-size: 11px;
         }
 
         .btn .delete
@@ -115,8 +117,9 @@
             float: right;
             width: 11px;
             padding: 6px;
+            margin-right: 5px;
             height: 11px;
-            background-color: gray;
+            background-color: #bebebe;
         }
 
         .btn .delete:hover
@@ -131,44 +134,14 @@
     %disks_blocks%
 
     <script type="text/javascript">
-        /*
-        $(document).ready(function () {
-            $(".btn .delete").click(function () {
-                var id = $(this).attr("id");
+        function over(db)
+        {
+            document.getElementById("img_" + db).setAttribute("src", "%AppPathUrl%icon/iface/disk_big_act.png")
+        }
 
-                window.external.deleteDocument(id);
-
-                return false;
-            });
-
-            $(".block").click(function () {
-                var type = $(this).attr("type");
-                var db = $(this).attr("db");
-
-                if (type == "disk")
-                {
-                    window.external.openDisk(db);
-                }
-
-                if (type == "folder")
-                {
-                    var id = $(this).attr("id");
-                    window.external.openFolder(id, db);
-                }
-
-                if (type == "document")
-                {
-                    var id = $(this).attr("id");
-
-                    if ($(this).hasClass("mydoc")) {
-                        window.external.openMyDocument(id, db);
-                    } else {
-                        window.external.openDocument(id, db);
-                    }
-                }
-            });
-        });
-        */
+        function out(db) {
+            document.getElementById("img_" + db).setAttribute("src", "%AppPathUrl%icon/iface/disk_big.png")
+        }
     </script>
 </body>
 </html>

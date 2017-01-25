@@ -140,9 +140,19 @@ namespace templates
             //open form
             template.loadHTML(html);
             this.progress.setCurrent(11);
-            template.Show();
+            //template.Show();
             this.progress.setCurrent(12);
             this.progress.Close();
+
+            template.ShowDialog();
+        }
+
+        public bool isClosed()
+        {
+            if (this.isClosed())
+                return true;
+            else
+                return false;
         }
 
         void openProc(string documentHtmlValues)
@@ -220,9 +230,11 @@ namespace templates
             //process html values
             template.loadHtmlElementsValue(documentHtmlValues);
           
-            template.Show();
+            //template.Show();
             this.progress.setCurrent(12);
             this.progress.Close();
+
+            template.ShowDialog();
         }
 
         ~Templates()

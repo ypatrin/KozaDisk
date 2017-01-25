@@ -17,6 +17,8 @@ namespace KozaDisk.Forms
     [System.Runtime.InteropServices.ComVisibleAttribute(true)]
     public partial class TemplatesList : Form
     {
+        KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
+
         User userData = null;
         Disks disks = new Disks();
         string view = "tree";
@@ -40,6 +42,7 @@ namespace KozaDisk.Forms
 
         private void TemplatesList_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = new Size(1030, 650);
             this.load();
         }
 
@@ -56,20 +59,8 @@ namespace KozaDisk.Forms
                 diskTreeNode.db = disk.db;
                 diskTreeNode.Name = disk.name;
                 diskTreeNode.Text = disk.name;
-                diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);
-
-                /*
-                if (!activator.isActivated(disk.db))
-                {
-                    diskTreeNode.ImageIndex = 0;
-                    diskTreeNode.SelectedImageIndex = 0;
-                }
-                else
-                {
-                    diskTreeNode.ImageIndex = 1;
-                    diskTreeNode.SelectedImageIndex = 1;
-                }   
-                */      
+                diskTreeNode.ToolTipText = disk.description;
+                diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);      
                 
                 if (!activator.isActivated(disk.db) && !activator.isTrial(disk.db))
                 {
@@ -128,10 +119,18 @@ namespace KozaDisk.Forms
                 List<Folder> folders = disk.getFolders();
                 int countTemplates = disk.getCoutTemplates();
 
+                string diskName = disk.name;
+                string diskNameFull = disk.name;
+
+                if (diskName.Length > 58)
+                {
+                    diskName = diskName.Substring(0, 58) + "...";
+                }
+
                 //blocks
-                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\">";
-                nodeHtml += $"<div class=\"head\">{disk.name}</div>";
-                nodeHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
+                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\" onMouseOver=\"over('{disk.db}')\" onMouseOut=\"out('{disk.db}')\">";
+                nodeHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{diskNameFull}';\" onMouseOut=\"this.innerHTML='{diskName}';\">{diskName}</div>";
+                nodeHtml += $"<div class=\"image\"><img id=\"img_{disk.db}\" src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
                 nodeHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                 nodeHtml += "</div>";
             }
@@ -149,6 +148,7 @@ namespace KozaDisk.Forms
 
         public void load()
         {
+            
             FilesBrowser.AllowWebBrowserDrop = false;
             FilesBrowser.IsWebBrowserContextMenuEnabled = false;
             FilesBrowser.WebBrowserShortcutsEnabled = false;
@@ -156,9 +156,9 @@ namespace KozaDisk.Forms
             FilesBrowser.ObjectForScripting = this;
 
             DisksBlocksBrowser.AllowWebBrowserDrop = false;
-            DisksBlocksBrowser.IsWebBrowserContextMenuEnabled = false;
+            DisksBlocksBrowser.IsWebBrowserContextMenuEnabled = true;
             DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
-            DisksBlocksBrowser.ScriptErrorsSuppressed = false;
+            DisksBlocksBrowser.ScriptErrorsSuppressed = true;
             DisksBlocksBrowser.ObjectForScripting = this;
 
             MyDocsBlockBrowser.AllowWebBrowserDrop = false;
@@ -207,8 +207,16 @@ namespace KozaDisk.Forms
                     {
                         int countTemplates = disk.getCoutTemplates(Int32.Parse(folder.id));
 
+                        string folderName = folder.name;
+                        string folderNameFull = folder.name;
+
+                        if (folderName.Length > 58)
+                        {
+                            folderName = folderName.Substring(0, 58) + "...";
+                        }
+
                         disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
-                        disksBlockHtml += $"<div class=\"head\">{folder.name}</div>";
+                        disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{folderNameFull}';\" onMouseOut=\"this.innerHTML='{folderName}';\">{folderName}</div>";
                         disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
                         disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                         disksBlockHtml += "</div>";
@@ -244,18 +252,29 @@ namespace KozaDisk.Forms
 
                     writeNavigation(navi);
 
-                    KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
-                    if (!activator.isActivated(disk.db))
+                    if (!activator.isActivated(disk.db) && activator.isVisibleActivateWindow(disk.db))
                     {
                         //display activation message
-                        KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate();
+                        string days = activator.getTrialDays(disk.db);
+                        KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
                         activateForm.setDiskName(disk.name);
                         activateForm.userData = this.userData;
                         activateForm.db = disk.db;
+
+                        activator.hideActivateWindows(disk.db);
+
                         activateForm.ShowDialog();
                     }
+                    else
+                    {
+                        if (!activator.isActivated(disk.db) && !activator.isVisibleActivateWindow(disk.db))
+                        {
+                            string days = activator.getTrialDays(disk.db);
 
-
+                            KozaDisk.Forms.TrialForm trial = new TrialForm(days);
+                            trial.ShowDialog();
+                        }
+                    }
                 }
             }
         }
@@ -323,9 +342,9 @@ namespace KozaDisk.Forms
                 string docName = template.name;
                 string docNameFull = template.name;
 
-                if (docName.Length > 47)
+                if (docName.Length > 58)
                 {
-                    docName = docName.Substring(0, 38) + "...";
+                    docName = docName.Substring(0, 58) + "...";
                 }
                 // document
                 if (template.type == "0")
@@ -379,128 +398,128 @@ namespace KozaDisk.Forms
 
         public void openDocument(string documentId, string db)
         {
-            db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
-            string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
-
-            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
-            connection.Open();
-
-            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
-            SQLiteDataReader reader = command.ExecuteReader();
-
-            reader.Read();
-
-            Template template = new Template();
-
-            template.id = (string)reader["id"].ToString();
-            template.structureId = (string)reader["structure_id"].ToString();
-            template.name = (string)reader["name"].ToString();
-            template.markersXML = (string)reader["markers_xml"].ToString();
-            template.template = (string)reader["template"].ToString();
-            template.type = (string)reader["type"].ToString();
-            template.fileExt = (string)reader["file_ext"].ToString();
-
-            string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
-            string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
-
-            //create template file
-            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
-            //create markers file
-            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
-
-            if (template.type == "0")
+            try
             {
+                this.WindowState = FormWindowState.Minimized;
+
+                db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
+                string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
+
+                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+                connection.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                Template template = new Template();
+
+                template.id = (string)reader["id"].ToString();
+                template.structureId = (string)reader["structure_id"].ToString();
+                template.name = (string)reader["name"].ToString();
+                template.markersXML = (string)reader["markers_xml"].ToString();
+                template.template = (string)reader["template"].ToString();
+                template.type = (string)reader["type"].ToString();
+                template.fileExt = (string)reader["file_ext"].ToString();
+
+                string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
+                string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
+
+                //create template file
+                System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
+                //create markers file
+                System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
+
+                if (template.type == "0")
+                {
+                    //loading template
+                    templates.Templates templates = new templates.Templates();
+                    templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
+                    templates.setUserXmlFile(this.userData.XmlFilePath);
+                    templates.setDbName(databaseName);
+                    templates.setDocId(Int32.Parse(template.id));
+                    templates.open();
+                }
+                if (template.type == "1")
+                {
+                    System.IO.File.WriteAllBytes(Constant.TempPath + template.name + template.fileExt, Convert.FromBase64String(template.template));
+                    System.Diagnostics.Process.Start(Constant.TempPath + template.name + template.fileExt);
+                }
+
+                this.WindowState = FormWindowState.Maximized;
+
+            }
+            catch (Exception ex) { }
+        }
+
+        public void openMyDocument(string documentId, string db)
+        {
+            try
+            {
+                this.WindowState = FormWindowState.Minimized;
+
+                db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
+                string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
+
+                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+                connection.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                reader.Read();
+
+                Template template = new Template();
+
+                template.id = (string)reader["id"].ToString();
+                template.structureId = (string)reader["structure_id"].ToString();
+                template.name = (string)reader["name"].ToString();
+                template.markersXML = (string)reader["markers_xml"].ToString();
+                template.template = (string)reader["template"].ToString();
+                template.type = (string)reader["type"].ToString();
+
+                string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
+                string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
+
+                connection.Close();
+
+                string myDocsDb = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+                SQLiteConnection myDocCn = new SQLiteConnection(string.Format("Data Source={0};", myDocsDb));
+                myDocCn.Open();
+
+                string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE doc_id = '{documentId}'";
+
+                SQLiteCommand MyDocCmd = new SQLiteCommand(sql, myDocCn);
+                SQLiteDataReader r = MyDocCmd.ExecuteReader();
+                r.Read();
+                string html = r["doc_html"].ToString();
+                html = Encrypt.Base64.Decode(html);
+
+                myDocCn.Close();
+
+                //create template file
+                System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
+                //create markers file
+                System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
+
                 //loading template
                 templates.Templates templates = new templates.Templates();
                 templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
                 templates.setUserXmlFile(this.userData.XmlFilePath);
                 templates.setDbName(databaseName);
                 templates.setDocId(Int32.Parse(template.id));
-                templates.open();
+                templates.open(html);
+
+                this.WindowState = FormWindowState.Maximized;
+                //delete temp files
+                //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+                //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
             }
-            if (template.type == "1")
+            catch(Exception ex)
             {
-                /*
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.FileName = template.name + ".pdf";
-                sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                sfd.Filter = "PDF File|*.pdf";
-                sfd.Title = "Зберегти документ " + template.name;
 
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    System.IO.File.WriteAllBytes(sfd.FileName, Convert.FromBase64String(template.template));
-                    
-                    if (MessageBox.Show("Документ успішно збережений! Відкрити?", "Збереження документа", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        System.Diagnostics.Process.Start(sfd.FileName);
-                    }
-                }
-                */
-
-                System.IO.File.WriteAllBytes(Constant.TempPath + template.name + template.fileExt, Convert.FromBase64String(template.template));
-                System.Diagnostics.Process.Start(Constant.TempPath + template.name + template.fileExt);
             }
-        }
-
-        public void openMyDocument(string documentId, string db)
-        {
-            db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
-            string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
-
-            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
-            connection.Open();
-
-            SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
-            SQLiteDataReader reader = command.ExecuteReader();
-
-            reader.Read();
-
-            Template template = new Template();
-
-            template.id = (string)reader["id"].ToString();
-            template.structureId = (string)reader["structure_id"].ToString();
-            template.name = (string)reader["name"].ToString();
-            template.markersXML = (string)reader["markers_xml"].ToString();
-            template.template = (string)reader["template"].ToString();
-            template.type = (string)reader["type"].ToString();
-
-            string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
-            string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
-
-            connection.Close();
-
-            string myDocsDb = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
-            SQLiteConnection myDocCn = new SQLiteConnection(string.Format("Data Source={0};", myDocsDb));
-            myDocCn.Open();
-
-            string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE doc_id = '{documentId}'";
-
-            SQLiteCommand MyDocCmd = new SQLiteCommand(sql, myDocCn);
-            SQLiteDataReader r = MyDocCmd.ExecuteReader();
-            r.Read();
-            string html = r["doc_html"].ToString();
-            html = Encrypt.Base64.Decode(html);
-
-            myDocCn.Close();
-
-            //create template file
-            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempDocxFile, Convert.FromBase64String(template.template));
-            //create markers file
-            System.IO.File.WriteAllBytes(KozaDisk.Constant.TempXmlFile, Convert.FromBase64String(template.markersXML));
-
-            //loading template
-            templates.Templates templates = new templates.Templates();
-            templates.setTemplate(KozaDisk.Constant.TempDocxFile, KozaDisk.Constant.TempXmlFile, template.name);
-            templates.setUserXmlFile(this.userData.XmlFilePath);
-            templates.setDbName(databaseName);
-            templates.setDocId(Int32.Parse(template.id));
-            templates.open(html);
-            
-
-            //delete temp files
-            //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
-            //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
         }
 
         private void BlockViewBtn_Click(object sender, EventArgs e)
@@ -608,9 +627,9 @@ namespace KozaDisk.Forms
                     string docName = r["doc_name"].ToString();
                     string docNameFull = r["doc_name"].ToString();
 
-                    if (docName.Length > 47)
+                    if (docName.Length > 58)
                     {
-                        docName = docName.Substring(0, 47) + "...";
+                        docName = docName.Substring(0, 58) + "...";
                     }
 
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
@@ -660,20 +679,27 @@ namespace KozaDisk.Forms
  
         public void deleteDocument(string id)
         {
-            if (MessageBox.Show("Видалити документ?", "Видалення", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
+            {
+                if (MessageBox.Show("Видалити документ?", "Видалення", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+
+                    SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+                    connection.Open();
+
+                    string sql = $"DELETE FROM documents WHERE id = {id}";
+
+                    SQLiteCommand command = new SQLiteCommand(sql, connection);
+                    command.ExecuteNonQuery();
+
+                    this.loadMyDocuments(Constant.MyDocumentsBlockTab);
+                }
+            }
+            catch(Exception ex)
             {
 
-                string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
-
-                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
-                connection.Open();
-
-                string sql = $"DELETE FROM documents WHERE id = {id}";
-
-                SQLiteCommand command = new SQLiteCommand(sql, connection);
-                command.ExecuteNonQuery();
-
-                this.loadMyDocuments(Constant.MyDocumentsBlockTab);
             }
         }
 
@@ -730,7 +756,7 @@ namespace KozaDisk.Forms
         {
             string links = "";
             string separator = " <span style=\"font-family: sans-serif; font-size: 12px; color: #797979;\">&gt;</span> ";
-            string style = "font-family: 'Miriad Pro'; font-size: 15px; cursor: pointer; color: 00bd9c;";
+            string style = "font-family: 'Arial'; font-size: 15px; cursor: pointer; color: 00bd9c;";
 
             //write home
             links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.NaviMainLink()\">Головна</a>";
@@ -806,8 +832,16 @@ namespace KozaDisk.Forms
 
             foreach (var template in findingTemplates)
             {
-                disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\">";
-                disksBlockHtml += $"<div class=\"head\">{template.name}</div>";
+                string docName = template.name;
+                string docNameFull = template.name;
+
+                if (docName.Length > 58)
+                {
+                    docName = docName.Substring(0, 58) + "...";
+                }
+
+                disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{template.dbName}');\">";
+                disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
                 disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                 disksBlockHtml += "</div>";
             }
@@ -846,12 +880,47 @@ namespace KozaDisk.Forms
 
         private void DiskTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            this.searchBox.Focus();
+
             Class.Objects.DiskTreeNode selectedNode = (Class.Objects.DiskTreeNode)this.DiskTree.SelectedNode;
             selectedNode.Expand();
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
-                KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
+                if (!activator.isActivated(selectedNode.db) && activator.isVisibleActivateWindow(selectedNode.db))
+                {
+                    string days = activator.getTrialDays(selectedNode.db);
+
+                    //display activation message
+                    KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
+                    activateForm.setDiskName(selectedNode.Name);
+                    activateForm.userData = this.userData;
+                    activateForm.db = selectedNode.db;
+
+                    activator.hideActivateWindows(selectedNode.db);
+
+                    activateForm.ShowDialog();
+
+                    if (activator.isActivated(selectedNode.db))
+                    {
+                        this.prepareTree();
+                    }
+                }
+                else
+                {
+                    if (!activator.isActivated(selectedNode.db) && !activator.isVisibleActivateWindow(selectedNode.db))
+                    {
+                        string days = activator.getTrialDays(selectedNode.db);
+
+                        KozaDisk.Forms.TrialForm trial = new TrialForm(days);
+                        trial.ShowDialog();
+                    }
+                }
+
+                if (selectedNode.ImageIndex == 0)
+                    selectedNode.ImageIndex = 1;
+
+                /*
                 if (!activator.isActivated(selectedNode.db) && !selectedNode.isAtivateWindowDisplayed)
                 {
                     //display activation message
@@ -869,13 +938,19 @@ namespace KozaDisk.Forms
                     {
                         selectedNode.isAtivateWindowDisplayed = true;
                     }
+
+                    if (selectedNode.ImageIndex == 0)
+                        selectedNode.ImageIndex = 1;
                 }
+                */
             }
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Folder)
             {
                 this.openFolder(selectedNode.id, selectedNode.db);
             }
+
+            this.searchBox.Focus();
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)
@@ -905,6 +980,46 @@ namespace KozaDisk.Forms
 
         private void DiskTree_Validating(object sender, CancelEventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Forms.HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
+        }
+
+        private void DiskTree_DrawNode(object sender, DrawTreeNodeEventArgs e)
+        {
+            SolidBrush whiteBrush = new SolidBrush(Color.White);
+
+            if (e.Node.IsSelected)
+            {
+                if (DiskTree.Focused)
+                    e.Graphics.FillRectangle(whiteBrush, e.Bounds);
+                else
+                    e.Graphics.FillRectangle(whiteBrush, e.Bounds);
+            }
+
+            TextRenderer.DrawText(e.Graphics, e.Node.Text, e.Node.TreeView.Font, e.Node.Bounds, e.Node.ForeColor);
+        }
+
+        private void TemplatesList_Resize(object sender, EventArgs e)
+        {
+            Size panelSize = new Size();
+            panelSize.Height = panel6.Size.Height;
+            panelSize.Width = panel4.Width - 30;
+
+            this.panel6.Size = panelSize;
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void searchBox_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

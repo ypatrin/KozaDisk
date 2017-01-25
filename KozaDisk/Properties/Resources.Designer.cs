@@ -73,26 +73,6 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg {
-            get {
-                object obj = ResourceManager.GetObject("bg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bg_cover {
-            get {
-                object obj = ResourceManager.GetObject("bg-cover", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bg1 {
             get {
                 object obj = ResourceManager.GetObject("bg1", resourceCulture);
@@ -103,9 +83,9 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_about {
+        internal static System.Drawing.Bitmap block {
             get {
-                object obj = ResourceManager.GetObject("btn-about", resourceCulture);
+                object obj = ResourceManager.GetObject("block", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,9 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_about1 {
+        internal static System.Drawing.Bitmap block1 {
             get {
-                object obj = ResourceManager.GetObject("btn-about1", resourceCulture);
+                object obj = ResourceManager.GetObject("block1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,19 +103,9 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_about2 {
+        internal static System.Drawing.Bitmap block2 {
             get {
-                object obj = ResourceManager.GetObject("btn-about2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btn_help {
-            get {
-                object obj = ResourceManager.GetObject("btn-help", resourceCulture);
+                object obj = ResourceManager.GetObject("block2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,49 +123,19 @@ namespace KozaDisk.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btn_wg {
-            get {
-                object obj = ResourceManager.GetObject("btn-wg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btn_wg1 {
-            get {
-                object obj = ResourceManager.GetObject("btn-wg1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btn_wg2 {
-            get {
-                object obj = ResourceManager.GetObject("btn-wg2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btn_wg3 {
-            get {
-                object obj = ResourceManager.GetObject("btn-wg3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clock1 {
+            get {
+                object obj = ResourceManager.GetObject("clock1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -235,27 +175,24 @@ namespace KozaDisk.Properties {
         ///&lt;html&gt;
         ///&lt;head&gt;
         ///&lt;/head&gt;
-        ///&lt;body style=&quot;margin: 0; font-family: Minion Pro&quot;&gt;
+        ///&lt;body style=&quot;margin: 0; font-family: Arial; font-size: 16px;&quot;&gt;
         ///    &lt;style&gt;
         ///        .block
         ///        {
         ///            width: 200px;
-        ///            height: 180px;
+        ///            height: 230px;
         ///            border: 1px solid #f4f4f4;
         ///            margin: 10px;
         ///            display:inline-block;
         ///            float: left;
+        ///            border-bottom: 3px; border-bottom-color: #DFDFDF
         ///        }
         ///
         ///        .block:hover
         ///        {
         ///            border: 1px solid #DFDFDF;
         ///            cursor: pointer;
-        ///        }
-        ///
-        ///        .block[type=document]
-        ///        {
-        ///            border: 1px s [остаток строки не уместился]&quot;;.
+        ///      [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_blocks {
             get {
@@ -268,7 +205,7 @@ namespace KozaDisk.Properties {
         ///&lt;html&gt;
         ///&lt;head&gt;
         ///&lt;/head&gt;
-        ///&lt;body bgcolor=&quot;#f9f9f9&quot; style=&quot;margin: 0; font-family: Minion Pro&quot;&gt;
+        ///&lt;body bgcolor=&quot;#f9f9f9&quot; style=&quot;margin: 0; font-family: Arial&quot;&gt;
         ///    &lt;style&gt;
         ///        body {
         ///            background-color: #f9f9f9;
@@ -287,7 +224,7 @@ namespace KozaDisk.Properties {
         ///        }
         ///
         ///        .first {
-        ///            border-top: 1px solid  [остаток строки не уместился]&quot;;.
+        ///            border-top: 1px solid #f9f9 [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree {
             get {
@@ -300,10 +237,8 @@ namespace KozaDisk.Properties {
         ///&lt;html&gt;
         ///&lt;head&gt;
         ///&lt;/head&gt;
-        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
-        ///    &lt;!--
-        ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
-        ///        --&gt;
+        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Arial&quot;&gt;
+        ///
         ///    &lt;style&gt;
         ///        .document_head {
         ///            width: 98%;
@@ -316,7 +251,10 @@ namespace KozaDisk.Properties {
         ///            width: 98%;
         ///            padding: 10px;
         ///            background-color: #f4f4f4;
-        ///            m [остаток строки не уместился]&quot;;.
+        ///            margin-bottom: 15px;
+        ///            cursor: pointer;
+        ///            border: 1px solid #f4f4f4;
+        ///        }        /// [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string disk_tree_files {
             get {
@@ -330,6 +268,16 @@ namespace KozaDisk.Properties {
         internal static System.Drawing.Bitmap downl {
             get {
                 object obj = ResourceManager.GetObject("downl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error {
+            get {
+                object obj = ResourceManager.GetObject("error", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -380,6 +328,16 @@ namespace KozaDisk.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -479,7 +437,7 @@ namespace KozaDisk.Properties {
         ///&lt;html&gt;
         ///&lt;head&gt;
         ///&lt;/head&gt;
-        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Minion Pro&quot;&gt;
+        ///&lt;body bgcolor=&quot;&quot; style=&quot;margin-top: 0; font-family: Arial&quot;&gt;
         ///    &lt;!--
         ///    &lt;script type=&quot;text/javascript&quot; src=&quot;%AppPath%\js\jquery.js&quot;&gt;&lt;/script&gt;
         ///        --&gt;
@@ -498,11 +456,22 @@ namespace KozaDisk.Properties {
         ///        }
         ///
         ///        table.myDocs thead tr th
-        ///        { [остаток строки не уместился]&quot;;.
+        ///        {
+        ///    [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string mydocs_tree {
             get {
                 return ResourceManager.GetString("mydocs_tree", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

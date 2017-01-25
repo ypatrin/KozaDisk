@@ -236,28 +236,39 @@ namespace templates
 
         private void TemplateForm_Load(object sender, EventArgs e)
         {
+            Size size = new Size();
+            size.Width = (panel1.Width-80);
+            size.Height = this.TemplateNameBox.Size.Height;
+            this.TemplateNameBox.Size = size;
+
+            Point point = new Point(0, (panel3.Height / 2)-50 );
+
+            this.ShowCommentBtn.Location = new Point(0, (panel3.Height / 2) - 50);
+            this.HideCommentBtn.Location = new Point(0, (panel3.Height / 2) - 50 - 61);
+
+            this.Activate();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            panel3.Size = new Size(30, 348);
-            panel13.Visible = false;
-            pictureBox2.Visible = false;
-            pictureBox3.Visible = true;
+            this.panel3.Size = new Size(30, 348);
+            this.panel13.Visible = false;
+            this.HideCommentBtn.Visible = false;
+            this.ShowCommentBtn.Visible = true;
 
-            panel3.BackColor = Color.White;
-            panel3.BorderStyle = BorderStyle.None;
+            this.panel3.BackColor = Color.White;
+            this.panel3.BorderStyle = BorderStyle.None;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            panel3.Size = new Size(300, 348);
-            panel13.Visible = true;
-            pictureBox2.Visible = true;
-            pictureBox3.Visible = false;
+            this.panel3.Size = new Size(300, 348);
+            this.panel13.Visible = true;
+            this.HideCommentBtn.Visible = true;
+            this.ShowCommentBtn.Visible = false;
 
-            panel3.BackColor = Color.FromArgb(245,245,245);
-            panel3.BorderStyle = BorderStyle.FixedSingle;
+            this.panel3.BackColor = Color.FromArgb(245,245,245);
+            this.panel3.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -302,8 +313,8 @@ namespace templates
             connection.Open();
 
             //delete old
-            SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE doc_id = '{docId}' AND db_name = '{db}'", connection);
-            c.ExecuteNonQuery();
+            //SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE doc_id = '{docId}' AND db_name = '{db}'", connection);
+            //c.ExecuteNonQuery();
 
             //add
             string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";
@@ -312,6 +323,20 @@ namespace templates
             command.ExecuteNonQuery();
 
             MessageBox.Show("Шаблон успішно збережений!","Шаблон", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BackColor = Color.FromArgb(0, 189, 156);
+            button.ForeColor = Color.White;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BackColor = Color.FromArgb(27, 30, 37);
+            button.ForeColor = Color.FromArgb(227, 227, 229);
         }
 
         private string Base64Encode(string plainText)

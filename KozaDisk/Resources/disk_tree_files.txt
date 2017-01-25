@@ -2,10 +2,8 @@
 <html>
 <head>
 </head>
-<body bgcolor="" style="margin-top: 0; font-family: Minion Pro">
-    <!--
-    <script type="text/javascript" src="%AppPath%\js\jquery.js"></script>
-        -->
+<body bgcolor="" style="margin-top: 0; font-family: Arial">
+
     <style>
         .document_head {
             width: 98%;
@@ -20,11 +18,12 @@
             background-color: #f4f4f4;
             margin-bottom: 15px;
             cursor: pointer;
+            border: 1px solid #f4f4f4;
         }
 
         .document:hover {
             border: 1px solid black;
-            font-weight: bolder;
+            /*font-weight: bolder;*/
             color: black;
         }
     </style>

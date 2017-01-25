@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Activate));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ActivateButton = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.DiskNameLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.ActivateButton);
             this.panel1.Controls.Add(this.ActivateCodeBox);
             this.panel1.Controls.Add(this.label4);
@@ -130,8 +133,22 @@
             this.textBox1.Size = new System.Drawing.Size(355, 60);
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Для активації диску введіть, будь ласка, код, який прийшов Вам разом з диском. Та" +
-    "кож жи можете користуватися диском 14 днів в пробному режимі.";
+            this.textBox1.Text = "Шановний користувачу! Переконайтеся, що ваш комп\'ютер підключений до інтернету. В" +
+    "ідтак уведіть у поржнє поле код активації, поданий у коробці диску.";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(156)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(84, 268);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 35);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Активувати пізніше";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Activate
             // 
@@ -143,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Myriad Pro", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Activate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -164,5 +182,6 @@
         private System.Windows.Forms.Label DiskNameLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

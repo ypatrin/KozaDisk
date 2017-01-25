@@ -54,7 +54,7 @@
     <StartupObject>KozaDisk.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Коза48.ico</ApplicationIcon>
+    <ApplicationIcon>koza %282%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class\Activator.cs" />
@@ -82,6 +82,18 @@
     <Compile Include="Forms\Activate.Designer.cs">
       <DependentUpon>Activate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ActivateErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivateErrorForm.Designer.cs">
+      <DependentUpon>ActivateErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActivateOkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivateOkForm.Designer.cs">
+      <DependentUpon>ActivateOkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AutofillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
     </Compile>
     <Compile Include="Forms\TemplatesList.Designer.cs">
       <DependentUpon>TemplatesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrialForm.Designer.cs">
+      <DependentUpon>TrialForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -178,6 +196,12 @@
     <EmbeddedResource Include="Forms\Activate.resx">
       <DependentUpon>Activate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivateErrorForm.resx">
+      <DependentUpon>ActivateErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivateOkForm.resx">
+      <DependentUpon>ActivateOkForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AutofillForm.resx">
       <DependentUpon>AutofillForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TemplatesList.resx">
       <DependentUpon>TemplatesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrialForm.resx">
+      <DependentUpon>TrialForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -254,6 +281,14 @@
     <None Include="Resources\m-contact.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\close1.png" />
+    <None Include="Resources\clock1.png" />
+    <None Include="Resources\block.png" />
+    <None Include="Resources\block1.png" />
+    <None Include="Resources\block2.png" />
+    <None Include="Resources\logo1.png" />
+    <Content Include="koza %282%29.ico" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\ok.png" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <ItemGroup>

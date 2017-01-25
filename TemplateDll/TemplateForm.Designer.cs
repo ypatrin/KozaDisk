@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplateForm));
-            this.SaveBtn = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.HeadPanel = new System.Windows.Forms.Panel();
+            this.SaveBtn = new System.Windows.Forms.Button();
             this.DownloadBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.TemplateNameBox = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -51,13 +52,12 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ShowCommentBtn = new System.Windows.Forms.PictureBox();
+            this.HideCommentBtn = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.chartRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TemplateNameBox = new System.Windows.Forms.TextBox();
-            this.SaveBtn.SuspendLayout();
+            this.HeadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -67,71 +67,86 @@
             this.panel3.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowCommentBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HideCommentBtn)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // HeadPanel
+            // 
+            this.HeadPanel.BackColor = System.Drawing.Color.Black;
+            this.HeadPanel.Controls.Add(this.SaveBtn);
+            this.HeadPanel.Controls.Add(this.DownloadBtn);
+            this.HeadPanel.Controls.Add(this.PrintBtn);
+            this.HeadPanel.Controls.Add(this.pictureBox1);
+            this.HeadPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HeadPanel.Location = new System.Drawing.Point(0, 0);
+            this.HeadPanel.Name = "HeadPanel";
+            this.HeadPanel.Size = new System.Drawing.Size(815, 91);
+            this.HeadPanel.TabIndex = 1;
+            // 
             // SaveBtn
             // 
-            this.SaveBtn.BackColor = System.Drawing.Color.Black;
-            this.SaveBtn.Controls.Add(this.button4);
-            this.SaveBtn.Controls.Add(this.DownloadBtn);
-            this.SaveBtn.Controls.Add(this.PrintBtn);
-            this.SaveBtn.Controls.Add(this.pictureBox1);
-            this.SaveBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SaveBtn.Location = new System.Drawing.Point(0, 0);
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
+            this.SaveBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SaveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.SaveBtn.Location = new System.Drawing.Point(573, 27);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(815, 86);
-            this.SaveBtn.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(485, 23);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 32);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Зберегти";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.SaveBtn.Size = new System.Drawing.Size(141, 38);
+            this.SaveBtn.TabIndex = 4;
+            this.SaveBtn.TabStop = false;
+            this.SaveBtn.Text = "Зберегти";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.button4_Click);
+            this.SaveBtn.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.SaveBtn.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // DownloadBtn
             // 
-            this.DownloadBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.DownloadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
+            this.DownloadBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
             this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownloadBtn.ForeColor = System.Drawing.Color.White;
-            this.DownloadBtn.Location = new System.Drawing.Point(348, 23);
+            this.DownloadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DownloadBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.DownloadBtn.Location = new System.Drawing.Point(406, 27);
             this.DownloadBtn.Name = "DownloadBtn";
-            this.DownloadBtn.Size = new System.Drawing.Size(120, 32);
+            this.DownloadBtn.Size = new System.Drawing.Size(141, 38);
             this.DownloadBtn.TabIndex = 3;
+            this.DownloadBtn.TabStop = false;
             this.DownloadBtn.Text = "Завантажити";
-            this.DownloadBtn.UseVisualStyleBackColor = true;
+            this.DownloadBtn.UseVisualStyleBackColor = false;
             this.DownloadBtn.Click += new System.EventHandler(this.DownloadClick);
+            this.DownloadBtn.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.DownloadBtn.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // PrintBtn
             // 
-            this.PrintBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.PrintBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(37)))));
+            this.PrintBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
             this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintBtn.ForeColor = System.Drawing.Color.White;
-            this.PrintBtn.Location = new System.Drawing.Point(211, 23);
+            this.PrintBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.PrintBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
+            this.PrintBtn.Location = new System.Drawing.Point(238, 27);
             this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(120, 32);
+            this.PrintBtn.Size = new System.Drawing.Size(141, 38);
             this.PrintBtn.TabIndex = 2;
+            this.PrintBtn.TabStop = false;
             this.PrintBtn.Text = "Перегляд та друк";
-            this.PrintBtn.UseVisualStyleBackColor = true;
+            this.PrintBtn.UseVisualStyleBackColor = false;
             this.PrintBtn.Click += new System.EventHandler(this.PrintClick);
+            this.PrintBtn.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.PrintBtn.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::templates.Properties.Resources.inner_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 30);
+            this.pictureBox1.Image = global::templates.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(190, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -140,9 +155,9 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
+            this.panel2.Location = new System.Drawing.Point(0, 91);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(815, 375);
+            this.panel2.Size = new System.Drawing.Size(815, 371);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -157,7 +172,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(515, 375);
+            this.panel4.Size = new System.Drawing.Size(515, 371);
             this.panel4.TabIndex = 3;
             // 
             // panel12
@@ -167,7 +182,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(26, 92);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(459, 258);
+            this.panel12.Size = new System.Drawing.Size(459, 254);
             this.panel12.TabIndex = 5;
             // 
             // webBrowser1
@@ -176,7 +191,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(457, 256);
+            this.webBrowser1.Size = new System.Drawing.Size(457, 252);
             this.webBrowser1.TabIndex = 5;
             // 
             // panel8
@@ -200,6 +215,16 @@
             this.panel11.Size = new System.Drawing.Size(459, 39);
             this.panel11.TabIndex = 2;
             // 
+            // TemplateNameBox
+            // 
+            this.TemplateNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TemplateNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TemplateNameBox.Location = new System.Drawing.Point(5, 8);
+            this.TemplateNameBox.Name = "TemplateNameBox";
+            this.TemplateNameBox.Size = new System.Drawing.Size(436, 19);
+            this.TemplateNameBox.TabIndex = 1;
+            this.TemplateNameBox.Text = "Document name";
+            // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -219,7 +244,7 @@
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(26, 350);
+            this.panel7.Location = new System.Drawing.Point(26, 346);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(459, 25);
             this.panel7.TabIndex = 3;
@@ -229,7 +254,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(485, 19);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(30, 356);
+            this.panel6.Size = new System.Drawing.Size(30, 352);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -237,7 +262,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 19);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 356);
+            this.panel5.Size = new System.Drawing.Size(26, 352);
             this.panel5.TabIndex = 1;
             // 
             // panel1
@@ -257,7 +282,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(515, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 375);
+            this.panel3.Size = new System.Drawing.Size(300, 371);
             this.panel3.TabIndex = 2;
             // 
             // panel15
@@ -266,7 +291,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(31, 61);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(267, 312);
+            this.panel15.Size = new System.Drawing.Size(267, 308);
             this.panel15.TabIndex = 2;
             // 
             // webBrowser2
@@ -278,42 +303,40 @@
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(267, 312);
+            this.webBrowser2.Size = new System.Drawing.Size(267, 308);
             this.webBrowser2.TabIndex = 1;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel14.Controls.Add(this.pictureBox3);
-            this.panel14.Controls.Add(this.pictureBox2);
+            this.panel14.Controls.Add(this.ShowCommentBtn);
+            this.panel14.Controls.Add(this.HideCommentBtn);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 61);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(31, 312);
+            this.panel14.Size = new System.Drawing.Size(31, 308);
             this.panel14.TabIndex = 1;
             // 
-            // pictureBox3
+            // ShowCommentBtn
             // 
-            this.pictureBox3.Image = global::templates.Properties.Resources.com_arrow_left;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 57);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.ShowCommentBtn.Image = global::templates.Properties.Resources.com_arrow_left;
+            this.ShowCommentBtn.Location = new System.Drawing.Point(0, 80);
+            this.ShowCommentBtn.Name = "ShowCommentBtn";
+            this.ShowCommentBtn.Size = new System.Drawing.Size(28, 57);
+            this.ShowCommentBtn.TabIndex = 1;
+            this.ShowCommentBtn.TabStop = false;
+            this.ShowCommentBtn.Visible = false;
+            this.ShowCommentBtn.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox2
+            // HideCommentBtn
             // 
-            this.pictureBox2.Image = global::templates.Properties.Resources.com_arrow;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 151);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.HideCommentBtn.Image = global::templates.Properties.Resources.com_arrow;
+            this.HideCommentBtn.Location = new System.Drawing.Point(0, 151);
+            this.HideCommentBtn.Name = "HideCommentBtn";
+            this.HideCommentBtn.Size = new System.Drawing.Size(30, 57);
+            this.HideCommentBtn.TabIndex = 0;
+            this.HideCommentBtn.TabStop = false;
+            this.HideCommentBtn.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel13
             // 
@@ -339,32 +362,21 @@
             // 
             this.chartRecordBindingSource.DataSource = typeof(templates.ChartRecord);
             // 
-            // TemplateNameBox
-            // 
-            this.TemplateNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TemplateNameBox.Font = new System.Drawing.Font("Myriad Pro", 12F);
-            this.TemplateNameBox.Location = new System.Drawing.Point(5, 8);
-            this.TemplateNameBox.Name = "TemplateNameBox";
-            this.TemplateNameBox.Size = new System.Drawing.Size(436, 20);
-            this.TemplateNameBox.TabIndex = 1;
-            this.TemplateNameBox.Text = "Document name";
-            // 
             // TemplateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 461);
+            this.ClientSize = new System.Drawing.Size(815, 462);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.SaveBtn);
-            this.Font = new System.Drawing.Font("Myriad Pro", 9F);
+            this.Controls.Add(this.HeadPanel);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TemplateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Перегляд шаблону";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TemplateForm_Load);
-            this.SaveBtn.ResumeLayout(false);
-            this.SaveBtn.PerformLayout();
+            this.HeadPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -375,9 +387,8 @@
             this.panel3.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowCommentBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HideCommentBtn)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).EndInit();
@@ -387,13 +398,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel SaveBtn;
+        private System.Windows.Forms.Panel HeadPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.BindingSource chartRecordBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button DownloadBtn;
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.Panel panel12;
@@ -411,8 +422,8 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox HideCommentBtn;
+        private System.Windows.Forms.PictureBox ShowCommentBtn;
         private System.Windows.Forms.TextBox TemplateNameBox;
     }
 }
