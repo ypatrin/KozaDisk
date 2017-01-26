@@ -331,7 +331,7 @@
             this.printPreviewStaticItem2,
             this.zoomTrackBarEditItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 62;
+            this.ribbonControl1.MaxItemId = 65;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -357,8 +357,8 @@
             superToolTip1.FixedTooltipWidth = true;
             toolTipTitleItem1.Text = "Схема документа";
             toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Открыть схему документа, которая позволит быстрее разобраться в структуре докумен" +
-    "та.";
+            toolTipItem1.Text = "Відкрити схему документа, яка дозволить швидше розібратися в структурі документа." +
+    "";
             superToolTip1.Items.Add(toolTipTitleItem1);
             superToolTip1.Items.Add(toolTipItem1);
             superToolTip1.MaxWidth = 210;
@@ -387,7 +387,7 @@
             // printPreviewBarItem3
             // 
             this.printPreviewBarItem3.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.printPreviewBarItem3.Caption = "Найти";
+            this.printPreviewBarItem3.Caption = "Знайти";
             this.printPreviewBarItem3.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Find;
             this.printPreviewBarItem3.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem3.Enabled = false;
@@ -396,9 +396,9 @@
             this.printPreviewBarItem3.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_FindLarge;
             this.printPreviewBarItem3.Name = "printPreviewBarItem3";
             superToolTip3.FixedTooltipWidth = true;
-            toolTipTitleItem3.Text = "Найти";
+            toolTipTitleItem3.Text = "Знайти";
             toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Запуск диалогового окна поиска для нахождения текста в документе.";
+            toolTipItem3.Text = "Запуск діалогового вікна пошуку для знаходження тексту в документі.";
             superToolTip3.Items.Add(toolTipTitleItem3);
             superToolTip3.Items.Add(toolTipItem3);
             superToolTip3.MaxWidth = 210;
@@ -407,7 +407,7 @@
             // printPreviewBarItem4
             // 
             this.printPreviewBarItem4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.printPreviewBarItem4.Caption = "Эскизы";
+            this.printPreviewBarItem4.Caption = "Ескізи";
             this.printPreviewBarItem4.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Thumbnails;
             this.printPreviewBarItem4.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem4.Enabled = false;
@@ -416,9 +416,9 @@
             this.printPreviewBarItem4.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ThumbnailsLarge;
             this.printPreviewBarItem4.Name = "printPreviewBarItem4";
             superToolTip4.FixedTooltipWidth = true;
-            toolTipTitleItem4.Text = "Эскизы";
+            toolTipTitleItem4.Text = "Ескізи";
             toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Открыть эскизов, что позволяет вам перемещаться по документу.";
+            toolTipItem4.Text = "Відкрити ескізів, що дозволяє вам переміщатися по документу.";
             superToolTip4.Items.Add(toolTipTitleItem4);
             superToolTip4.Items.Add(toolTipItem4);
             superToolTip4.MaxWidth = 210;
@@ -445,7 +445,7 @@
             // 
             // printPreviewBarItem6
             // 
-            this.printPreviewBarItem6.Caption = "Печать";
+            this.printPreviewBarItem6.Caption = "Друк";
             this.printPreviewBarItem6.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Print;
             this.printPreviewBarItem6.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem6.Enabled = false;
@@ -454,9 +454,9 @@
             this.printPreviewBarItem6.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PrintLarge;
             this.printPreviewBarItem6.Name = "printPreviewBarItem6";
             superToolTip6.FixedTooltipWidth = true;
-            toolTipTitleItem6.Text = "Печать (Ctrl+P)";
+            toolTipTitleItem6.Text = "Друк (Ctrl+P)";
             toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Выберите принтер, количество копий и другие необходимые настройки перед печатью.";
+            toolTipItem6.Text = "Оберіть принтер, кількість копій та інші необхідні настройки перед друком.";
             superToolTip6.Items.Add(toolTipTitleItem6);
             superToolTip6.Items.Add(toolTipItem6);
             superToolTip6.MaxWidth = 210;
@@ -464,7 +464,7 @@
             // 
             // printPreviewBarItem7
             // 
-            this.printPreviewBarItem7.Caption = "Быстрая печать";
+            this.printPreviewBarItem7.Caption = "Швидкий друк";
             this.printPreviewBarItem7.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect;
             this.printPreviewBarItem7.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem7.Enabled = false;
@@ -473,9 +473,9 @@
             this.printPreviewBarItem7.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirectLarge;
             this.printPreviewBarItem7.Name = "printPreviewBarItem7";
             superToolTip7.FixedTooltipWidth = true;
-            toolTipTitleItem7.Text = "Быстрая печать";
+            toolTipTitleItem7.Text = "Швидкий друк";
             toolTipItem7.LeftIndent = 6;
-            toolTipItem7.Text = "Отправить документ на распечатку без сделанных изменений.";
+            toolTipItem7.Text = "Надіслати документ на друк без зроблених змін.";
             superToolTip7.Items.Add(toolTipTitleItem7);
             superToolTip7.Items.Add(toolTipItem7);
             superToolTip7.MaxWidth = 210;
@@ -500,7 +500,7 @@
             // 
             // printPreviewBarItem9
             // 
-            this.printPreviewBarItem9.Caption = "Заголовок/Нижний колонтитул";
+            this.printPreviewBarItem9.Caption = "Заголовок";
             this.printPreviewBarItem9.Command = DevExpress.XtraPrinting.PrintingSystemCommand.EditPageHF;
             this.printPreviewBarItem9.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem9.Enabled = false;
@@ -509,9 +509,9 @@
             this.printPreviewBarItem9.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_EditPageHFLarge;
             this.printPreviewBarItem9.Name = "printPreviewBarItem9";
             superToolTip9.FixedTooltipWidth = true;
-            toolTipTitleItem9.Text = "Заголовок и нижний колонтинтул";
+            toolTipTitleItem9.Text = "Заголовок";
             toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Редактировать заголовок и нижний колонтинтул документа.";
+            toolTipItem9.Text = "Редагувати заголовок і нижній колонтитул документа.";
             superToolTip9.Items.Add(toolTipTitleItem9);
             superToolTip9.Items.Add(toolTipItem9);
             superToolTip9.MaxWidth = 210;
@@ -531,7 +531,7 @@
             superToolTip10.FixedTooltipWidth = true;
             toolTipTitleItem10.Text = "Масштаб";
             toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Растяжение или сжатие выводимого на печать.";
+            toolTipItem10.Text = "Розтягування або стиснення виведеного на друк.";
             superToolTip10.Items.Add(toolTipTitleItem10);
             superToolTip10.Items.Add(toolTipItem10);
             superToolTip10.MaxWidth = 210;
@@ -540,7 +540,7 @@
             // printPreviewBarItem11
             // 
             this.printPreviewBarItem11.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.printPreviewBarItem11.Caption = "Указатель";
+            this.printPreviewBarItem11.Caption = "Вказівник";
             this.printPreviewBarItem11.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Pointer;
             this.printPreviewBarItem11.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem11.Down = true;
@@ -551,9 +551,9 @@
             this.printPreviewBarItem11.Name = "printPreviewBarItem11";
             this.printPreviewBarItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip11.FixedTooltipWidth = true;
-            toolTipTitleItem11.Text = "Указатель мыши";
+            toolTipTitleItem11.Text = "Вказівник миші";
             toolTipItem11.LeftIndent = 6;
-            toolTipItem11.Text = "Отобразить указатель мыши.";
+            toolTipItem11.Text = "Відобразити вказівник миші.";
             superToolTip11.Items.Add(toolTipTitleItem11);
             superToolTip11.Items.Add(toolTipItem11);
             superToolTip11.MaxWidth = 210;
@@ -562,7 +562,7 @@
             // printPreviewBarItem12
             // 
             this.printPreviewBarItem12.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.printPreviewBarItem12.Caption = "Ручная настройка";
+            this.printPreviewBarItem12.Caption = "Ручна настройка";
             this.printPreviewBarItem12.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HandTool;
             this.printPreviewBarItem12.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem12.Enabled = false;
@@ -572,9 +572,9 @@
             this.printPreviewBarItem12.Name = "printPreviewBarItem12";
             this.printPreviewBarItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip12.FixedTooltipWidth = true;
-            toolTipTitleItem12.Text = "Ручная настройка";
+            toolTipTitleItem12.Text = "Ручна настройка";
             toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Разрешить ручную прокрутку для просмотра страниц.";
+            toolTipItem12.Text = "Дозволити ручну прокрутку для перегляду сторінок.";
             superToolTip12.Items.Add(toolTipTitleItem12);
             superToolTip12.Items.Add(toolTipItem12);
             superToolTip12.MaxWidth = 210;
@@ -583,7 +583,7 @@
             // printPreviewBarItem13
             // 
             this.printPreviewBarItem13.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.printPreviewBarItem13.Caption = "Увеличитель";
+            this.printPreviewBarItem13.Caption = "Збільшити";
             this.printPreviewBarItem13.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Magnifier;
             this.printPreviewBarItem13.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem13.Enabled = false;
@@ -593,10 +593,10 @@
             this.printPreviewBarItem13.Name = "printPreviewBarItem13";
             this.printPreviewBarItem13.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText;
             superToolTip13.FixedTooltipWidth = true;
-            toolTipTitleItem13.Text = "Увеличитель";
+            toolTipTitleItem13.Text = "Збільшувач";
             toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Запуск увеличителя.\r\n\r\nНажатие на масштаб приводит к тому, что документ становитс" +
-    "я увеличенным, повторное нажатие приводит его к нормальному состоянию.";
+            toolTipItem13.Text = "Запуск збільшувача.\r\n\r\nНатискання на масштаб призводить до того, що документ стає" +
+    " збільшеним, повторне натискання призводить його до нормального стану.";
             superToolTip13.Items.Add(toolTipTitleItem13);
             superToolTip13.Items.Add(toolTipItem13);
             superToolTip13.MaxWidth = 210;
@@ -604,7 +604,7 @@
             // 
             // printPreviewBarItem14
             // 
-            this.printPreviewBarItem14.Caption = "Уменьшить";
+            this.printPreviewBarItem14.Caption = "Зменшити";
             this.printPreviewBarItem14.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomOut;
             this.printPreviewBarItem14.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem14.Enabled = false;
@@ -613,9 +613,9 @@
             this.printPreviewBarItem14.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ZoomOutLarge;
             this.printPreviewBarItem14.Name = "printPreviewBarItem14";
             superToolTip14.FixedTooltipWidth = true;
-            toolTipTitleItem14.Text = "Уменьшить";
+            toolTipTitleItem14.Text = "Зменшити";
             toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Уменьшить для отображения большего количества страниц.";
+            toolTipItem14.Text = "Зменшити для відображення більшої кількості сторінок.";
             superToolTip14.Items.Add(toolTipTitleItem14);
             superToolTip14.Items.Add(toolTipItem14);
             superToolTip14.MaxWidth = 210;
@@ -623,7 +623,7 @@
             // 
             // printPreviewBarItem15
             // 
-            this.printPreviewBarItem15.Caption = "Увеличить";
+            this.printPreviewBarItem15.Caption = "Збільшити";
             this.printPreviewBarItem15.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomIn;
             this.printPreviewBarItem15.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem15.Enabled = false;
@@ -632,9 +632,9 @@
             this.printPreviewBarItem15.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ZoomInLarge;
             this.printPreviewBarItem15.Name = "printPreviewBarItem15";
             superToolTip15.FixedTooltipWidth = true;
-            toolTipTitleItem15.Text = "Увеличить";
+            toolTipTitleItem15.Text = "Збільшити";
             toolTipItem15.LeftIndent = 6;
-            toolTipItem15.Text = "Увеличить для лучшего просмотра документа.";
+            toolTipItem15.Text = "Збільшити для кращого перегляду документа.";
             superToolTip15.Items.Add(toolTipTitleItem15);
             superToolTip15.Items.Add(toolTipItem15);
             superToolTip15.MaxWidth = 210;
@@ -654,7 +654,7 @@
             superToolTip16.FixedTooltipWidth = true;
             toolTipTitleItem16.Text = "Масштаб";
             toolTipItem16.LeftIndent = 6;
-            toolTipItem16.Text = "Выберите уровень масштабирования для предпросмотра документа.";
+            toolTipItem16.Text = "Оберіть рівень масштабування для передперегляду документа.";
             superToolTip16.Items.Add(toolTipTitleItem16);
             superToolTip16.Items.Add(toolTipItem16);
             superToolTip16.MaxWidth = 210;
@@ -662,7 +662,7 @@
             // 
             // printPreviewBarItem17
             // 
-            this.printPreviewBarItem17.Caption = "Первая страница";
+            this.printPreviewBarItem17.Caption = "Перша сторінка";
             this.printPreviewBarItem17.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowFirstPage;
             this.printPreviewBarItem17.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem17.Enabled = false;
@@ -671,9 +671,9 @@
             this.printPreviewBarItem17.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ShowFirstPageLarge;
             this.printPreviewBarItem17.Name = "printPreviewBarItem17";
             superToolTip17.FixedTooltipWidth = true;
-            toolTipTitleItem17.Text = "Первая страница (Ctrl+Home)";
+            toolTipTitleItem17.Text = "Перша сторінка (Ctrl+Home)";
             toolTipItem17.LeftIndent = 6;
-            toolTipItem17.Text = "Переход на первую страницу документа.";
+            toolTipItem17.Text = "Перехід на першу сторінку документа.";
             superToolTip17.Items.Add(toolTipTitleItem17);
             superToolTip17.Items.Add(toolTipItem17);
             superToolTip17.MaxWidth = 210;
@@ -681,7 +681,7 @@
             // 
             // printPreviewBarItem18
             // 
-            this.printPreviewBarItem18.Caption = "Предыдущая страница";
+            this.printPreviewBarItem18.Caption = "Попередня сторінка";
             this.printPreviewBarItem18.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowPrevPage;
             this.printPreviewBarItem18.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem18.Enabled = false;
@@ -690,9 +690,9 @@
             this.printPreviewBarItem18.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ShowPrevPageLarge;
             this.printPreviewBarItem18.Name = "printPreviewBarItem18";
             superToolTip18.FixedTooltipWidth = true;
-            toolTipTitleItem18.Text = "Предыдущая страница (PageUp)";
+            toolTipTitleItem18.Text = "Попередня сторінка (PageUp)";
             toolTipItem18.LeftIndent = 6;
-            toolTipItem18.Text = "Переход на предыдущую страницу документа.";
+            toolTipItem18.Text = "Перехід на попередню сторінку документа.";
             superToolTip18.Items.Add(toolTipTitleItem18);
             superToolTip18.Items.Add(toolTipItem18);
             superToolTip18.MaxWidth = 210;
@@ -700,7 +700,7 @@
             // 
             // printPreviewBarItem19
             // 
-            this.printPreviewBarItem19.Caption = "Следующая страница";
+            this.printPreviewBarItem19.Caption = "Наступна сторінка";
             this.printPreviewBarItem19.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowNextPage;
             this.printPreviewBarItem19.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem19.Enabled = false;
@@ -709,9 +709,9 @@
             this.printPreviewBarItem19.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ShowNextPageLarge;
             this.printPreviewBarItem19.Name = "printPreviewBarItem19";
             superToolTip19.FixedTooltipWidth = true;
-            toolTipTitleItem19.Text = "Следующая страница (PageDown)";
+            toolTipTitleItem19.Text = "Наступна сторінка (PageDown)";
             toolTipItem19.LeftIndent = 6;
-            toolTipItem19.Text = "Переход на следующую страницу документа.";
+            toolTipItem19.Text = "Перехід на наступну сторінку документа.";
             superToolTip19.Items.Add(toolTipTitleItem19);
             superToolTip19.Items.Add(toolTipItem19);
             superToolTip19.MaxWidth = 210;
@@ -719,7 +719,7 @@
             // 
             // printPreviewBarItem20
             // 
-            this.printPreviewBarItem20.Caption = "Последняя страница";
+            this.printPreviewBarItem20.Caption = "Остання сторінка";
             this.printPreviewBarItem20.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowLastPage;
             this.printPreviewBarItem20.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem20.Enabled = false;
@@ -728,9 +728,9 @@
             this.printPreviewBarItem20.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ShowLastPageLarge;
             this.printPreviewBarItem20.Name = "printPreviewBarItem20";
             superToolTip20.FixedTooltipWidth = true;
-            toolTipTitleItem20.Text = "Последняя страница (Ctrl+End)";
+            toolTipTitleItem20.Text = "Остання сторінка (Ctrl+End)";
             toolTipItem20.LeftIndent = 6;
-            toolTipItem20.Text = "Переход на последнюю страницу документа.";
+            toolTipItem20.Text = "Перехід на останню сторінку документа.";
             superToolTip20.Items.Add(toolTipTitleItem20);
             superToolTip20.Items.Add(toolTipItem20);
             superToolTip20.MaxWidth = 210;
@@ -739,7 +739,7 @@
             // printPreviewBarItem21
             // 
             this.printPreviewBarItem21.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.printPreviewBarItem21.Caption = "Много страниц";
+            this.printPreviewBarItem21.Caption = "Много сторінок";
             this.printPreviewBarItem21.Command = DevExpress.XtraPrinting.PrintingSystemCommand.MultiplePages;
             this.printPreviewBarItem21.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem21.Enabled = false;
@@ -748,9 +748,9 @@
             this.printPreviewBarItem21.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_MultiplePagesLarge;
             this.printPreviewBarItem21.Name = "printPreviewBarItem21";
             superToolTip21.FixedTooltipWidth = true;
-            toolTipTitleItem21.Text = "Много страниц";
+            toolTipTitleItem21.Text = "Багато сторінок";
             toolTipItem21.LeftIndent = 6;
-            toolTipItem21.Text = "Выберите положение страницы для предпросмотра.";
+            toolTipItem21.Text = "Оберіть положення сторінки для предперегляду.";
             superToolTip21.Items.Add(toolTipTitleItem21);
             superToolTip21.Items.Add(toolTipItem21);
             superToolTip21.MaxWidth = 210;
@@ -840,7 +840,7 @@
             // 
             // printPreviewBarItem26
             // 
-            this.printPreviewBarItem26.Caption = "Закрыть предпросмотр печати";
+            this.printPreviewBarItem26.Caption = "Закрити предпросмотр друку";
             this.printPreviewBarItem26.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ClosePreview;
             this.printPreviewBarItem26.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem26.Enabled = false;
@@ -849,9 +849,9 @@
             this.printPreviewBarItem26.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreviewLarge;
             this.printPreviewBarItem26.Name = "printPreviewBarItem26";
             superToolTip26.FixedTooltipWidth = true;
-            toolTipTitleItem26.Text = "Закрыть предпросмотр печати";
+            toolTipTitleItem26.Text = "Закрити передперегляд друку";
             toolTipItem26.LeftIndent = 6;
-            toolTipItem26.Text = "Закрыть предпросмотр печати документа.";
+            toolTipItem26.Text = "Закрити передперегляд друку";
             superToolTip26.Items.Add(toolTipTitleItem26);
             superToolTip26.Items.Add(toolTipItem26);
             superToolTip26.MaxWidth = 210;
@@ -860,7 +860,7 @@
             // printPreviewBarItem27
             // 
             this.printPreviewBarItem27.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.printPreviewBarItem27.Caption = "Направление";
+            this.printPreviewBarItem27.Caption = "Напрямок";
             this.printPreviewBarItem27.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageOrientation;
             this.printPreviewBarItem27.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem27.Enabled = false;
@@ -869,9 +869,9 @@
             this.printPreviewBarItem27.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PageOrientationLarge;
             this.printPreviewBarItem27.Name = "printPreviewBarItem27";
             superToolTip27.FixedTooltipWidth = true;
-            toolTipTitleItem27.Text = "Положение страницы";
+            toolTipTitleItem27.Text = "Положення сторінки";
             toolTipItem27.LeftIndent = 6;
-            toolTipItem27.Text = "Переключение между вертикальным и горизонтальным расположением страницы.";
+            toolTipItem27.Text = "Перемикання між вертикальним і горизонтальним розташуванням сторінки.";
             superToolTip27.Items.Add(toolTipTitleItem27);
             superToolTip27.Items.Add(toolTipItem27);
             superToolTip27.MaxWidth = 210;
@@ -880,7 +880,7 @@
             // printPreviewBarItem28
             // 
             this.printPreviewBarItem28.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.printPreviewBarItem28.Caption = "Размер";
+            this.printPreviewBarItem28.Caption = "Розмір";
             this.printPreviewBarItem28.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PaperSize;
             this.printPreviewBarItem28.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewBarItem28.Enabled = false;
@@ -889,9 +889,9 @@
             this.printPreviewBarItem28.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PaperSizeLarge;
             this.printPreviewBarItem28.Name = "printPreviewBarItem28";
             superToolTip28.FixedTooltipWidth = true;
-            toolTipTitleItem28.Text = "Размер страницы";
+            toolTipTitleItem28.Text = "Розмір сторінки";
             toolTipItem28.LeftIndent = 6;
-            toolTipItem28.Text = "Выберите размер бумаги для документа.";
+            toolTipItem28.Text = "Оберіть розмір паперу для документа.";
             superToolTip28.Items.Add(toolTipTitleItem28);
             superToolTip28.Items.Add(toolTipItem28);
             superToolTip28.MaxWidth = 210;
@@ -909,10 +909,10 @@
             this.printPreviewBarItem29.ImageOptions.LargeImage = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PageMarginsLarge;
             this.printPreviewBarItem29.Name = "printPreviewBarItem29";
             superToolTip29.FixedTooltipWidth = true;
-            toolTipTitleItem29.Text = "Поля страницы";
+            toolTipTitleItem29.Text = "Поля сторінки";
             toolTipItem29.LeftIndent = 6;
-            toolTipItem29.Text = "Выбор размеров поля для документа.\r\n\r\nДля применения настроек для поля, выберите " +
-    "Настройки полей.";
+            toolTipItem29.Text = "Вибір розмірів поля для документа.\r\n\r\nДля застосування налаштувань для поля, вибе" +
+    "ріть Установки полів.";
             superToolTip29.Items.Add(toolTipTitleItem29);
             superToolTip29.Items.Add(toolTipItem29);
             superToolTip29.MaxWidth = 210;
@@ -1389,7 +1389,7 @@
             this.printPreviewRibbonPageGroup5,
             this.printPreviewRibbonPageGroup8});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Предпросмотр печати";
+            this.ribbonPage1.Text = "Предпросмотр друку";
             // 
             // printPreviewRibbonPageGroup2
             // 
@@ -1401,7 +1401,7 @@
             this.printPreviewRibbonPageGroup2.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Print;
             this.printPreviewRibbonPageGroup2.Name = "printPreviewRibbonPageGroup2";
             this.printPreviewRibbonPageGroup2.ShowCaptionButton = false;
-            this.printPreviewRibbonPageGroup2.Text = "Печать";
+            this.printPreviewRibbonPageGroup2.Text = "Друк";
             // 
             // printPreviewRibbonPageGroup3
             // 
@@ -1423,7 +1423,7 @@
             superToolTip49.Items.Add(toolTipItem49);
             superToolTip49.MaxWidth = 210;
             this.printPreviewRibbonPageGroup3.SuperTip = superToolTip49;
-            this.printPreviewRibbonPageGroup3.Text = "Настройки страницы";
+            this.printPreviewRibbonPageGroup3.Text = "Налаштування сторінки";
             // 
             // printPreviewRibbonPageGroup4
             // 
@@ -1440,7 +1440,7 @@
             this.printPreviewRibbonPageGroup4.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Navigation;
             this.printPreviewRibbonPageGroup4.Name = "printPreviewRibbonPageGroup4";
             this.printPreviewRibbonPageGroup4.ShowCaptionButton = false;
-            this.printPreviewRibbonPageGroup4.Text = "Управление";
+            this.printPreviewRibbonPageGroup4.Text = "Керування";
             // 
             // printPreviewRibbonPageGroup5
             // 
@@ -1468,7 +1468,7 @@
             this.printPreviewRibbonPageGroup8.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Close;
             this.printPreviewRibbonPageGroup8.Name = "printPreviewRibbonPageGroup8";
             this.printPreviewRibbonPageGroup8.ShowCaptionButton = false;
-            this.printPreviewRibbonPageGroup8.Text = "Закрыть";
+            this.printPreviewRibbonPageGroup8.Text = "Закрити";
             // 
             // ribbonStatusBar1
             // 

@@ -112,6 +112,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PopupOkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PopupOkForm.Designer.cs">
+      <DependentUpon>PopupOkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TemplatesList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PopupOkForm.resx">
+      <DependentUpon>PopupOkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TemplatesList.resx">
       <DependentUpon>TemplatesList.cs</DependentUpon>

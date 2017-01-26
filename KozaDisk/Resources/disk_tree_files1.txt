@@ -69,21 +69,11 @@
     </table>
 
     <script type="text/javascript">
-        /*
-        $(document).ready(function () {
-            $(".document").click(function () {
-                var document_id = $(this).attr("id");
-                var db = $(this).attr("db");
-                window.external.openMyDocument(document_id, db);
-            });
-
-            $(".delete").click(function () {
-                var id = $(this).attr("id");
-                window.external.deleteDocument(id);
-                return false;
-            });
-        });
-        */
+        function removeDocument(rowid)
+        {
+            var row = document.getElementById("doc_" + rowid);
+            row.parentNode.removeChild(row);
+        }
     </script>
 </body>
 </html>

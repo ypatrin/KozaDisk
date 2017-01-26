@@ -128,8 +128,8 @@ namespace KozaDisk.Forms
                 }
 
                 //blocks
-                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\" onMouseOver=\"over('{disk.db}')\" onMouseOut=\"out('{disk.db}')\">";
-                nodeHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{diskNameFull}';\" onMouseOut=\"this.innerHTML='{diskName}';\">{diskName}</div>";
+                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\" >";
+                nodeHtml += $"<div class=\"head\">{diskName}</div>";
                 nodeHtml += $"<div class=\"image\"><img id=\"img_{disk.db}\" src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
                 nodeHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                 nodeHtml += "</div>";
@@ -190,6 +190,16 @@ namespace KozaDisk.Forms
 
         public void openDisk(string db)
         {
+            this.openDisk(db, false);
+        }
+
+        public void openDiskNoActivation(string db)
+        {
+            this.openDisk(db, true);
+        }
+
+        public void openDisk(string db, bool isHideActivation)
+        {
             this.DisksBlocksBrowser.Stop();
 
             var disks = this.disks.getDisksList();
@@ -198,61 +208,7 @@ namespace KozaDisk.Forms
             {
                 if (disk.db == db)
                 {
-                    List<Folder> folders = disk.getFolders();
-
-                    string blocksHtml = Properties.Resources.disk_blocks;
-                    string disksBlockHtml = "";
-
-                    foreach (Folder folder in folders)
-                    {
-                        int countTemplates = disk.getCoutTemplates(Int32.Parse(folder.id));
-
-                        string folderName = folder.name;
-                        string folderNameFull = folder.name;
-
-                        if (folderName.Length > 55)
-                        {
-                            folderName = folderName.Substring(0, 55) + "...";
-                        }
-
-                        disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
-                        disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{folderNameFull}';\" onMouseOut=\"this.innerHTML='{folderName}';\">{folderName}</div>";
-                        disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
-                        disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
-                        disksBlockHtml += "</div>";
-                    }
-
-                    blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
-                    blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
-                    blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
-
-                    while (this.DisksBlocksBrowser.ReadyState != WebBrowserReadyState.Complete)
-                    {
-                        Application.DoEvents();
-                        this.DisksBlocksBrowser.Stop();
-                    }
-
-                    this.DisksBlocksBrowser.Navigate("about:blank");
-                    this.DisksBlocksBrowser.DocumentText = "0";
-                    this.DisksBlocksBrowser.Document.OpenNew(true);
-                    this.DisksBlocksBrowser.Document.Write(blocksHtml);
-                    this.DisksBlocksBrowser.Refresh();
-
-                    //write navigation
-                    List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
-                    KozaDisk.Class.Objects.Navigation cd = new Class.Objects.Navigation();
-
-                    cd.db = disk.db;
-                    cd.text = disk.name;
-                    cd.isDisk = true;
-                    cd.isFolder = false;
-                    cd.isMyDocs = false;
-
-                    navi.Add(cd);
-
-                    writeNavigation(navi);
-
-                    if (!activator.isActivated(disk.db) && activator.isVisibleActivateWindow(disk.db))
+                    if (!activator.isActivated(disk.db) && !isHideActivation)
                     {
                         //display activation message
                         string days = activator.getTrialDays(disk.db);
@@ -261,19 +217,65 @@ namespace KozaDisk.Forms
                         activateForm.userData = this.userData;
                         activateForm.db = disk.db;
 
-                        activator.hideActivateWindows(disk.db);
-
                         activateForm.ShowDialog();
                     }
-                    else
-                    {
-                        if (!activator.isActivated(disk.db) && !activator.isVisibleActivateWindow(disk.db))
-                        {
-                            string days = activator.getTrialDays(disk.db);
 
-                            KozaDisk.Forms.TrialForm trial = new TrialForm(days);
-                            trial.ShowDialog();
+                    if (activator.isActivated(disk.db) || activator.isTrial(disk.db))
+                    {
+                        List<Folder> folders = disk.getFolders();
+
+                        string blocksHtml = Properties.Resources.disk_blocks;
+                        string disksBlockHtml = "";
+
+                        foreach (Folder folder in folders)
+                        {
+                            int countTemplates = disk.getCoutTemplates(Int32.Parse(folder.id));
+
+                            string folderName = folder.name;
+                            string folderNameFull = folder.name;
+
+                            if (folderName.Length > 55)
+                            {
+                                folderName = folderName.Substring(0, 55) + "...";
+                            }
+
+                            disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
+                            disksBlockHtml += $"<div class=\"head\">{folderName}</div>";
+                            disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
+                            disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
+                            disksBlockHtml += "</div>";
                         }
+
+                        blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+                        blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                        blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+                        while (this.DisksBlocksBrowser.ReadyState != WebBrowserReadyState.Complete)
+                        {
+                            Application.DoEvents();
+                            this.DisksBlocksBrowser.Stop();
+                        }
+
+                        this.DisksBlocksBrowser.Navigate("about:blank");
+                        this.DisksBlocksBrowser.DocumentText = "0";
+                        this.DisksBlocksBrowser.Document.OpenNew(true);
+                        this.DisksBlocksBrowser.Document.Write(blocksHtml);
+                        this.DisksBlocksBrowser.Refresh();
+
+                        //write navigation
+                        List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+                        KozaDisk.Class.Objects.Navigation cd = new Class.Objects.Navigation();
+
+                        cd.db = disk.db;
+                        cd.text = disk.name;
+                        cd.isDisk = true;
+                        cd.isFolder = false;
+                        cd.isMyDocs = false;
+
+                        navi.Add(cd);
+
+                        writeNavigation(navi);
+
                     }
                 }
             }
@@ -350,7 +352,7 @@ namespace KozaDisk.Forms
                 if (template.type == "0")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"head\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }
@@ -359,7 +361,7 @@ namespace KozaDisk.Forms
                 if (template.type == "1")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"head\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\file.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }
@@ -534,6 +536,14 @@ namespace KozaDisk.Forms
 
             this.Tabs.SelectedIndex = 1;
             this.isNoNavigation = false;
+
+            this.writeNavigation(new List<Class.Objects.Navigation>());
+
+            this.FilesBrowser.Navigate("about:blank");
+            this.FilesBrowser.DocumentText = "0";
+            this.FilesBrowser.Document.OpenNew(true);
+            this.FilesBrowser.Document.Write("");
+            this.FilesBrowser.Refresh();
         }
 
         private void ListViewBtn_Click(object sender, EventArgs e)
@@ -549,7 +559,8 @@ namespace KozaDisk.Forms
             this.Tabs.SelectedIndex = 0;
 
             this.isNoNavigation = true;
-            this.writeNavigation(new List<Class.Objects.Navigation>());
+            //this.writeNavigation(new List<Class.Objects.Navigation>());
+            this.NaviMainLink();
         }
 
         private void AutoFillBtn_Click(object sender, EventArgs e)
@@ -634,20 +645,20 @@ namespace KozaDisk.Forms
 
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
-                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"{r["doc_id"].ToString()}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\" full_name=\"\" short_name=\"{docName}\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
-                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"doc_{r["id"].ToString()}\">";
+                    disksBlockHtml += $"<div class=\"head\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
-                    disksBlockHtml += $"<div class=\"edit\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
                     disksBlockHtml += $"<div class=\"date\">{createdAt.ToString("dd.MM.yyyy")}</div>";
                     disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
                     disksBlockHtml += $"</div>";
                     disksBlockHtml += "</div>";
 
-                    disksTreeHtml += $"<tr>";
+                    disksTreeHtml += $"<tr id=\"doc_{r["id"].ToString()}\">";
                     disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\">{r["doc_name"].ToString()}</td>";
                     disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
-                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["doc_id"].ToString()}');\">&nbsp;&nbsp;&nbsp;<img src=\"{Constant.ApplcationPath}icon\\iface\\delete-list.png\"/></td>";
+                    disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\">&nbsp;&nbsp;&nbsp;<img src=\"{Constant.ApplcationPath}icon\\iface\\delete-list.png\"/></td>";
                     disksTreeHtml += "</tr>";
 
                     //disksTreeHtml += $"<div class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\"></div>";
@@ -694,7 +705,9 @@ namespace KozaDisk.Forms
                     SQLiteCommand command = new SQLiteCommand(sql, connection);
                     command.ExecuteNonQuery();
 
-                    this.loadMyDocuments(Constant.MyDocumentsBlockTab);
+                    //this.loadMyDocuments(Constant.MyDocumentsBlockTab);
+                    this.MyDocsBlockBrowser.Document.InvokeScript("removeDocument", new string[] { id });
+                    this.MyDocsListBrowser.Document.InvokeScript("removeDocument", new string[] { id });
                 }
             }
             catch(Exception ex)
@@ -771,7 +784,7 @@ namespace KozaDisk.Forms
                     //write link
                     if (navigationLink.isDisk)
                     {
-                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openDisk('{navigationLink.db}');\">{navigationLink.text}</a>";
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.openDiskNoActivation('{navigationLink.db}');\">{navigationLink.text}</a>";
                     }
 
                     if (navigationLink.isFolder)
@@ -841,7 +854,7 @@ namespace KozaDisk.Forms
                 }
 
                 disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{template.dbName}');\">";
-                disksBlockHtml += $"<div class=\"head\" onMouseOver=\"this.innerHTML='{docNameFull}';\" onMouseOut=\"this.innerHTML='{docName}';\">{docName}</div>";
+                disksBlockHtml += $"<div class=\"head\">{docName}</div>";
                 disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                 disksBlockHtml += "</div>";
             }
@@ -887,62 +900,21 @@ namespace KozaDisk.Forms
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
-                if (!activator.isActivated(selectedNode.db) && activator.isVisibleActivateWindow(selectedNode.db))
+                if (!activator.isActivated(selectedNode.db))
                 {
-                    string days = activator.getTrialDays(selectedNode.db);
-
                     //display activation message
+                    string days = activator.getTrialDays(selectedNode.db);
                     KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
                     activateForm.setDiskName(selectedNode.Name);
                     activateForm.userData = this.userData;
                     activateForm.db = selectedNode.db;
 
-                    activator.hideActivateWindows(selectedNode.db);
-
                     activateForm.ShowDialog();
-
-                    if (activator.isActivated(selectedNode.db))
-                    {
-                        this.prepareTree();
-                    }
-                }
-                else
-                {
-                    if (!activator.isActivated(selectedNode.db) && !activator.isVisibleActivateWindow(selectedNode.db))
-                    {
-                        string days = activator.getTrialDays(selectedNode.db);
-
-                        KozaDisk.Forms.TrialForm trial = new TrialForm(days);
-                        trial.ShowDialog();
-                    }
                 }
 
                 if (selectedNode.ImageIndex == 0)
                     selectedNode.ImageIndex = 1;
 
-                /*
-                if (!activator.isActivated(selectedNode.db) && !selectedNode.isAtivateWindowDisplayed)
-                {
-                    //display activation message
-                    KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate();
-                    activateForm.setDiskName(selectedNode.Name);
-                    activateForm.userData = this.userData;
-                    activateForm.db = selectedNode.db;
-                    activateForm.ShowDialog();
-
-                    if (activator.isActivated(selectedNode.db))
-                    {
-                        this.prepareTree();
-                    }
-                    else
-                    {
-                        selectedNode.isAtivateWindowDisplayed = true;
-                    }
-
-                    if (selectedNode.ImageIndex == 0)
-                        selectedNode.ImageIndex = 1;
-                }
-                */
             }
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Folder)

@@ -159,3 +159,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.HelpForm.r
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateErrorForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateOkForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.TrialForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.PopupOkForm.resources

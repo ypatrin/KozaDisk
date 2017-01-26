@@ -42,11 +42,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BankBox = new System.Windows.Forms.TextBox();
             this.FaxBox = new System.Windows.Forms.TextBox();
-            this.AddressBox = new System.Windows.Forms.TextBox();
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.TelephoneBox = new System.Windows.Forms.TextBox();
             this.LegalAddressBox = new System.Windows.Forms.TextBox();
-            this.AbbreviationGenitiveBox = new System.Windows.Forms.TextBox();
             this.SubordinationGenitiveBox = new System.Windows.Forms.TextBox();
             this.SubordinationBox = new System.Windows.Forms.TextBox();
             this.AbbreviationBox = new System.Windows.Forms.TextBox();
@@ -55,38 +53,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.metroLabel8 = new System.Windows.Forms.Label();
             this.metroLabel27 = new System.Windows.Forms.Label();
-            this.metroLabel29 = new System.Windows.Forms.Label();
             this.metroLabel26 = new System.Windows.Forms.Label();
             this.metroLabel28 = new System.Windows.Forms.Label();
             this.metroLabel15 = new System.Windows.Forms.Label();
-            this.metroLabel5 = new System.Windows.Forms.Label();
             this.metroLabel7 = new System.Windows.Forms.Label();
             this.metroLabel6 = new System.Windows.Forms.Label();
             this.metroLabel4 = new System.Windows.Forms.Label();
             this.metroLabel3 = new System.Windows.Forms.Label();
             this.metroLabel2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.InitialsCadreBox = new System.Windows.Forms.TextBox();
             this.ChiefPositionBox = new System.Windows.Forms.TextBox();
             this.ChiefInitialsBox = new System.Windows.Forms.TextBox();
             this.ChiefSurnameDativeBox = new System.Windows.Forms.TextBox();
-            this.SurnameCadreBox = new System.Windows.Forms.TextBox();
-            this.PositionCadreGenitiveBox = new System.Windows.Forms.TextBox();
             this.ChiefNameGenitiveBox = new System.Windows.Forms.TextBox();
             this.ChiefNameBox = new System.Windows.Forms.TextBox();
             this.ChiefSurnameBox = new System.Windows.Forms.TextBox();
-            this.PositionCadreBox = new System.Windows.Forms.TextBox();
             this.ChiefPositionLowerBox = new System.Windows.Forms.TextBox();
             this.ChiefPositionDativeBox = new System.Windows.Forms.TextBox();
-            this.metroLabel24 = new System.Windows.Forms.Label();
             this.metroLabel17 = new System.Windows.Forms.Label();
             this.metroLabel18 = new System.Windows.Forms.Label();
             this.metroLabel19 = new System.Windows.Forms.Label();
-            this.metroLabel30 = new System.Windows.Forms.Label();
-            this.metroLabel23 = new System.Windows.Forms.Label();
             this.metroLabel13 = new System.Windows.Forms.Label();
             this.metroLabel14 = new System.Windows.Forms.Label();
-            this.metroLabel22 = new System.Windows.Forms.Label();
             this.metroLabel21 = new System.Windows.Forms.Label();
             this.metroLabel20 = new System.Windows.Forms.Label();
             this.metroLabel12 = new System.Windows.Forms.Label();
@@ -163,11 +151,9 @@
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.BankBox);
             this.tabPage2.Controls.Add(this.FaxBox);
-            this.tabPage2.Controls.Add(this.AddressBox);
             this.tabPage2.Controls.Add(this.EmailBox);
             this.tabPage2.Controls.Add(this.TelephoneBox);
             this.tabPage2.Controls.Add(this.LegalAddressBox);
-            this.tabPage2.Controls.Add(this.AbbreviationGenitiveBox);
             this.tabPage2.Controls.Add(this.SubordinationGenitiveBox);
             this.tabPage2.Controls.Add(this.SubordinationBox);
             this.tabPage2.Controls.Add(this.AbbreviationBox);
@@ -176,11 +162,9 @@
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.metroLabel8);
             this.tabPage2.Controls.Add(this.metroLabel27);
-            this.tabPage2.Controls.Add(this.metroLabel29);
             this.tabPage2.Controls.Add(this.metroLabel26);
             this.tabPage2.Controls.Add(this.metroLabel28);
             this.tabPage2.Controls.Add(this.metroLabel15);
-            this.tabPage2.Controls.Add(this.metroLabel5);
             this.tabPage2.Controls.Add(this.metroLabel7);
             this.tabPage2.Controls.Add(this.metroLabel6);
             this.tabPage2.Controls.Add(this.metroLabel4);
@@ -229,12 +213,6 @@
             resources.ApplyResources(this.FaxBox, "FaxBox");
             this.FaxBox.Name = "FaxBox";
             // 
-            // AddressBox
-            // 
-            this.AddressBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.AddressBox, "AddressBox");
-            this.AddressBox.Name = "AddressBox";
-            // 
             // EmailBox
             // 
             this.EmailBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -252,12 +230,6 @@
             this.LegalAddressBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             resources.ApplyResources(this.LegalAddressBox, "LegalAddressBox");
             this.LegalAddressBox.Name = "LegalAddressBox";
-            // 
-            // AbbreviationGenitiveBox
-            // 
-            this.AbbreviationGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.AbbreviationGenitiveBox, "AbbreviationGenitiveBox");
-            this.AbbreviationGenitiveBox.Name = "AbbreviationGenitiveBox";
             // 
             // SubordinationGenitiveBox
             // 
@@ -304,11 +276,6 @@
             resources.ApplyResources(this.metroLabel27, "metroLabel27");
             this.metroLabel27.Name = "metroLabel27";
             // 
-            // metroLabel29
-            // 
-            resources.ApplyResources(this.metroLabel29, "metroLabel29");
-            this.metroLabel29.Name = "metroLabel29";
-            // 
             // metroLabel26
             // 
             resources.ApplyResources(this.metroLabel26, "metroLabel26");
@@ -323,11 +290,6 @@
             // 
             resources.ApplyResources(this.metroLabel15, "metroLabel15");
             this.metroLabel15.Name = "metroLabel15";
-            // 
-            // metroLabel5
-            // 
-            resources.ApplyResources(this.metroLabel5, "metroLabel5");
-            this.metroLabel5.Name = "metroLabel5";
             // 
             // metroLabel7
             // 
@@ -357,38 +319,24 @@
             // tabPage3
             // 
             resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Controls.Add(this.InitialsCadreBox);
             this.tabPage3.Controls.Add(this.ChiefPositionBox);
             this.tabPage3.Controls.Add(this.ChiefInitialsBox);
             this.tabPage3.Controls.Add(this.ChiefSurnameDativeBox);
-            this.tabPage3.Controls.Add(this.SurnameCadreBox);
-            this.tabPage3.Controls.Add(this.PositionCadreGenitiveBox);
             this.tabPage3.Controls.Add(this.ChiefNameGenitiveBox);
             this.tabPage3.Controls.Add(this.ChiefNameBox);
             this.tabPage3.Controls.Add(this.ChiefSurnameBox);
-            this.tabPage3.Controls.Add(this.PositionCadreBox);
             this.tabPage3.Controls.Add(this.ChiefPositionLowerBox);
             this.tabPage3.Controls.Add(this.ChiefPositionDativeBox);
-            this.tabPage3.Controls.Add(this.metroLabel24);
             this.tabPage3.Controls.Add(this.metroLabel17);
             this.tabPage3.Controls.Add(this.metroLabel18);
             this.tabPage3.Controls.Add(this.metroLabel19);
-            this.tabPage3.Controls.Add(this.metroLabel30);
-            this.tabPage3.Controls.Add(this.metroLabel23);
             this.tabPage3.Controls.Add(this.metroLabel13);
             this.tabPage3.Controls.Add(this.metroLabel14);
-            this.tabPage3.Controls.Add(this.metroLabel22);
             this.tabPage3.Controls.Add(this.metroLabel21);
             this.tabPage3.Controls.Add(this.metroLabel20);
             this.tabPage3.Controls.Add(this.metroLabel12);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // InitialsCadreBox
-            // 
-            this.InitialsCadreBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.InitialsCadreBox, "InitialsCadreBox");
-            this.InitialsCadreBox.Name = "InitialsCadreBox";
             // 
             // ChiefPositionBox
             // 
@@ -408,18 +356,6 @@
             resources.ApplyResources(this.ChiefSurnameDativeBox, "ChiefSurnameDativeBox");
             this.ChiefSurnameDativeBox.Name = "ChiefSurnameDativeBox";
             // 
-            // SurnameCadreBox
-            // 
-            this.SurnameCadreBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.SurnameCadreBox, "SurnameCadreBox");
-            this.SurnameCadreBox.Name = "SurnameCadreBox";
-            // 
-            // PositionCadreGenitiveBox
-            // 
-            this.PositionCadreGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.PositionCadreGenitiveBox, "PositionCadreGenitiveBox");
-            this.PositionCadreGenitiveBox.Name = "PositionCadreGenitiveBox";
-            // 
             // ChiefNameGenitiveBox
             // 
             this.ChiefNameGenitiveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -438,12 +374,6 @@
             resources.ApplyResources(this.ChiefSurnameBox, "ChiefSurnameBox");
             this.ChiefSurnameBox.Name = "ChiefSurnameBox";
             // 
-            // PositionCadreBox
-            // 
-            this.PositionCadreBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.PositionCadreBox, "PositionCadreBox");
-            this.PositionCadreBox.Name = "PositionCadreBox";
-            // 
             // ChiefPositionLowerBox
             // 
             this.ChiefPositionLowerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -455,11 +385,6 @@
             this.ChiefPositionDativeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             resources.ApplyResources(this.ChiefPositionDativeBox, "ChiefPositionDativeBox");
             this.ChiefPositionDativeBox.Name = "ChiefPositionDativeBox";
-            // 
-            // metroLabel24
-            // 
-            resources.ApplyResources(this.metroLabel24, "metroLabel24");
-            this.metroLabel24.Name = "metroLabel24";
             // 
             // metroLabel17
             // 
@@ -476,16 +401,6 @@
             resources.ApplyResources(this.metroLabel19, "metroLabel19");
             this.metroLabel19.Name = "metroLabel19";
             // 
-            // metroLabel30
-            // 
-            resources.ApplyResources(this.metroLabel30, "metroLabel30");
-            this.metroLabel30.Name = "metroLabel30";
-            // 
-            // metroLabel23
-            // 
-            resources.ApplyResources(this.metroLabel23, "metroLabel23");
-            this.metroLabel23.Name = "metroLabel23";
-            // 
             // metroLabel13
             // 
             resources.ApplyResources(this.metroLabel13, "metroLabel13");
@@ -495,11 +410,6 @@
             // 
             resources.ApplyResources(this.metroLabel14, "metroLabel14");
             this.metroLabel14.Name = "metroLabel14";
-            // 
-            // metroLabel22
-            // 
-            resources.ApplyResources(this.metroLabel22, "metroLabel22");
-            this.metroLabel22.Name = "metroLabel22";
             // 
             // metroLabel21
             // 
@@ -638,11 +548,9 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox BankBox;
         private System.Windows.Forms.TextBox FaxBox;
-        private System.Windows.Forms.TextBox AddressBox;
         private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.TextBox TelephoneBox;
         private System.Windows.Forms.TextBox LegalAddressBox;
-        private System.Windows.Forms.TextBox AbbreviationGenitiveBox;
         private System.Windows.Forms.TextBox SubordinationGenitiveBox;
         private System.Windows.Forms.TextBox SubordinationBox;
         private System.Windows.Forms.TextBox AbbreviationBox;
@@ -651,38 +559,28 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label metroLabel8;
         private System.Windows.Forms.Label metroLabel27;
-        private System.Windows.Forms.Label metroLabel29;
         private System.Windows.Forms.Label metroLabel26;
         private System.Windows.Forms.Label metroLabel28;
         private System.Windows.Forms.Label metroLabel15;
-        private System.Windows.Forms.Label metroLabel5;
         private System.Windows.Forms.Label metroLabel7;
         private System.Windows.Forms.Label metroLabel6;
         private System.Windows.Forms.Label metroLabel4;
         private System.Windows.Forms.Label metroLabel3;
         private System.Windows.Forms.Label metroLabel2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox InitialsCadreBox;
         private System.Windows.Forms.TextBox ChiefPositionBox;
         private System.Windows.Forms.TextBox ChiefInitialsBox;
         private System.Windows.Forms.TextBox ChiefSurnameDativeBox;
-        private System.Windows.Forms.TextBox SurnameCadreBox;
-        private System.Windows.Forms.TextBox PositionCadreGenitiveBox;
         private System.Windows.Forms.TextBox ChiefNameGenitiveBox;
         private System.Windows.Forms.TextBox ChiefNameBox;
         private System.Windows.Forms.TextBox ChiefSurnameBox;
-        private System.Windows.Forms.TextBox PositionCadreBox;
         private System.Windows.Forms.TextBox ChiefPositionLowerBox;
         private System.Windows.Forms.TextBox ChiefPositionDativeBox;
-        private System.Windows.Forms.Label metroLabel24;
         private System.Windows.Forms.Label metroLabel17;
         private System.Windows.Forms.Label metroLabel18;
         private System.Windows.Forms.Label metroLabel19;
-        private System.Windows.Forms.Label metroLabel30;
-        private System.Windows.Forms.Label metroLabel23;
         private System.Windows.Forms.Label metroLabel13;
         private System.Windows.Forms.Label metroLabel14;
-        private System.Windows.Forms.Label metroLabel22;
         private System.Windows.Forms.Label metroLabel21;
         private System.Windows.Forms.Label metroLabel20;
         private System.Windows.Forms.Label metroLabel12;

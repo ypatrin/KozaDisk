@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.IO;
 using KozaDisk.Forms;
 using System.Xml.Serialization;
+using System.Management;
+using System.Net;
 
 namespace KozaDisk
 {
@@ -19,6 +21,42 @@ namespace KozaDisk
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        public void sendStatistic()
+        {
+            string cpuID = string.Empty;
+            string mbID = String.Empty;
+
+            // Get processor ID
+            var cpu = new ManagementObjectSearcher("Select ProcessorID From Win32_processor");
+            var cpuList = cpu.Get();
+
+            foreach (ManagementObject mo in cpuList)
+            {
+                cpuID = mo["ProcessorID"].ToString();
+            }
+
+            //get MainBorad id
+            var mainboard = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+            var mainboardList = cpu.Get();
+
+            foreach (ManagementObject mo in mainboardList)
+            {
+                mbID = mo["ProcessorID"].ToString();
+            }
+
+            string secret = KozaDisk.Encrypt.Base64.Encode($"processor:{cpuID};mainboard:{mbID}");
+
+            string url = $"http://mcfr.ua/index/koza/?pcid={secret}";
+
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream resStream = response.GetResponseStream();
+            }
+            catch(Exception ex) { }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -48,8 +86,21 @@ namespace KozaDisk
                     this.NewUserPanel.Visible = true;
                     this.LoginPanel.Visible = false;
                 }
+
+                //import and create
+                if (i == 1)
+                {
+                    foreach (User user in users.getUsers())
+                    {
+                        this.User = user;
+                    }
+
+                    this.NewUserPanel.Visible = true;
+                    this.LoginPanel.Visible = false;
+                }
+
                 //import user
-                else
+                if (i > 1)
                 {
                     this.NewUserPanel.Visible = false;
                     this.LoginPanel.Visible = true;
@@ -75,7 +126,8 @@ namespace KozaDisk
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            this.User = new User();
+            if (this.User == null)
+                this.User = new User();
 
             this.NewUserPanel.Visible = true;
             this.LoginPanel.Visible = false;
@@ -105,6 +157,9 @@ namespace KozaDisk
             }
             else
             {
+                if (this.User == null)
+                    this.User = new User();
+
                 //fill user object
                 this.User.UserName = this.UsernameBox.Text.Trim();
                 this.User.UserEmail = this.EmailBox.Text.Trim();
@@ -160,6 +215,9 @@ namespace KozaDisk
             //login 
             Users users = new Users();
             User user = users.getUser(userName.Trim());
+
+            //send statistic
+            this.sendStatistic();
 
             //load application
             TemplatesList templatesList = new TemplatesList();

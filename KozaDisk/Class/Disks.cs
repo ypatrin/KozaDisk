@@ -11,6 +11,10 @@ namespace KozaDisk
     {
         public List<Disk> getDisksList()
         {
+
+            if (!Directory.Exists(Constant.ApplcationStorage + @"db\xml"))
+                Directory.CreateDirectory(Constant.ApplcationStorage + @"db\xml");
+
             List<Disk> disks = new List<Disk>();
             String[] disksXml = Directory.GetFiles(Constant.ApplcationStorage + @"db\xml");
 

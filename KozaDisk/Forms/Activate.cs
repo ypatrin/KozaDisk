@@ -16,13 +16,18 @@ namespace KozaDisk.Forms
         public User userData { get; set; }
         public string db { get; set; }
         public string key = "fbv8295_";
+        public string remainingDays = "0";
 
         public Activate(string days)
         {
             InitializeComponent();
             if (Int32.Parse(days) <= 0)
             {
-                this.button1.Enabled = false;
+                this.button1.Visible = false;
+            }
+            else
+            {
+                this.remainingDays = days;
             }
         }
 
@@ -64,14 +69,27 @@ namespace KozaDisk.Forms
             this.key = this.key + now.ToString("ddMMyyyy");
 
             string cpuID = string.Empty;
+            string mbID = String.Empty;
 
-            var mbs = new ManagementObjectSearcher("Select ProcessorID From Win32_processor");
-            var mbsList = mbs.Get();
+            // Get processor ID
+            var cpu = new ManagementObjectSearcher("Select ProcessorID From Win32_processor");
+            var cpuList = cpu.Get();
 
-            foreach (ManagementObject mo in mbsList)
+            foreach (ManagementObject mo in cpuList)
             {
                 cpuID = mo["ProcessorID"].ToString();
             }
+
+            //get MainBorad id
+            var mainboard = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+            var mainboardList = cpu.Get();
+
+            foreach (ManagementObject mo in mainboardList)
+            {
+                mbID = mo["ProcessorID"].ToString();
+            }
+
+            string secret = KozaDisk.Encrypt.Base64.Encode($"processor:{cpuID};mainboard:{mbID}");
 
             string xmlRequest = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>";
             xmlRequest += "<activation>";
@@ -84,7 +102,7 @@ namespace KozaDisk.Forms
             xmlRequest += $"        <email>{userData.UserEmail}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
             xmlRequest += $"        <phone>{userData.UserPhone}</phone>"; // ФИО юзера
-            xmlRequest += $"        <app_code>{cpuID}</app_code>"; // ID приложения (уникальное для каждого юзера)
+            xmlRequest += $"        <app_code>{secret}</app_code>"; // ID приложения (уникальное для каждого юзера)
             xmlRequest += "     </user>";
             xmlRequest += "</activation>";
 
@@ -140,6 +158,10 @@ namespace KozaDisk.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
+            KozaDisk.Forms.TrialForm trial = new TrialForm(this.remainingDays);
+            trial.ShowDialog();
             this.Close();
         }
     }

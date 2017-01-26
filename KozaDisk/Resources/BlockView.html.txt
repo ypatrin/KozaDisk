@@ -142,6 +142,13 @@
         function out(db) {
             document.getElementById("img_" + db).setAttribute("src", "%AppPathUrl%icon/iface/disk_big.png")
         }
+
+        function removeDocument(id)
+        {
+            var element = document.getElementById("doc_" + id);
+            element.outerHTML = "";
+            delete element;
+        }
     </script>
 </body>
 </html>

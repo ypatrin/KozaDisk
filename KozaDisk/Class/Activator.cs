@@ -22,13 +22,19 @@ namespace KozaDisk.Class
         /// </summary>
         string ConfigFile = KozaDisk.Constant.ApplcationStorage + @"db\acd\disk.xml";
 
-        private Dictionary<string, bool> daw = new Dictionary<string, bool>();
-
+        /// <summary>
+        /// Активатор дисков
+        /// </summary>
         public Activator()
         {
             this._loadConfig();
         }
 
+        /// <summary>
+        /// Активирован ли диск
+        /// </summary>
+        /// <param name="db">Имя БД</param>
+        /// <returns></returns>
         public bool isActivated(string db)
         {
             XmlElement root = this.Config.DocumentElement;
@@ -50,7 +56,7 @@ namespace KozaDisk.Class
 
                 //create db node
                 XmlElement dbElem = this.Config.CreateElement("db_"+db);
-                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key><startDate>{startDate.ToString("dd/MM/yyyy")}</startDate><endDate>{endDate.ToString("dd/MM/yyyy")}</endDate>";
+                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key>";
 
                 //add db to config xml
                 root.AppendChild(dbElem);
@@ -61,103 +67,55 @@ namespace KozaDisk.Class
             }
         }
 
-        public void hideActivateWindows(string db)
-        {
-            this.daw[db] = false;
-        }
-
-        public bool isVisibleActivateWindow(string db)
-        {
-            try
-            {
-                return this.daw[db];
-            }
-            catch(Exception ex)
-            {
-                this.daw.Add(db, false);
-                return true;
-            }
-
-            return true;
-        }
-
+        /// <summary>
+        /// Получает количество оставшихся дней триала диска
+        /// </summary>
+        /// <param name="db">Имя БД</param>
+        /// <returns></returns>
         public string getTrialDays(string db)
         {
             string days = "0";
+
             XmlElement root = this.Config.DocumentElement;
 
-            try
+            if (db.Trim() == "2017.1.db")
             {
+                DateTime startDate = Convert.ToDateTime("07/02/2017");
+                DateTime endDate = startDate.AddDays(30);
                 DateTime now = DateTime.Now;
-                XmlNode disk = root.SelectSingleNode($"db_{db}");
-                string endDateStr = disk.SelectSingleNode("endDate").InnerText.ToString();
-                DateTime endDate = Convert.ToDateTime(endDateStr);
 
                 days = (endDate - now).TotalDays.ToString();
 
                 if (days.IndexOf(',') != -1)
                     days = days.Remove(days.IndexOf(','));
 
-            }
-            catch (Exception ex)
-            {
-                DateTime startDate = DateTime.Now;
-                DateTime endDate = startDate.AddDays(31);
-
-                //create db node
-                XmlElement dbElem = this.Config.CreateElement("db_" + db);
-                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key><startDate>{startDate.ToString("dd/MM/yyyy")}</startDate><endDate>{endDate.ToString("dd/MM/yyyy")}</endDate>";
-
-                //add db to config xml
-                root.AppendChild(dbElem);
-
-                this._saveConfig();
-                days = "30";
+                if (days.IndexOf('.') != -1)
+                    days = days.Remove(days.IndexOf(','));
             }
 
             return days;
         }
 
+        /// <summary>
+        /// Доступен ли триал для данного диска
+        /// </summary>
+        /// <param name="db">Имя БД</param>
+        /// <returns></returns>
         public bool isTrial(string db)
         {
-            XmlElement root = this.Config.DocumentElement;
+            string days = getTrialDays(db);
 
-            try
-            {
-                DateTime now = DateTime.Now;
-                XmlNode disk = root.SelectSingleNode($"db_{db}");
-                string endDateStr = disk.SelectSingleNode("endDate").InnerText.ToString();
-                DateTime endDate = Convert.ToDateTime(endDateStr);
-
-                int status = now.CompareTo(endDate);
-
-                if (status < 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                DateTime startDate = DateTime.Now;
-                DateTime endDate = startDate.AddDays(31);
-
-                //create db node
-                XmlElement dbElem = this.Config.CreateElement("db_" + db);
-                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key><startDate>{startDate.ToString("dd/MM/yyyy")}</startDate><endDate>{endDate.ToString("dd/MM/yyyy")}</endDate>";
-
-                //add db to config xml
-                root.AppendChild(dbElem);
-
-                this._saveConfig();
-
+            if (Int32.Parse(days) > 0)
+                return true;
+            else
                 return false;
-            }
         }
 
+        /// <summary>
+        /// Активация диска
+        /// </summary>
+        /// <param name="db">Имя БД</param>
+        /// <param name="key">Ключ активации</param>
         public void activate(string db, string key)
         {
             XmlElement root = this.Config.DocumentElement;
@@ -196,6 +154,9 @@ namespace KozaDisk.Class
             this.Config = configXml;
         }
 
+        /// <summary>
+        /// Save activator config
+        /// </summary>
         private void _saveConfig()
         {
             //save config
