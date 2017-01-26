@@ -96,10 +96,10 @@
             this.NewUserPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.NewUserPanel.Controls.Add(this.panel8);
             this.NewUserPanel.Controls.Add(this.panel9);
-            this.NewUserPanel.Location = new System.Drawing.Point(24, 104);
+            this.NewUserPanel.Location = new System.Drawing.Point(24, 110);
             this.NewUserPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NewUserPanel.Name = "NewUserPanel";
-            this.NewUserPanel.Size = new System.Drawing.Size(380, 287);
+            this.NewUserPanel.Size = new System.Drawing.Size(382, 288);
             this.NewUserPanel.TabIndex = 7;
             this.NewUserPanel.Visible = false;
             // 
@@ -113,7 +113,7 @@
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.button1);
-            this.panel8.Location = new System.Drawing.Point(2, 38);
+            this.panel8.Location = new System.Drawing.Point(4, 38);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(374, 246);
@@ -232,7 +232,7 @@
             this.LoginPanel.Location = new System.Drawing.Point(24, 144);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(380, 180);
+            this.LoginPanel.Size = new System.Drawing.Size(382, 183);
             this.LoginPanel.TabIndex = 6;
             // 
             // panel3
@@ -243,7 +243,7 @@
             this.panel3.Controls.Add(this.CreateButton);
             this.panel3.Controls.Add(this.ImportButton);
             this.panel3.Controls.Add(this.usersBox);
-            this.panel3.Location = new System.Drawing.Point(2, 39);
+            this.panel3.Location = new System.Drawing.Point(4, 39);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(374, 140);
