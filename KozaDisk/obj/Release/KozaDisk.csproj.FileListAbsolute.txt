@@ -160,3 +160,4 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateEr
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateOkForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.TrialForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.PopupOkForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Release\KozaDisk.csprojResolveAssemblyReference.cache

@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Data.SQLite;
 using Renci.SshNet;
+using Editor.Class;
 
 namespace Editor
 {
@@ -86,9 +87,10 @@ namespace Editor
 
                 foreach(Editor.Class.Document document in documents)
                 {
-                    ListViewItem lvi = new ListViewItem();
+                    DocumentItem lvi = new DocumentItem();
                     lvi.Name = document.id;
                     lvi.Text = document.name;
+                    lvi.documentType = document.type;
                     lvi.ImageIndex = 3;
 
                     this.ListDocuments.Items.Add(lvi);
@@ -105,7 +107,6 @@ namespace Editor
                 if (lvi[0] != null)
                 {
                     ListViewItem selectedItem = lvi[0];
-                    //MessageBox.Show(selectedItem.Text);
 
                     this.SelectedDocument.Text = selectedItem.Text;
                     this.AddButton.Enabled = true;
@@ -126,6 +127,7 @@ namespace Editor
                 string link = this.LinkBox.Text;
                 string id = null;
 
+                //check if this link
                 Regex expression = new Regex(@"document/(?<Identifier>[0-9]*)");
                 var results = expression.Matches(link);
 
@@ -136,6 +138,25 @@ namespace Editor
 
                 if (id != null)
                 {
+                    List<Editor.Class.Document> documents = this.DataBase.getDocumentsById(id);
+
+                    foreach (Editor.Class.Document document in documents)
+                    {
+                        ListViewItem lvi = new ListViewItem();
+                        lvi.Name = document.id;
+                        lvi.Text = document.name;
+                        lvi.ImageIndex = 3;
+
+                        this.ListDocuments.Items.Add(lvi);
+                    }
+                }
+
+                //check if this id
+                int result;
+                if (Int32.TryParse(link, out result))
+                {
+                    id = result.ToString();
+
                     List<Editor.Class.Document> documents = this.DataBase.getDocumentsById(id);
 
                     foreach (Editor.Class.Document document in documents)
@@ -183,11 +204,11 @@ namespace Editor
 
                 if (lvi[0] != null)
                 {
-                    ListViewItem selectedItem = lvi[0];
+                    ListViewItem selectedItem = (ListViewItem)lvi[0];
 
                     TreeNode parentNode = this.DiskTree.SelectedNode ?? this.DiskTree.Nodes[0];
 
-                    TreeNode newNode = new TreeNode();
+                    DocumentNode newNode = new DocumentNode();
                     newNode.Text = selectedItem.Text;
                     newNode.Name = selectedItem.Name;
                     newNode.ImageIndex = 3;
@@ -227,7 +248,7 @@ namespace Editor
 
         private void revBox_TextChanged(object sender, EventArgs e)
         {
-            this.DiskTree.Nodes[0].Text = this.DiskRevisionBox.Text;
+
         }
 
         private void CreateDiskBtn_Click(object sender, EventArgs e)
@@ -348,11 +369,20 @@ namespace Editor
 
             string templateType = "0";
 
-            // if that pdf file?
+            // if that static file?
             string ext = Path.GetExtension(localPath);
 
+            // if file extension != doc and docx - its static file
             if (ext != ".docx" && ext != ".doc")
+            {
                 templateType = "1";
+            }
+            //check is doc file is static
+            else
+            {
+                templateType = this.DataBase.getTemplateType(documentNode.Name).ToString();
+            }
+
 
             //insert document
             string sql = $"INSERT INTO templates (structure_id,file_ext,name,name_lower,markers_xml,template,type) VALUES('{categoryId}', '{ext}', '{documentNode.Text}', '{documentNode.Text.ToLower()}', '{markersXmlEnc}', '{templateFileEnc}', '{templateType}');";
@@ -363,6 +393,11 @@ namespace Editor
             {
                 File.Delete(localPath);
             }
+        }
+
+        private void DiskNameBox_TextChanged(object sender, EventArgs e)
+        {
+            this.DiskTree.Nodes[0].Text = this.DiskNameBox.Text;
         }
     }
 }

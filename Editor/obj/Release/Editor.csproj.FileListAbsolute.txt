@@ -13,7 +13,6 @@ D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Release\EntityFramework.SqlServer.x
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Release\MySql.Data.xml
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Release\Renci.SshNet.xml
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Release\System.Data.SQLite.xml
-D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.csprojResolveAssemblyReference.cache
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.Form1.resources
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.Properties.Resources.resources
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.csproj.GenerateResource.Cache

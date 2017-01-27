@@ -58,6 +58,7 @@ namespace KozaDisk.Forms
                 Class.Objects.DiskTreeNode diskTreeNode = new Class.Objects.DiskTreeNode();
                 diskTreeNode.db = disk.db;
                 diskTreeNode.Name = disk.name;
+                diskTreeNode.description = disk.description;
                 diskTreeNode.Text = disk.name;
                 diskTreeNode.ToolTipText = disk.description;
                 diskTreeNode.setType(Class.Objects.DiskTreeType.Disk);      
@@ -213,7 +214,7 @@ namespace KozaDisk.Forms
                         //display activation message
                         string days = activator.getTrialDays(disk.db);
                         KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
-                        activateForm.setDiskName(disk.name);
+                        activateForm.setDiskName(disk.description);
                         activateForm.userData = this.userData;
                         activateForm.db = disk.db;
 
@@ -455,11 +456,16 @@ namespace KozaDisk.Forms
             catch (Exception ex) { }
         }
 
-        public void openMyDocument(string documentId, string db)
+        public void openMyDocument(string templateId, string documentId, string db)
         {
             try
             {
                 this.WindowState = FormWindowState.Minimized;
+
+                if (System.IO.File.Exists(KozaDisk.Constant.TempDocxFile))
+                    System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+                if (System.IO.File.Exists(KozaDisk.Constant.TempXmlFile))
+                    System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
 
                 db = db.Replace(Constant.ApplcationStorage + @"db\cd\", "");
                 string databaseName = Constant.ApplcationStorage + @"db\cd\" + db;
@@ -467,7 +473,7 @@ namespace KozaDisk.Forms
                 SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
                 connection.Open();
 
-                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {templateId}", connection);
                 SQLiteDataReader reader = command.ExecuteReader();
 
                 reader.Read();
@@ -490,14 +496,18 @@ namespace KozaDisk.Forms
                 SQLiteConnection myDocCn = new SQLiteConnection(string.Format("Data Source={0};", myDocsDb));
                 myDocCn.Open();
 
-                string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE doc_id = '{documentId}'";
+                string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE id = '{documentId}'";
+                string html = "";
 
                 SQLiteCommand MyDocCmd = new SQLiteCommand(sql, myDocCn);
-                SQLiteDataReader r = MyDocCmd.ExecuteReader();
-                r.Read();
-                string html = r["doc_html"].ToString();
-                html = Encrypt.Base64.Decode(html);
+                using (SQLiteDataReader r = MyDocCmd.ExecuteReader())
+                {
+                    r.Read();
+                    html = r["doc_html"].ToString();
+                    html = Encrypt.Base64.Decode(html);
+                }
 
+                MyDocCmd.Dispose();
                 myDocCn.Close();
 
                 //create template file
@@ -514,9 +524,12 @@ namespace KozaDisk.Forms
                 templates.open(html);
 
                 this.WindowState = FormWindowState.Maximized;
+
                 //delete temp files
-                //System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
-                //System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
+                if (System.IO.File.Exists(KozaDisk.Constant.TempDocxFile))
+                    System.IO.File.Delete(KozaDisk.Constant.TempDocxFile);
+                if (System.IO.File.Exists(KozaDisk.Constant.TempXmlFile))
+                    System.IO.File.Delete(KozaDisk.Constant.TempXmlFile);
             }
             catch(Exception ex)
             {
@@ -646,17 +659,17 @@ namespace KozaDisk.Forms
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
                     disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"doc_{r["id"].ToString()}\">";
-                    disksBlockHtml += $"<div class=\"head\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\">{docName}</div>";
-                    disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"head\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
-                    disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
+                    disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
                     disksBlockHtml += $"<div class=\"date\">{createdAt.ToString("dd.MM.yyyy")}</div>";
                     disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
                     disksBlockHtml += $"</div>";
                     disksBlockHtml += "</div>";
 
                     disksTreeHtml += $"<tr id=\"doc_{r["id"].ToString()}\">";
-                    disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\">{r["doc_name"].ToString()}</td>";
+                    disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{r["doc_name"].ToString()}</td>";
                     disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
                     disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\">&nbsp;&nbsp;&nbsp;<img src=\"{Constant.ApplcationPath}icon\\iface\\delete-list.png\"/></td>";
                     disksTreeHtml += "</tr>";
@@ -905,7 +918,7 @@ namespace KozaDisk.Forms
                     //display activation message
                     string days = activator.getTrialDays(selectedNode.db);
                     KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
-                    activateForm.setDiskName(selectedNode.Name);
+                    activateForm.setDiskName(selectedNode.description);
                     activateForm.userData = this.userData;
                     activateForm.db = selectedNode.db;
 

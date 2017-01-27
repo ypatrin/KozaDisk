@@ -160,9 +160,9 @@
             this.label9.Location = new System.Drawing.Point(14, 133);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.Size = new System.Drawing.Size(149, 18);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Телефон";
+            this.label9.Text = "Мобільний телефон";
             // 
             // label8
             // 
@@ -171,9 +171,9 @@
             this.label8.Location = new System.Drawing.Point(14, 76);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 18);
+            this.label8.Size = new System.Drawing.Size(45, 18);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Email *";
+            this.label8.Text = "Email";
             // 
             // label7
             // 
@@ -182,9 +182,9 @@
             this.label7.Location = new System.Drawing.Point(14, 18);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 18);
+            this.label7.Size = new System.Drawing.Size(195, 18);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Прізвище, Ім\'я, По батькові *";
+            this.label7.Text = "Прізвище, ім’я, по батькові";
             // 
             // button1
             // 
@@ -350,10 +350,10 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.panel6.Location = new System.Drawing.Point(584, 294);
+            this.panel6.Location = new System.Drawing.Point(584, 293);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(115, 145);
+            this.panel6.Size = new System.Drawing.Size(115, 146);
             this.panel6.TabIndex = 5;
             this.panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rightButton_Contacts_Click);
             this.panel6.MouseEnter += new System.EventHandler(this.rightButton_MouseHover);
@@ -395,7 +395,7 @@
             this.panel5.Location = new System.Drawing.Point(584, 144);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(115, 149);
+            this.panel5.Size = new System.Drawing.Size(115, 150);
             this.panel5.TabIndex = 4;
             this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rightButton_Help_Click);
             this.panel5.MouseEnter += new System.EventHandler(this.rightButton_MouseHover);

@@ -95,33 +95,48 @@ namespace templates
 
         public void loadHtmlElementsValue(string documentHtmlValues)
         {
-            foreach (string htmlElement in documentHtmlValues.Split(';'))
+            try
             {
-                if (htmlElement == "")
-                    continue;
-
-                string[] element = htmlElement.Split(':');
-
-                string type = element[0];
-                string name = element[1];
-                string val = element[2];
-
-                foreach (HtmlElement HtmlElement1 in webBrowser1.Document.Body.All)
+                foreach (string htmlElement in documentHtmlValues.Split(';'))
                 {
-                    if (HtmlElement1.Name == name)
+                    try
                     {
-                        if (type == "text")
+                        if (htmlElement == "")
+                            continue;
+
+                        string[] element = htmlElement.Split(':');
+
+                        if (element.Length < 3)
+                            continue;
+
+                        string type = element[0];
+                        string name = element[1];
+                        string val = element[2];
+
+                        foreach (HtmlElement HtmlElement1 in webBrowser1.Document.Body.All)
                         {
-                            HtmlElement1.SetAttribute("value", val);
-                        }
-                        if (type == "checkbox")
-                        {
-                            if (val == "False")
-                                HtmlElement1.SetAttribute("checked", "");
+                            try
+                            {
+                                if (HtmlElement1.Name == name)
+                                {
+                                    if (type == "text")
+                                    {
+                                        HtmlElement1.SetAttribute("value", val);
+                                    }
+                                    if (type == "checkbox")
+                                    {
+                                        if (val == "False")
+                                            HtmlElement1.SetAttribute("checked", "");
+                                    }
+                                }
+                            }
+                            catch (Exception ex) { }
                         }
                     }
+                    catch (Exception e) { }
                 }
             }
+            catch (Exception Error) { }
         }
 
         public void runJs()

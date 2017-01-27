@@ -50,7 +50,7 @@
             this.panel1.Font = new System.Drawing.Font("Arial", 8F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 497);
+            this.panel1.Size = new System.Drawing.Size(437, 498);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelpForm_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HelpForm_MouseMove);
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(437, 497);
+            this.ClientSize = new System.Drawing.Size(437, 498);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

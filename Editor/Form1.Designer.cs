@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Test", "1484268907_EditDocument.png");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("01.2017", 4, 4);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Новый диск");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("01.2017", 4, 4);
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Новый диск");
             this.panel1 = new System.Windows.Forms.Panel();
             this.DiskDescriptionBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -119,7 +119,6 @@
             this.DiskRevisionBox.Size = new System.Drawing.Size(120, 24);
             this.DiskRevisionBox.TabIndex = 7;
             this.DiskRevisionBox.Text = "01.2017";
-            this.DiskRevisionBox.TextChanged += new System.EventHandler(this.revBox_TextChanged);
             // 
             // DiskNameBox
             // 
@@ -127,6 +126,7 @@
             this.DiskNameBox.Name = "DiskNameBox";
             this.DiskNameBox.Size = new System.Drawing.Size(315, 24);
             this.DiskNameBox.TabIndex = 6;
+            this.DiskNameBox.TextChanged += new System.EventHandler(this.DiskNameBox_TextChanged);
             // 
             // label2
             // 
@@ -311,12 +311,12 @@
             this.DiskTree.ImageList = this.imageList1;
             this.DiskTree.Location = new System.Drawing.Point(0, 0);
             this.DiskTree.Name = "DiskTree";
-            treeNode1.ImageIndex = 4;
-            treeNode1.Name = "0";
-            treeNode1.SelectedImageIndex = 4;
-            treeNode1.Text = "01.2017";
+            treeNode2.ImageIndex = 4;
+            treeNode2.Name = "0";
+            treeNode2.SelectedImageIndex = 4;
+            treeNode2.Text = "01.2017";
             this.DiskTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode2});
             this.DiskTree.SelectedImageIndex = 0;
             this.DiskTree.Size = new System.Drawing.Size(364, 330);
             this.DiskTree.TabIndex = 0;
@@ -398,10 +398,10 @@
             this.TreeCatalogs.ImageList = this.imageList1;
             this.TreeCatalogs.Location = new System.Drawing.Point(0, 0);
             this.TreeCatalogs.Name = "TreeCatalogs";
-            treeNode2.Name = "Disk";
-            treeNode2.Text = "Новый диск";
+            treeNode3.Name = "Disk";
+            treeNode3.Text = "Новый диск";
             this.TreeCatalogs.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode3});
             this.TreeCatalogs.SelectedImageIndex = 0;
             this.TreeCatalogs.Size = new System.Drawing.Size(308, 430);
             this.TreeCatalogs.TabIndex = 1;

@@ -27,5 +27,7 @@ namespace Editor.Class
         /// </summary>
         public string fileName { get; set; }
 
+        public int type { get; set; }
+
     }
 }

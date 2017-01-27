@@ -46,7 +46,9 @@ namespace Editor.Class
         {
             try
             {
-                connection.Open();
+                if (connection.State != System.Data.ConnectionState.Open)
+                    connection.Open();
+
                 return true;
             }
             catch (MySqlException ex)
@@ -133,6 +135,30 @@ namespace Editor.Class
             }
         }
 
+        public int getTemplateType(string templateId)
+        {
+            int templateType = 1;
+
+            string query = $"SELECT * FROM document_templates WHERE id = '{templateId}' ORDER BY position";
+
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                using (MySqlDataReader dataReader = cmd.ExecuteReader())
+                {
+                    dataReader.Read();
+                    templateType = Int32.Parse(dataReader["mechanic_id"].ToString());
+                }
+            }
+
+            if (templateType == 2)
+                return 1;
+            else
+                return 0;
+        }
+
         /// <summary>
         /// Get list of documents by Catalog ID
         /// </summary>
@@ -159,6 +185,7 @@ namespace Editor.Class
                     doc.id = dataReader["id"].ToString();
                     doc.categoryId = dataReader["catalog_part_id"].ToString();
                     doc.name = dataReader["name"].ToString();
+                    doc.type = Int32.Parse(dataReader["mechanic_id"].ToString());
                     doc.fileName = dataReader["file_name"].ToString();
 
                     list.Add(doc);
@@ -370,7 +397,15 @@ namespace Editor.Class
                     }
                     if (dataReader["type_id"].ToString() == "2")
                     {
-                        xml += $"<marker name=\"{markerAlias}\" type=\"static\" field=\"{this.getFiledName(markerName)}\" comment=\"{markerComment}\" />";
+                        Serializer serializer = new Serializer();
+                        Dictionary<System.Object, System.Object> phpFormula = (Dictionary<System.Object, System.Object>)serializer.Deserialize(markerFormula);
+
+                        Dictionary<System.Object, System.Object> args = (Dictionary<System.Object, System.Object>)phpFormula["args"];
+
+                        int fieldID = (Int32)args["id"];
+                        string fieldName = this.getFiledName(fieldID);
+
+                        xml += $"<marker name=\"{markerAlias}\" type=\"static\" field=\"{fieldName}\" comment=\"{markerComment}\" />";
                     }
                     if (dataReader["type_id"].ToString() == "3")
                     {
@@ -411,38 +446,103 @@ namespace Editor.Class
             return xml;
         }
 
-        private string getFiledName(string name)
+        private string getFiledName(int id)
         {
-            if (name == "s_1_full_name") return "FullName";
-            if (name == "s_2_full_name") return "FullNameGenitive";
-            if (name == "s_2_full_name1") return "FullNameGenitive";
-            if (name == "s_3_abbreviation") return "Abbreviation";
-            if (name == "s_4_abbreviation") return "AbbreviationGenitive";
-            if (name == "s_5_subordination") return "Subordination";
-            if (name == "s_6_subordination") return "SubordinationGenitive";
-            if (name == "s_7_unit") return "Unit";
-            if (name == "s_8_place") return "Place";
-            if (name == "s_9_code") return "Code";
-            if (name == "s_10_bank") return "Bank";
-            if (name == "s_11_legal_address") return "LegalAddress";
-            if (name == "s_12_chief_name") return "ChiefName";
-            if (name == "s_13_chief_name") return "ChiefNameGenitive";
-            if (name == "s_14_chief_surname") return "ChiefSurname";
-            if (name == "s_15_chief_surname") return "ChiefSurnameDative";
-            if (name == "s_16_chief_initials") return "ChiefInitials";
-            if (name == "s_17_chief_position") return "ChiefPosition";
-            if (name == "s_18_chief_position") return "ChiefPositionDative";
-            if (name == "s_19_chief_position") return "ChiefPositionLower";
-            if (name == "s_20_position_cadre") return "PositionCadre";
-            if (name == "s_21_position_cadre") return "PositionCadreGenitive";
-            if (name == "s_22_initials_cadre") return "InitialsCadre";
-            if (name == "s_23_surname_cadre") return "SurnameCadre";
-            if (name == "s_24_address") return "Address";
-            if (name == "s_25_tel") return "Telephone";
-            if (name == "s_26_fax") return "Fax";
-            if (name == "s_27_e-mail") return "Email";
+            switch(id)
+            {
+                // organization
 
-            return "";
+                case 1:
+                    return "FullName";
+                    break;
+                case 2:
+                    return "FullNameGenitive";
+                    break;
+                case 3:
+                    return "Abbreviation";
+                    break;
+                case 4:
+                    return "AbbreviationGenitive";
+                    break;
+                case 5:
+                    return "Subordination";
+                    break;
+                case 6:
+                    return "SubordinationGenitive";
+                    break;
+                case 7:
+                    return "Place";
+                    break;
+                case 8:
+                    return "Code";
+                    break;
+                case 9:
+                    return "Bank";
+                    break;
+                case 10:
+                    return "LegalAddress";
+                    break;
+                case 11:
+                    return "ChiefName";
+                    break;
+                case 12:
+                    return "ChiefNameGenitive";
+                    break;
+                case 13:
+                    return "ChiefSurname";
+                    break;
+                case 14:
+                    return "ChiefSurnameDative";
+                    break;
+                case 15:
+                    return "ChiefInitials";
+                    break;
+                case 16:
+                    return "ChiefPosition";
+                    break;
+                case 17:
+                    return "ChiefPositionDative";
+                    break;
+                case 18:
+                    return "ChiefPositionLower";
+                    break;
+                case 53:
+                    return "Unit";
+                    break;
+
+                //hidden
+                case 19:
+                    return "PositionCadre";
+                    break;
+                case 20:
+                    return "PositionCadreGenitive";
+                    break;
+                case 21:
+                    return "InitialsCadre";
+                    break;
+                case 22:
+                    return "SurnameCadre";
+                    break;
+
+                //chief 
+                case 23:
+                    return "Address";
+                    break;
+                case 24:
+                    return "Telephone";
+                    break;
+                case 25:
+                    return "Fax";
+                    break;
+                case 26:
+                    return "Email";
+                    break;
+
+                //default
+                default:
+                    return "";
+                    break;
+            }
         }
     }
 }

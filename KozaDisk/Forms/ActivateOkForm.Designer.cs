@@ -66,11 +66,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.label1.Location = new System.Drawing.Point(18, 90);
+            this.label1.Location = new System.Drawing.Point(15, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 27);
+            this.label1.Size = new System.Drawing.Size(299, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Диск успішно активовано";
+            this.label1.Text = "Диск успішно активовано!";
             // 
             // panel1
             // 
