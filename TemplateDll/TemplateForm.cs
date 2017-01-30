@@ -30,6 +30,7 @@ namespace templates
         string userName = "";
         string dbName = "";
         int docId = 0;
+        int myDocId = 0;
 
         public TemplateForm()
         {
@@ -67,6 +68,11 @@ namespace templates
         public void setDocId(int docId)
         {
             this.docId = docId;
+        }
+
+        public void setMyDocId(int docId)
+        {
+            this.myDocId = docId;
         }
 
         public void loadHTML(string html)
@@ -327,9 +333,12 @@ namespace templates
             SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
             connection.Open();
 
-            //delete old
-            //SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE doc_id = '{docId}' AND db_name = '{db}'", connection);
-            //c.ExecuteNonQuery();
+            if (this.myDocId > 0)
+            {
+                //delete old
+                SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE id = '{this.myDocId}'", connection);
+                c.ExecuteNonQuery();
+            }
 
             //add
             string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";

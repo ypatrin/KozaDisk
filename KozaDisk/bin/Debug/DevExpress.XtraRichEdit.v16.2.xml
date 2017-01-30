@@ -601,6 +601,38 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraRichEdit.RichEditControl.PopupMenuShowing"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.#ctor(DevExpress.XtraRichEdit.Menu.RichEditPopupMenu)">
+            <summary>
+                <para>Initializes a new instance of the PopupMenuShowingEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="menu">
+		A <see cref="T:DevExpress.XtraRichEdit.Menu.RichEditPopupMenu"/> which represents the event's popup menu. This value is assigned to the <see cref="P:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.Menu"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.Menu">
+            <summary>
+                <para>Gets or sets the popup (context) menu for which this event was raised.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Menu.RichEditPopupMenu"/> object, which represents the context menu for the event. 
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.Repository.RichTextEditHorizontalScrollbarOptions">
 
             <summary>
@@ -3143,6 +3175,14 @@
 
 
         </member>
+        <member name="E:DevExpress.XtraRichEdit.RichEditControl.SpellingErrorLimitExceeded">
+            <summary>
+                <para>Raises when the number of found misspelled words exceeds the error limit.
+</para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraRichEdit.RichEditControl.SplitTableCellsFormShowing">
             <summary>
                 <para>Occurs before the Split Cells dialog is invoked.
@@ -3351,38 +3391,6 @@
                 <para>Fires when the zoom factor used to display the document is changed.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraRichEdit.RichEditControl.PopupMenuShowing"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.#ctor(DevExpress.XtraRichEdit.Menu.RichEditPopupMenu)">
-            <summary>
-                <para>Initializes a new instance of the PopupMenuShowingEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="menu">
-		A <see cref="T:DevExpress.XtraRichEdit.Menu.RichEditPopupMenu"/> which represents the event's popup menu. This value is assigned to the <see cref="P:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.Menu"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs.Menu">
-            <summary>
-                <para>Gets or sets the popup (context) menu for which this event was raised.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraRichEdit.Menu.RichEditPopupMenu"/> object, which represents the context menu for the event. 
-
-</value>
 
 
         </member>

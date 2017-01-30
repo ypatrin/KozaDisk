@@ -4156,48 +4156,60 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.LoadWorkspace(System.String,System.IO.Stream,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Loads a workspace from the target stream and places this workspace in the <see cref="P:DevExpress.Utils.WorkspaceManager.Workspaces"/> collection under the specific name.
+</para>
             </summary>
             <param name="name">
-		 
+		A String value that is the name this workspace will have in the <see cref="P:DevExpress.Utils.WorkspaceManager.Workspaces"/> collection.
+
             </param>
             <param name="stream">
-		 
+		A Stream that contains the desired workspace.
+
             </param>
             <param name="getNameFromData">
-		 
+		<b>true</b>, if the workspace name written in a stream has a priority over the <i>name</i> parameter of this method; otherwise, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b> if the workspace was successfully loaded; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.LoadWorkspace(System.String,System.Object,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Loads a workspace from the target file and places this workspace in the <see cref="P:DevExpress.Utils.WorkspaceManager.Workspaces"/> collection under the specific name.
+</para>
             </summary>
             <param name="name">
-		 
+		A String value that is the name this workspace will have in the <see cref="P:DevExpress.Utils.WorkspaceManager.Workspaces"/> collection.
+
             </param>
             <param name="path">
-		 
+		A String value that is the path to a local storage file, which contains the required workspace.
+
             </param>
             <param name="getNameFromData">
-		 
+		<b>true</b>, if the workspace name written in a file has a priority over the <i>name</i> parameter of this method; otherwise, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if the workspace was successfully loaded; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="E:DevExpress.Utils.WorkspaceManager.PropertyDeserializing">
             <summary>
-                <para> </para>
+                <para>Occurs whenever a property is about to be restored from a workspace.
+</para>
             </summary>
 
 
         </member>
         <member name="E:DevExpress.Utils.WorkspaceManager.PropertySerializing">
             <summary>
-                <para> </para>
+                <para>Occurs whenever a property is about to be written into a workspace.
+</para>
             </summary>
 
 
@@ -4243,52 +4255,68 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.RestoreLayout(System.Windows.Forms.Control,System.IO.Stream)">
             <summary>
-                <para> </para>
+                <para>Retrieves the stored layout version of one specific control from a stream.
+
+</para>
             </summary>
             <param name="targetControl">
-		 
+		A control whose layout is to be loaded.
+
             </param>
             <param name="stream">
-		 
+		A Stream that keeps the control layout.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.RestoreLayout(System.Windows.Forms.Control,System.String)">
             <summary>
-                <para> </para>
+                <para>Retrieves the stored layout version of one specific control from a file.
+
+</para>
             </summary>
             <param name="targetControl">
-		 
+		A control whose layout is to be loaded.
+
             </param>
             <param name="path">
-		 
+		A String value that is the path to a file that stores the control layout.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.SaveLayout(System.Windows.Forms.Control,System.IO.Stream)">
             <summary>
-                <para> </para>
+                <para>Saves the layout of one specific control to a target stream.
+
+</para>
             </summary>
             <param name="targetControl">
-		 
+		A Control whose layout is to be saved.
+
             </param>
             <param name="stream">
-		 
+		A Stream that should keep the control layout.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.Utils.WorkspaceManager.SaveLayout(System.Windows.Forms.Control,System.String)">
             <summary>
-                <para> </para>
+                <para>Saves the layout of one specific control to a target local storage location.
+
+</para>
             </summary>
             <param name="targetControl">
-		 
+		A Control whose layout is to be saved.
+
             </param>
             <param name="path">
-		 
+		A String value that is the path to a file that should keep the layout of a control.
+
             </param>
 
 
@@ -4388,7 +4416,8 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
         </member>
         <member name="E:DevExpress.Utils.WorkspaceManager.WorkspaceCollectionChanged">
             <summary>
-                <para> </para>
+                <para>Occurs whenever the <see cref="P:DevExpress.Utils.WorkspaceManager.Workspaces"/> collection of the current Workspace Manager component changes.
+</para>
             </summary>
 
 
@@ -4902,6 +4931,14 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.AllowDefaultSvgImages">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.AllowDpiScale">
             <summary>
                 <para>Gets or sets whether or not DevExpress Skins can be scaled on high-DPI devices.
@@ -4979,10 +5016,10 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode">
             <summary>
-                <para>Gets or sets whether DevExpress controls use animation.
+                <para>Gets or sets whether DevExpress controls use animation effects by default. This is a static property.
 </para>
             </summary>
-            <value>A <see cref="AnimationMode"/> enumeration value that specifies whether DevExpress controls use animation.
+            <value>An <see cref="AnimationMode"/> enumeration value that specifies whether DevExpress controls use animation effects by default.
 </value>
 
 
@@ -4995,11 +5032,24 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnFilterPopupMode">
+            <summary>
+                <para>Gets or sets the default display mode of column filter dropdowns in all <see cref="T:DevExpress.XtraGrid.GridControl"/>s in the current application.
+
+</para>
+            </summary>
+            <value>A value that specifies the default display mode of column filter dropdowns in all GridControls in the current application.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.CustomizationFormSnapMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not customization forms can stick to each other, parent forms or screen edges. 
+</para>
             </summary>
-            <value> </value>
+            <value>A SnapMode enumerator value that specifies whether or not dock panels can stick to each other, parent forms or screen edges. 
+</value>
 
 
         </member>
@@ -5167,9 +5217,17 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetAllowDefaultSvgImages">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetAllowHoverAnimation(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns whether animation on hovering objects is enabled. This is a static property.
+                <para>Returns whether animation on hovering objects is enabled. This is a static method.
 
 </para>
             </summary>
@@ -5372,7 +5430,7 @@ This is a static property.
                 <para>Gets or sets whether a control's scroll bars appear on screen when an end-user moves the mouse pointer over the scrollable content. This is a static property.
 </para>
             </summary>
-            <value><b>true</b>, if scoll bars appear; otherwise, <b>false</b>.
+            <value><b>true</b>, if scroll bars appear on screen when an end-user moves the mouse pointer over the scrollable content; otherwise, <b>false</b>.
 
 </value>
 
@@ -7526,7 +7584,8 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.HorzIndent"/> and <see 
         <member name="T:DevExpress.Utils.FlyoutPanel">
 
             <summary>
-                <para>The floating panel that is displayed and hidden using an animation effect. See Flyout Panel.
+                <para>A floating panel that is displayed and hidden using an animation effect. See Flyout Panel.
+
 </para>
             </summary>
 
@@ -8831,9 +8890,12 @@ Currently, the <b>Default</b> option is equivalent to the <b>BeforeText</b> opti
         </member>
         <member name="P:DevExpress.XtraEditors.XtraScrollableControl.LookAndFeel">
             <summary>
-                <para> </para>
+                <para>Provides access to the Look And Feel settings of this XtraScrollableControl object.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ContainerUserLookAndFeel"/> object that stores look-and-feel settings.
+</value>
 
 
         </member>
@@ -9266,9 +9328,11 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
         </member>
         <member name="P:DevExpress.Utils.Menu.DXPopupMenu.AllowToolbarTransparency">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -9308,9 +9372,11 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
         </member>
         <member name="P:DevExpress.Utils.Menu.DXPopupMenu.IsDesignTimeMenu">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -9388,17 +9454,21 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
         </member>
         <member name="P:DevExpress.Utils.Menu.DXPopupMenu.ToolbarHideDistance">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.Utils.Menu.DXPopupMenu.ToolbarRowCount">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -11584,6 +11654,20 @@ The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.
 
 
         </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageSize(System.Object,System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="images">
+		 
+            </param>
+            <param name="index">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Object)">
             <summary>
                 <para>Returns the size of the images in the specified image list.
@@ -11937,6 +12021,59 @@ For the XtraPivotGrid control, this option acts as the <see cref="F:DevExpress.U
         <member name="F:DevExpress.Utils.EditorShowMode.MouseUp">
             <summary>
                 <para>A cell's in-place editor is activated when a mouse button is released from a click within the cell.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.HKeyPrefix">
+
+            <summary>
+                <para>Provides values that indicate different ways to interpret an ampersand character (&amp;) in item captions.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Utils.HKeyPrefix.Default">
+            <summary>
+                <para>A default control behavior.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.HKeyPrefix.Hide">
+            <summary>
+                <para>The ampersand character (&amp;) is hidden, the next character is not underlined.
+<para>
+
+</para>
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.HKeyPrefix.None">
+            <summary>
+                <para>The ampersand character (&amp;) is shown, the next character is not underlined.
+<para>
+
+</para>
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.HKeyPrefix.Show">
+            <summary>
+                <para>The ampersand character (&amp;) is hidden, the next character is underlined.
+<para>
+
+</para>
+
 </para>
             </summary>
 
@@ -13006,60 +13143,72 @@ For the XtraPivotGrid control, this option acts as the <see cref="F:DevExpress.U
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.RestoreLayoutFromRegistry(System.String)">
             <summary>
-                <para> </para>
+                <para>Loads the current SplitContainerControl's layout from the system registry.
+</para>
             </summary>
             <param name="path">
-		 
+		A String value which specifies the system registry path. If the specified path doesn't exist, this method does nothing.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.RestoreLayoutFromStream(System.IO.Stream)">
             <summary>
-                <para> </para>
+                <para>Loads the current SplitContainerControl's layout from the specific stream.
+</para>
             </summary>
             <param name="stream">
-		 
+		The Stream from which the  the current SplitContainerControl's layout should be restored.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.RestoreLayoutFromXml(System.String)">
             <summary>
-                <para> </para>
+                <para>Loads the current SplitContainerControl's layout from the specific XML file.
+</para>
             </summary>
             <param name="xmlFile">
-		 
+		A String value that is the path to an XML file where the current SplitContainerControl's layout should be restored from.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.SaveLayoutToRegistry(System.String)">
             <summary>
-                <para> </para>
+                <para>Saves the current SplitContainerControl's layout to the system registry.
+</para>
             </summary>
             <param name="path">
-		 
+		A String value that is the system registry path to which  the current SplitContainerControl's layout should be saved.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.SaveLayoutToStream(System.IO.Stream)">
             <summary>
-                <para> </para>
+                <para>Saves the current SplitContainerControl's layout to a stream.
+</para>
             </summary>
             <param name="stream">
-		 
+		A stream where the layout should be stored.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.SplitContainerControl.SaveLayoutToXml(System.String)">
             <summary>
-                <para> </para>
+                <para>Saves the current SplitContainerControl's layout to the specific XML file.
+</para>
             </summary>
             <param name="xmlFile">
-		 
+		A String value that is the path to an XML file where the current SplitContainerControl's layout should be saved.
+
             </param>
 
 
@@ -13779,7 +13928,9 @@ For the XtraPivotGrid control, this option acts as the <see cref="F:DevExpress.U
         </member>
         <member name="M:DevExpress.XtraEditors.GroupCaptionCustomDrawEventArgs.DefaultDraw">
             <summary>
-                <para> </para>
+                <para>Performs default painting of this element.
+
+</para>
             </summary>
 
 
@@ -16300,10 +16451,12 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
         </member>
         <member name="M:DevExpress.LookAndFeel.Helpers.FormUserLookAndFeel.#ctor(System.Windows.Forms.Form)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the FormUserLookAndFeel class with the specified settings.
+</para>
             </summary>
             <param name="owner">
-		 
+		A Form that owns the newly created FormUserLookAndFeel object.
+
             </param>
 
 

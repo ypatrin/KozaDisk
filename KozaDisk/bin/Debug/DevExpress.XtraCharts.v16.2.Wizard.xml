@@ -69,7 +69,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartStructureChangingEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartStructureUpdating"/> event.
+</para>
             </summary>
 
         </member>
@@ -516,7 +517,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ColorEachSupportSeriesView3DBaseModel">
 
             <summary>
-                <para> </para>
+                <para>The <see cref="T:DevExpress.XtraCharts.SeriesView3DColorEachSupportBase"/> model.
+</para>
             </summary>
 
         </member>
@@ -536,7 +538,7 @@
                 <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SeriesView3DColorEachSupportBase.ColorEach"/> within the model.
 </para>
             </summary>
-            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for each point. 
+            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for all points. 
 
 </value>
 
@@ -607,7 +609,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.PieSpinAnimationBaseModel">
 
             <summary>
-                <para> </para>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieSpinAnimationBase"/> model.
+</para>
             </summary>
 
         </member>
@@ -627,6 +630,42 @@
 </para>
             </summary>
             <value>The count of spins.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.StackedAreaSeriesView"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.ColorEach">
+            <summary>
+                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.ColorEachSupportSeriesViewBaseModel.ColorEach"/> property.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.MarkerOptions">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.SeriesPointAnimation">
+            <summary>
+                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.PointSeriesViewBaseModel.SeriesPointAnimation"/> property.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -776,7 +815,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.XYSeriesDirectedAnimationBaseModel">
 
             <summary>
-                <para> </para>
+                <para>The <see cref="T:DevExpress.XtraCharts.XYSeriesDirectedAnimationBase"/> model.
+</para>
             </summary>
 
         </member>
@@ -1115,7 +1155,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartPaletteColorizerBaseModel">
 
             <summary>
-                <para> </para>
+                <para>The <see cref="T:DevExpress.XtraCharts.ChartPaletteColorizerBase"/> model.
+</para>
             </summary>
 
         </member>
@@ -1616,7 +1657,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventHandler">
 
             <summary>
-                <para> </para>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.PropertyDescriptorsCustomizing"/> event. 
+</para>
             </summary>
 
         </member>
@@ -1778,7 +1820,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.PropertyDescriptorsCustomizingEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.PropertyDescriptorsCustomizing"/> event.
+</para>
             </summary>
 
         </member>
@@ -2037,14 +2080,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
-</para>
-            </summary>
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyle3DModel">
 
             <summary>
@@ -2056,7 +2091,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.AddElementMenuOptions">
 
             <summary>
-                <para> </para>
+                <para>Options of the <b>Add Element</b> menu.
+</para>
             </summary>
 
         </member>
@@ -2373,7 +2409,8 @@
         </member>
         <member name="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartStructureUpdating">
             <summary>
-                <para>Occurs when a chart structure changing begins.
+                <para>Occurs when chart structure changes begin.
+
 </para>
             </summary>
 
@@ -2411,13 +2448,17 @@
         </member>
         <member name="M:DevExpress.XtraCharts.Designer.ChartDesigner.RegisterCustomModelType(System.Type,System.Type)">
             <summary>
-                <para> </para>
+                <para>Registers the model of the specified type for use in the Designer for a chart element with the specified type. 
+
+</para>
             </summary>
             <param name="chartElementType">
-		 
+		The type of a chart element.
+
             </param>
             <param name="customModelType">
-		 
+		The type of a model.
+
             </param>
 
 
@@ -3083,13 +3124,15 @@
         <member name="T:DevExpress.XtraCharts.Designer.LegendAlignment">
 
             <summary>
-                <para> </para>
+                <para>The alignment of a legend.
+</para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraCharts.Designer.LegendAlignment.HorizontalAlignment">
             <summary>
-                <para> </para>
+                <para>The horizontal alignment of a legend.
+</para>
             </summary>
             <returns> </returns>
 
@@ -3107,7 +3150,8 @@
         </member>
         <member name="F:DevExpress.XtraCharts.Designer.LegendAlignment.VerticalAlignment">
             <summary>
-                <para> </para>
+                <para>The vertical alignment of a legend.
+</para>
             </summary>
             <returns> </returns>
 
@@ -3683,9 +3727,11 @@
         </member>
         <member name="P:DevExpress.XtraCharts.Wizard.WizardPage.Header">
             <summary>
-                <para> </para>
+                <para>Returns the header text of the wizard page.
+</para>
             </summary>
-            <value> </value>
+            <value>The header text.
+</value>
 
 
         </member>
@@ -4675,7 +4721,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.CustomModelProvider">
 
             <summary>
-                <para> </para>
+                <para>A class that provides a model for a custom chart element.
+</para>
             </summary>
 
         </member>
@@ -4689,13 +4736,17 @@
         </member>
         <member name="M:DevExpress.XtraCharts.Designer.CustomModelProvider.RegisterCustomModelType(System.Type,System.Type)">
             <summary>
-                <para> </para>
+                <para>Registers the model of the specified type for use in the Designer for a chart element with the specified type.
+
+</para>
             </summary>
             <param name="chartElementType">
-		 
+		The type of a chart element.
+
             </param>
             <param name="customModelType">
-		 
+		The type of a model.
+
             </param>
 
 
@@ -4716,6 +4767,14 @@
             <value><b>true</b> if markers are connected using inverted steps; <b>false</b> - standard steps are use to connect markers.
 </value>
 
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RegressionLineModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RegressionLine"/> model.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.XYSeriesAnimationBaseModel">
@@ -5898,7 +5957,7 @@
                 <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RadarSeriesViewBase.ColorEach"/> within the model.
 </para>
             </summary>
-            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for each point. 
+            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for all points. 
 
 </value>
 
@@ -6710,7 +6769,7 @@
                 <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SeriesViewColorEachSupportBase.ColorEach"/> within the model.
 </para>
             </summary>
-            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for each point. 
+            <value><b>true</b> if each point in a series should have a different color; <b>false</b> if one color should be used for all points. 
 
 </value>
 
@@ -6727,7 +6786,7 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartModel">
 
             <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.ChartControl"/> model.
+                <para>The chart model.
 </para>
             </summary>
 
@@ -7135,10 +7194,11 @@
         </member>
         <member name="P:DevExpress.XtraCharts.Designer.ChartElementModel.Children">
             <summary>
-                <para>Returns the list of 
+                <para>Returns the list of children chart elements.
 </para>
             </summary>
-            <value> </value>
+            <value>The list of <see cref="T:DevExpress.XtraCharts.Designer.ChartElementModel"/> objects.
+</value>
 
 
         </member>
@@ -8822,12 +8882,15 @@
         </member>
         <member name="M:DevExpress.XtraCharts.Designer.SeriesCollectionModel.IsCompatibleViewType(DevExpress.XtraCharts.ViewType)">
             <summary>
-                <para> </para>
+                <para>Returns the value indicating whether the specified view type is compatible with view types of the currently stored series.
+</para>
             </summary>
             <param name="viewType">
-		 
+		The series view type that should be tested.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if the specified series view type is compatible with view types of the currently stored series; otherwise <b>false</b>.
+</returns>
 
 
         </member>
@@ -9077,48 +9140,6 @@
             <value>The string representation of the first series point value.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RegressionLineModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RegressionLine"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RectangularBorderModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RectangularBorder"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RectangleGradientFillOptionsModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RectangleGradientFillOptions"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.RectangleGradientFillOptionsModel.GradientMode">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RectangleGradientFillOptions.GradientMode"/> within the model.
-</para>
-            </summary>
-            <value>The linear gradient direction.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.RectangleFillStyleModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.RectangleFillStyle"/> model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.RectangleFillStyle3DModel">
@@ -9744,6 +9765,14 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.PolarDiagramModel">
 
             <summary>
@@ -9888,6 +9917,14 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.PieBurstAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RectangularBorderModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RectangularBorder"/> model.
 </para>
             </summary>
 
@@ -10500,6 +10537,24 @@
             </summary>
             <returns>The LegendCollectionModel textual representation.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.KnownDateModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.KnownDate"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.KnownDateModel.Date">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.KnownDate.Date"/> within the model.
+</para>
+            </summary>
+            <value>The date for the known date.
+</value>
 
 
         </member>
@@ -13269,7 +13324,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartElementSelectingEventHandler">
 
             <summary>
-                <para> </para>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartElementSelecting"/> event. 
+</para>
             </summary>
 
         </member>
@@ -13292,7 +13348,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartElementSelectingEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartElementSelecting"/> event.
+</para>
             </summary>
 
         </member>
@@ -13381,7 +13438,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartElementHighlightingEventHandler">
 
             <summary>
-                <para> </para>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartElementHighlighting"/> event. 
+</para>
             </summary>
 
         </member>
@@ -13404,7 +13462,8 @@
         <member name="T:DevExpress.XtraCharts.Designer.ChartElementHighlightingEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartElementHighlighting"/> event.
+</para>
             </summary>
 
         </member>
@@ -13501,7 +13560,8 @@
         </member>
         <member name="M:DevExpress.XtraCharts.Designer.ChartCollectionBaseModel.Swap(System.Int32,System.Int32)">
             <summary>
-                <para> </para>
+                <para>Swaps items with the specified indeces within the collection.
+</para>
             </summary>
             <param name="oldIndex">
 		 
@@ -14882,6 +14942,24 @@
                 <para>The <see cref="T:DevExpress.XtraCharts.AnnotationAnchorPoint"/> model.
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.RectangleGradientFillOptionsModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.RectangleGradientFillOptions"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.RectangleGradientFillOptionsModel.GradientMode">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.RectangleGradientFillOptions.GradientMode"/> within the model.
+</para>
+            </summary>
+            <value>The linear gradient direction.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraCharts.Wizard.WizardSeriesLabelsPage">
@@ -22515,40 +22593,12 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
             </summary>
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel">
+        <member name="T:DevExpress.XtraCharts.Designer.RectangleFillStyleModel">
 
             <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.StackedAreaSeriesView"/> model.
+                <para>The <see cref="T:DevExpress.XtraCharts.RectangleFillStyle"/> model.
 </para>
             </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.ColorEach">
-            <summary>
-                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.ColorEachSupportSeriesViewBaseModel.ColorEach"/> property.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.MarkerOptions">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.StackedAreaSeriesViewModel.SeriesPointAnimation">
-            <summary>
-                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.PointSeriesViewBaseModel.SeriesPointAnimation"/> property.
-</para>
-            </summary>
-            <value> 
-</value>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.SplineSeriesViewModel">
@@ -22575,24 +22625,6 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
                 <para>The <see cref="T:DevExpress.XtraCharts.StackedLineSeriesLabel"/> model.
 </para>
             </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.KnownDateModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.KnownDate"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.KnownDateModel.Date">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.KnownDate.Date"/> within the model.
-</para>
-            </summary>
-            <value>The date for the known date.
-</value>
-
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.StackedLine3DSeriesLabelModel">
@@ -22719,7 +22751,8 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
         <member name="T:DevExpress.XtraCharts.Designer.ChartStructureUpdatingEventHandler">
 
             <summary>
-                <para> </para>
+                <para>A method that will handle the <see cref="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartStructureUpdating"/> event. 
+</para>
             </summary>
 
         </member>

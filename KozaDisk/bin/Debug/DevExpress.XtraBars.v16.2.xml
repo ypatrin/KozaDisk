@@ -715,6 +715,42 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking.FloatForm">
+
+            <summary>
+                <para>Represents a floating form where a floating panel resides.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.FloatForm.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.FloatForm"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.FloatForm.DockManager">
+            <summary>
+                <para>Gets the dock manager which displays the current form.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> object which represents the dock manager that displays the current form.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.FloatForm.IsDisposing">
+            <summary>
+                <para>Gets whether the form is currently being disposed of.
+</para>
+            </summary>
+            <value><b>true</b> if the form is currently being disposed of; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.TabbedViewPageAppearance">
 
             <summary>
@@ -4269,9 +4305,11 @@ This option is in effect when a custom control is embedded into the gallery grou
         </member>
         <member name="P:DevExpress.XtraBars.Docking.DockingOptions.SnapMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not dock panels can stick to each other, parent forms or screen edges.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="SnapMode"/> enumerator value that specifies whether or not dock panels can stick to each other, parent forms or screen edges.
+</value>
 
 
         </member>
@@ -4282,38 +4320,6 @@ This option is in effect when a custom control is embedded into the gallery grou
             </summary>
             <value>A <see cref="VerticalTextOrientation"/> enumerator value that specifies the text direction, according to which tabbed panels' header strings are drawn.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking.DockVisibility">
-
-            <summary>
-                <para>Contains values that specify the visible state for dock panels.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.AutoHide">
-            <summary>
-                <para>The panel's auto-hide functionality is enabled.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.Hidden">
-            <summary>
-                <para>The panel is hidden.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.Visible">
-            <summary>
-                <para>The panel is visible.
-</para>
-            </summary>
 
 
         </member>
@@ -6509,178 +6515,6 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking.DockManagerAppearances">
-
-            <summary>
-                <para>Contains appearance settings for dock panels.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.#ctor(DevExpress.XtraBars.BarAndDockingController)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> class with the specified BarAndDockingController.
-</para>
-            </summary>
-            <param name="controller">
-		A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object representing the controller that will own the created collection. This value is assigned to the <see cref="P:DevExpress.XtraBars.BarManagerAppearances.Controller"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.ActiveTab">
-            <summary>
-                <para>Gets the appearance settings used to paint the active tab within a tab container.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active tab within a tab container.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.BeginUpdate">
-            <summary>
-                <para>Locks the DockManagerAppearances object by preventing visual updates of the object and its elements until the <b>EndUpdate</b> method is called.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Controller">
-            <summary>
-                <para>Gets the BarAndDockingController which the current collection belongs to.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object representing the BarAndDockingController that owns the current collection.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.Dispose">
-            <summary>
-                <para>Releases all the resources used by the current <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.EndUpdate">
-            <summary>
-                <para>Unlocks the DockManagerAppearances object after a call to the <b>BeginUpdate</b> method and causes an immediate visual update.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.FloatFormCaption">
-            <summary>
-                <para>Gets the appearance settings used to paint the float forms' captions.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the captions of float forms.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.FloatFormCaptionActive">
-            <summary>
-                <para>Gets the appearance settings used to paint the caption of an active float form.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the caption of an active float form.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HideContainer">
-            <summary>
-                <para>Gets the appearance settings used to paint the auto hide containers.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the auto hide containers.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HidePanelButton">
-            <summary>
-                <para>Gets the appearance settings used to paint the panel's button in the auto hide container.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the panel's button in the auto hide container.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HidePanelButtonActive">
-            <summary>
-                <para>Gets the appearance settings used to paint a panel's button in the auto hide container when it's hot-tracked or the panel it corresponds to is displayed.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active button in the auto hide container.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Panel">
-            <summary>
-                <para>Gets the appearance settings used to paint dock panels.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting dock panels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.PanelCaption">
-            <summary>
-                <para>Gets the appearance settings used to paint dock panels' captions.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the captions of all dock panels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.PanelCaptionActive">
-            <summary>
-                <para>Gets the appearance settings used to paint the active panel's caption.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active panel's caption.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.Reset">
-            <summary>
-                <para>Restores all the appearance settings and usage options to their default values and thus stops dock controls from using these appearance settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Tabs">
-            <summary>
-                <para>Gets the appearance settings used to paint a tab panel and its inactive tabs.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint a tab panel  and its inactive tab panels.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraBars.Docking.AutoHideContainer">
 
             <summary>
@@ -7226,9 +7060,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentPinItem.IsSelected">
             <summary>
-                <para> </para>
+                <para>Returns whether or not this RecentPinItem is currently selected (pressed).
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if this RecentPinItem is currently selected (pressed); otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -7930,17 +7766,21 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentItemBase.IsInContentPanel">
             <summary>
-                <para> </para>
+                <para>Returns whether or not this item belongs to a content panel of a parent Recent Item Control.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if this item belongs to a content panel of a parent Recent Item Control; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RecentItemBase.IsInMainPanel">
             <summary>
-                <para> </para>
+                <para>Returns whether or not this item belongs to a main panel of a parent Recent Item Control.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if this item belongs to a main panel of a parent Recent Item Control; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -9877,132 +9717,6 @@ See Navigation Frame and Tab Pane.
 		A <see cref="T:DevExpress.XtraRichEdit.PopupMenuShowingEventArgs"/> class instance containing event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit">
-
-            <summary>
-                <para>A repository item which stores settings specific to a <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RepositoryItemPopupGalleryEdit class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
-            <summary>
-                <para>Copies settings of the specified repository item.
-</para>
-            </summary>
-            <param name="item">
-		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object or its descendant that represents the source of the operation.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.EditorTypeName">
-            <summary>
-                <para>Gets the class name of an editor corresponding to the current repository item.
-</para>
-            </summary>
-            <value>The string identifying the class name of a corresponding editor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.EditValueType">
-            <summary>
-                <para>Gets of sets whether the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor's edit value is represented by the string of character-separated values (the default behavior) or by the System.Collections.Generic.List&lt;object&gt; object.
-</para>
-            </summary>
-            <value>An <b>EditValueTypeCollection</b> enumeration value that specifies the type in which the edit value is represented.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.Gallery">
-            <summary>
-                <para>Gets the gallery used in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
-</para>
-            </summary>
-            <value>The gallery used in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.GetDisplayText(DevExpress.Utils.FormatInfo,System.Object)">
-            <summary>
-                <para>Returns the text representation of the specified value, formatted according to the specified settings.
-</para>
-            </summary>
-            <param name="format">
-		A <see cref="T:DevExpress.Utils.FormatInfo"/> object that specifies the format settings.
-
-
-            </param>
-            <param name="editValue">
-		A value to be formatted.
-
-            </param>
-            <returns>A string that specifies the value's formatted text representation.
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.QueryDisplayText">
-            <summary>
-                <para>Enables you to provide custom display text for the editor.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.SeparatorChar">
-            <summary>
-                <para>Gets or sets the delimiter used to separate items selected in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor. This delimiter separates item values in the editor's value and item captions in the editor's edit box.
-</para>
-            </summary>
-            <value>The delimiter used to separate items selected in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowButtons">
-            <summary>
-                <para>Gets or sets whether the OK and Cancel buttons are displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> popup window.
-</para>
-            </summary>
-            <value><b>true</b>, if the OK and Cancel buttons are displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowPopupCloseButton">
-            <summary>
-                <para>Gets or sets whether the Cancel button is displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
-</para>
-            </summary>
-            <value><b>true</b>, if the Cancel button is displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowSizeGrip">
-            <summary>
-                <para>Gets or sets whether the size grip is displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
-</para>
-            </summary>
-            <value><b>true</b>, if the size grip is displayed; otherwise, <b>false</b>.
-</value>
 
 
         </member>
@@ -13055,11 +12769,11 @@ See Navigation Frame and Tab Pane.
 
             </param>
             <param name="useParentForm">
-		<b>true</b> to search for the DocumentManager component not only among the target control's children, but on its parent form as well; otherwise, <b>false</b>.
+		<b>true</b>, to search for the DocumentManager component not only among the target control's children, but on its parent form as well; otherwise, <b>false</b>.
 
             </param>
             <param name="useChildControl">
-		<b>true</b> to search for the DocumentManager component among all children owned by the target control; otherwise, <b>false</b>.
+		<b>true</b>, to search for the DocumentManager component among all children owned by the target control; otherwise, <b>false</b>.
 
             </param>
             <returns>A retrieved DocumentManager component.
@@ -13165,9 +12879,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.RecreateMdiChildHandle">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -13230,9 +12946,11 @@ See Navigation Frame and Tab Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.DocumentManager.SnapMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not Documents owned by this DocumentManager can stick to each other, parent forms or screen edges.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="SnapMode"/> enumerator value that specifies whether or not Documents can stick to each other, parent forms or screen edges.
+</value>
 
 
         </member>
@@ -13992,10 +13710,10 @@ Supports animation effects when navigating through pages.  See Navigation Pane.
         </member>
         <member name="P:DevExpress.XtraBars.Navigation.NavigationPane.AllowHtmlDraw">
             <summary>
-                <para>Gets or sets whether every page within this NavigationPane can format its content using HTML tags.
+                <para>Gets or sets whether or not page tab header captions recognize HTML tags.
 </para>
             </summary>
-            <value><b>true</b>, if every page within this NavigationPane can format its content using HTML tags; otherwise, <b>false</b>.
+            <value><b>true</b> if page tab header captions recognize HTML tags; otherwise, <b>false</b>.
 </value>
 
 
@@ -20389,9 +20107,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Navigation.OfficeNavigationBar.CreateItemInstance">
             <summary>
-                <para> </para>
+                <para>Creates a new <see cref="T:DevExpress.XtraBars.Navigation.NavigationBarItem"/> that belongs to this OfficeNavigationBar.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="NavigationBarItem"/> object that belongs to this OfficeNavigationBar.
+</returns>
 
 
         </member>
@@ -22616,6 +22336,14 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupProperties.HeaderAutoFill">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupProperties.HeaderButtons">
             <summary>
                 <para>Gets or sets which tab buttons can be displayed within all <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/>s' tab header panels.
@@ -22664,6 +22392,14 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
             </summary>
             <value>The <b>integer</b> value that is the maximum number of documents in document groups.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupProperties.MultiLine">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -24589,7 +24325,7 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
                 <para>Gets or sets whether Documents within this WidgetView are resized using a smooth animation effect.
 </para>
             </summary>
-            <value>A DefaultBoolean enumerator value that specifies whether Documents within this WidgetView are resized using a smooth animation effect.
+            <value><b>True</b> if Documents within this WidgetView are resized using a smooth animation effect; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
 </value>
 
 
@@ -25956,9 +25692,11 @@ that was automatically created when the <see cref="P:DevExpress.XtraBars.Navigat
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonPageCategory.IsDefaultCategory">
             <summary>
-                <para> </para>
+                <para>Returns whether or not this RibbonPageCategory is a default category for its parent Ribbon.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if this RibbonPageCategory is a default category for its parent Ribbon; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -29340,9 +29078,11 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.GetAllowHoverAnimation">
             <summary>
-                <para> </para>
+                <para>Returns whether animation on hovering gallery items is actually enabled.
+</para>
             </summary>
-            <returns> </returns>
+            <returns><b>true</b>, if  animation on hovering gallery items is actually enabled; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
@@ -31976,6 +31716,14 @@ The width of items is specified by the Width attribute of the <see cref="P:DevEx
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.ViewInfo.RibbonHitInfo.InFullScreenButton">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Ribbon.ViewInfo.RibbonHitInfo.InGallery">
             <summary>
                 <para>Gets whether the test point is within a Gallery.
@@ -34233,17 +33981,21 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.Image">
             <summary>
-                <para> </para>
+                <para>Gets or sets the custom background image for this RibbonControl.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Image"/> object that is the custom background image for this RibbonControl.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.ImageAlignment">
             <summary>
-                <para> </para>
+                <para>Gets or sets the alignment of a background Ribbon image.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="HorzAlignment"/> enumerator value that specifies the alignment of a background Ribbon image.
+</value>
 
 
         </member>
@@ -34511,6 +34263,14 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <value>An RibbonCustomizationFormOptions object that contains settings related to the current RibbonControl's Customization Form.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsMenuMinWidth">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -36713,6 +36473,132 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit">
+
+            <summary>
+                <para>A repository item which stores settings specific to a <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RepositoryItemPopupGalleryEdit class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
+            <summary>
+                <para>Copies settings of the specified repository item.
+</para>
+            </summary>
+            <param name="item">
+		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object or its descendant that represents the source of the operation.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.EditorTypeName">
+            <summary>
+                <para>Gets the class name of an editor corresponding to the current repository item.
+</para>
+            </summary>
+            <value>The string identifying the class name of a corresponding editor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.EditValueType">
+            <summary>
+                <para>Gets of sets whether the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor's edit value is represented by the string of character-separated values (the default behavior) or by the System.Collections.Generic.List&lt;object&gt; object.
+</para>
+            </summary>
+            <value>An <b>EditValueTypeCollection</b> enumeration value that specifies the type in which the edit value is represented.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.Gallery">
+            <summary>
+                <para>Gets the gallery used in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
+</para>
+            </summary>
+            <value>The gallery used in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.GetDisplayText(DevExpress.Utils.FormatInfo,System.Object)">
+            <summary>
+                <para>Returns the text representation of the specified value, formatted according to the specified settings.
+</para>
+            </summary>
+            <param name="format">
+		A <see cref="T:DevExpress.Utils.FormatInfo"/> object that specifies the format settings.
+
+
+            </param>
+            <param name="editValue">
+		A value to be formatted.
+
+            </param>
+            <returns>A string that specifies the value's formatted text representation.
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.QueryDisplayText">
+            <summary>
+                <para>Enables you to provide custom display text for the editor.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.SeparatorChar">
+            <summary>
+                <para>Gets or sets the delimiter used to separate items selected in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor. This delimiter separates item values in the editor's value and item captions in the editor's edit box.
+</para>
+            </summary>
+            <value>The delimiter used to separate items selected in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> editor.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowButtons">
+            <summary>
+                <para>Gets or sets whether the OK and Cancel buttons are displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> popup window.
+</para>
+            </summary>
+            <value><b>true</b>, if the OK and Cancel buttons are displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowPopupCloseButton">
+            <summary>
+                <para>Gets or sets whether the Cancel button is displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
+</para>
+            </summary>
+            <value><b>true</b>, if the Cancel button is displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit.ShowSizeGrip">
+            <summary>
+                <para>Gets or sets whether the size grip is displayed in the <see cref="T:DevExpress.XtraEditors.PopupGalleryEdit"/> control.
+</para>
+            </summary>
+            <value><b>true</b>, if the size grip is displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.PopupGalleryEdit">
 
             <summary>
@@ -36815,6 +36701,189 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Navigation.NavigationPageBase">
+
+            <summary>
+                <para>Provides base <see cref="T:DevExpress.XtraBars.Navigation.NavigationPage"/> and <see cref="T:DevExpress.XtraBars.Navigation.TabNavigationPage"/> properties.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Navigation.NavigationPageBase.#ctor">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Anchor">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.BackgroundPadding">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.BorderStyle">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Caption">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.ControlName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.ControlTypeName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Dock">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Enabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Image">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.ImageUri">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.IsControlLoaded">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.IsDeferredControlLoad">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Location">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Owner">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.PageText">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.PageVisible">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Properties">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Size">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.TabIndex">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.TabStop">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Navigation.NavigationPageBase.Visible">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -37609,9 +37678,11 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction.SelectedCommand">
             <summary>
-                <para> </para>
+                <para>Gets or sets a currently focused FlyoutAction button.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="FlyoutCommand"/> object that is a currently focused FlyoutAction button.
+</value>
 
 
         </member>
@@ -37635,7 +37706,7 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
         </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.WindowsUI.IFlyoutProperties.AllowHtmlDraw">
             <summary>
-                <para>Gets or sets whether captions and descriptions for all Flyouts within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> can be formatted via HTML tags.
+                <para>Gets or sets whether captions and descriptions for all Flyouts within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> can be formatted via HTML Text Formatting.
 </para>
             </summary>
             <value><b>true</b>, if captions and descriptions for all Flyouts within the <see cref="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView"/> can be formatted via HTML tags; otherwise, <b>false</b>.
@@ -41216,6 +41287,16 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking.SizingEventArgs.SidePanel">
+            <summary>
+                <para>Returns the panel that resizes together with the panel dragged by an end-user.
+</para>
+            </summary>
+            <value>A <see cref="DockPanel"/> object that is the panel that resizes together with the panel dragged by an end-user.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.Docking2010.Views.WindowsUI.ITileContainerProperties">
 
             <summary>
@@ -42937,6 +43018,24 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.BarBaseButtonItemLink">
+
+            <summary>
+                <para>Represents a link to the <see cref="T:DevExpress.XtraBars.BarBaseButtonItem"/> item.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarBaseButtonItemLink.Item">
+            <summary>
+                <para>Gets the bar item which the current link corresponds to. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.BarBaseButtonItem"/> object representing the item which the current link corresponds to.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraBars.BarBaseButtonItem">
 
             <summary>
@@ -43044,6 +43143,210 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
 		A <see cref="T:DevExpress.XtraBars.BarItemLink"/> object that will be passed to the <see cref="E:DevExpress.XtraBars.BarBaseButtonItem.DownChanged"/> event.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Docking.DockVisibility">
+
+            <summary>
+                <para>Contains values that specify the visible state for dock panels.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.AutoHide">
+            <summary>
+                <para>The panel's auto-hide functionality is enabled.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.Hidden">
+            <summary>
+                <para>The panel is hidden.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.DockVisibility.Visible">
+            <summary>
+                <para>The panel is visible.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Docking.DockManagerAppearances">
+
+            <summary>
+                <para>Contains appearance settings for dock panels.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.#ctor(DevExpress.XtraBars.BarAndDockingController)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> class with the specified BarAndDockingController.
+</para>
+            </summary>
+            <param name="controller">
+		A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object representing the controller that will own the created collection. This value is assigned to the <see cref="P:DevExpress.XtraBars.BarManagerAppearances.Controller"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.ActiveTab">
+            <summary>
+                <para>Gets the appearance settings used to paint the active tab within a tab container.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active tab within a tab container.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.BeginUpdate">
+            <summary>
+                <para>Locks the DockManagerAppearances object by preventing visual updates of the object and its elements until the <b>EndUpdate</b> method is called.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Controller">
+            <summary>
+                <para>Gets the BarAndDockingController which the current collection belongs to.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraBars.BarAndDockingController"/> object representing the BarAndDockingController that owns the current collection.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.Dispose">
+            <summary>
+                <para>Releases all the resources used by the current <see cref="T:DevExpress.XtraBars.Docking.DockManagerAppearances"/> object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.EndUpdate">
+            <summary>
+                <para>Unlocks the DockManagerAppearances object after a call to the <b>BeginUpdate</b> method and causes an immediate visual update.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.FloatFormCaption">
+            <summary>
+                <para>Gets the appearance settings used to paint the float forms' captions.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the captions of float forms.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.FloatFormCaptionActive">
+            <summary>
+                <para>Gets the appearance settings used to paint the caption of an active float form.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the caption of an active float form.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HideContainer">
+            <summary>
+                <para>Gets the appearance settings used to paint the auto hide containers.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the auto hide containers.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HidePanelButton">
+            <summary>
+                <para>Gets the appearance settings used to paint the panel's button in the auto hide container.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the panel's button in the auto hide container.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.HidePanelButtonActive">
+            <summary>
+                <para>Gets the appearance settings used to paint a panel's button in the auto hide container when it's hot-tracked or the panel it corresponds to is displayed.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active button in the auto hide container.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Panel">
+            <summary>
+                <para>Gets the appearance settings used to paint dock panels.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting dock panels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.PanelCaption">
+            <summary>
+                <para>Gets the appearance settings used to paint dock panels' captions.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the captions of all dock panels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.PanelCaptionActive">
+            <summary>
+                <para>Gets the appearance settings used to paint the active panel's caption.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object providing appearance settings for painting the active panel's caption.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Docking.DockManagerAppearances.Reset">
+            <summary>
+                <para>Restores all the appearance settings and usage options to their default values and thus stops dock controls from using these appearance settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking.DockManagerAppearances.Tabs">
+            <summary>
+                <para>Gets the appearance settings used to paint a tab panel and its inactive tabs.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint a tab panel  and its inactive tab panels.
+</value>
 
 
         </member>
@@ -43167,42 +43470,6 @@ For <see cref="T:DevExpress.XtraBars.Ribbon.ApplicationMenu"/> objects, the defa
             </summary>
             <value>An integer specifying the control's position within its parent control's collection.
 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.Docking.FloatForm">
-
-            <summary>
-                <para>Represents a floating form where a floating panel resides.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Docking.FloatForm.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Docking.FloatForm"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.FloatForm.DockManager">
-            <summary>
-                <para>Gets the dock manager which displays the current form.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.Docking.DockManager"/> object which represents the dock manager that displays the current form.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Docking.FloatForm.IsDisposing">
-            <summary>
-                <para>Gets whether the form is currently being disposed of.
-</para>
-            </summary>
-            <value><b>true</b> if the form is currently being disposed of; otherwise, <b>false</b>.
 </value>
 
 
@@ -43443,7 +43710,8 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="F:DevExpress.XtraBars.AnimationType.Default">
             <summary>
-                <para> </para>
+                <para>Equivalent to the <b>System</b> value.
+</para>
             </summary>
 
 
@@ -43643,9 +43911,11 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="P:DevExpress.XtraBars.ShortcutItemClickEventArgs.Accelerator">
             <summary>
-                <para> </para>
+                <para>Gets the hotkey combination an end-user has pressed.
+</para>
             </summary>
-            <value> </value>
+            <value>A Keys object that specifies the hotkey combination an end-user has pressed.
+</value>
 
 
         </member>
@@ -43896,7 +44166,7 @@ It's not possible to make a dock panel fill the form (user control).
                 <para>Gets or sets whether a bar can be collapsed by double-clicking on the bar's drag widget.
 </para>
             </summary>
-            <value><b>true</b> if a bar can be collapsed by double-clicking on the bar's drag widget; otherwise, <b>false</b>.
+            <value><b>true</b>, if a bar can be collapsed by double-clicking on the bar's drag widget; otherwise, <b>false</b>.
 </value>
 
 
@@ -44000,7 +44270,7 @@ It's not possible to make a dock panel fill the form (user control).
                 <para>Gets or sets whether the bar can be dragged using the mouse.
 </para>
             </summary>
-            <value><b>true</b> if the bar can be dragged; otherwise, <b>false</b>.
+            <value><b>true</b>, if the bar can be dragged; otherwise, <b>false</b>.
 </value>
 
 
@@ -44017,10 +44287,11 @@ It's not possible to make a dock panel fill the form (user control).
         </member>
         <member name="P:DevExpress.XtraBars.BarOptions.ExpandAnimationDuration">
             <summary>
-                <para>Gets or sets the duration of expand animation for all drop-down menus within this bar.
+                <para>Gets or sets the duration of the collapse/expand animation on double-clicking on the bar's drag widget.
+
 </para>
             </summary>
-            <value>An Int32 value that is the expand animation duration.
+            <value>An Int32 value that is the collapse/expand animation duration.
 </value>
 
 
@@ -45812,6 +46083,16 @@ If such an item is not found in the parent form's bar/RibbonControl, the child f
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.BarAndDockingControllerLookAndFeel.ColorScheme">
+            <summary>
+                <para>Gets or sets the color scheme of a Ribbon that utilizes this BarAndDockingControllerLookAndFeel.
+</para>
+            </summary>
+            <value>A <see cref="RibbonControlColorScheme"/> enumerator value that specifies the color scheme of a Ribbon that utilizes this BarAndDockingControllerLookAndFeel.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.BarAndDockingControllerLookAndFeel.FormTouchScaleFactor">
             <summary>
                 <para>Gets or sets the scale factor used to calculate the size and distance between specific control elements when touch UI mode is enabled.
@@ -45829,6 +46110,17 @@ If such an item is not found in the parent form's bar/RibbonControl, the child f
             </summary>
             <value>A value that specifies whether the touch UI mode is enabled for the controls managed by the current BarAndDockingController.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.BarAndDockingControllerLookAndFeel.GetColorSchemeName(DevExpress.XtraBars.Ribbon.RibbonControlColorScheme)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="colorScheme">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -48838,6 +49130,14 @@ Return value: Visible
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.ActualHeaderAutoFill">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.ActualHeaderButtonsShowMode">
             <summary>
                 <para>Gets the current conditions that specify when tab buttons within a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/>'s tab header panel are displayed.
@@ -48880,6 +49180,14 @@ Return value: Visible
             </summary>
             <value>An integer value that is the actual maximum number of documents in the current document group.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.ActualMultiLine">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -48989,6 +49297,14 @@ Return value: Visible
 
 
         </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.HeaderAutoFill">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.HeaderButtons">
             <summary>
                 <para>Gets or sets which tab buttons can be displayed within the current <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup"/>'s tab header panel.
@@ -49036,6 +49352,14 @@ Return value: Visible
             </summary>
             <value>The <b>nullable</b> value that is the maximum number of documents in the current document group.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Docking2010.Views.Tabbed.IDocumentGroupDefaultProperties.MultiLine">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -49916,24 +50240,6 @@ Return value: Visible
                 <para>Allows a <see cref="T:DevExpress.XtraBars.Bar"/> control to be docked to the top of the owner control.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraBars.BarBaseButtonItemLink">
-
-            <summary>
-                <para>Represents a link to the <see cref="T:DevExpress.XtraBars.BarBaseButtonItem"/> item.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraBars.BarBaseButtonItemLink.Item">
-            <summary>
-                <para>Gets the bar item which the current link corresponds to. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraBars.BarBaseButtonItem"/> object representing the item which the current link corresponds to.
-</value>
 
 
         </member>
@@ -51303,14 +51609,14 @@ Return value: Visible
         </member>
         <member name="P:DevExpress.XtraBars.Bars.Item(System.String)">
             <summary>
-                <para>Gets a <see cref="T:DevExpress.XtraBars.Bar"/> with a specific <b>Name</b> property.
+                <para>Gets a <see cref="T:DevExpress.XtraBars.Bar"/> whose <see cref="P:DevExpress.XtraBars.Bar.BarName"/> property matches the specified value.
 </para>
             </summary>
             <param name="barName">
-		The name of the <see cref="T:DevExpress.XtraBars.Bar"/> to access.
+		The string that matches the <see cref="P:DevExpress.XtraBars.Bar.BarName"/> value of a target bar.
 
             </param>
-            <value>A <see cref="T:DevExpress.XtraBars.Bar"/> class instance or <b>null</b> if a <see cref="T:DevExpress.XtraBars.Bar"/> class instance is not found.
+            <value>A <see cref="T:DevExpress.XtraBars.Bar"/> object, or <b>null</b> if a target Bar is not found.
 </value>
 
 
@@ -51517,6 +51823,14 @@ Return value: Visible
             </summary>
             <value><b>true</b>, if the Customization Window can be opened by the end-user; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.BarManager.AllowDisposeItems">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -51929,9 +52243,11 @@ Return value: Visible
         </member>
         <member name="M:DevExpress.XtraBars.BarManager.GetBarItemImages">
             <summary>
-                <para> </para>
+                <para>Returns all icons of bar items owned by this BarManager.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A <see cref="ImageCollection"/> object containing icons of bar items owned by this BarManager.
+</returns>
 
 
         </member>
@@ -52227,7 +52543,8 @@ This option is in effect if you subscribed to the parent BarManager's <see cref=
         </member>
         <member name="M:DevExpress.XtraBars.BarManager.LayoutChanged">
             <summary>
-                <para> </para>
+                <para>Forces the BarManager to repaint itself after you have made certain modifications to its layout.
+</para>
             </summary>
 
 
@@ -59065,10 +59382,11 @@ This option is only in effect when the link is positioned within a status bar sp
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.BackstageViewControl.Office2013StyleOptions">
             <summary>
-                <para>Gets or sets the BackstageViewControl content offset, applied in Office 2013 style.
+                <para>Provides access to the settings applied in Office 2013 style, such as the BackstageViewControl content offset and animation on showing/hiding the control.
+
 </para>
             </summary>
-            <value>A BackstageViewOffice2013StyleOptions object that contains offset settings applied in Office 2013 style.
+            <value>A BackstageViewOffice2013StyleOptions object that contains settings applied in Office 2013 style.
 
 </value>
 
@@ -59327,9 +59645,11 @@ This option is only in effect when the link is positioned within a status bar sp
         </member>
         <member name="P:DevExpress.XtraBars.Ribbon.RibbonMiniToolbar.RowCount">
             <summary>
-                <para> </para>
+                <para>Gets or sets the number of item link rows for this RibbonMiniToolbar.
+</para>
             </summary>
-            <value> </value>
+            <value>An Int32 value that is the number of item link rows for this RibbonMiniToolbar.
+</value>
 
 
         </member>

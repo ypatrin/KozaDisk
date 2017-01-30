@@ -1051,7 +1051,7 @@
         </member>
         <member name="M:DevExpress.XtraCharts.ChartControl.ExportToXlsx(System.String)">
             <summary>
-                <para>Creates an XLS file with a chart inserted as an image. 
+                <para>Creates an XLSX file with a chart inserted as an image. 
 
 </para>
             </summary>

@@ -12400,6 +12400,28 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraCharts.XYDiagram2D.ShowCrosshair(System.Object,System.Object,DevExpress.XtraCharts.Axis2D,DevExpress.XtraCharts.Axis2D,DevExpress.XtraCharts.XYDiagramPaneBase)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="argument">
+		 
+            </param>
+            <param name="value">
+		 
+            </param>
+            <param name="axisX">
+		 
+            </param>
+            <param name="axisY">
+		 
+            </param>
+            <param name="pane">
+		 
+            </param>
+
+
+        </member>
         <member name="P:DevExpress.XtraCharts.XYDiagram2D.ZoomingOptions">
             <summary>
                 <para>Returns zooming options for the XY-Diagram.
@@ -40295,7 +40317,8 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
         <member name="T:DevExpress.XtraCharts.ChartAppearance">
 
             <summary>
-                <para> </para>
+                <para>The appearance parameters of a chart.
+</para>
             </summary>
 
         </member>
@@ -40377,7 +40400,8 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
         <member name="T:DevExpress.XtraCharts.CrosshairValueSelectionMode">
 
             <summary>
-                <para> </para>
+                <para>Lists identifiers that specify the behavior of the selection of points shown in the crosshair label.
+</para>
             </summary>
 
         </member>
@@ -41220,7 +41244,9 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
         <member name="T:DevExpress.XtraCharts.TextOptions">
 
             <summary>
-                <para> </para>
+                <para>The options for the text of the chart element.
+
+</para>
             </summary>
 
         </member>
@@ -41453,7 +41479,7 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
 
 </para>
             </summary>
-            <value><b>true</b> if hiding axis labels is allowed; otherwise, <b>false</b>.
+            <value><b>true</b>, if hiding axis labels is allowed; otherwise, <b>false</b>.
 
 </value>
 
@@ -41467,7 +41493,6 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
 </para>
             </summary>
             <value><b>true</b> if rotating axis labels is allowed; otherwise, <b>false</b>.
-
 </value>
 
 

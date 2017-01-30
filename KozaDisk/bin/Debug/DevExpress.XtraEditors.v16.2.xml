@@ -1974,6 +1974,13 @@ The object specifies dates that lie in the range between the DateRange.StartDate
 
 
         </member>
+        <member name="E:DevExpress.XtraEditors.Controls.CalendarControlBase.CustomWeekDayAbbreviation">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraEditors.Controls.CalendarControlBase.CustomWeekNumber">
             <summary>
                 <para>Allows week numbers to be customized. 
@@ -2847,10 +2854,10 @@ The object specifies dates that lie in the range between the DateRange.StartDate
         </member>
         <member name="M:DevExpress.XtraEditors.ColorPickEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupColorPickEditForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.PopupColorPickEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -5301,9 +5308,11 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRatingControl.FirstItemValue">
             <summary>
-                <para> </para>
+                <para>Gets or sets the value assigned to the first <see cref="T:DevExpress.XtraEditors.RatingControl"/> item.
+</para>
             </summary>
-            <value> </value>
+            <value>A Decimal value assigned to the first <see cref="T:DevExpress.XtraEditors.RatingControl"/> item.
+</value>
 
 
         </member>
@@ -5480,9 +5489,11 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRatingControl.ValueInterval">
             <summary>
-                <para> </para>
+                <para>Gets or sets the difference in two neighboring rating items' values.
+</para>
             </summary>
-            <value> </value>
+            <value>A Decimal value that is the difference in two neighboring rating items' values.
+</value>
 
 
         </member>
@@ -5866,10 +5877,10 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="M:DevExpress.XtraEditors.TimeSpanEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>TimeSpanEditDropDownForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.TimeSpanEditDropDownForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -8999,27 +9010,29 @@ In bound mode, this method populates the item collection before returning it.
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.HighlightedItemStyle">
             <summary>
-                <para>Specifies how selected items are highlighted within the control's popup window.
+                <para>Gets or sets the paint mode for the selected and hot-tracked items in the CheckedListBoxControl embedded in the dropdown window. 
+
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.HighlightStyle"/> value that specifies how selected items are highlighted.
+            <value>A <see cref="T:DevExpress.XtraEditors.HighlightStyle"/> value that specifies the paint mode for the selected and hot-tracked items.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.HotTrackItems">
             <summary>
-                <para>Gets or sets whether the items are hot-tracked when the mouse pointer moves over them.
+                <para>Gets or sets whether item hot-tracking is enabled in the CheckedListBoxControl embedded in the dropdown window.
 </para>
             </summary>
-            <value><b>true</b> if the items are hot-tracked; otherwise, <b>false</b>.
+            <value><b>true</b>, if the item hot-tracking is enabled; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.HotTrackSelectMode">
             <summary>
-                <para>Gets or sets how items are selected when item hot-tracking is enabled.
+                <para>Gets or sets how items in the embedded CheckedListBoxControl are selected when item hot-tracking is enabled.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraEditors.HotTrackSelectMode"/> value that specifies how items are selected.
@@ -9281,7 +9294,8 @@ In bound mode, this method populates the item collection before returning it.
         </member>
         <member name="E:DevExpress.XtraEditors.CheckedComboBoxEdit.DrawListBoxItem">
             <summary>
-                <para> </para>
+                <para>Occurs whenever this CheckedComboBoxEdit has to display a child list box item. Allows you to manually paint these items.
+</para>
             </summary>
 
 
@@ -9433,20 +9447,21 @@ In bound mode, this method populates the item collection before returning it.
         </member>
         <member name="M:DevExpress.XtraEditors.CheckedComboBoxEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
+
 </para>
             </summary>
-            <returns>A <b>CheckedPopupContainerForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.CheckedPopupContainerForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.CheckedComboBoxEdit.InternalListBox">
             <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+                <para>Returns a <see cref="T:DevExpress.XtraEditors.CheckedListBoxControl"/> that displays check items in the control's dropdown.
 </para>
             </summary>
-            <value> 
+            <value>A CheckedListBoxControl embedded in the control's dropdown.
 </value>
 
 
@@ -11827,10 +11842,10 @@ In a <see cref="T:DevExpress.XtraEditors.BaseListBoxControl"/> control's descend
         </member>
         <member name="M:DevExpress.XtraEditors.BreadCrumbEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>BreadCrumbPopupForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.BreadCrumbPopupForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -14374,6 +14389,62 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 		A <see cref="T:DevExpress.XtraEditors.TileItemDragEventArgs"/> object that contains data for the event.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.XtraInputBox">
+
+            <summary>
+                <para>A skinable dialog with one editor (a <see cref="T:DevExpress.XtraEditors.TextEdit"/> by default) and <i>OK</i>/<i>Cancel</i> buttons to accept or reject the current value of this editor.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(System.String,System.String,System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="prompt">
+		 
+            </param>
+            <param name="title">
+		 
+            </param>
+            <param name="defaultResponse">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="owner">
+		 
+            </param>
+            <param name="prompt">
+		 
+            </param>
+            <param name="title">
+		 
+            </param>
+            <param name="defaultResponse">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.XtraInputBox.Show(DevExpress.XtraEditors.XtraInputBoxArgs)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="args">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -17190,49 +17261,63 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
         </member>
         <member name="M:DevExpress.XtraEditors.NavigatorButtonBase.BindCommand(System.Linq.Expressions.Expression`1,System.Object,System.Func`1)">
             <summary>
-                <para> </para>
+                <para>Uses the command selector to find an appropriate parameterized command in the source and bind it to this navigator button.
+</para>
             </summary>
             <param name="commandSelector">
-		 
+		An Expression that selects the appropriate command from the <i>source</i> object. 
+
             </param>
             <param name="source">
-		 
+		An Object (typically, a ViewModel) where the <i>commandSelector</i> looks for the required command. 
+
             </param>
             <param name="queryCommandParameter">
-		 
+		A Func delegate that passes the specific Object to the command as a parameter. 
+
             </param>
-            <returns> </returns>
+            <returns>An IDisposable object. Disposing of this object unbinds the command from this navigator button. 
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.NavigatorButtonBase.BindCommand(System.Object,System.Func`1)">
             <summary>
-                <para> </para>
+                <para>Binds the specific parameterized command to this navigator button.
+</para>
             </summary>
             <param name="command">
-		 
+		An Object that is the command to be bound to this navigator button. 
+
             </param>
             <param name="queryCommandParameter">
-		 
+		A Func delegate that passes the specific Object to the <i>command</i> as a parameter. 
+
             </param>
-            <returns> </returns>
+            <returns>An IDisposable object. Disposing of this object unbinds the <i>command</i> from this navigator button. 
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.NavigatorButtonBase.BindCommand``1(System.Linq.Expressions.Expression{System.Action`1},System.Object,System.Func{``0})">
             <summary>
-                <para> </para>
+                <para>Uses the command selector to find an appropriate parameterized command of the target type in the source and bind it to this navigator button.
+</para>
             </summary>
             <param name="commandSelector">
-		 
+		An Expression that selects the appropriate command from the <i>source</i> object. 
+
             </param>
             <param name="source">
-		 
+		An Object (typically, a ViewModel) where the commandSelector looks for the required command. 
+
             </param>
             <param name="queryCommandParameter">
-		 
+		A Func delegate that passes the specific Object to the command as a parameter. 
+
             </param>
-            <returns> </returns>
+            <returns>An IDisposable object. Disposing of this object unbinds the command from this navigator button. 
+</returns>
 
 
         </member>
@@ -17248,7 +17333,8 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
         </member>
         <member name="E:DevExpress.XtraEditors.NavigatorButtonBase.Click">
             <summary>
-                <para> </para>
+                <para>Occurs when a user clicks this navigator button.
+</para>
             </summary>
 
 
@@ -18944,7 +19030,7 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="P:DevExpress.XtraEditors.LabelControl.AutoSizeInLayoutControl">
             <summary>
-                <para>Gets or sets whether the editor's width is changed to display the editor's content in its entirety. This property is in effect only when the editor resides within a Layout Control. 
+                <para>Gets or sets whether the editor's width is changed to display the editor's content in its entirety. This property is in effect only when the editor resides within a Layout Hierarchical Structure. 
 </para>
             </summary>
             <value><b>true</b>, if the editor's width is changed to display the editor's content in its entirety; otherwise, <b>false</b>.
@@ -19568,6 +19654,14 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.UseCtrlScroll">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEditBase.ValueMember">
             <summary>
                 <para>Gets or sets the field name whose values identify dropdown rows.
@@ -19742,7 +19836,7 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AllowAnimationOnValueChanged">
             <summary>
-                <para>Gets or sets whether the sparkline reflects changes to the chart values using animation.
+                <para>Gets or sets whether the sparkline reflects changes to the chart values using animation. This property is not in effect for in-place editors.
 
 </para>
             </summary>
@@ -19911,6 +20005,107 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.XtraInputBoxArgs">
+
+            <summary>
+                <para>Exposes properties that customize a related <see cref="T:DevExpress.XtraEditors.XtraInputBox"/> dialog.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.XtraInputBoxArgs.#ctor(System.Windows.Forms.IWin32Window,System.String,System.String,System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="owner">
+		 
+            </param>
+            <param name="prompt">
+		 
+            </param>
+            <param name="title">
+		 
+            </param>
+            <param name="defaultResponse">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.XtraInputBoxArgs.#ctor(DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,System.String,System.String,System.String,System.Windows.Forms.DialogResult[],System.Int32,DevExpress.Utils.DefaultBoolean,DevExpress.XtraEditors.MessageBeepSound)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="lookAndFeel">
+		 
+            </param>
+            <param name="owner">
+		 
+            </param>
+            <param name="prompt">
+		 
+            </param>
+            <param name="title">
+		 
+            </param>
+            <param name="defaultResponse">
+		 
+            </param>
+            <param name="buttons">
+		 
+            </param>
+            <param name="defaultButtonIndex">
+		 
+            </param>
+            <param name="allowHtmlText">
+		 
+            </param>
+            <param name="beep">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Buttons">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Content">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.DefaultResponse">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Editor">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.XtraInputBoxArgs.Prompt">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.ToggleSwitch">
 
             <summary>
@@ -20069,23 +20264,29 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.GetStateByValue(System.Object)">
             <summary>
-                <para> </para>
+                <para>Converts a specific <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value to a boolean value.
+</para>
             </summary>
             <param name="value">
-		 
+		An Object that is the value to be checked.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b> if the target value corresponds to the "checked" <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> state; <b>false</b> if the value corresponds to the "unchecked" state or is not identified.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.GetValueByState(System.Boolean)">
             <summary>
-                <para> </para>
+                <para>Converts a boolean value to the corresponding <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value.
+</para>
             </summary>
             <param name="state">
-		 
+		<b>true</b>, to retrieve the <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value when the editor is "checked"; otherwise, <b>false</b>.
+
             </param>
-            <returns> </returns>
+            <returns>An Object that is the <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value associated with the required boolean value.
+</returns>
 
 
         </member>
@@ -20141,17 +20342,22 @@ In Visual Studio 2005 and more recent versions, the same as the <b>Horizontal</b
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.ValueOff">
             <summary>
-                <para> </para>
+                <para>Gets or sets the custom <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value associated with the "unchecked" editor state.
+</para>
             </summary>
-            <value> </value>
+            <value>An Object that is the custom <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value associated with the "unchecked" editor state.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch.ValueOn">
             <summary>
-                <para> </para>
+                <para>Gets or sets the custom <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value associated with the "checked" editor state.
+</para>
             </summary>
-            <value> </value>
+            <value>An Object that is the custom <see cref="T:DevExpress.XtraEditors.ToggleSwitch"/> edit value associated with the "checked" editor state.
+
+</value>
 
 
         </member>
@@ -23572,9 +23778,11 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
         </member>
         <member name="P:DevExpress.XtraTab.XtraTabPage.LookAndFeel">
             <summary>
-                <para> </para>
+                <para>Provides access to look-and-feel settings of the current XtraTabPage object.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="ContainerUserLookAndFeel"/> object that stores XtraTabPage look-and-feel settings.
+</value>
 
 
         </member>
@@ -24785,9 +24993,11 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
         </member>
         <member name="P:DevExpress.XtraEditors.TileControl.AllowSmoothScrolling">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not smooth pixel scrolling is enabled for this TileControl.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if pixel scrolling is enabled; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -26313,7 +26523,7 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         <member name="T:DevExpress.XtraEditors.BarCodeControl">
 
             <summary>
-                <para>Displays barcodes.
+                <para>Displays a bar code.
 </para>
             </summary>
 
@@ -26328,31 +26538,31 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.AutoModule">
             <summary>
-                <para>Gets or sets a value that specifies whether the <see cref="P:DevExpress.XtraEditors.BarCodeControl.Module"/> property value should be calculated automatically based upon the barcode's size.
+                <para>Gets or sets a value that specifies whether the <see cref="P:DevExpress.XtraEditors.BarCodeControl.Module"/> property value should be calculated automatically based upon the bar code's size.
 
 </para>
             </summary>
-            <value><b>true</b> if the barcode's module is calculated automatically; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code's module is calculated automatically; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.BinaryData">
             <summary>
-                <para>Gets or sets the byte array to be coded into the PDF417 or ECC200 barcode.
+                <para>Gets or sets the byte array to be coded into the PDF417 or ECC200 bar code.
 </para>
             </summary>
-            <value>An array of System.Byte values to be coded using the barcode's symbology.
+            <value>An array of System.Byte values to be coded using the bar code's symbology.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.HorizontalAlignment">
             <summary>
-                <para>Gets or sets the barcode's horizontal alignment.
+                <para>Gets or sets the bar code's horizontal alignment.
 </para>
             </summary>
-            <value>A HorzAlignment value that specifies the barcode's horizontal alignment.
+            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> enumeration value that specifies the bar code's horizontal alignment.
 </value>
 
 
@@ -26363,7 +26573,7 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
 
 </para>
             </summary>
-            <value>A VertAlignment value that specifies the text's horizontal alignment.
+            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> enumeration value that specifies the text's horizontal alignment.
 </value>
 
 
@@ -26380,27 +26590,27 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.Orientation">
             <summary>
-                <para>Gets or sets the barcode's orientation.
+                <para>Gets or sets the bar code's orientation.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.BarCodeOrientation"/> value that specifies the barcode's orientation.
+            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.BarCodeOrientation"/> enumeration value that specifies the bar code's orientation.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.ShowText">
             <summary>
-                <para>Gets or sets whether the control's <b>Text</b> is visible.
+                <para>Gets or sets whether or not the control's <b>Text</b> is displayed along with the bar code.
 </para>
             </summary>
-            <value><b>true</b> if the text is displayed; otherwise, <b>false</b>.
+            <value><b>true</b>, if the text is displayed; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.Symbology">
             <summary>
-                <para>Gets or sets the symbology (code type) for the barcode and the text.
+                <para>Gets or sets the symbology (code type) for the bar code and the text.
 
 </para>
             </summary>
@@ -26411,10 +26621,10 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         </member>
         <member name="P:DevExpress.XtraEditors.BarCodeControl.VerticalAlignment">
             <summary>
-                <para>Gets or sets the barcode's vertical alignment.
+                <para>Gets or sets the bar code's vertical alignment.
 </para>
             </summary>
-            <value>A VertAlignment value that specifies the barcode's vertical alignment.
+            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> enumeration value that specifies the bar code's vertical alignment.
 </value>
 
 
@@ -26425,7 +26635,7 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
 
 </para>
             </summary>
-            <value>A VertAlignment value that specifies the text's vertical alignment.
+            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> enumeration value that specifies the text's vertical alignment.
 </value>
 
 
@@ -32593,16 +32803,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.UseCtrlScroll">
-            <summary>
-                <para>Gets or sets whether an end-user can scroll through the dropdown records using the CTRL+UP ARROW and CTRL+DOWN ARROW keys when the dropdown is closed.
-</para>
-            </summary>
-            <value><b>true</b> if scrolling through the dropdown records is enabled; otherwise <b>false</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.UseDropDownRowsAsMaxCount">
             <summary>
                 <para>Gets or sets whether the number of visible data rows limits the height of the dropdown window.
@@ -32674,10 +32874,10 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.
         </member>
         <member name="M:DevExpress.XtraEditors.TimeEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>TouchPopupTimeEditForm </b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.TouchPopupTimeEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -32790,10 +32990,10 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.
         </member>
         <member name="M:DevExpress.XtraEditors.MRUEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupMRUForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupMRUForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -33637,10 +33837,11 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="M:DevExpress.XtraEditors.LookUpEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupLookUpEditForm </b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupLookUpEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
+
 </returns>
 
 
@@ -33870,10 +34071,10 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.BaseCheckedListBoxControl.CheckOnClick">
             <summary>
-                <para>Gets or sets a value specifying whether the item's check state changes whenever the item is clicked.
+                <para>Gets or sets whether one or two mouse clicks are required to toggle the check state of an unfocused (unselected) item.
 </para>
             </summary>
-            <value><b>true</b> if the item's check state changes whenever the item is clicked; otherwise, <b>false</b>.
+            <value><b>true</b> if a single mouse click is required to toggle the check state of an unfocused (unselected) item; <b>false</b> if two mouse clicks are required.
 </value>
 
 
@@ -35369,20 +35570,20 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.QueryValueByCheckStateEventArgs.CheckState">
             <summary>
-                <para>Gets the current check state of a check editor.
+                <para>Gets the editor's current check state.
 </para>
             </summary>
-            <value>A <see cref="T:System.Windows.Forms.CheckState"/> enumeration value representing an editor's check state.
+            <value>The editor's check state.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.QueryValueByCheckStateEventArgs.Value">
             <summary>
-                <para>Gets or sets an edited value corresponding to the current check state.
+                <para>Use this property to set the edit value that corresponds to the current check state.
 </para>
             </summary>
-            <value>An object representing the edit value.
+            <value>The edit value.
 </value>
 
 
@@ -35536,10 +35737,10 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.QueryCheckStatesEventArgs.Handled">
             <summary>
-                <para>Gets or sets a value specifying whether the default event processing should be avoided.
+                <para>Gets or sets whether the event is handled and no default processing is required.
 </para>
             </summary>
-            <value><b>true</b> if the default event processing is avoided; otherwise, <b>false</b>.
+            <value><b>true</b> if default event processing is not required; <b>false</b> if default processing is required.
 </value>
 
 
@@ -35590,20 +35791,21 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.QueryCheckStateByValueEventArgs.CheckState">
             <summary>
-                <para>Gets or sets the check state.
+                <para>Use this property to set the check state that corresponds to the current edit value.
+
 </para>
             </summary>
-            <value>A <see cref="T:System.Windows.Forms.CheckState"/> enumeration value representing a check state.
+            <value>The check state.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.QueryCheckStateByValueEventArgs.Value">
             <summary>
-                <para>Gets the current edited value of a check editor.
+                <para>Gets the current edit value.
 </para>
             </summary>
-            <value>A <see cref="T:System.Object"/> expression representing an editor's edited value.
+            <value>A <see cref="T:System.Object"/> expression representing an editor's edit value.
 </value>
 
 
@@ -38343,98 +38545,112 @@ Return value: Iif
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsApril">
             <summary>
-                <para> </para>
+                <para>Returns "Is April".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsAugust">
             <summary>
-                <para> </para>
+                <para>Returns "Is August".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsDecember">
             <summary>
-                <para> </para>
+                <para>Returns "Is December".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsFebruary">
             <summary>
-                <para> </para>
+                <para>Returns "Is February".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsJanuary">
             <summary>
-                <para> </para>
+                <para>Returns "Is January".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsJuly">
             <summary>
-                <para> </para>
+                <para>Returns "Is July".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsJune">
             <summary>
-                <para> </para>
+                <para>Returns "Is June".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsLastMonth">
             <summary>
-                <para> </para>
+                <para>Returns "Is last month".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsLastYear">
             <summary>
-                <para> </para>
+                <para>Returns "Is last year".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsMarch">
             <summary>
-                <para> </para>
+                <para>Returns "Is March".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsMay">
             <summary>
-                <para> </para>
+                <para>Returns "Is May".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsNextMonth">
             <summary>
-                <para> </para>
+                <para>Returns "Is next month".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsNextYear">
             <summary>
-                <para> </para>
+                <para>Returns "Is next year".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsNovember">
             <summary>
-                <para> </para>
+                <para>Returns "Is November".
+</para>
             </summary>
 
 
@@ -38460,7 +38676,8 @@ Return value: IsNull
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsOctober">
             <summary>
-                <para> </para>
+                <para>Returns "Is October".
+</para>
             </summary>
 
 
@@ -38610,14 +38827,16 @@ Return value: Yesterday
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsSameDay">
             <summary>
-                <para> </para>
+                <para>Returns "Is same day".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsSeptember">
             <summary>
-                <para> </para>
+                <para>Returns "Is September".
+</para>
             </summary>
 
 
@@ -38654,7 +38873,8 @@ Return value: Is This Year
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionIsYearToDate">
             <summary>
-                <para> </para>
+                <para>Returns "Is the year-to-date period".
+</para>
             </summary>
 
 
@@ -38683,7 +38903,8 @@ Return value: DayAfterTomorrow
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionLocalDateTimeLastMonth">
             <summary>
-                <para> </para>
+                <para>Returns "Last month".
+</para>
             </summary>
 
 
@@ -38701,7 +38922,8 @@ Return value: LastWeek
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionLocalDateTimeLastYear">
             <summary>
-                <para> </para>
+                <para>Returns "Last year".
+</para>
             </summary>
 
 
@@ -38807,7 +39029,8 @@ Return value: Tomorrow
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionLocalDateTimeTwoMonthsAway">
             <summary>
-                <para> </para>
+                <para>Returns "Two months away".
+</para>
             </summary>
 
 
@@ -38825,14 +39048,16 @@ Return value: TwoWeeksAway
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionLocalDateTimeTwoYearsAway">
             <summary>
-                <para> </para>
+                <para>Returns "Two years away".
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.FilterCriteriaToStringFunctionLocalDateTimeYearBeforeToday">
             <summary>
-                <para> </para>
+                <para>Returns "One year ago".
+</para>
             </summary>
 
 
@@ -42891,10 +43116,12 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.HighlightedItemStyle">
             <summary>
-                <para>Specifies whether selected and hot-tracked items are skinned.
+                <para>Gets or sets the paint mode for the selected and hot-tracked items. 
+
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.HighlightStyle"/> value that specifies whether selected and hot-tracked items are skinned.
+            <value>A <see cref="T:DevExpress.XtraEditors.HighlightStyle"/> value that specifies the paint mode for the selected and hot-tracked items.
+
 </value>
 
 
@@ -42931,10 +43158,10 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.HotTrackItems">
             <summary>
-                <para>Gets or sets whether the items are hot-tracked when the mouse pointer moves over them.
+                <para>Gets or sets whether list box items are hot-tracked when the mouse pointer moves over them.
 </para>
             </summary>
-            <value><b>true</b> if the items are hot-tracked; otherwise, <b>false</b>.
+            <value><b>true</b>, if the items are hot-tracked; otherwise, <b>false</b>.
 </value>
 
 
@@ -43561,10 +43788,10 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.PopupContainerEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupContainerForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupContainerForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -43773,10 +44000,10 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.PopupBaseEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupBaseForm</b> object that represents the control's pop-up window.
+            <returns>A <b>PopupBaseForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -44334,10 +44561,10 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.ImageComboBoxEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupImageComboBoxEditListBoxForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupImageComboBoxEditListBoxForm</b>  object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -44682,10 +44909,10 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.ComboBoxEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>ComboBoxPopupListBoxForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.ComboBoxPopupListBoxForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -47098,15 +47325,15 @@ The method's parameter allows you to suppress an exception that is thrown if ano
         </member>
         <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
             <summary>
-                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, allowing you to manually position it.
+                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, allowing you to manually position it.
 </para>
             </summary>
             <param name="parentControl">
-		A UserControl relative to which the displayed Wait Form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.
+		A UserControl. The WaitForm is positioned relative to the screen or the form where the UserControl resides.
 
             </param>
             <param name="splashFormType">
-		The type of Wait Form to be displayed.
+		The type of WaitForm to be displayed.
 
             </param>
             <param name="useFadeIn">
@@ -47119,7 +47346,7 @@ The method's parameter allows you to suppress an exception that is thrown if ano
 
             </param>
             <param name="startPos">
-		The Wait Form's arrangement.
+		<b>SplashFormStartPosition.Default</b> to center the WaitForm against the UserControl's parent form. <b>SplashFormStartPosition.Manual</b> to manually specify the WaitForm's location with the 'loc' parameter.
 
             </param>
             <param name="loc">
@@ -47131,16 +47358,17 @@ The method's parameter allows you to suppress an exception that is thrown if ano
         </member>
         <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean)">
             <summary>
-                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against a UserControl.
+                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, centering it against the form containing the specified UserControl.
+
 
 </para>
             </summary>
             <param name="parentControl">
-		A UserControl relative to which the displayed Wait Form is positioned. This parameter is in effect when displaying <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>s.
+		A <b>UserControl</b>. The splash form is centered against the form where the UserControl resides.
 
             </param>
             <param name="splashFormType">
-		The type of Wait Form to be displayed.
+		The type of WaitForm to be displayed.
 
             </param>
             <param name="useFadeIn">
@@ -47415,18 +47643,17 @@ The method's parameter allows you to disable the parent form while the splash fo
         </member>
         <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ParentFormState)">
             <summary>
-                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against the form containing the specified UserControl.
+                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, centering it against the form containing the specified UserControl.
 
 The method's parameter allows you to disable this form while the splash form is displayed.
 </para>
             </summary>
             <param name="parentControl">
-		A <b>UserControl</b> contained on the <b>Form</b>, against which the splash form is centered. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.
-
+		A <b>UserControl</b>. The splash form is centered against the form where the UserControl resides.
 
             </param>
             <param name="splashFormType">
-		The type of splash form to be displayed.
+		The type of WaitForm to be displayed.
 
             </param>
             <param name="useFadeIn">
@@ -47438,7 +47665,7 @@ The method's parameter allows you to disable this form while the splash form is 
 
             </param>
             <param name="parentFormDesiredState">
-		A <b>ParentFormState</b> enumeration value that specifies whether the parent form is enabled while the splash form is displayed. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.
+		A <b>ParentFormState</b> enumeration value that specifies whether the parent form is enabled while the splash form is displayed. 
 
             </param>
 
@@ -47476,18 +47703,17 @@ The method's parameter allows you to disable the parent form while the splash fo
         </member>
         <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(System.Windows.Forms.UserControl,System.Type,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point,DevExpress.XtraSplashScreen.ParentFormState)">
             <summary>
-                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> descendant, centering it against the form containing the specified UserControl.
-
-The method's parameter allows you to disable this form while the splash form is displayed.
+                <para>Creates and displays the specified <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>,  allowing you to manually position it.
+The method's parameter allows you to disable the parent form while the splash form is displayed.
 </para>
             </summary>
             <param name="parentControl">
-		A <b>UserControl</b> contained on the <b>Form</b>, against which the splash form is centered. This parameter is in effect when a <see cref="T:DevExpress.XtraWaitForm.WaitForm"/> is displayed.
+		A UserControl. The WaitForm is positioned relative to the screen or the form where the UserControl resides.
 
 
             </param>
             <param name="splashFormType">
-		The type of splash form to be displayed.
+		The type of WaitForm to be displayed.
 
             </param>
             <param name="useFadeIn">
@@ -47499,7 +47725,8 @@ The method's parameter allows you to disable this form while the splash form is 
 
             </param>
             <param name="startPos">
-		The splash form's arrangement.
+		<b>SplashFormStartPosition.Default</b> to center the WaitForm against the UserControl's parent form. <b>SplashFormStartPosition.Manual</b> to manually specify the WaitForm's location with the 'loc' parameter.
+
 
             </param>
             <param name="loc">
@@ -50202,10 +50429,10 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="M:DevExpress.XtraEditors.MemoExEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>MemoExPopupForm</b> object that represents the control's pop-up window.
+            <returns>A <b>MemoExPopupForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -50343,10 +50570,10 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="M:DevExpress.XtraEditors.ImageEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>An <b>ImagePopupForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.ImagePopupForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -50597,10 +50824,10 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="M:DevExpress.XtraEditors.ColorEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupColorEditForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupColorEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -50643,17 +50870,17 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="P:DevExpress.XtraEditors.CheckEdit.Checked">
             <summary>
-                <para>Gets or sets a value indicating whether a check editor is checked.
+                <para>Gets or sets whether the check editor is in the checked state. 
 </para>
             </summary>
-            <value><b>true</b> if a check editor is checked; otherwise, <b>false</b>.
+            <value><b>true</b> if the editor is checked; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="E:DevExpress.XtraEditors.CheckEdit.CheckedChanged">
             <summary>
-                <para>Occurs when the <see cref="P:DevExpress.XtraEditors.CheckEdit.Checked"/> property value has been changed.
+                <para>Fires after the <see cref="P:DevExpress.XtraEditors.CheckEdit.Checked"/> property value has been changed.
 </para>
             </summary>
 
@@ -50661,7 +50888,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="P:DevExpress.XtraEditors.CheckEdit.CheckState">
             <summary>
-                <para>Gets or sets the state of the check editor.
+                <para>Gets or sets the editor's check state.
 </para>
             </summary>
             <value>A <see cref="T:System.Windows.Forms.CheckState"/> enumeration value representing the check editor's state.
@@ -50671,7 +50898,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="E:DevExpress.XtraEditors.CheckEdit.CheckStateChanged">
             <summary>
-                <para>Occurs after the <see cref="P:DevExpress.XtraEditors.CheckEdit.CheckState"/> property value was changed.
+                <para>Fires after the <see cref="P:DevExpress.XtraEditors.CheckEdit.CheckState"/> property value has been changed.
 </para>
             </summary>
 
@@ -50689,10 +50916,10 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="P:DevExpress.XtraEditors.CheckEdit.EditValue">
             <summary>
-                <para>Gets or sets the check edit control's edited value. 
+                <para>Gets or sets the editor's edit value. 
 </para>
             </summary>
-            <value>An <see cref="T:System.Object"/> value representing the editor's edited value.
+            <value>The editor's edit value.
 </value>
 
 
@@ -50709,7 +50936,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="E:DevExpress.XtraEditors.CheckEdit.QueryCheckStateByValue">
             <summary>
-                <para>Enables you to provide a custom conversion of the <see cref="P:DevExpress.XtraEditors.CheckEdit.EditValue"/> property value to the appropriate check state.
+                <para>Allows for custom conversion from the edit value to a check state (checked, unchecked and indeterminate).
 </para>
             </summary>
 
@@ -50717,7 +50944,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="E:DevExpress.XtraEditors.CheckEdit.QueryValueByCheckState">
             <summary>
-                <para>Enables you to provide custom conversion of the current check state to the appropriate <see cref="P:DevExpress.XtraEditors.CheckEdit.EditValue"/> property value .
+                <para>Allows for custom conversion from a check state (checked, unchecked and indeterminate) to an edit value.
 </para>
             </summary>
 
@@ -50783,10 +51010,10 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="M:DevExpress.XtraEditors.CalcEdit.GetPopupEditForm">
             <summary>
-                <para>Returns the pop-up window invoked with a click on the control's drop-down button.
+                <para>Returns the control's popup window.
 </para>
             </summary>
-            <returns>A <b>PopupCalcEditForm</b> object that represents the control's pop-up window.
+            <returns>A <b>DevExpress.XtraEditors.Popup.PopupCalcEditForm</b> object that represents the control's popup window. <b>null</b> (<b>Nothing</b> in VB) if the popup window has not been opened yet.
 </returns>
 
 
@@ -51679,7 +51906,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.AllowContextImageChangeAnimation">
             <summary>
-                <para>Gets or sets whether the context image is changed using animation.
+                <para>Gets or sets whether the context image is changed using animation. This property is not in effect for in-place editors.
 </para>
             </summary>
             <value><b>True</b> if the context image is changed using animation; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
@@ -51689,9 +51916,11 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.AllowGlyphSkinning">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether this <see cref="T:DevExpress.XtraEditors.TextEdit"/> can colorize its icons.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DefaultBoolean"/> enumerator value that specifies whether or not this <see cref="T:DevExpress.XtraEditors.TextEdit"/> can colorize its icons. The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is identical to <see cref="F:DevExpress.Utils.DefaultBoolean.False"/>.
+</value>
 
 
         </member>
@@ -52096,7 +52325,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemProgressBar.AllowAnimationOnValueChanged">
             <summary>
-                <para>Gets or sets whether the progress indicator reflects changes using animation.
+                <para>Gets or sets whether the progress indicator reflects changes using animation. This property is not in effect for in-place editors.
 </para>
             </summary>
             <value><b>True</b> if the progress indicator reflects changes using animation; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
@@ -52311,7 +52540,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.AllowAnimationOnValueChanged">
             <summary>
-                <para>Gets or sets whether the pictures being edited are changed using animation.
+                <para>Gets or sets whether the pictures being edited are changed using animation. This property is not in effect for in-place editors.
 </para>
             </summary>
             <value><b>True</b> if the pictures being edited are changed using animation; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
@@ -53328,6 +53557,13 @@ This property is in effect for standalone editors and for editors embedded in to
 
 
         </member>
+        <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemDateEdit.CustomWeekDayAbbreviation">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemDateEdit.CustomWeekNumber">
             <summary>
                 <para>Allows week numbers to be customized.
@@ -54310,7 +54546,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.CheckedChanged">
             <summary>
-                <para>Occurs when the <see cref="P:DevExpress.XtraEditors.CheckEdit.Checked"/> property value has been changed.
+                <para>Fires after the <see cref="P:DevExpress.XtraEditors.CheckEdit.Checked"/> property has been changed.
 </para>
             </summary>
 
@@ -54318,7 +54554,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.CheckStateChanged">
             <summary>
-                <para>Occurs when the <see cref="P:DevExpress.XtraEditors.CheckEdit.CheckState"/> property value has changed.
+                <para>Fires after the <see cref="P:DevExpress.XtraEditors.CheckEdit.CheckState"/> property has been changed.
 </para>
             </summary>
 
@@ -54537,7 +54773,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.QueryCheckStateByValue">
             <summary>
-                <para>Enables you to convert the edited value to an appropriate check state.
+                <para>Allows for custom conversion from the edit value to a check state (checked, unchecked and indeterminate).
 </para>
             </summary>
 
@@ -54545,7 +54781,7 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.QueryValueByCheckState">
             <summary>
-                <para>Enables you to convert the editor's check state to an edited value.
+                <para>Allows for custom conversion from the check state (checked, unchecked and indeterminate) to an edit value.
 </para>
             </summary>
 
@@ -54563,31 +54799,31 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.ValueChecked">
             <summary>
-                <para>Gets or sets a value corresponding to the editor's checked state.
+                <para>Gets or sets a value that corresponds to the checked state.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.Object"/> expression representing the checked state's value.
+            <value>The value associated with the checked state.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.ValueGrayed">
             <summary>
-                <para>Gets or sets a value corresponding to the grayed state of a check editor.
+                <para>Gets or sets a value that corresponds to the indeterminate state.
 </para>
             </summary>
-            <value>A <see cref="T:System.Object"/> expression representing the grayed state's value.
+            <value>The value associated with the indeterminate state.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit.ValueUnchecked">
             <summary>
-                <para>Gets or sets a value corresponding to the unchecked state of a check editor.
+                <para>Gets or sets a value that corresponds to the unchecked state.
 </para>
             </summary>
-            <value>A <see cref="T:System.Object"/> expression representing the unchecked state's value.
+            <value>The value associated with the unchecked state.
 </value>
 
 
@@ -58036,19 +58272,24 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.Controls.CloseUpEventArgs.#ctor(System.Object,System.Boolean,DevExpress.XtraEditors.PopupCloseMode,DevExpress.XtraEditors.Popup.BlobSimpleButtonType)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the CloseUpEventArgs class with the specified settings.
+</para>
             </summary>
             <param name="val">
-		 
+		An Object assigned to the <see cref="P:DevExpress.XtraEditors.Controls.CloseUpEventArgs.Value"/> property.
+
             </param>
             <param name="accept">
-		 
+		<b>true</b>, if the <see cref="P:DevExpress.XtraEditors.Controls.CloseUpEventArgs.Value"/> is accepted; otherwise, <b>false</b>.
+
             </param>
             <param name="closeMode">
-		 
+		A <see cref="T:DevExpress.XtraEditors.PopupCloseMode"/> enumeration value that indicates available methods to close the popup editor's dropdown window. 
+
             </param>
             <param name="pressedButton">
-		 
+		A BlobSimpleButtonType enumeration value that specifies a button associated with this CloseUpEventArgs object.
+
             </param>
 
 

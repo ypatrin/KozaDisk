@@ -7244,6 +7244,76 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand">
+
+            <summary>
+                <para>Toggles displaying grid lines for a table with no borders applied -  on/off.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
+            <summary>
+                <para>Initializes a new instance of the ToggleShowTableGridLinesCommand class with the specified owner.
+</para>
+            </summary>
+            <param name="control">
+		An object exposing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface specifying the owner of the command (usually the <see cref="T:DevExpress.XtraRichEdit.RichEditControl"/>).
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.DescriptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a command description.
+</para>
+            </summary>
+            <value>An <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.Id">
+            <summary>
+                <para>Gets the ID of the ToggleShowTableGridLinesCommand.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.ImageName">
+            <summary>
+                <para>Gets the name of the resource image corresponding to ToggleShowTableGridLinesCommand.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the name of an image contained in resources.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.KeyTip">
+            <summary>
+                <para>Gets the <b>Key Tip</b> for the command.
+</para>
+            </summary>
+            <value>A <see cref="String"/> value that is the key tip associated with the command.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.MenuCaptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a menu caption corresponding to ToggleShowTableGridLinesCommand.
+</para>
+            </summary>
+            <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.ShowDeleteTableCellsFormCommand">
 
             <summary>
@@ -16721,10 +16791,10 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.IRichEditControl.Document">
             <summary>
-                <para>For internal use.
+                <para>Provides access to a <see cref="T:DevExpress.XtraRichEdit.API.Native.Document"/> interface representing the control's document.
 </para>
             </summary>
-            <value> 
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.Document"/> interface representing a document loaded in the control.
 </value>
 
 
@@ -18707,9 +18777,11 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.Export.OpenXmlDocumentExporterOptions.ExportCompatibilitySettings">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to export the document compatibility settings.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to export the compatibility settings; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -20956,6 +21028,16 @@ context.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.Import.HtmlDocumentImporterOptions.FontScalingDpiValue">
+            <summary>
+                <para>Gets or sets the DPI value that will be used to scale fonts on high DPI settings.
+</para>
+            </summary>
+            <value>A positive integer that is the DPI setting used to render text.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.Import.HtmlDocumentImporterOptions.IgnoreFloatProperty">
             <summary>
                 <para>Specifies whether or not to ignore the "float" setting of HTML elements in the imported document.
@@ -22424,6 +22506,17 @@ context.
 </para>
             </summary>
             <value><b>True</b>, to disable CJK font correction; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.EnableMSWordCompatibleFieldParser">
+            <summary>
+                <para>Enables changing parsing rules for nested fields.
+
+</para>
+            </summary>
+            <value><b>True</b>, to parse and evaluate nested fields in a way similar to MS Word; otherwise, <b>false</b> to use the legacy parser.
 </value>
 
 
@@ -37337,6 +37430,14 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.CompletedTask">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="M:DevExpress.XtraRichEdit.API.Layout.DocumentLayout.Dispose">
             <summary>
                 <para>Disposes of the DocumentLayout object.
@@ -38750,6 +38851,16 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.Document.CompatibilitySettings">
+            <summary>
+                <para>Provides access to the document compatibility settings.
+</para>
+            </summary>
+            <value>A <see cref="CompatibilitySettings"/> object that holds the document compatibility options. 
+</value>
+
+
+        </member>
         <member name="E:DevExpress.XtraRichEdit.API.Native.Document.ContentChanged">
             <summary>
                 <para>Occurs when the document content was changed.
@@ -39876,6 +39987,66 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand">
+
+            <summary>
+                <para>A command that toggles all field codes in the document on or off. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
+            <summary>
+                <para>Initializes a new instance of the ToggleAllFieldsCommand class with the specified owner.
+</para>
+            </summary>
+            <param name="control">
+		An object exposing the <see cref="T:DevExpress.XtraRichEdit.IRichEditControl"/> interface (RichEditControl) specifying the owner of the command.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand.DescriptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a command description.
+</para>
+            </summary>
+            <value>An <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand.Id">
+            <summary>
+                <para>Gets the ID of the ToggleAllFieldsCommand.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand.ImageName">
+            <summary>
+                <para>Gets the name of the resource image assigned to the command.
+</para>
+            </summary>
+            <value>An empty string.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleAllFieldsCommand.MenuCaptionStringId">
+            <summary>
+                <para>Gets a string resource identifier of a menu caption corresponding to ToggleAllFieldsCommand.
+</para>
+            </summary>
+            <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.RichEditHitTestResult">
 
             <summary>
@@ -40261,6 +40432,14 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.UseFontSubstitution">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.UseHtml5">
             <summary>
                 <para>Gets or sets whether the exported HTML conforms with HTML5 specification. 
@@ -40547,12 +40726,46 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.SpellCheckerOptions.ClearErrorsAfterLimitExceeded">
+            <summary>
+                <para>Specifies whether the spell check stops and the list of misspelled words is cleared when the number of found misspellings exceeds a predefined limit.
+
+</para>
+            </summary>
+            <value><b>true</b>, to clear the list of the found misspelled words; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.SpellCheckerOptions.IgnoreNoProof">
             <summary>
                 <para>Gets or sets whether the spell checker should ignore "no-proof" settings for text ranges in a document.
 </para>
             </summary>
             <value><b>true</b>, to ignore "no-proof" settings; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.SpellCheckerOptions.LowerErrorLimit">
+            <summary>
+                <para>Gets or sets the number of misspelled words at which spell check is resumed after it has been stopped due to the high number of misspellings.
+
+</para>
+            </summary>
+            <value>An integer value that is the lower error limit. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.SpellCheckerOptions.UpperErrorLimit">
+            <summary>
+                <para>Gets or sets the number of errors at which the spell check stops.
+
+</para>
+            </summary>
+            <value>An integer value that is the upper error limit. 
 
 </value>
 
@@ -41122,76 +41335,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand">
-
-            <summary>
-                <para>Toggles displaying grid lines for a table with no borders applied -  on/off.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
-            <summary>
-                <para>Initializes a new instance of the ToggleShowTableGridLinesCommand class with the specified owner.
-</para>
-            </summary>
-            <param name="control">
-		An object exposing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface specifying the owner of the command (usually the <see cref="T:DevExpress.XtraRichEdit.RichEditControl"/>).
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.DescriptionStringId">
-            <summary>
-                <para>Gets a string resource identifier of a command description.
-</para>
-            </summary>
-            <value>An <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.Id">
-            <summary>
-                <para>Gets the ID of the ToggleShowTableGridLinesCommand.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.ImageName">
-            <summary>
-                <para>Gets the name of the resource image corresponding to ToggleShowTableGridLinesCommand.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the name of an image contained in resources.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.KeyTip">
-            <summary>
-                <para>Gets the <b>Key Tip</b> for the command.
-</para>
-            </summary>
-            <value>A <see cref="String"/> value that is the key tip associated with the command.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.ToggleShowTableGridLinesCommand.MenuCaptionStringId">
-            <summary>
-                <para>Gets a string resource identifier of a menu caption corresponding to ToggleShowTableGridLinesCommand.
-</para>
-            </summary>
-            <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
-</value>
 
 
         </member>
@@ -43621,6 +43764,54 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Native.CompatibilityMode">
+
+            <summary>
+                <para>Lists modes that specify the compatibility of the exporting document with different word-processing application versions. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode11">
+            <summary>
+                <para>The resulting document is compatible with MS Word&#174; 2003. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode12">
+            <summary>
+                <para>The resulting document is compatible with MS Word&#174; 2007. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode14">
+            <summary>
+                <para>The resulting document is compatible with MS Word&#174; 2010. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode15">
+            <summary>
+                <para>The resulting document is compatible with MS Word&#174; 2013. Default mode. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.ModeNotSpecified">
+            <summary>
+                <para>Compatibility mode is not specified. 
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart">
 
             <summary>
@@ -43712,6 +43903,76 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
                 <para>A collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.ParagraphFrameBox"/> objects.
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings">
+
+            <summary>
+                <para>Enables you to specify application-wide settings to ensure compatibility with previous RichEdit versions, different versions of MS Word and other word-processing applications.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.AllowTextAfterFloatingTableBreak">
+            <summary>
+                <para>Gets or sets whether to insert a page break between the floating table and the following content.
+
+</para>
+            </summary>
+            <value><b>true</b>, to place the floating table and the following text on the same page; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.CompatibilityMode">
+            <summary>
+                <para>Specifies the document compatibility with different word-processing application versions. 
+</para>
+            </summary>
+            <value>One of the <see cref="CompatibilityMode"/> enumeration values identifying the compatibility mode. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.DifferentiateMultirowTableHeaders">
+            <summary>
+                <para>Specifies whether the rows in the multi-row table header should be differentiated when applying the conditional formatting. 
+</para>
+            </summary>
+            <value><b>true</b>, to apply the conditional formatting to every row separately in the multi-row header; otherwise, <b>false</b>. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.DoNotFlipMirrorIndents">
+            <summary>
+                <para>Specifies whether to swap the mirrored paragraph indents. 
+</para>
+            </summary>
+            <value><b>true</b>, to interchange the paragraph indents if they are considered as mirrored; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.EnableOpenTypeFeatures">
+            <summary>
+                <para>Specifies whether to enable the OpenType font features (ligatures, contextual alternates, stylistic sets, number spacing, and number formatting).
+</para>
+            </summary>
+            <value><b>true</b>, to enable OpenType font features; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.OverrideTableStyleFontSizeAndJustification">
+            <summary>
+                <para>Specifies whether the font size and the justification determined by the document table style should be overridden.
+</para>
+            </summary>
+            <value><b>true</b>, to override the table style's font size and justification parameters; otherwise, <b>false</b>.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkEnd">

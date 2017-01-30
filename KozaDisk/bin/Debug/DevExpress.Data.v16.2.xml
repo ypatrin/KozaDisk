@@ -20516,12 +20516,20 @@ To create the addition operator using the <see cref="M:DevExpress.Data.Filtering
 
 
         </member>
+        <member name="P:DevExpress.Data.ODataLinq.ODataServerModeSource.KeyExpression">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.Data.ODataLinq.ODataServerModeSource.KeyExpressions">
             <summary>
-                <para>Specifies the key expression.
+                <para>Specifies the key expressions.
 </para>
             </summary>
-            <value>A string that specifies the key expression.
+            <value>A string array that specifies the key expressions.
 </value>
 
 
@@ -20682,6 +20690,14 @@ To create the addition operator using the <see cref="M:DevExpress.Data.Filtering
 
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Data.ODataLinq.ODataInstantFeedbackSource.KeyExpression">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -27610,17 +27626,17 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditorCategories_Custom">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditorCategories_DateTime">
             <summary>
-                <para>"<b>Custom</b>"
+                <para>"<b>Date-Time</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditorCategories_DateTime">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditorCategories_Letters">
             <summary>
-                <para>"<b>Date-Time</b>"
+                <para>"<b>Letters</b>"
 </para>
             </summary>
 
@@ -27634,177 +27650,73 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditorCategories_Simple">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Date">
             <summary>
-                <para>"<b>Simple</b>"
+                <para>"<b>Date</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Currency">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_FixedPoint">
             <summary>
-                <para>"<b>Currency</b>"
+                <para>"<b>Fixed-Point</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_CurrencyDecimal">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_FixedPointPositive">
             <summary>
-                <para>"<b>Currency (decimal)</b>"
+                <para>"<b>Fixed-Point Positive</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Extension">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Integer">
             <summary>
-                <para>"<b>Extension</b>"
+                <para>"<b>Integer</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_FullDate_LongTime">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_IntegerPositive">
             <summary>
-                <para>"<b>Full date/long time</b>"
+                <para>"<b>Integer Positive</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_FullDate_ShortTime">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_OnlyLatinLetters">
             <summary>
-                <para>"<b>Full date/short time</b>"
+                <para>"<b>Only Latin Letters</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_GeneralDate_LongTime">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_OnlyLetters">
             <summary>
-                <para>"<b>General date/long time</b>"
+                <para>"<b>Only Letters</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_GeneralDate_ShortTime">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_OnlyLowercaseLetters">
             <summary>
-                <para>"<b>General date/short time</b>"
+                <para>"<b>Only Lowercase Letters</b>"
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_LongDate">
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_OnlyUppercaseLetters">
             <summary>
-                <para>"<b>Long date</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_LongTime">
-            <summary>
-                <para>"<b>Long time</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_LongZipCode">
-            <summary>
-                <para>"<b>Long zip code</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_MonthDay">
-            <summary>
-                <para>"<b>Month day</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Number">
-            <summary>
-                <para>"<b>Number</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_NumberDecimal">
-            <summary>
-                <para>"<b>Number (decimal)</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Percent">
-            <summary>
-                <para>"<b>Percent</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_PercentDecimal">
-            <summary>
-                <para>"<b>Percent (decimal)</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_Phone">
-            <summary>
-                <para>"<b>Phone</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_ShortDate">
-            <summary>
-                <para>"<b>Short date</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_ShortTime">
-            <summary>
-                <para>"<b>Short time</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_ShortZipCode">
-            <summary>
-                <para>"<b>Short zip code</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_SocialSecurity">
-            <summary>
-                <para>"<b>Social security</b>"
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.EditingFieldEditors_YearMonth">
-            <summary>
-                <para>"<b>Year month</b>"
+                <para>"<b>Only Uppercase Letters</b>"
 </para>
             </summary>
 
@@ -28571,6 +28483,14 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.ExportOption_XlsShowGridLines">
             <summary>
                 <para>"<b>Show grid lines</b>"
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraPrinting.Localization.PreviewStringId.ExportOption_XlsUseNativeFormat">
+            <summary>
+                <para>For internal use.
 </para>
             </summary>
 
@@ -32934,7 +32854,7 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
 
             </param>
             <param name="sides">
-		A <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration value that specifies which sides of a brick have borders.
+		One or more <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration values, specifying which sides of a brick have borders. 
 
             </param>
             <param name="borderWidth">
@@ -32962,12 +32882,37 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
 
             </param>
             <param name="sides">
-		A <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration value that specifies which sides of a brick have borders.
-
+		One or more <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration values, specifying which sides of a brick have borders. 
 
             </param>
             <param name="borderWidth">
 		A <see cref="T:System.Single"/> value which specifies the width of borders.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.RectangleF"/> value that represents the deflated rectangle.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.BrickStyle.DeflateBorderWidth(System.Drawing.RectangleF,DevExpress.XtraPrinting.BorderSide,System.Single,System.Boolean)">
+            <summary>
+                <para>Deflates the specified rectangle by the width of borders represented by this brick style, and optionally applies the current border style.
+</para>
+            </summary>
+            <param name="rect">
+		A <see cref="T:System.Drawing.RectangleF"/> value which specifies the rectangle to be deflated. 
+
+            </param>
+            <param name="sides">
+		One or more <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration values, specifying which sides of a brick have borders. 
+
+            </param>
+            <param name="dpi">
+		A <see cref="T:System.Single"/> value which specifies the dpi value to be applied to the width of borders before deflating. 
+
+            </param>
+            <param name="applyBorderStyle">
+		<b>true</b> to apply the current border style; otherwise, <b>false</b>. The current border style can be accessed via the <see cref="P:DevExpress.XtraPrinting.BrickStyle.BorderStyle"/> property.
 
             </param>
             <returns>A <see cref="T:System.Drawing.RectangleF"/> value that represents the deflated rectangle.
@@ -33314,12 +33259,15 @@ Also <see cref="P:DevExpress.Utils.FormatInfo.FormatString"/> is set to an empty
         </member>
         <member name="M:DevExpress.XtraPrinting.BrickStyle.SwapRightAndLeftSides(DevExpress.XtraPrinting.BorderSide)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="sides">
-		 
+		One or more <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration values.
+
             </param>
-            <returns> </returns>
+            <returns>One or more <see cref="T:DevExpress.XtraPrinting.BorderSide"/> enumeration values.
+</returns>
 
 
         </member>

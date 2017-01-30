@@ -260,6 +260,13 @@
 
 
         </member>
+        <member name="F:DevExpress.Utils.UI.Localization.UtilsUIStringId.Msg_FormatStringNotFound">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.Utils.UI.Localization.UtilsUIStringId.NonePickerNodeText">
             <summary>
                 <para>"None".

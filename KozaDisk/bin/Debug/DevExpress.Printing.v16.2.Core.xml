@@ -314,7 +314,7 @@
         <member name="T:DevExpress.XtraPrinting.BarCode.IntelligentMailPackageGenerator">
 
             <summary>
-                <para>Generates an Intelligent Mail Package barcode.
+                <para>Generates an Intelligent Mail Package bar code.
 
 </para>
             </summary>
@@ -2526,16 +2526,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.PanelBrick.RightToLeftLayout">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.PanelBrick.Text">
             <summary>
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.VisualBrick.Text"/> property to hide it.
@@ -2579,7 +2569,7 @@
         <member name="T:DevExpress.XtraPrinting.BarCode.CodeMSIGenerator">
 
             <summary>
-                <para>Represents the class used to generate an MSI barcode.
+                <para>Represents the class used to generate an MSI bar code.
 </para>
             </summary>
 
@@ -2597,14 +2587,14 @@
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.CodeMSIGenerator.MSICheckSum">
             <summary>
-                <para>Gets or sets the checksum type for the barcode. 
+                <para>Gets or sets the checksum type for the bar code. 
 
 </para>
             </summary>
@@ -2616,7 +2606,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.CodeMSIGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -3200,7 +3190,7 @@
         <member name="T:DevExpress.XtraPrinting.BarCode.UPCE0Generator">
 
             <summary>
-                <para>Represents the class used to generate an UPC-E0 barcode.
+                <para>Represents the class used to generate an UPC-E0 bar code.
 
 </para>
             </summary>
@@ -3216,7 +3206,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.UPCE0Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -7360,7 +7350,7 @@
         <member name="T:DevExpress.XtraPrinting.BarCode.Industrial2of5Generator">
 
             <summary>
-                <para>Represents the class used to generate an Industrial 2 of 5 barcode.
+                <para>Represents the class used to generate an Industrial 2 of 5 bar code.
 </para>
             </summary>
 
@@ -7375,7 +7365,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Industrial2of5Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -7385,11 +7375,11 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Industrial2of5Generator.WideNarrowRatio">
             <summary>
-                <para>Gets or sets the density of a barcode's bars.
+                <para>Gets or sets the density of a bar code's bars.
 
 </para>
             </summary>
-            <value>A float value specifying the density of a barcode's bars.
+            <value>A float value specifying the density of a bar code's bars.
 </value>
 
 
@@ -7572,7 +7562,7 @@
         <member name="T:DevExpress.XtraPrinting.BarCode.UPCAGenerator">
 
             <summary>
-                <para>Represents the class used to generate an UPC-A barcode.
+                <para>Represents the class used to generate an UPC-A bar code.
 </para>
             </summary>
 
@@ -7587,7 +7577,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.UPCAGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -14615,7 +14605,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         <member name="T:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel">
 
             <summary>
-                <para>Specifies the amount of redundancy built into the coding of the PDF417 barcode to compensate for calculation errors.
+                <para>Specifies the amount of redundancy built into the coding of the PDF417 bar code to compensate for calculation errors.
 
 </para>
             </summary>
@@ -14623,7 +14613,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level0">
             <summary>
-                <para>Identifies the zero error correction level of the PDF417 barcode.
+                <para>Identifies the zero error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14631,7 +14621,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level1">
             <summary>
-                <para>Identifies the first error correction level of the PDF417 barcode.
+                <para>Identifies the first error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14639,7 +14629,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level2">
             <summary>
-                <para>Identifies the second error correction level of the PDF417 barcode.
+                <para>Identifies the second error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14647,7 +14637,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level3">
             <summary>
-                <para>Identifies the third error correction level of the PDF417 barcode.
+                <para>Identifies the third error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14655,7 +14645,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level4">
             <summary>
-                <para>Identifies the fourth error correction level of the PDF417 barcode.
+                <para>Identifies the fourth error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14663,7 +14653,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level5">
             <summary>
-                <para>Identifies the fifth error correction level of the PDF417 barcode.
+                <para>Identifies the fifth error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14671,7 +14661,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level6">
             <summary>
-                <para>Identifies the sixth error correction level of the PDF417 barcode.
+                <para>Identifies the sixth error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14679,7 +14669,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level7">
             <summary>
-                <para>Identifies the seventh error correction level of the PDF417 barcode.
+                <para>Identifies the seventh error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14687,7 +14677,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel.Level8">
             <summary>
-                <para>Identifies the eighth error correction level of the PDF417 barcode.
+                <para>Identifies the eighth error correction level of the PDF417 bar code.
 </para>
             </summary>
 
@@ -14696,14 +14686,14 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         <member name="T:DevExpress.XtraPrinting.BarCode.PDF417CompactionMode">
 
             <summary>
-                <para>Specifies the kind of data that should be coded into the PDF417 barcode.
+                <para>Specifies the kind of data that should be coded into the PDF417 bar code.
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.PDF417CompactionMode.Binary">
             <summary>
-                <para>Specifies that the byte array should be coded into the PDF417 barcode.
+                <para>Specifies that the byte array should be coded into the PDF417 bar code.
 </para>
             </summary>
 
@@ -14711,7 +14701,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.PDF417CompactionMode.Text">
             <summary>
-                <para>Specifies that the textual information should be coded into the PDF417 barcode.
+                <para>Specifies that the textual information should be coded into the PDF417 bar code.
 </para>
             </summary>
 
@@ -14720,7 +14710,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         <member name="T:DevExpress.XtraPrinting.BarCode.PDF417Generator">
 
             <summary>
-                <para>Generates a PDF417 barcode.
+                <para>Generates a PDF417 bar code.
 
 
 
@@ -14734,7 +14724,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
 </para>
             </summary>
             <param name="source">
-		A <see cref="T:DevExpress.XtraPrinting.BarCode.PDF417Generator"/> object, which represents the source used to generate a PDF417 barcode.
+		A <see cref="T:DevExpress.XtraPrinting.BarCode.PDF417Generator"/> object, which represents the source used to generate a PDF417 bar code.
 
             </param>
 
@@ -14750,18 +14740,18 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.Columns">
             <summary>
-                <para>Gets or sets the number of barcode columns, which allows control of the logic width of the barcode. 
+                <para>Gets or sets the number of bar code columns, which allows control of the logic width of the bar code. 
 
 </para>
             </summary>
-            <value>An integer, specifying the logic width of the barcode.
+            <value>An integer, specifying the logic width of the bar code.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.CompactionMode">
             <summary>
-                <para>Gets or sets whether textual information or a byte array should be used as the barcode's data.
+                <para>Gets or sets whether textual information or a byte array should be used as the bar code's data.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.PDF417CompactionMode"/> enumeration value.
@@ -14771,7 +14761,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.ErrorCorrectionLevel">
             <summary>
-                <para>Gets or sets the amount of redundancy built into the barcode's coding, to compensate for calculation errors. 
+                <para>Gets or sets the amount of redundancy built into the bar code's coding, to compensate for calculation errors. 
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.XtraPrinting.BarCode.ErrorCorrectionLevel"/> enumeration value, specifying the error correction level.
@@ -14781,18 +14771,18 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.Rows">
             <summary>
-                <para>Gets or sets the number of barcode rows, which allows control of the logic height of the barcode. 
+                <para>Gets or sets the number of bar code rows, which allows control of the logic height of the bar code. 
 
 </para>
             </summary>
-            <value>An integer, specifying the logic height of the barcode. 
+            <value>An integer, specifying the logic height of the bar code. 
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -14802,7 +14792,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PDF417Generator.TruncateSymbol">
             <summary>
-                <para>Gets or sets whether the special end-symbol should be appended to the barcode. 
+                <para>Gets or sets whether the special end-symbol should be appended to the bar code. 
 </para>
             </summary>
             <value><b>true</b> if the end symbol should be appended; otherwise, <b>false</b>.
@@ -15023,9 +15013,11 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
         </member>
         <member name="P:DevExpress.XtraPrinting.CsvExportOptionsEx.DocumentCulture">
             <summary>
-                <para> </para>
+                <para>Gets or sets the export document's culture, which defines the formatting settings for numeric and date-time data.
+</para>
             </summary>
-            <value> </value>
+            <value>The export document's culture
+</value>
 
 
         </member>
@@ -15214,7 +15206,9 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.BeforeExportTable">
             <summary>
-                <para> </para>
+                <para>Allows you to customize settings of a native Excel table prior to export. This event is in effect when the <see cref="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.LayoutMode"/> property is set to <b>Table</b>.
+
+</para>
             </summary>
 
 
@@ -15254,9 +15248,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.DocumentCulture">
             <summary>
-                <para> </para>
+                <para>Gets or sets the export document's culture, which defines the formatting settings for numeric and date-time data.
+</para>
             </summary>
-            <value> </value>
+            <value>The export document's culture.
+</value>
 
 
         </member>
@@ -15290,20 +15286,20 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.FitToPrintedPageHeight">
             <summary>
-                <para>Gets or sets whether the output document should be fit to the page height when printed.
+                <para>Not supported by the XlsxExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, to fit the output document to the printed page height; otherwise, <b>false</b>.
+            <value> 
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.FitToPrintedPageWidth">
             <summary>
-                <para>Gets or sets whether the output document should be fit to the page width when printed. 
+                <para>Not supported by the XlsxExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, if the output document should be fit to the printed page width. 
+            <value> 
 </value>
 
 
@@ -15320,37 +15316,49 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.LayoutMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether data is exported in regular mode or as a native Excel table.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether data is exported in regular mode or as a native Excel table. The default value is <b>Standard</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.PageRange">
             <summary>
-                <para> </para>
+                <para>Not supported by the XlsxExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.RasterizationResolution">
             <summary>
-                <para>Specifies the resolution used to rasterize vector images on export to the XLSX format.
+                <para>Not supported by the XlsxExportOptionsEx class.
 </para>
             </summary>
-            <value>An integer value specifying the resolution (in dpi) used to rasterize vector images.
+            <value> 
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.RasterizeImages">
             <summary>
-                <para>Specifies whether or not vector images should be rasterized on export to the XLSX format.
+                <para>Not supported by the XlsxExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, to rasterize vector images; otherwise, <b>false</b>.
+            <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.ShowBandHeaders">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15405,17 +15413,23 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.SummaryCountBlankCells">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the Count summary function exported to Excel format takes into account all cells or only non-blank cells.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if non-blank and blank cells are counted;  <b>false</b> if non-blank cells are only counted. The default value is <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.SuppressEmptyStrings">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the source control cells with Empty Strings are exported as Blank cells in Excel format.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to export the source control cells with Empty Strings as Blank cells; otherwise, <b>false</b>. The default is <b>false</b>.
+
+</value>
 
 
         </member>
@@ -15441,9 +15455,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.UnboundExpressionExportMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether column values or column expressions are exported for unbound (calculated) columns.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether column values or column expressions are exported for unbound (calculated) columns. The default value is <b>AsValue</b>.
+</value>
 
 
         </member>
@@ -15600,7 +15616,9 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="E:DevExpress.XtraPrinting.XlsExportOptionsEx.BeforeExportTable">
             <summary>
-                <para> </para>
+                <para>Allows you to customize settings of a native Excel table prior to export. This event is in effect when the <see cref="P:DevExpress.XtraPrinting.XlsExportOptionsEx.LayoutMode"/> property is set to <b>Table</b>.
+
+</para>
             </summary>
 
 
@@ -15640,9 +15658,11 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.DocumentCulture">
             <summary>
-                <para> </para>
+                <para>Gets or sets the export document's culture, which defines the formatting settings for numeric and date-time data.
+</para>
             </summary>
-            <value> </value>
+            <value>The export document's culture.
+</value>
 
 
         </member>
@@ -15676,20 +15696,20 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.FitToPrintedPageHeight">
             <summary>
-                <para>Gets or sets whether the output document should be fit to the page height when printed.
+                <para>Not supported by the XlsExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, to fit the output document to the printed page height; otherwise, <b>false</b>.
+            <value> 
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.FitToPrintedPageWidth">
             <summary>
-                <para>Gets or sets whether the output document should be fit to the page width when printed. 
+                <para>Not supported by the XlsExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, if the output document should be fit to the printed page width. 
+            <value> 
 </value>
 
 
@@ -15706,37 +15726,49 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.LayoutMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether data is exported in regular mode or as a native Excel table.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether data is exported in regular mode or as a native Excel table. The default value is <b>Standard</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.PageRange">
             <summary>
-                <para> </para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.RasterizationResolution">
             <summary>
-                <para>Specifies the resolution used to rasterize vector images on export to the XLS format.
+                <para>Not supported by the XlsExportOptionsEx class.
 </para>
             </summary>
-            <value>An integer value specifying the resolution (in dpi) used to rasterize vector images.
+            <value> 
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.RasterizeImages">
             <summary>
-                <para>Specifies whether or not vector images should be rasterized on export to the XLS format.
+                <para>Not supported by the XlsExportOptionsEx class.
 </para>
             </summary>
-            <value><b>true</b>, to rasterize vector images; otherwise, <b>false</b>.
+            <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.ShowBandHeaders">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15791,33 +15823,43 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.SummaryCountBlankCells">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the Count summary function exported to Excel format takes into account all cells or only non-blank cells.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if non-blank and blank cells are counted;  <b>false</b> if non-blank cells are only counted. The default value is <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.SuppressEmptyStrings">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the source control cells with Empty Strings are exported as Blank cells in Excel format.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to export the source control cells with Empty Strings as Blank cells; otherwise, <b>false</b>. The default is <b>false</b>.
+
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.UnboundExpressionExportMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether column values or column expressions are exported for unbound (calculated) columns.
+</para>
             </summary>
-            <value> </value>
+            <value>A value that specifies whether column values or column expressions are exported for unbound (calculated) columns. The default value is <b>AsValue</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.WorkbookColorPaletteCompliance">
             <summary>
-                <para> </para>
+                <para>Not supported by the XlsExportOptionsEx class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -22828,16 +22870,6 @@ Converts the current cell format to the differential formatting object.
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.LabelBrick.RightToLeftLayout">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Export.Xl.XlCondFmtRuleAboveAverage">
 
             <summary>
@@ -23193,7 +23225,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCodeBrick.AutoModule">
             <summary>
-                <para>Gets or sets a value that specifies whether the <see cref="P:DevExpress.XtraPrinting.BarCodeBrick.Module"/> property value should be calculated automatically based upon the barcode's size.
+                <para>Gets or sets a value that specifies whether the <see cref="P:DevExpress.XtraPrinting.BarCodeBrick.Module"/> property value should be calculated automatically based upon the bar code's size.
 
 </para>
             </summary>
@@ -23204,7 +23236,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCodeBrick.BinaryData">
             <summary>
-                <para>Gets or sets the byte array to be coded into the PDF417 barcode.
+                <para>Gets or sets the byte array to be coded into the PDF417 bar code.
 </para>
             </summary>
             <value>An array of <see cref="T:System.Byte"/> values.
@@ -23472,7 +23504,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.Expanded">
             <summary>
-                <para>A GS1 DataBar Expanded barcode is generated.
+                <para>A GS1 DataBar Expanded bar code is generated.
 </para>
             </summary>
 
@@ -23480,7 +23512,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.ExpandedStacked">
             <summary>
-                <para>A GS1 DataBar Expanded Stacked barcode is generated.
+                <para>A GS1 DataBar Expanded Stacked bar code is generated.
 </para>
             </summary>
 
@@ -23488,7 +23520,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.Limited">
             <summary>
-                <para>A GS1 DataBar Limited barcode is generated.
+                <para>A GS1 DataBar Limited bar code is generated.
 </para>
             </summary>
 
@@ -23496,7 +23528,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.Omnidirectional">
             <summary>
-                <para>A GS1 DataBar Omnidirectional barcode is generated.
+                <para>A GS1 DataBar Omnidirectional bar code is generated.
 </para>
             </summary>
 
@@ -23504,7 +23536,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.Stacked">
             <summary>
-                <para>A GS1 DataBar Stacked barcode is generated.
+                <para>A GS1 DataBar Stacked bar code is generated.
 </para>
             </summary>
 
@@ -23512,7 +23544,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.StackedOmnidirectional">
             <summary>
-                <para>A GS1 DataBar Stacked Omnidirectional barcode is generated.
+                <para>A GS1 DataBar Stacked Omnidirectional bar code is generated.
 </para>
             </summary>
 
@@ -23520,7 +23552,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataBarType.Truncated">
             <summary>
-                <para>A GS1 DataBar Truncated barcode is generated.
+                <para>A GS1 DataBar Truncated bar code is generated.
 </para>
             </summary>
 
@@ -23804,7 +23836,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.UPCSupplemental5Generator">
 
             <summary>
-                <para>Represents the class used to generate an UPC Supplemental 5 barcode.
+                <para>Represents the class used to generate an UPC Supplemental 5 bar code.
 </para>
             </summary>
 
@@ -23819,7 +23851,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.UPCSupplemental5Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23830,7 +23862,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.UPCSupplemental2Generator">
 
             <summary>
-                <para>Represents the class used to generate an UPC Supplemental 2 barcode.
+                <para>Represents the class used to generate an UPC Supplemental 2 bar code.
 </para>
             </summary>
 
@@ -23845,7 +23877,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.UPCSupplemental2Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23856,7 +23888,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.PostNetGenerator">
 
             <summary>
-                <para>Represents the class used to generate a PostNet barcode.
+                <para>Represents the class used to generate a PostNet bar code.
 </para>
             </summary>
 
@@ -23874,14 +23906,14 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.PostNetGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23892,7 +23924,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.UPCE1Generator">
 
             <summary>
-                <para>Represents the class used to generate an UPC-E1 barcode.
+                <para>Represents the class used to generate an UPC-E1 bar code.
 
 </para>
             </summary>
@@ -23908,7 +23940,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.UPCE1Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23919,7 +23951,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.EAN13Generator">
 
             <summary>
-                <para>Represents the class used to generate an EAN 13 barcode.
+                <para>Represents the class used to generate an EAN 13 bar code.
 </para>
             </summary>
 
@@ -23937,14 +23969,14 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN13Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23955,7 +23987,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator">
 
             <summary>
-                <para>Represents the class used to generate an Interleaved 2 of 5 barcode.
+                <para>Represents the class used to generate an Interleaved 2 of 5 bar code.
 </para>
             </summary>
 
@@ -23970,7 +24002,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -23980,11 +24012,11 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Interleaved2of5Generator.WideNarrowRatio">
             <summary>
-                <para>Gets or sets the density of a barcode's bars.
+                <para>Gets or sets the density of a bar code's bars.
 
 </para>
             </summary>
-            <value>A float value specifying the density of a barcode's bars.
+            <value>A float value specifying the density of a bar code's bars.
 
 </value>
 
@@ -23993,7 +24025,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Matrix2of5Generator">
 
             <summary>
-                <para>Represents the class used to generate a Matrix 2 of 5 barcode.
+                <para>Represents the class used to generate a Matrix 2 of 5 bar code.
 </para>
             </summary>
 
@@ -24008,7 +24040,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Matrix2of5Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24030,7 +24062,7 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
@@ -24049,7 +24081,7 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
@@ -24057,7 +24089,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.EAN128Generator">
 
             <summary>
-                <para>Represents the class used to generate an EAN-128 barcode.
+                <para>Represents the class used to generate an EAN-128 bar code.
 </para>
             </summary>
 
@@ -24072,7 +24104,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN128Generator.FNC1Substitute">
             <summary>
-                <para>Gets or sets the symbol (or set of symbols) in the barcode's text that will be replaced with the <b>FNC1</b> functional character when the barcode's bars are drawn.
+                <para>Gets or sets the symbol (or set of symbols) in the bar code's text that will be replaced with the <b>FNC1</b> functional character when the bar code's bars are drawn.
 
 </para>
             </summary>
@@ -24083,17 +24115,17 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN128Generator.HumanReadableText">
             <summary>
-                <para>Specifies whether or not parentheses should be included in the barcode's text.
+                <para>Specifies whether or not parentheses should be included in the bar code's text.
 </para>
             </summary>
-            <value><b>true</b> to insert parentheses into the barcode's printed text; otherwise, <b>false</b>.
+            <value><b>true</b> to insert parentheses into the bar code's printed text; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN128Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24104,7 +24136,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.EAN8Generator">
 
             <summary>
-                <para>Represents the class used to generate an EAN 8 barcode.
+                <para>Represents the class used to generate an EAN 8 bar code.
 </para>
             </summary>
 
@@ -24119,7 +24151,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.EAN8Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24147,7 +24179,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code93Generator">
 
             <summary>
-                <para>Represents the class used to generate a Code 93 barcode.
+                <para>Represents the class used to generate a Code 93 bar code.
 </para>
             </summary>
 
@@ -24162,7 +24194,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code93Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24173,7 +24205,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code39ExtendedGenerator">
 
             <summary>
-                <para>Represents the class used to generate a Code 39 Extended barcode.
+                <para>Represents the class used to generate a Code 39 Extended bar code.
 
 </para>
             </summary>
@@ -24189,7 +24221,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code39ExtendedGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24200,7 +24232,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code128Generator">
 
             <summary>
-                <para>Represents the class used to generate a Code 128 barcode.
+                <para>Represents the class used to generate a Code 128 bar code.
 
 </para>
             </summary>
@@ -24229,14 +24261,14 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code128Generator.CharacterSet">
             <summary>
-                <para>Gets or sets the character set type for the barcode. 
+                <para>Gets or sets the character set type for the bar code. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Code128Charset"/> enumeration value, specifying a character set to be used.
@@ -24246,7 +24278,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code128Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24257,7 +24289,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code11Generator">
 
             <summary>
-                <para>Represents the class used to generate a Code 11 barcode.
+                <para>Represents the class used to generate a Code 11 bar code.
 
 </para>
             </summary>
@@ -24276,14 +24308,14 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code11Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24294,7 +24326,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.CodabarGenerator">
 
             <summary>
-                <para>Represents the class used to generate a Codabar barcode.
+                <para>Represents the class used to generate a Codabar bar code.
 
 </para>
             </summary>
@@ -24313,14 +24345,14 @@ Converts the current cell format to the differential formatting object.
                 <para>Overrides the <see cref="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum"/> property.
 </para>
             </summary>
-            <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
+            <value><b>true</b> if the bar code object needs a checksum to be calculated; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.CodabarGenerator.StartStopPair">
             <summary>
-                <para>Gets or sets the first (start) and last (stop) symbols used to code the barcode's structure. 
+                <para>Gets or sets the first (start) and last (stop) symbols used to code the bar code's structure. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair"/> enumeration value that specifies the pair of start and stop symbols used.
@@ -24331,7 +24363,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.CodabarGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24341,10 +24373,10 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.CodabarGenerator.WideNarrowRatio">
             <summary>
-                <para>Gets or sets the density of a barcode's bars.
+                <para>Gets or sets the density of a bar code's bars.
 </para>
             </summary>
-            <value>A float value specifying the density of a barcode's bars.
+            <value>A float value specifying the density of a bar code's bars.
 </value>
 
 
@@ -24352,7 +24384,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code93ExtendedGenerator">
 
             <summary>
-                <para>Represents the class used to generate a Code 93 Extended barcode.
+                <para>Represents the class used to generate a Code 93 Extended bar code.
 </para>
             </summary>
 
@@ -24367,7 +24399,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code93ExtendedGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24378,7 +24410,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code39Generator">
 
             <summary>
-                <para>Represents the class used to generate a Code 39 barcode.
+                <para>Represents the class used to generate a Code 39 bar code.
 
 </para>
             </summary>
@@ -24394,7 +24426,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code39Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24404,10 +24436,10 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.Code39Generator.WideNarrowRatio">
             <summary>
-                <para>Gets or sets the density of a barcode's bars.
+                <para>Gets or sets the density of a bar code's bars.
 </para>
             </summary>
-            <value>A float value specifying the density of a barcode's bars.
+            <value>A float value specifying the density of a bar code's bars.
 </value>
 
 
@@ -24415,14 +24447,14 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase">
 
             <summary>
-                <para>Defines the base class for all the classes used to generate barcodes.
+                <para>Defines the base class for all the classes used to generate bar codes.
 </para>
             </summary>
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.CalcCheckSum">
             <summary>
-                <para>Gets or sets whether to calculate a checksum for the barcode.
+                <para>Gets or sets whether to calculate a checksum for the bar code.
 </para>
             </summary>
             <value><b>true</b> if the barcode object needs a checksum to be calculated; otherwise, <b>false</b>.
@@ -24490,7 +24522,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.BarCodeGeneratorBase.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -24501,7 +24533,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.MSICheckSum">
 
             <summary>
-                <para>Specifies which formula is used to calculate the checksum for the MSI barcode.
+                <para>Specifies which formula is used to calculate the checksum for the MSI bar code.
 
 </para>
             </summary>
@@ -24509,7 +24541,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.MSICheckSum.DoubleModulo10">
             <summary>
-                <para>The checksum is calculated with respect to base 10 twice.
+                <para>The checksum is calculated with respect to base <b>10</b> twice.
 </para>
             </summary>
 
@@ -24517,7 +24549,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.MSICheckSum.Modulo10">
             <summary>
-                <para>The checksum is calculated with respect to base 10.
+                <para>The checksum is calculated with respect to base <b>10</b>.
 </para>
             </summary>
 
@@ -24534,14 +24566,14 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.Code128Charset">
 
             <summary>
-                <para>Specifies the character set used for coding the Code 128 barcode structure.
+                <para>Specifies the character set used for coding the Code 128 bar code structure.
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetA">
             <summary>
-                <para>The "A" character set will be used for coding a barcode.
+                <para>The "A" character set will be used for coding a bar code.
 </para>
             </summary>
 
@@ -24549,7 +24581,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto">
             <summary>
-                <para>The character set will be chosen automatically according to the text assigned to a barcode.
+                <para>The character set will be chosen automatically according to the text assigned to a bar code.
 </para>
             </summary>
 
@@ -24557,7 +24589,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetB">
             <summary>
-                <para>The "B" character set will be used for coding a barcode.
+                <para>The "B" character set will be used for coding a bar code.
 </para>
             </summary>
 
@@ -24565,7 +24597,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetC">
             <summary>
-                <para>The "C" character set will be used for coding a barcode.
+                <para>The "C" character set will be used for coding a bar code.
 </para>
             </summary>
 
@@ -24574,7 +24606,7 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair">
 
             <summary>
-                <para>Specifies the first (start) and last (stop) symbols used to code the Codabar barcode structure.
+                <para>Specifies the first (start) and last (stop) symbols used to code the Codabar bar code structure.
 
 </para>
             </summary>
@@ -24582,7 +24614,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair.AT">
             <summary>
-                <para>The first element in a barcode is "A" and the last element is "T".
+                <para>The first element in a bar code is "A" and the last element is "T".
 
 </para>
             </summary>
@@ -24591,7 +24623,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair.BN">
             <summary>
-                <para>The first element in a barcode is "B" and the last element is "N".
+                <para>The first element in a bar code is "B" and the last element is "N".
 </para>
             </summary>
 
@@ -24599,7 +24631,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair.CStar">
             <summary>
-                <para>The first element in a barcode is "C" and the last element is "*".
+                <para>The first element in a bar code is "C" and the last element is "*".
 
 </para>
             </summary>
@@ -24608,7 +24640,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair.DE">
             <summary>
-                <para>The first element in a barcode is "D" and the last element is "E".
+                <para>The first element in a bar code is "D" and the last element is "E".
 
 </para>
             </summary>
@@ -24617,7 +24649,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.CodabarStartStopPair.None">
             <summary>
-                <para>The are no start (first) and stop (last) elements used in a barcode.
+                <para>The are no start (first) and stop (last) elements used in a bar code.
 
 </para>
             </summary>
@@ -24627,14 +24659,14 @@ Converts the current cell format to the differential formatting object.
         <member name="T:DevExpress.XtraPrinting.BarCode.BarCodeOrientation">
 
             <summary>
-                <para>Specifies by what angle a barcode is rotated.
+                <para>Specifies by what angle a bar code is rotated.
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.BarCodeOrientation.Normal">
             <summary>
-                <para>A barcode is displayed in its normal orientation.
+                <para>A bar code is displayed in its normal orientation.
 </para>
             </summary>
 
@@ -24642,7 +24674,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.BarCodeOrientation.RotateLeft">
             <summary>
-                <para>A barcode is rotated 90 degrees counter clockwise.
+                <para>A bar code is rotated <b>90</b> degrees counter clockwise.
 
 </para>
             </summary>
@@ -24651,7 +24683,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.BarCodeOrientation.RotateRight">
             <summary>
-                <para>A barcode is rotated 90 degrees clockwise.
+                <para>A bar code is rotated <b>90</b> degrees clockwise.
 </para>
             </summary>
 
@@ -24659,7 +24691,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.BarCodeOrientation.UpsideDown">
             <summary>
-                <para>A barcode is rotated 180 degrees.
+                <para>A bar code is rotated <b>180</b> degrees.
 </para>
             </summary>
 
@@ -25437,17 +25469,21 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="P:DevExpress.XtraPrinting.PageByPageExportOptionsBase.RasterizationResolution">
             <summary>
-                <para> </para>
+                <para>Specifies the resolution used to rasterize vector images on export to the corresponding document format.
+</para>
             </summary>
-            <value> </value>
+            <value>An integer value specifying the resolution (in DPI) used to rasterize vector images.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.PageByPageExportOptionsBase.RasterizeImages">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not vector images should be rasterized on export to the corresponding document format.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to rasterize vector images; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -26086,6 +26122,14 @@ Converts the current cell format to the differential formatting object.
 
 
         </member>
+        <member name="F:DevExpress.XtraPrinting.ExportOptionKind.PdfCompressed">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraPrinting.ExportOptionKind.PdfConvertImagesToJpeg">
             <summary>
                 <para><para>The <see cref="P:DevExpress.XtraPrinting.PdfExportOptions.ConvertImagesToJpeg"/> property of the PDF export options.</para>
@@ -26308,6 +26352,13 @@ Converts the current cell format to the differential formatting object.
 
 
         </member>
+        <member name="F:DevExpress.XtraPrinting.ExportOptionKind.XlsUseNativeFormat">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraPrinting.ExportOptionKind.XlsxExportMode">
             <summary>
                 <para><para>The <see cref="P:DevExpress.XtraPrinting.XlsxExportOptions.ExportMode"/> property of the XLSX export options.</para>
@@ -26475,6 +26526,42 @@ This is supported only by the DXPrinting for WPF library.
 </para>
             </summary>
             <value>A <see cref="T:System.Windows.Forms.TreeView"/> object to be printed.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Export.BeforeExportTableEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraPrinting.XlsExportOptionsEx.BeforeExportTable"/> and <see cref="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.BeforeExportTable"/> events.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Export.BeforeExportTableEventArgs.#ctor">
+            <summary>
+                <para>Initializes a new instance of the BeforeExportTableEventArgs class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Export.BeforeExportTableEventArgs.Table">
+            <summary>
+                <para>Gets the object that encapsulates a native Excel table to which data is exported.
+</para>
+            </summary>
+            <value>The object that encapsulates a native Excel table to which data is exported.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Export.BeforeExportTableEventArgs.UseTableTotalFooter">
+            <summary>
+                <para>Gets or sets whether to use the native Excel table footer (supports only a single line of summaries) or emulate this footer using formulas (multi-line summaries are supported in this mode).
+</para>
+            </summary>
+            <value><b>true</b>, to use the native Excel table footer; otherwise, <b>false</b>.
 </value>
 
 
@@ -29652,195 +29739,86 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         <member name="T:DevExpress.XtraPrinting.EditingFieldEditorNames">
 
             <summary>
-                <para>Lists editors that can be used for changing control content in Print Preview.
+                <para>Specifies editors that can be used for changing control content in Print Preview.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Currency">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Date">
             <summary>
-                <para>An editor with the mask for entering an integer currency amount.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.CurrencyDecimal">
-            <summary>
-                <para>An editor with the mask for entering a decimal currency amount.
+                <para>Corresponds to an editor with a mask for entering date-time values.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Extension">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.FixedPoint">
             <summary>
-                <para>An editor with the mask for entering a phone number with an extension.
-
+                <para>Corresponds to an editor with a mask for entering real values.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.FullDate_LongTime">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.FixedPointPositive">
             <summary>
-                <para>An editor for entering a date/time value using the long date and long time pattern.
+                <para>Corresponds to an editor with a mask for entering positive real values.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.FullDate_ShortTime">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Integer">
             <summary>
-                <para>An editor for entering a date/time value using the long date and short time pattern.
+                <para>Corresponds to an editor with a mask for entering integer values.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.GeneralDate_LongTime">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.IntegerPositive">
             <summary>
-                <para>An editor for entering a date/time value using the short date and long time pattern.
+                <para>Corresponds to an editor with a mask for entering positive integer values.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.GeneralDate_ShortTime">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.OnlyLatinLetters">
             <summary>
-                <para>An editor for entering a date/time value using the short date and short time pattern.
+                <para>Corresponds to an editor with a mask for entering Latin letters only.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.LongDate">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.OnlyLetters">
             <summary>
-                <para>An editor for entering a date/time value using the long date pattern.
+                <para>Corresponds to an editor with a mask for entering letters only.
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.LongTime">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.OnlyLowercaseLetters">
             <summary>
-                <para>An editor for entering a date/time value using the long time pattern.
+                <para>Corresponds to an editor with a mask for entering lowercase letters only (entered characters are converted to lowercase).
 </para>
             </summary>
             <returns> </returns>
 
 
         </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.LongZipCode">
+        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.OnlyUppercaseLetters">
             <summary>
-                <para>An editor with the mask for entering a long zip code.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.MonthDay">
-            <summary>
-                <para>An editor for entering a date/time value using the month day pattern.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Number">
-            <summary>
-                <para>An editor with the mask for entering an integer number.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.NumberDecimal">
-            <summary>
-                <para>An editor with the mask for entering a decimal number.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Percent">
-            <summary>
-                <para>An editor with the mask for entering an integer percentage. 
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.PercentDecimal">
-            <summary>
-                <para>An editor with the mask for entering a decimal percentage. 
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.Phone">
-            <summary>
-                <para>An editor with the mask for entering a telephone number.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.ShortDate">
-            <summary>
-                <para>An editor for entering a date/time value using the short date pattern.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.ShortTime">
-            <summary>
-                <para>An editor for entering a date/time value using the short time pattern.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.ShortZipCode">
-            <summary>
-                <para>An editor with the mask for entering a short zip code.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.SocialSecurity">
-            <summary>
-                <para>An editor with the mask for entering a social security number.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraPrinting.EditingFieldEditorNames.YearMonth">
-            <summary>
-                <para>An editor for entering a date/time value using the year month pattern.
+                <para>Corresponds to an editor with a mask for entering uppercase letters only (entered characters are converted to uppercase).
 </para>
             </summary>
             <returns> </returns>
@@ -31444,7 +31422,7 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
 </para>
             </summary>
             <param name="useMargins">
-		<b>true</b> to use the margin values of the default printer's settings; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseMargins"/> property.
+		<b>true</b> to use the margin values of the default printer's settings; otherwise, <b>false</b>. 
 
             </param>
             <param name="usePaperKind">
@@ -33134,7 +33112,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.XtraPrinting.BarCode.DataMatrixGS1Generator">
 
             <summary>
-                <para>Generates a GS1 (Data Matrix) barcode.
+                <para>Generates a GS1 (Data Matrix) bar code.
 
 
 
@@ -33164,7 +33142,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGS1Generator.CompactionMode">
             <summary>
-                <para>Specifies whether textual information or a byte array should be used as the barcode's data, as well as its encoding. 
+                <para>Specifies whether textual information or a byte array should be used as the bar code's data, as well as its encoding. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.DataMatrixCompactionMode"/> enumeration value. 
@@ -33174,7 +33152,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGS1Generator.FNC1Substitute">
             <summary>
-                <para>Specifies the symbol (or set of symbols) in the barcode's text that will be replaced with the FNC1 functional character when the barcode's bars are drawn. 
+                <para>Specifies the symbol (or set of symbols) in the bar code's text that will be replaced with the FNC1 functional character when the bar code's bars are drawn. 
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the symbols to be replaced.
@@ -33184,17 +33162,17 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGS1Generator.HumanReadableText">
             <summary>
-                <para>Specifies whether or not parentheses should be included in the barcode's text.
+                <para>Specifies whether or not parentheses should be included in the bar code's text.
 </para>
             </summary>
-            <value><b>true</b> to insert parentheses into the barcode's printed text; otherwise, <b>false</b>.
+            <value><b>true</b> to insert parentheses into the bar code's printed text; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGS1Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -33232,13 +33210,16 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="M:DevExpress.XtraPrinting.Export.BrickViewData.ApplyClipping(System.Drawing.RectangleF,System.Boolean)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="clipBounds">
 		 
+
             </param>
             <param name="round">
 		 
+
             </param>
 
 
@@ -34375,7 +34356,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="T:DevExpress.XtraPrinting.BarCode.IntelligentMailGenerator">
 
             <summary>
-                <para>Generates an Intelligent Mail barcode.
+                <para>Generates an Intelligent Mail bar code.
 
 
 </para>
@@ -34402,7 +34383,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.IntelligentMailGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -34429,7 +34410,8 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="T:DevExpress.Export.SkipFooterRowEventArgs">
 
             <summary>
-                <para> </para>
+                <para>Provides data for the <see cref="E:DevExpress.XtraPrinting.XlsExportOptionsEx.SkipFooterRow"/> and <see cref="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.SkipFooterRow"/> events.
+</para>
             </summary>
 
         </member>
@@ -34505,16 +34487,19 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="T:DevExpress.Export.SkipFooterRowEventHandler">
 
             <summary>
-                <para> </para>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraPrinting.XlsExportOptionsEx.SkipFooterRow"/> and <see cref="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.SkipFooterRow"/> events.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.SkipFooterRowEventHandler.Invoke(DevExpress.Export.SkipFooterRowEventArgs)">
             <summary>
-                <para> </para>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraPrinting.XlsExportOptionsEx.SkipFooterRow"/> and <see cref="E:DevExpress.XtraPrinting.XlsxExportOptionsEx.SkipFooterRow"/> events.
+</para>
             </summary>
             <param name="e">
-		 
+		The event's data.
+
             </param>
 
 
@@ -37516,9 +37501,12 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="P:DevExpress.XtraReports.ReportGeneration.ReportGenerationOptions.AutoFitToPageWidth">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not column widths are automatically modified so that the width of total columns matches the width of a View.
+
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to enable the auto width feature; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -38135,7 +38123,7 @@ The default is <b>XlPageUnits.Inches</b>.
         <member name="T:DevExpress.XtraPrinting.BarCode.DataBarGenerator">
 
             <summary>
-                <para>Generates a GS1 (DataBar) barcode.
+                <para>Generates a GS1 (DataBar) bar code.
 </para>
             </summary>
 
@@ -38150,10 +38138,10 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataBarGenerator.CalcCheckSum">
             <summary>
-                <para>Gets or sets whether or not to calculate a checksum for the barcode.
+                <para>Gets or sets whether or not to calculate a checksum for the bar code.
 </para>
             </summary>
-            <value><b>true</b>, if the barcode object requires a checksum calculation; otherwise, <b>false</b>.
+            <value><b>true</b>, if the bar code object requires a checksum calculation; otherwise, <b>false</b>.
 
 </value>
 
@@ -38161,7 +38149,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataBarGenerator.FNC1Substitute">
             <summary>
-                <para>Specifies the symbol (or set of symbols) in the barcode's text that will be replaced with the FNC1 functional character when the bars are drawn. 
+                <para>Specifies the symbol (or set of symbols) in the bar code's text that will be replaced with the <b>FNC1</b> functional character when the bars are drawn. 
 
 </para>
             </summary>
@@ -38172,7 +38160,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataBarGenerator.SegmentsInRow">
             <summary>
-                <para>Gets or sets the number of data segments per row in the Expanded Stacked type of a GS1 DataBar barcode. 
+                <para>Gets or sets the number of data segments per row in the Expanded Stacked type of a GS1 DataBar bar code. 
 </para>
             </summary>
             <value>A <b>System.Int32</b> value specifying a number of data segments per row.
@@ -38182,7 +38170,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataBarGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -38192,10 +38180,10 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataBarGenerator.Type">
             <summary>
-                <para>Gets or sets the type of a GS1 DataBar barcode. 
+                <para>Gets or sets the type of a GS1 DataBar bar code. 
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.DataBarType"/> value specifying the GS1 DataBar barcode's type.
+            <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.DataBarType"/> value specifying the GS1 DataBar bar code's type.
 
 </value>
 
@@ -38453,7 +38441,7 @@ The default is <b>XlPageUnits.Inches</b>.
         <member name="T:DevExpress.XtraPrinting.BarCode.QRCodeGenerator">
 
             <summary>
-                <para>Generates a QR Code barcode.
+                <para>Generates a QR Code bar code.
 
 
 
@@ -38483,7 +38471,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.CompactionMode">
             <summary>
-                <para>Gets or sets whether numeric, alpha-numeric or byte information should be used as the barcode's data.
+                <para>Gets or sets whether numeric, alpha-numeric or byte information should be used as the bar code's data.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.QRCodeCompactionMode"/> enumeration value.
@@ -38493,7 +38481,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.ErrorCorrectionLevel">
             <summary>
-                <para>Gets or sets the amount of redundancy built into the barcode's coding, to compensate for calculation errors. 
+                <para>Gets or sets the amount of redundancy built into the bar code's coding, to compensate for calculation errors. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.QRCodeErrorCorrectionLevel"/> enumeration value.
@@ -38503,7 +38491,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -38513,7 +38501,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.QRCodeGenerator.Version">
             <summary>
-                <para>Gets or sets the barcode's size.
+                <para>Gets or sets the bar code's size.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.QRCodeVersion"/> enumeration value.
@@ -38524,7 +38512,7 @@ The default is <b>XlPageUnits.Inches</b>.
         <member name="T:DevExpress.XtraPrinting.BarCode.QRCodeVersion">
 
             <summary>
-                <para>Lists the values used to specify the QR Code barcode's size.
+                <para>Lists the values used to specify the QR Code bar code's size.
 </para>
             </summary>
 
@@ -38937,7 +38925,7 @@ The default is <b>XlPageUnits.Inches</b>.
         <member name="T:DevExpress.XtraPrinting.BarCode.ITF14Generator">
 
             <summary>
-                <para>Generates an ITF-14 barcode.
+                <para>Generates an ITF-14 bar code.
 </para>
             </summary>
 
@@ -38952,7 +38940,7 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.ITF14Generator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -38962,10 +38950,10 @@ The default is <b>XlPageUnits.Inches</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.ITF14Generator.WideNarrowRatio">
             <summary>
-                <para>Gets or sets the density of a barcode's bars.
+                <para>Gets or sets the density of a bar code's bars.
 </para>
             </summary>
-            <value>A float value specifying the density of the barcode's bars.
+            <value>A float value specifying the density of the bar code's bars.
 
 </value>
 
@@ -39296,7 +39284,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="T:DevExpress.XtraPrinting.BarCode.IBarCodeData">
 
             <summary>
-                <para>For internal use. Provides options that are used to manage a barcode's content.
+                <para>For internal use. Provides options that are used to manage a bar code's content.
 </para>
             </summary>
 
@@ -39353,7 +39341,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.IBarCodeData.Style">
             <summary>
-                <para>Gets the barcode's style settings.
+                <para>Gets the bar code's style settings.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BrickStyle"/> object that is assigned to the <see cref="P:DevExpress.XtraPrinting.VisualBrick.Style"/> property.
@@ -39363,7 +39351,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.IBarCodeData.Text">
             <summary>
-                <para>Gets the barcode's text. 
+                <para>Gets the bar code's text. 
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -39374,7 +39362,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="T:DevExpress.XtraPrinting.BarCode.DataMatrixGenerator">
 
             <summary>
-                <para>Generates an ECC200 - Data Matrix barcode. 
+                <para>Generates an ECC200 - Data Matrix bar code. 
 </para>
             </summary>
 
@@ -39401,7 +39389,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGenerator.CompactionMode">
             <summary>
-                <para>Gets or sets whether textual information or a byte array should be used as the barcode's data, as well as its encoding. 
+                <para>Gets or sets whether textual information or a byte array should be used as the bar code's data, as well as its encoding. 
 
 </para>
             </summary>
@@ -39412,7 +39400,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGenerator.MatrixSize">
             <summary>
-                <para>Gets or sets the barcode matrix size. 
+                <para>Gets or sets the bar code matrix size. 
 
 </para>
             </summary>
@@ -39423,7 +39411,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="P:DevExpress.XtraPrinting.BarCode.DataMatrixGenerator.SymbologyCode">
             <summary>
-                <para>For internal use. Gets the barcode symbology for the current generator object. 
+                <para>For internal use. Gets the bar code symbology for the current generator object. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BarCode.Native.BarCodeSymbology"/> enumeration value.
@@ -39434,7 +39422,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="T:DevExpress.XtraPrinting.BarCode.BarCode2DGenerator">
 
             <summary>
-                <para>The base class for generators of 2D barcodes.
+                <para>The base class for generators of 2D bar codes.
 </para>
             </summary>
 
@@ -39488,14 +39476,14 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="T:DevExpress.XtraPrinting.BarCode.DataMatrixSize">
 
             <summary>
-                <para>Lists the available data matrix size options related to the ECC200 - Data Matrix barcode.
+                <para>Lists the available data matrix size options related to the ECC200 - Data Matrix bar code.
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix104x104">
             <summary>
-                <para>The barcode matrix size is <b>104</b>x<b>104</b>. 
+                <para>The bar code matrix size is <b>104</b>x<b>104</b>. 
 </para>
             </summary>
 
@@ -39503,7 +39491,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix10x10">
             <summary>
-                <para>The barcode matrix size is <b>10</b>x<b>10</b>. 
+                <para>The bar code matrix size is <b>10</b>x<b>10</b>. 
 </para>
             </summary>
 
@@ -39511,7 +39499,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix120x120">
             <summary>
-                <para>The barcode matrix size is <b>120</b>x<b>120</b>. 
+                <para>The bar code matrix size is <b>120</b>x<b>120</b>. 
 </para>
             </summary>
 
@@ -39519,7 +39507,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix12x12">
             <summary>
-                <para>The barcode matrix size is <b>12</b>x<b>12</b>. 
+                <para>The bar code matrix size is <b>12</b>x<b>12</b>. 
 </para>
             </summary>
 
@@ -39527,7 +39515,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix12x26">
             <summary>
-                <para>The barcode matrix size is <b>12</b>x<b>26</b>. 
+                <para>The bar code matrix size is <b>12</b>x<b>26</b>. 
 </para>
             </summary>
 
@@ -39535,7 +39523,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix12x36">
             <summary>
-                <para>The barcode matrix size is <b>12</b>x<b>36</b>. 
+                <para>The bar code matrix size is <b>12</b>x<b>36</b>. 
 </para>
             </summary>
 
@@ -39543,7 +39531,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix132x132">
             <summary>
-                <para>The barcode matrix size is <b>132</b>x<b>132</b>. 
+                <para>The bar code matrix size is <b>132</b>x<b>132</b>. 
 </para>
             </summary>
 
@@ -39551,7 +39539,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix144x144">
             <summary>
-                <para>The barcode matrix size is <b>144</b>x<b>144</b>. 
+                <para>The bar code matrix size is <b>144</b>x<b>144</b>. 
 </para>
             </summary>
 
@@ -39559,7 +39547,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix14x14">
             <summary>
-                <para>The barcode matrix size is <b>14</b>x<b>14</b>. 
+                <para>The bar code matrix size is <b>14</b>x<b>14</b>. 
 </para>
             </summary>
 
@@ -39567,7 +39555,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix16x16">
             <summary>
-                <para>The barcode matrix size is <b>16</b>x<b>16</b>. 
+                <para>The bar code matrix size is <b>16</b>x<b>16</b>. 
 </para>
             </summary>
 
@@ -39575,7 +39563,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix16x36">
             <summary>
-                <para>The barcode matrix size is <b>16</b>x<b>36</b>. 
+                <para>The bar code matrix size is <b>16</b>x<b>36</b>. 
 </para>
             </summary>
 
@@ -39583,7 +39571,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix16x48">
             <summary>
-                <para>The barcode matrix size is <b>16</b>x<b>48</b>. 
+                <para>The bar code matrix size is <b>16</b>x<b>48</b>. 
 </para>
             </summary>
 
@@ -39591,7 +39579,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix18x18">
             <summary>
-                <para>The barcode matrix size is <b>18</b>x<b>18</b>. 
+                <para>The bar code matrix size is <b>18</b>x<b>18</b>. 
 </para>
             </summary>
 
@@ -39599,7 +39587,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix20x20">
             <summary>
-                <para>The barcode matrix size is <b>20</b>x<b>20</b>. 
+                <para>The bar code matrix size is <b>20</b>x<b>20</b>. 
 </para>
             </summary>
 
@@ -39607,7 +39595,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix22x22">
             <summary>
-                <para>The barcode matrix size is <b>22</b>x<b>22</b>. 
+                <para>The bar code matrix size is <b>22</b>x<b>22</b>. 
 </para>
             </summary>
 
@@ -39615,7 +39603,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix24x24">
             <summary>
-                <para>The barcode matrix size is <b>24</b>x<b>24</b>. 
+                <para>The bar code matrix size is <b>24</b>x<b>24</b>. 
 </para>
             </summary>
 
@@ -39623,7 +39611,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix26x26">
             <summary>
-                <para>The barcode matrix size is <b>26</b>x<b>26</b>. 
+                <para>The bar code matrix size is <b>26</b>x<b>26</b>. 
 </para>
             </summary>
 
@@ -39631,7 +39619,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix32x32">
             <summary>
-                <para>The barcode matrix size is <b>32</b>x<b>32</b>. 
+                <para>The bar code matrix size is <b>32</b>x<b>32</b>. 
 </para>
             </summary>
 
@@ -39639,7 +39627,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix36x36">
             <summary>
-                <para>The barcode matrix size is <b>36</b>x<b>36</b>. 
+                <para>The bar code matrix size is <b>36</b>x<b>36</b>. 
 </para>
             </summary>
 
@@ -39647,7 +39635,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix40x40">
             <summary>
-                <para>The barcode matrix size is <b>40</b>x<b>40</b>. 
+                <para>The bar code matrix size is <b>40</b>x<b>40</b>. 
 </para>
             </summary>
 
@@ -39655,7 +39643,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix44x44">
             <summary>
-                <para>The barcode matrix size is <b>44</b>x<b>44</b>. 
+                <para>The bar code matrix size is <b>44</b>x<b>44</b>. 
 </para>
             </summary>
 
@@ -39663,7 +39651,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix48x48">
             <summary>
-                <para>The barcode matrix size is <b>48</b>x<b>48</b>. 
+                <para>The bar code matrix size is <b>48</b>x<b>48</b>. 
 </para>
             </summary>
 
@@ -39671,7 +39659,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix52x52">
             <summary>
-                <para>The barcode matrix size is <b>52</b>x<b>52</b>. 
+                <para>The bar code matrix size is <b>52</b>x<b>52</b>. 
 </para>
             </summary>
 
@@ -39679,7 +39667,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix64x64">
             <summary>
-                <para>The barcode matrix size is <b>64</b>x<b>64</b>. 
+                <para>The bar code matrix size is <b>64</b>x<b>64</b>. 
 </para>
             </summary>
 
@@ -39687,7 +39675,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix72x72">
             <summary>
-                <para>The barcode matrix size is <b>72</b>x<b>72</b>. 
+                <para>The bar code matrix size is <b>72</b>x<b>72</b>. 
 </para>
             </summary>
 
@@ -39695,7 +39683,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix80x80">
             <summary>
-                <para>The barcode matrix size is <b>80</b>x<b>80</b>. 
+                <para>The bar code matrix size is <b>80</b>x<b>80</b>. 
 </para>
             </summary>
 
@@ -39703,7 +39691,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix88x88">
             <summary>
-                <para>The barcode matrix size is <b>88</b>x<b>88</b>. 
+                <para>The bar code matrix size is <b>88</b>x<b>88</b>. 
 </para>
             </summary>
 
@@ -39711,7 +39699,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix8x18">
             <summary>
-                <para>The barcode matrix size is <b>8</b>x<b>18</b>. 
+                <para>The bar code matrix size is <b>8</b>x<b>18</b>. 
 </para>
             </summary>
 
@@ -39719,7 +39707,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix8x32">
             <summary>
-                <para>The barcode matrix size is <b>8</b>x<b>32</b>. 
+                <para>The bar code matrix size is <b>8</b>x<b>32</b>. 
 </para>
             </summary>
 
@@ -39727,7 +39715,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.Matrix96x96">
             <summary>
-                <para>The barcode matrix size is <b>96</b>x<b>96</b>. 
+                <para>The bar code matrix size is <b>96</b>x<b>96</b>. 
 </para>
             </summary>
 
@@ -39735,7 +39723,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="F:DevExpress.XtraPrinting.BarCode.DataMatrixSize.MatrixAuto">
             <summary>
-                <para>The barcode matrix size is auto-adjusted, depending on the quantity of encoded data. 
+                <para>The bar code matrix size is auto-adjusted, depending on the quantity of encoded data. 
 </para>
             </summary>
 
@@ -39744,7 +39732,7 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         <member name="T:DevExpress.XtraPrinting.BarCode.DataMatrixCompactionMode">
 
             <summary>
-                <para>Specifies the kind of data that should be coded into the ECC200 - Data Matrix and PDF417 barcodes. 
+                <para>Specifies the kind of data that should be coded into the ECC200 - Data Matrix and PDF417 bar codes. 
 
 </para>
             </summary>
@@ -40793,6 +40781,16 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.PrintingSystemBase"/> object which specifies the Printing System used to create and print this brick. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPrinting.VisualBrick.RightToLeftLayout">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -43198,16 +43196,20 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
         </member>
         <member name="M:DevExpress.XtraPrinting.Brick.SetAttachedValue``1(DevExpress.XtraPrinting.AttachedProperty{``0},``0,``0)">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
             <param name="prop">
 		 
+
             </param>
             <param name="value">
 		 
+
             </param>
             <param name="defaultValue">
 		 
+
             </param>
 
 

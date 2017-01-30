@@ -17,6 +17,7 @@ namespace templates
         private string tempPath = System.IO.Path.GetTempPath();
         private string templateName, dbName;
         private int docId;
+        private int myDocId = 0;
 
         private TmplDocument tmplDocument = TmplDocument.getInstance();
         private Markers markers = new Markers();
@@ -43,6 +44,11 @@ namespace templates
         public void setDocId(int docId)
         {
             this.docId = docId;
+        }
+
+        public void setMyDocId(int docId)
+        {
+            this.myDocId = docId;
         }
 
         public void open()
@@ -222,6 +228,7 @@ namespace templates
             template.setUserName(userName);
             template.setDbName(this.dbName);
             template.setDocId(this.docId);
+            template.setMyDocId(this.myDocId);
 
             //open form
             template.loadHTML(html);

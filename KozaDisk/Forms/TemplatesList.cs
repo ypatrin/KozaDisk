@@ -205,6 +205,21 @@ namespace KozaDisk.Forms
 
             var disks = this.disks.getDisksList();
 
+            //deselect all
+            this.DiskTree.SelectedNode = null;
+
+            //Select cd
+            var result = this.DiskTree.Nodes.Find(db, true).FirstOrDefault();
+            if (result != null)
+                this.DiskTree.SelectedNode = result;
+
+            //clear files browser
+            this.FilesBrowser.Navigate("about:blank");
+            this.FilesBrowser.DocumentText = "0";
+            this.FilesBrowser.Document.OpenNew(true);
+            this.FilesBrowser.Document.Write("");
+            this.FilesBrowser.Refresh();
+
             foreach (Disk disk in disks)
             {
                 if (disk.db == db)
@@ -276,7 +291,6 @@ namespace KozaDisk.Forms
                         navi.Add(cd);
 
                         writeNavigation(navi);
-
                     }
                 }
             }
@@ -521,6 +535,7 @@ namespace KozaDisk.Forms
                 templates.setUserXmlFile(this.userData.XmlFilePath);
                 templates.setDbName(databaseName);
                 templates.setDocId(Int32.Parse(template.id));
+                templates.setMyDocId(Int32.Parse(documentId));
                 templates.open(html);
 
                 this.WindowState = FormWindowState.Maximized;
@@ -758,22 +773,51 @@ namespace KozaDisk.Forms
 
         public void NaviMainLink()
         {
-            this.panel11.Visible = true;
-            this.panel12.Visible = false;
-
-            this.view = "tree";
-
-            this.ListViewImg.Visible = true;
-            this.ListViewBtn.Visible = false;
-
-            this.BlockViewImg.Visible = false;
-            this.BlockViewBtn.Visible = true;
-
             this.Tabs.SelectedIndex = 0;
             this.searchBox.Text = "";
 
             this.prepareList();
             this.prepareTree();
+            
+
+            if (this.view == "tree")
+            {
+                this.ListViewImg.Visible = true;
+                this.ListViewBtn.Visible = false;
+
+                this.BlockViewImg.Visible = false;
+                this.BlockViewBtn.Visible = true;
+
+                this.Tabs.SelectedIndex = 0;
+
+                //this.isNoNavigation = true;
+                this.writeNavigation(new List<Class.Objects.Navigation>());
+
+                this.FilesBrowser.Navigate("about:blank");
+                this.FilesBrowser.DocumentText = "0";
+                this.FilesBrowser.Document.OpenNew(true);
+                this.FilesBrowser.Document.Write("");
+                this.FilesBrowser.Refresh();
+            }
+            if (this.view == "block")
+            {
+                this.ListViewImg.Visible = false;
+                this.ListViewBtn.Visible = true;
+
+                this.BlockViewImg.Visible = true;
+                this.BlockViewBtn.Visible = false;
+
+                this.Tabs.SelectedIndex = 1;
+                this.isNoNavigation = false;
+
+                this.writeNavigation(new List<Class.Objects.Navigation>());
+
+                this.FilesBrowser.Navigate("about:blank");
+                this.FilesBrowser.DocumentText = "0";
+                this.FilesBrowser.Document.OpenNew(true);
+                this.FilesBrowser.Document.Write("");
+                this.FilesBrowser.Refresh();
+            }
 
             this.writeNavigation(new List<Class.Objects.Navigation>());
         }
@@ -787,7 +831,7 @@ namespace KozaDisk.Forms
             //write home
             links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.NaviMainLink()\">Головна</a>";
 
-            if (!this.isNoNavigation)
+            if (true) //!this.isNoNavigation)
             {
                 foreach (KozaDisk.Class.Objects.Navigation navigationLink in navigationLinks)
                 {
@@ -814,20 +858,19 @@ namespace KozaDisk.Forms
 
             try
             {
+                /*
                 NaviBrowser.Navigate("about:blank");
                 NaviBrowser.DocumentText = "0";
                 NaviBrowser.Document.OpenNew(true);
                 NaviBrowser.Document.Write(links);
                 NaviBrowser.Refresh();
+                */
+
+                NaviBrowser.DocumentText = links;
+                //NaviBrowser.Document.OpenNew(true);
+                //NaviBrowser.Document.Write(links);
             }
             catch(Exception ex) { }
-
-            /*
-            while (NaviBrowser.ReadyState != WebBrowserReadyState.Complete)
-            {
-                
-            }
-            */
         }
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -926,8 +969,31 @@ namespace KozaDisk.Forms
                 }
 
                 if (selectedNode.ImageIndex == 0)
+                {
                     selectedNode.ImageIndex = 1;
+                }
 
+
+                //clear files
+                this.FilesBrowser.Navigate("about:blank");
+                this.FilesBrowser.DocumentText = "0";
+                this.FilesBrowser.Document.OpenNew(true);
+                this.FilesBrowser.Document.Write("");
+                this.FilesBrowser.Refresh();
+
+                //write navigation
+                List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+                KozaDisk.Class.Objects.Navigation cd = new Class.Objects.Navigation();
+
+                cd.db = selectedNode.db;
+                cd.text = selectedNode.Text;
+                cd.isDisk = true;
+                cd.isFolder = false;
+                cd.isMyDocs = false;
+
+                navi.Add(cd);
+
+                writeNavigation(navi);
             }
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Folder)

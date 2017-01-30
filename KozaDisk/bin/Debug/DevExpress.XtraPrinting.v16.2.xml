@@ -632,7 +632,7 @@
         <member name="T:DevExpress.XtraPrinting.Preview.EditingFieldExtensionsWin">
 
             <summary>
-                <para>Provides functionality to register custom editors to be used for changing the control content in Print Preview.
+                <para>Provides functionality to register custom editors to be used for editing the control content in Print Preview.
 
 </para>
             </summary>
@@ -747,7 +747,7 @@
 		The name of an editor to be unregistered. 
 
             </param>
-            <returns><b>true</b>, if an editor has been successfully registered; otherwise, <b>false</b>. 
+            <returns><b>true</b>, if an editor has been successfully unregistered; otherwise, <b>false</b>. 
 </returns>
 
 
@@ -1212,7 +1212,7 @@
         <member name="T:DevExpress.XtraPrinting.Preview.RibbonControllerBase">
 
             <summary>
-                <para>Represents the base class for Ribbon Controller classes that embed their specific functionality into the existing <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> object.
+                <para>The base for Ribbon Controller classes that embed their specific functionality into the existing <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> object.
 
 
 
@@ -1240,13 +1240,17 @@
         </member>
         <member name="M:DevExpress.XtraPrinting.Preview.RibbonControllerBase.Initialize(DevExpress.XtraBars.Ribbon.RibbonControl,DevExpress.XtraBars.Ribbon.RibbonStatusBar)">
             <summary>
-                <para> </para>
+                <para>Provides Ribbon Controller initialization with the specified Ribbon Control and Status Bar.
+
+</para>
             </summary>
             <param name="ribbonControl">
-		 
+		A <see cref="T:DevExpress.XtraBars.Ribbon.RibbonControl"/> object.
+
             </param>
             <param name="ribbonStatusBar">
-		 
+		A <see cref="T:DevExpress.XtraBars.Ribbon.RibbonStatusBar"/> object.
+
             </param>
 
 
@@ -2437,6 +2441,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.PrintRibbonController.AllowDefaultSvgImages">
+            <summary>
+                <para>Specifies whether to use bitmap or vector icons for the ribbon Document Preview toolbar.
+</para>
+            </summary>
+            <value><b>true</b>, to use vector images; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.XtraPrinting.Preview.PrintRibbonController.BeginInit">
             <summary>
                 <para>Starts the PrintRibbonController's initialization. Initialization occurs at runtime.
@@ -2473,7 +2487,8 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.Preview.PrintRibbonController.ImageCollection">
             <summary>
-                <para> </para>
+                <para>Gets the collection of images used in the PrintRibbonController UI.
+</para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.Preview.RibbonImageCollection"/> object.
 </value>
@@ -2515,7 +2530,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.Preview.PrintRibbonController.UseDefaultSvgImages">
             <summary>
-                <para>Specifies whether to use bitmap or vector icons for the ribbon Document Preview toolbar.
+                <para>Use the <see cref="P:DevExpress.XtraPrinting.Preview.PrintRibbonController.AllowDefaultSvgImages"/> property instead.
 </para>
             </summary>
             <value><b>true</b>, to use vector images; otherwise, <b>false</b>.
@@ -2754,6 +2769,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraPrinting.Preview.PrintBarManager.AllowDefaultSvgImages">
+            <summary>
+                <para>Specifies whether to use bitmap or vector icons for the standard Document Preview toolbar.
+</para>
+            </summary>
+            <value><b>true</b>, to use vector images; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPrinting.Preview.PrintBarManager.ColorPopupControlContainer">
             <summary>
                 <para>Gets or sets the popup control which is used to specify a color within the printing bar manager.
@@ -2891,7 +2916,7 @@
         </member>
         <member name="P:DevExpress.XtraPrinting.Preview.PrintBarManager.UseDefaultSvgImages">
             <summary>
-                <para>Specifies whether to use bitmap or vector icons for the standard Document Preview toolbar.
+                <para>Use the <see cref="P:DevExpress.XtraPrinting.Preview.PrintBarManager.AllowDefaultSvgImages"/> property instead.
 </para>
             </summary>
             <value><b>true</b>, to use vector images; otherwise, <b>false</b>.
