@@ -1,0 +1,113 @@
+.date
+{
+	cursor: default;
+}
+
+input{
+    border: 1px solid #a8a7a7 !important;
+    background: #f7f7f7;
+}
+
+input[type=checkbox]{
+    border: none;
+    width: 25px;
+    background: none;
+    height: 25px;
+}
+
+input[type=text]
+{
+	max-width: 150px;
+    min-width: 50px;
+    width: 100%;
+}
+tr{
+    margin:0;
+    padding:0;
+}
+table{
+    margin-top: 5px;
+    width:100%;
+    overflow: scroll;
+}
+td{
+    margin:0;
+    padding:0;
+}
+td p span input[type="text"] {
+    max-width: 150px;
+    min-width: 40px;
+    width: 53%;
+    border: 1px solid #444444;
+}
+td p{
+    margin-top: 7pt !important;
+    margin-bottom: 7pt !important;
+    line-height: 19px;
+    min-width: 75px !important;
+}
+
+.marker{
+    margin: -1px 5px 1px 2px;
+    width: 20px;
+    height: 17px;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #1abc9c;
+}
+
+/*для текста*/
+.text {
+	background: #fff url("../icon/comments/text.png") no-repeat center;
+
+}
+
+.text:hover {
+    background: #1abc9c url("../icon/comments/text-h.png") no-repeat center;
+}
+
+/*для автоввода*/
+.autofill {
+	background: #fff url("../icon/comments/autofill.png") no-repeat center;
+
+}
+
+.autofill:hover {
+    background: #1abc9c url("../icon/comments/autofill-h.png") no-repeat center;
+}
+
+/*для комментариев*/
+.comment {
+	background: #fff url("../icon/comments/question.png") no-repeat center;
+
+}
+
+.comment:hover {
+    background: #1abc9c url("../icon/comments/question-h.png") no-repeat center;
+}
+
+/*для календаря*/
+.calendar {
+	background: #fff url("../icon/comments/calendar.png") no-repeat center;
+
+}
+
+.calendar:hover {
+    background: #1abc9c url("../icon/comments/calendar-h.png") no-repeat center;
+}
+
+/*для формулы*/
+.formula {
+	background: #fff url("../icon/comments/formula.png") no-repeat center;
+
+}
+
+.formula:hover {
+    background: #1abc9c url("../icon/comments/formula-h.png") no-repeat center;
+}
+
+
+.marker img{
+    display: none;
+}
+

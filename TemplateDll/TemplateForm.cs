@@ -31,6 +31,7 @@ namespace templates
         string dbName = "";
         int docId = 0;
         int myDocId = 0;
+        string orientation = "portrait";
 
         public TemplateForm()
         {
@@ -73,6 +74,11 @@ namespace templates
         public void setMyDocId(int docId)
         {
             this.myDocId = docId;
+        }
+
+        public void setTemplateOrientation(string orientation)
+        {
+            this.orientation = orientation;
         }
 
         public void loadHTML(string html)
@@ -180,10 +186,20 @@ namespace templates
             head.AppendChild(pageJs);
 
             //inject page css
-            HtmlNode pageCss = htmlDocument.CreateElement("link");
-            pageCss.SetAttributeValue("rel", "stylesheet");
-            pageCss.SetAttributeValue("href", ApplicationPath + @"\css\page.css");
-            head.AppendChild(pageCss);
+            if (this.orientation == "portrait")
+            {
+                HtmlNode pageCss = htmlDocument.CreateElement("link");
+                pageCss.SetAttributeValue("rel", "stylesheet");
+                pageCss.SetAttributeValue("href", ApplicationPath + @"\css\page-portrait.css");
+                head.AppendChild(pageCss);
+            }
+            else
+            {
+                HtmlNode pageCss = htmlDocument.CreateElement("link");
+                pageCss.SetAttributeValue("rel", "stylesheet");
+                pageCss.SetAttributeValue("href", ApplicationPath + @"\css\page-album.css");
+                head.AppendChild(pageCss);
+            }
 
             htmlDocument.Save(htmlFile);
         }

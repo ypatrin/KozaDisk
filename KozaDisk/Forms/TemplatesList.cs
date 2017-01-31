@@ -439,6 +439,7 @@ namespace KozaDisk.Forms
                 template.template = (string)reader["template"].ToString();
                 template.type = (string)reader["type"].ToString();
                 template.fileExt = (string)reader["file_ext"].ToString();
+                template.orientation = (string)reader["orientation"].ToString();
 
                 string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
                 string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
@@ -456,6 +457,7 @@ namespace KozaDisk.Forms
                     templates.setUserXmlFile(this.userData.XmlFilePath);
                     templates.setDbName(databaseName);
                     templates.setDocId(Int32.Parse(template.id));
+                    templates.setOrientation(template.orientation);
                     templates.open();
                 }
                 if (template.type == "1")

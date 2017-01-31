@@ -83,7 +83,7 @@
             this.HeadPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeadPanel.Location = new System.Drawing.Point(0, 0);
             this.HeadPanel.Name = "HeadPanel";
-            this.HeadPanel.Size = new System.Drawing.Size(815, 91);
+            this.HeadPanel.Size = new System.Drawing.Size(1124, 91);
             this.HeadPanel.TabIndex = 1;
             // 
             // SaveBtn
@@ -157,7 +157,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 91);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(815, 371);
+            this.panel2.Size = new System.Drawing.Size(1124, 529);
             this.panel2.TabIndex = 2;
             // 
             // panel4
@@ -172,7 +172,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(515, 371);
+            this.panel4.Size = new System.Drawing.Size(824, 529);
             this.panel4.TabIndex = 3;
             // 
             // panel12
@@ -182,7 +182,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(26, 92);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(459, 254);
+            this.panel12.Size = new System.Drawing.Size(768, 412);
             this.panel12.TabIndex = 5;
             // 
             // webBrowser1
@@ -191,7 +191,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(457, 252);
+            this.webBrowser1.Size = new System.Drawing.Size(766, 410);
             this.webBrowser1.TabIndex = 5;
             // 
             // panel8
@@ -202,7 +202,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(26, 19);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(459, 73);
+            this.panel8.Size = new System.Drawing.Size(768, 73);
             this.panel8.TabIndex = 4;
             // 
             // panel11
@@ -212,7 +212,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 11);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(459, 39);
+            this.panel11.Size = new System.Drawing.Size(768, 39);
             this.panel11.TabIndex = 2;
             // 
             // TemplateNameBox
@@ -230,7 +230,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(0, 50);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(459, 23);
+            this.panel10.Size = new System.Drawing.Size(768, 23);
             this.panel10.TabIndex = 1;
             // 
             // panel9
@@ -238,23 +238,23 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(459, 11);
+            this.panel9.Size = new System.Drawing.Size(768, 11);
             this.panel9.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(26, 346);
+            this.panel7.Location = new System.Drawing.Point(26, 504);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(459, 25);
+            this.panel7.Size = new System.Drawing.Size(768, 25);
             this.panel7.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(485, 19);
+            this.panel6.Location = new System.Drawing.Point(794, 19);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(30, 352);
+            this.panel6.Size = new System.Drawing.Size(30, 510);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -262,7 +262,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 19);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 352);
+            this.panel5.Size = new System.Drawing.Size(26, 510);
             this.panel5.TabIndex = 1;
             // 
             // panel1
@@ -270,7 +270,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 19);
+            this.panel1.Size = new System.Drawing.Size(824, 19);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -280,9 +280,9 @@
             this.panel3.Controls.Add(this.panel14);
             this.panel3.Controls.Add(this.panel13);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(515, 0);
+            this.panel3.Location = new System.Drawing.Point(824, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 371);
+            this.panel3.Size = new System.Drawing.Size(300, 529);
             this.panel3.TabIndex = 2;
             // 
             // panel15
@@ -291,7 +291,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(31, 61);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(267, 308);
+            this.panel15.Size = new System.Drawing.Size(267, 466);
             this.panel15.TabIndex = 2;
             // 
             // webBrowser2
@@ -303,7 +303,7 @@
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(267, 308);
+            this.webBrowser2.Size = new System.Drawing.Size(267, 466);
             this.webBrowser2.TabIndex = 1;
             // 
             // panel14
@@ -314,7 +314,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 61);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(31, 308);
+            this.panel14.Size = new System.Drawing.Size(31, 466);
             this.panel14.TabIndex = 1;
             // 
             // ShowCommentBtn
@@ -366,7 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 462);
+            this.ClientSize = new System.Drawing.Size(1124, 620);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.HeadPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);

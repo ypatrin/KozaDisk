@@ -219,7 +219,7 @@ namespace templates
                     }
                     if (isHaveCheckbox && !isChecked && !isEmptyTextBox)
                     {
-                        //this.markers.deleteLineInDocument(this.newDoc.Document, name);
+                        this.markers.deleteLineInDocument(this.newDoc.Document, name);
                         this.markers.replaceInDocument(this.newDoc.Document, name, "");
                     }
                     if (isHaveCheckbox && !isChecked && isEmptyTextBox)

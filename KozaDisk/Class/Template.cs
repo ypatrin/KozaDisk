@@ -46,6 +46,8 @@ namespace KozaDisk
 
         public string dbName { get; set; }
 
+        public string orientation { get; set; }
+
         internal void setDbName(string databaseName)
         {
             throw new NotImplementedException();

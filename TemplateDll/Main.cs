@@ -18,6 +18,7 @@ namespace templates
         private string templateName, dbName;
         private int docId;
         private int myDocId = 0;
+        private string orientation = "portrait";
 
         private TmplDocument tmplDocument = TmplDocument.getInstance();
         private Markers markers = new Markers();
@@ -49,6 +50,11 @@ namespace templates
         public void setMyDocId(int docId)
         {
             this.myDocId = docId;
+        }
+
+        public void setOrientation(string orientation)
+        {
+            this.orientation = orientation;
         }
 
         public void open()
@@ -95,6 +101,7 @@ namespace templates
             this.progress.setCurrent(3);
 
             //inject JS
+            template.setTemplateOrientation(this.orientation);
             template.injectModules(this.htmlFilePath);
             this.progress.setCurrent(4);
 
@@ -181,6 +188,7 @@ namespace templates
             this.progress.setCurrent(3);
 
             //inject JS
+            template.setTemplateOrientation(this.orientation);
             template.injectModules(this.htmlFilePath);
             this.progress.setCurrent(4);
 
