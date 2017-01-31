@@ -169,12 +169,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
-    <None Include="Resources\inner-logo.png" />
     <None Include="Resources\logo1.png" />
+    <None Include="Resources\doc-bg.png" />
+    <None Include="Resources\top-bg.png" />
+    <None Include="Resources\doc-bg1.png" />
+    <None Include="Resources\top-bg1.png" />
+    <None Include="Resources\top-bg-mod.png" />
+    <None Include="Resources\pencil-gray.png" />
+    <None Include="Resources\top-bg-mod1.png" />
     <Content Include="Коза48.ico" />
     <None Include="Resources\com-arrow-left.png" />
     <None Include="Resources\com-arrow.png" />
-    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

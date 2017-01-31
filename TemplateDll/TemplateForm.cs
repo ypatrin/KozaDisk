@@ -274,7 +274,7 @@ namespace templates
         private void TemplateForm_Load(object sender, EventArgs e)
         {
             Size size = new Size();
-            size.Width = (panel1.Width-80);
+            size.Width = (panel1.Width-200);
             size.Height = this.TemplateNameBox.Size.Height;
             this.TemplateNameBox.Size = size;
 

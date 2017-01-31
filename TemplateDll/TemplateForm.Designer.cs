@@ -38,11 +38,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
             this.TemplateNameBox = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -62,8 +69,12 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -177,13 +188,37 @@
             // 
             // panel12
             // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.webBrowser1);
+            this.panel12.BackgroundImage = global::templates.Properties.Resources.doc_bg1;
+            this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel12.Controls.Add(this.panel20);
+            this.panel12.Controls.Add(this.panel19);
+            this.panel12.Controls.Add(this.panel18);
+            this.panel12.Controls.Add(this.panel17);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(26, 92);
+            this.panel12.Location = new System.Drawing.Point(26, 84);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(768, 412);
+            this.panel12.Size = new System.Drawing.Size(768, 420);
             this.panel12.TabIndex = 5;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Transparent;
+            this.panel20.Controls.Add(this.panel22);
+            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(75, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(638, 365);
+            this.panel20.TabIndex = 3;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.webBrowser1);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(0, 55);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(638, 310);
+            this.panel22.TabIndex = 1;
             // 
             // webBrowser1
             // 
@@ -191,55 +226,105 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(766, 410);
-            this.webBrowser1.TabIndex = 5;
+            this.webBrowser1.Size = new System.Drawing.Size(638, 310);
+            this.webBrowser1.TabIndex = 9;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Transparent;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(638, 55);
+            this.panel21.TabIndex = 0;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Transparent;
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel19.Location = new System.Drawing.Point(75, 365);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(638, 55);
+            this.panel19.TabIndex = 2;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Transparent;
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(75, 420);
+            this.panel18.TabIndex = 1;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel17.Location = new System.Drawing.Point(713, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(55, 420);
+            this.panel17.TabIndex = 0;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.panel23);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(26, 19);
+            this.panel8.Location = new System.Drawing.Point(26, 22);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(768, 73);
+            this.panel8.Size = new System.Drawing.Size(768, 62);
             this.panel8.TabIndex = 4;
             // 
-            // panel11
+            // panel23
             // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.TemplateNameBox);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 11);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(768, 39);
-            this.panel11.TabIndex = 2;
+            this.panel23.BackgroundImage = global::templates.Properties.Resources.top_bg_mod1;
+            this.panel23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel23.Controls.Add(this.TemplateNameBox);
+            this.panel23.Controls.Add(this.panel16);
+            this.panel23.Controls.Add(this.panel9);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(768, 62);
+            this.panel23.TabIndex = 4;
             // 
             // TemplateNameBox
             // 
             this.TemplateNameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TemplateNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TemplateNameBox.Location = new System.Drawing.Point(5, 8);
+            this.TemplateNameBox.Location = new System.Drawing.Point(81, 21);
             this.TemplateNameBox.Name = "TemplateNameBox";
-            this.TemplateNameBox.Size = new System.Drawing.Size(436, 19);
-            this.TemplateNameBox.TabIndex = 1;
+            this.TemplateNameBox.Size = new System.Drawing.Size(373, 19);
+            this.TemplateNameBox.TabIndex = 6;
             this.TemplateNameBox.Text = "Document name";
             // 
-            // panel10
+            // panel16
             // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 50);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(768, 23);
-            this.panel10.TabIndex = 1;
+            this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Controls.Add(this.pictureBox2);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel16.Location = new System.Drawing.Point(710, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(58, 62);
+            this.panel16.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::templates.Properties.Resources.pencil_gray;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(14, 14);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panel9
             // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(768, 11);
-            this.panel9.TabIndex = 0;
+            this.panel9.Size = new System.Drawing.Size(75, 62);
+            this.panel9.TabIndex = 2;
             // 
             // panel7
             // 
@@ -252,25 +337,26 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(794, 19);
+            this.panel6.Location = new System.Drawing.Point(794, 22);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(30, 510);
+            this.panel6.Size = new System.Drawing.Size(30, 507);
             this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 19);
+            this.panel5.Location = new System.Drawing.Point(0, 22);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 510);
+            this.panel5.Size = new System.Drawing.Size(26, 507);
             this.panel5.TabIndex = 1;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 19);
+            this.panel1.Size = new System.Drawing.Size(824, 22);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -358,10 +444,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "КОМЕНТАРІ";
             // 
-            // chartRecordBindingSource
-            // 
-            this.chartRecordBindingSource.DataSource = typeof(templates.ChartRecord);
-            // 
             // TemplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -381,9 +463,14 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
@@ -408,11 +495,7 @@
         private System.Windows.Forms.Button DownloadBtn;
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
@@ -424,6 +507,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox HideCommentBtn;
         private System.Windows.Forms.PictureBox ShowCommentBtn;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox TemplateNameBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

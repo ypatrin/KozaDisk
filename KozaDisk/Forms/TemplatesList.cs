@@ -502,6 +502,7 @@ namespace KozaDisk.Forms
                 template.markersXML = (string)reader["markers_xml"].ToString();
                 template.template = (string)reader["template"].ToString();
                 template.type = (string)reader["type"].ToString();
+                template.orientation = (string)reader["orientation"].ToString();
 
                 string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
                 string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
@@ -538,6 +539,7 @@ namespace KozaDisk.Forms
                 templates.setDbName(databaseName);
                 templates.setDocId(Int32.Parse(template.id));
                 templates.setMyDocId(Int32.Parse(documentId));
+                templates.setOrientation(template.orientation);
                 templates.open(html);
 
                 this.WindowState = FormWindowState.Maximized;

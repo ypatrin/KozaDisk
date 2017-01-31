@@ -128,9 +128,9 @@ namespace templates.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap inner_logo {
+        internal static System.Drawing.Bitmap doc_bg {
             get {
-                object obj = ResourceManager.GetObject("inner-logo", resourceCulture);
+                object obj = ResourceManager.GetObject("doc-bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -138,9 +138,9 @@ namespace templates.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap doc_bg1 {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("doc-bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -151,6 +151,56 @@ namespace templates.Properties {
         internal static System.Drawing.Bitmap logo1 {
             get {
                 object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pencil_gray {
+            get {
+                object obj = ResourceManager.GetObject("pencil-gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_bg {
+            get {
+                object obj = ResourceManager.GetObject("top-bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_bg_mod {
+            get {
+                object obj = ResourceManager.GetObject("top-bg-mod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_bg_mod1 {
+            get {
+                object obj = ResourceManager.GetObject("top-bg-mod1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_bg1 {
+            get {
+                object obj = ResourceManager.GetObject("top-bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
