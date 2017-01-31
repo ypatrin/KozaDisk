@@ -43,7 +43,7 @@ namespace templates
                 html = html.Replace(
                     "$$" + markerName + "$$", 
                     String.Format(""+
-                        "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\question.png'/></span>" +
+                        "<span class='marker comment' comment=\"{1}\"></span>" +
                         "<input type='text' name='{0}' id='{0}' val='' style='display:none'>"
                     , markerName, val, ApplicationPath)
                 );
@@ -90,7 +90,7 @@ namespace templates
                     "$$" + markerName + "$$", 
                     String.Format(""+
                         "<input type='text' name='{0}' id='{0}'>"+
-                        "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\text.png'/></span>"
+                        "<span class='marker text' comment=\"{1}\"></span>"
                     , markerName, markerComment, ApplicationPath)
                 );
             }
@@ -104,7 +104,7 @@ namespace templates
                     "$$" + markerName + "$$", 
                     String.Format(""+
                         "<input type='text' class='date' name='{0}' id='{0}' onfocus='this.blur()' readonly='readonly'>"+
-                        "<span class='marker'><img class='comment' comment=\"{1}\" src='{2}\\icon\\comments\\calendar.png'/></span>"
+                        "<span class='marker calendar' comment=\"{1}\"></span>"
                     , markerName, markerComment, ApplicationPath)
                 );
             }
@@ -125,7 +125,7 @@ namespace templates
                     "$$" + markerName + "$$",
                     String.Format(""+
                         "<input type='text' name='{1}' id='{1}' text_type='formula' formula='{3}' disabled='disabled'>"+
-                        "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\formula.png'/></span>"
+                        "<span class='marker formula' comment=\"{2}\"></span>"
                     , ApplicationPath, markerName, markerComment, val)
                 );
             }
@@ -188,9 +188,9 @@ namespace templates
                         "$$" + markerName + "$$",
                         String.Format(""+
                             "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
-                            "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/></span>" +
+                            "<span class='marker comment' comment=\"{3}\"></span>" +
                             "<input type='text' name='{1}' id='{1}'>"+
-                            "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\text.png'/></span>"
+                            "<span class='marker text' comment=\"{2}\"></span>"
                         , ApplicationPath, markerName, markerComment, markerCommentDyn)
                     );
                 }
@@ -203,9 +203,9 @@ namespace templates
                         "$$" + markerName + "$$",
                         String.Format(""+
                             "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
-                            "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\question.png'/></span>" +
+                            "<span class='marker comment' comment=\"{3}\"></span>" +
                             "<input type='text' name='{1}' id='{1}' class='date' onfocus='this.blur()' readonly='readonly'>"+
-                            "<span class='marker'><img class='comment' comment=\"{2}\" src='{0}\\icon\\comments\\calendar.png'/></span>"
+                            "<span class='marker calendar' comment=\"{2}\"></span>"
                         , ApplicationPath, markerName, markerComment, markerCommentDyn)
                     );
                 }
@@ -220,9 +220,9 @@ namespace templates
                         "$$" + markerName + "$$",
                         String.Format(""+
                             "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
-                            "<span class='marker'><img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/></span>" +
+                            "<span class='marker comment' comment=\"{4}\"></span>" +
                             "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
-                            "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\autofill.png'/></span>"
+                            "<span class='marker autofill' comment=\"{3}\"></span>"
                         , ApplicationPath, markerName, val, markerComment, markerCommentDyn)
                     );
                 }
@@ -232,7 +232,7 @@ namespace templates
                         "$$" + markerName + "$$",
                         String.Format(""+
                             "<input type='checkbox' checked='checked' name='{1}' id='dyn_{1}'/>"+
-                            "<span class='marker'><img class='comment' comment=\"{4}\" src='{0}\\icon\\comments\\question.png'/></span>" +
+                            "<span class='marker comment' comment=\"{4}\"></span>" +
                             "{2}"+
                             "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{5}'>"
                         , ApplicationPath, markerName, val, markerComment, markerCommentDyn, val.Replace("$$",""))
@@ -260,7 +260,7 @@ namespace templates
                     "$$" + markerName + "$$",
                     String.Format(""+
                         "<input type='text' class='static' disabled='disabled' name='{1}' id='{1}' value='{2}'>"+
-                        "<span class='marker'><img class='comment' comment=\"{3}\" src='{0}\\icon\\comments\\autofill.png'/></span>"
+                        "<span class='marker autofill' comment=\"{3}\"></span>"
                     , ApplicationPath, markerName, val, markerComment)
                 );
             }

@@ -436,4 +436,3 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\de\DevExpress.XtraPivotG
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\es\DevExpress.XtraPivotGrid.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ja\DevExpress.XtraPivotGrid.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Debug\ru\DevExpress.XtraPivotGrid.v16.2.resources.dll
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Debug\Template.dll.csprojResolveAssemblyReference.cache

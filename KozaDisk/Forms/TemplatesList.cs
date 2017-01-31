@@ -778,7 +778,9 @@ namespace KozaDisk.Forms
 
             this.prepareList();
             this.prepareTree();
-            
+
+            panel12.Visible = false;
+            panel11.Visible = true;
 
             if (this.view == "tree")
             {

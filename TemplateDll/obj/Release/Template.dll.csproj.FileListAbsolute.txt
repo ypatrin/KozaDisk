@@ -330,7 +330,6 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Release\de\DevExpress.Xpo.v16.
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Release\es\DevExpress.Xpo.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Release\ja\DevExpress.Xpo.v16.2.resources.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\bin\Release\ru\DevExpress.Xpo.v16.2.resources.dll
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\Template.dll.csprojResolveAssemblyReference.cache
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.PrintForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.PrintRibbonControllerResources.resources
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.ProgressForm.resources

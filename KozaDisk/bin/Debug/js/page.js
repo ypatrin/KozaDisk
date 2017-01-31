@@ -1,4 +1,29 @@
 ﻿$(document).ready(function(){
+    $( "input" ).focus(function() {
+        $(this).css( {
+            "border-color": "#1abc9c",
+            "background-color": "#fff"
+        } );
+    });
+    $( "input" ).focusout(function() {
+        $(this).css( {
+        	"border-color": "#444444",
+            "background-color": "#f7f7f7"
+		} );
+
+    });
+    $( "input[type=text]" ).hover(function() {
+        $(this).css( {
+            "border-color": "#1abc9c",
+            "background-color": "#fff"
+        } );
+    });
+    $( "input[type=text]" ).mouseout(function() {
+        $(this).css( {
+            "border-color": "#444444",
+            "background-color": "#f7f7f7"
+        } );
+    });
 	$(".comment").hover(function(){
 		var comment = $(this).attr("comment");
 		window.external.showComment(comment);
