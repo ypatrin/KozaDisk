@@ -310,59 +310,66 @@ namespace templates
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string htmlElements = "";
-            var elements = webBrowser1.Document.GetElementsByTagName("input");
-
-            foreach (HtmlElement element in elements)
+            try
             {
-                if (element.GetAttribute("type") == "text")
+                string htmlElements = "";
+                var elements = webBrowser1.Document.GetElementsByTagName("input");
+
+                foreach (HtmlElement element in elements)
                 {
-                    htmlElements += $"text:{element.Name}:{element.GetAttribute("value")};";
+                    if (element.GetAttribute("type") == "text")
+                    {
+                        htmlElements += $"text:{element.Name}:{element.GetAttribute("value")};";
+                    }
+
+                    if (element.GetAttribute("type") == "checkbox")
+                    {
+                        string isChecked = element.GetAttribute("checked");
+                        htmlElements += $"checkbox:{element.Name}:{isChecked};";
+                    }
                 }
 
-                if (element.GetAttribute("type") == "checkbox")
+                string encHtml = Base64Encode(htmlElements);
+
+                string AppStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"\\KozaDisk\\";
+                string DocumentsDB = AppStorage + $"users\\{this.userName}\\documents.db";
+                string db = this.dbName;
+                int docId = this.docId;
+
+                //save doc to DB
+
+                if (!System.IO.File.Exists(DocumentsDB))
                 {
-                    string isChecked = element.GetAttribute("checked");
-                    htmlElements += $"checkbox:{element.Name}:{isChecked};";
+                    SQLiteConnection.CreateFile(DocumentsDB);
+                    SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
+                    con.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("CREATE TABLE documents (id INTEGER PRIMARY KEY AUTOINCREMENT, db_name STRING(255), doc_id INTEGER(13), doc_name STRING(255), doc_html TEXT, created_at DATETIME); ", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
                 }
+
+                SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
+                connection.Open();
+
+                if (this.myDocId > 0)
+                {
+                    //delete old
+                    SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE id = '{this.myDocId}'", connection);
+                    c.ExecuteNonQuery();
+                }
+
+                //add
+                string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";
+
+                SQLiteCommand command = new SQLiteCommand(sql, connection);
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Збережено в розділі «Мої документи»", "КОЗА-ДИСК", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            string encHtml = Base64Encode(htmlElements);
-
-            string AppStorage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + $"\\KozaDisk\\";
-            string DocumentsDB = AppStorage + $"users\\{this.userName}\\documents.db";
-            string db = this.dbName;
-            int docId = this.docId;
-
-            //save doc to DB
-
-            if (!System.IO.File.Exists(DocumentsDB))
+            catch(Exception ex)
             {
-                SQLiteConnection.CreateFile(DocumentsDB);
-                SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
-                con.Open();
-                SQLiteCommand cmd = new SQLiteCommand("CREATE TABLE documents (id INTEGER PRIMARY KEY AUTOINCREMENT, db_name STRING(255), doc_id INTEGER(13), doc_name STRING(255), doc_html TEXT, created_at DATETIME); ", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+
             }
-
-            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
-            connection.Open();
-
-            if (this.myDocId > 0)
-            {
-                //delete old
-                SQLiteCommand c = new SQLiteCommand($"DELETE FROM documents WHERE id = '{this.myDocId}'", connection);
-                c.ExecuteNonQuery();
-            }
-
-            //add
-            string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";
-
-            SQLiteCommand command = new SQLiteCommand(sql, connection);
-            command.ExecuteNonQuery();
-
-            MessageBox.Show("Шаблон успішно збережений!","Шаблон", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Button_MouseEnter(object sender, EventArgs e)

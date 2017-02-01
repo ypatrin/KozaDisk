@@ -456,7 +456,7 @@
             superToolTip6.FixedTooltipWidth = true;
             toolTipTitleItem6.Text = "Друк (Ctrl+P)";
             toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Оберіть принтер, кількість копій та інші необхідні настройки перед друком.";
+            toolTipItem6.Text = "Оберіть принтер, кількість копій документа та інші налаштування перед друком.";
             superToolTip6.Items.Add(toolTipTitleItem6);
             superToolTip6.Items.Add(toolTipItem6);
             superToolTip6.MaxWidth = 210;
@@ -615,7 +615,7 @@
             superToolTip14.FixedTooltipWidth = true;
             toolTipTitleItem14.Text = "Зменшити";
             toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Зменшити для відображення більшої кількості сторінок.";
+            toolTipItem14.Text = "Зменшить для перегляду кількох сторінок документа водночас.";
             superToolTip14.Items.Add(toolTipTitleItem14);
             superToolTip14.Items.Add(toolTipItem14);
             superToolTip14.MaxWidth = 210;
@@ -634,7 +634,7 @@
             superToolTip15.FixedTooltipWidth = true;
             toolTipTitleItem15.Text = "Збільшити";
             toolTipItem15.LeftIndent = 6;
-            toolTipItem15.Text = "Збільшити для кращого перегляду документа.";
+            toolTipItem15.Text = "Збільшіть за потреби детального перегляду документа.";
             superToolTip15.Items.Add(toolTipTitleItem15);
             superToolTip15.Items.Add(toolTipItem15);
             superToolTip15.MaxWidth = 210;
@@ -659,6 +659,7 @@
             superToolTip16.Items.Add(toolTipItem16);
             superToolTip16.MaxWidth = 210;
             this.printPreviewBarItem16.SuperTip = superToolTip16;
+            this.printPreviewBarItem16.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // printPreviewBarItem17
             // 
@@ -1389,7 +1390,7 @@
             this.printPreviewRibbonPageGroup5,
             this.printPreviewRibbonPageGroup8});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Предпросмотр друку";
+            this.ribbonPage1.Text = "Перегляд та друк";
             // 
             // printPreviewRibbonPageGroup2
             // 
@@ -1452,7 +1453,6 @@
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem13);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem21);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem14);
-            this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem16);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem15);
             this.printPreviewRibbonPageGroup5.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Zoom;
             this.printPreviewRibbonPageGroup5.Name = "printPreviewRibbonPageGroup5";

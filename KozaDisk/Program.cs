@@ -17,6 +17,11 @@ namespace KozaDisk
         [STAThread]
         static void Main()
         {
+            MessageBoxManager.OK = "OK";
+            MessageBoxManager.Yes = "Так";
+            MessageBoxManager.No = "Ні";
+            MessageBoxManager.Register();
+
             Application.EnableVisualStyles();
             //seach old users
             string oldKozaPath = Constant.MyDocumentsPath + @"\" + Constant.OldKozaName + @"\";

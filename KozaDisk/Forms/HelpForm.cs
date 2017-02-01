@@ -59,7 +59,7 @@ namespace KozaDisk.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.FileName = "Іструкція Коза-Диск 2.0.pdf";
+            sfd.FileName = "instruction.pdf";
             sfd.Filter = "PDF Файл|*.pdf";
 
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -67,7 +67,7 @@ namespace KozaDisk.Forms
                 if (File.Exists(sfd.FileName))
                     File.Delete(sfd.FileName);
 
-                File.Copy(Constant.ApplcationPath + "manual.pdf", sfd.FileName);
+                File.Copy(Constant.ApplcationPath + "instruction.pdf", sfd.FileName);
                 MessageBox.Show("Файл успішно збережений!", "Допомога", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

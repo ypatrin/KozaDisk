@@ -18,7 +18,7 @@ namespace KozaDisk.Forms
         public TrialForm(string days)
         {
             InitializeComponent();
-            this.label1.Text = $"Залишилось {days} днів";
+            this.label1.Text = $"Залишилося {days} днів";
         }
 
         private void button1_Click(object sender, EventArgs e)

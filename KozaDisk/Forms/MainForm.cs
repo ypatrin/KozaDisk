@@ -84,7 +84,8 @@ namespace KozaDisk
                 if (i == 0)
                 {
                     this.NewUserPanel.Visible = true;
-                    this.LoginPanel.Visible = false;
+                    this.ImportPanel.Visible = false;
+                    this.loginPanel.Visible = false;
                 }
 
                 //import and create
@@ -96,28 +97,28 @@ namespace KozaDisk
                     }
 
                     this.NewUserPanel.Visible = true;
-                    this.LoginPanel.Visible = false;
+                    this.ImportPanel.Visible = false;
+                    this.loginPanel.Visible = false;
                 }
 
                 //import user
                 if (i > 1)
                 {
                     this.NewUserPanel.Visible = false;
-                    this.LoginPanel.Visible = true;
+                    this.ImportPanel.Visible = true;
+                    this.loginPanel.Visible = false;
                 }
             }
             else
             {
                 //login
                 this.NewUserPanel.Visible = false;
-                this.LoginPanel.Visible = true;
+                this.ImportPanel.Visible = false;
+                this.loginPanel.Visible = true;
 
                 this.usersBox.Visible = false;
                 this.ImportButton.Visible = false;
                 this.CreateButton.Visible = false;
-
-                this.LoginButton.Visible = true;
-                this.UserNameLbl.Visible = true;
 
                 string userName = File.ReadAllText(Constant.ApplcationStorage + @"app\login.cfg");
                 this.UserNameLbl.Text = userName;
@@ -130,7 +131,7 @@ namespace KozaDisk
                 this.User = new User();
 
             this.NewUserPanel.Visible = true;
-            this.LoginPanel.Visible = false;
+            this.ImportPanel.Visible = false;
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -145,7 +146,7 @@ namespace KozaDisk
             this.PhoneBox.Text = this.User.UserPhone;
 
             this.NewUserPanel.Visible = true;
-            this.LoginPanel.Visible = false;
+            this.ImportPanel.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -195,14 +196,8 @@ namespace KozaDisk
 
                 //load user
                 this.NewUserPanel.Visible = false;
-                this.LoginPanel.Visible = true;
-
-                this.usersBox.Visible = false;
-                this.ImportButton.Visible = false;
-                this.CreateButton.Visible = false;
-
-                this.LoginButton.Visible = true;
-                this.UserNameLbl.Visible = true;
+                this.ImportPanel.Visible = false;
+                this.loginPanel.Visible = true;
 
                 this.UserNameLbl.Text = this.User.UserName;
             }
@@ -254,7 +249,7 @@ namespace KozaDisk
         private void rightButton_Maunal_Click(object sender, MouseEventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.FileName = "Іструкція Коза-Диск 2.0.pdf";
+            sfd.FileName = "instruction.pdf";
             sfd.Filter = "PDF Файл|*.pdf";
 
             if (sfd.ShowDialog() == DialogResult.OK)
@@ -262,7 +257,7 @@ namespace KozaDisk
                 if (File.Exists(sfd.FileName))
                     File.Delete(sfd.FileName);
 
-                File.Copy(Constant.ApplcationPath + "manual.pdf", sfd.FileName);
+                File.Copy(Constant.ApplcationPath + "instruction.pdf", sfd.FileName);
                 MessageBox.Show("Файл успішно збережений!", "Допомога", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

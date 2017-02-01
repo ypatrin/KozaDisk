@@ -2,24 +2,25 @@
 {
 	cursor: default;
 }
-
-input{
-    border: 1px solid #a8a7a7 !important;
-    background: #f7f7f7;
-}
-
 input[type=checkbox]{
-    border: none;
+    border: none !important;
     width: 25px;
     background: none;
     height: 25px;
 }
+
+
 
 input[type=text]
 {
 	max-width: 150px;
     min-width: 50px;
     width: 100%;
+    border: 1px solid #a8a7a7 !important;
+    background: #f7f7f7;
+}
+input[type=text]:hover{
+    border: 1px solid #1abc9c !important;
 }
 tr{
     margin:0;

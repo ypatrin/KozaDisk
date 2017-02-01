@@ -93,7 +93,7 @@ namespace templates
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
                 this.newDoc.Document.SaveDocument(saveDialog.FileName, DocumentFormat.OpenXml);
-                MessageBox.Show("Документ успішно збережений!", "Koza Disk", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Документ успішно збережений!", "КОЗА-ДИСК", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function(){
     $( "input[type=text]" ).hover(function() {
         $(this).css( {
-            "border-color": "#1abc9c",
+            "border-color": "#1abc9c !important",
             "background-color": "#fff"
         } );
     });
@@ -14,7 +14,7 @@
 
     $( "input[type=text]" ).focus(function() {
         $(this).css( {
-            "border-color": "#1abc9c",
+            "border-color": "#1abc9c !important",
             "background-color": "#fff"
         } );
     });

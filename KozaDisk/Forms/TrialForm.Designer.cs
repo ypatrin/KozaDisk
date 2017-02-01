@@ -81,7 +81,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Залишилось Х днів";
+            this.label1.Text = "Залишилося Х днів";
             // 
             // TrialForm
             // 

@@ -208,7 +208,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(75, 0);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(638, 365);
+            this.panel20.Size = new System.Drawing.Size(670, 365);
             this.panel20.TabIndex = 3;
             // 
             // panel22
@@ -217,7 +217,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel22.Location = new System.Drawing.Point(0, 55);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(638, 310);
+            this.panel22.Size = new System.Drawing.Size(670, 310);
             this.panel22.TabIndex = 1;
             // 
             // webBrowser1
@@ -226,7 +226,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(638, 310);
+            this.webBrowser1.Size = new System.Drawing.Size(670, 310);
             this.webBrowser1.TabIndex = 9;
             // 
             // panel21
@@ -235,7 +235,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(0, 0);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(638, 55);
+            this.panel21.Size = new System.Drawing.Size(670, 55);
             this.panel21.TabIndex = 0;
             // 
             // panel19
@@ -244,7 +244,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel19.Location = new System.Drawing.Point(75, 365);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(638, 55);
+            this.panel19.Size = new System.Drawing.Size(670, 55);
             this.panel19.TabIndex = 2;
             // 
             // panel18
@@ -260,9 +260,9 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(713, 0);
+            this.panel17.Location = new System.Drawing.Point(745, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(55, 420);
+            this.panel17.Size = new System.Drawing.Size(23, 420);
             this.panel17.TabIndex = 0;
             // 
             // panel8
@@ -375,9 +375,9 @@
             // 
             this.panel15.Controls.Add(this.webBrowser2);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(31, 61);
+            this.panel15.Location = new System.Drawing.Point(29, 61);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(267, 466);
+            this.panel15.Size = new System.Drawing.Size(269, 466);
             this.panel15.TabIndex = 2;
             // 
             // webBrowser2
@@ -389,7 +389,7 @@
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(267, 466);
+            this.webBrowser2.Size = new System.Drawing.Size(269, 466);
             this.webBrowser2.TabIndex = 1;
             // 
             // panel14
@@ -400,7 +400,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 61);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(31, 466);
+            this.panel14.Size = new System.Drawing.Size(29, 466);
             this.panel14.TabIndex = 1;
             // 
             // ShowCommentBtn

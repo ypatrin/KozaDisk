@@ -41,10 +41,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.LoginPanel = new System.Windows.Forms.Panel();
+            this.ImportPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.UserNameLbl = new System.Windows.Forms.Label();
-            this.LoginButton = new System.Windows.Forms.Button();
             this.CreateButton = new System.Windows.Forms.Button();
             this.ImportButton = new System.Windows.Forms.Button();
             this.usersBox = new System.Windows.Forms.ComboBox();
@@ -60,11 +58,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginPanel = new System.Windows.Forms.Panel();
+            this.main = new System.Windows.Forms.Panel();
+            this.UserNameLbl = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.NewUserPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.LoginPanel.SuspendLayout();
+            this.ImportPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -74,12 +79,16 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.loginPanel.SuspendLayout();
+            this.main.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.loginPanel);
             this.panel1.Controls.Add(this.NewUserPanel);
-            this.panel1.Controls.Add(this.LoginPanel);
+            this.panel1.Controls.Add(this.ImportPanel);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -96,7 +105,7 @@
             this.NewUserPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.NewUserPanel.Controls.Add(this.panel8);
             this.NewUserPanel.Controls.Add(this.panel9);
-            this.NewUserPanel.Location = new System.Drawing.Point(24, 110);
+            this.NewUserPanel.Location = new System.Drawing.Point(10, 108);
             this.NewUserPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NewUserPanel.Name = "NewUserPanel";
             this.NewUserPanel.Size = new System.Drawing.Size(382, 288);
@@ -224,59 +233,29 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Створення профілю";
             // 
-            // LoginPanel
+            // ImportPanel
             // 
-            this.LoginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.LoginPanel.Controls.Add(this.panel3);
-            this.LoginPanel.Controls.Add(this.panel2);
-            this.LoginPanel.Location = new System.Drawing.Point(24, 144);
-            this.LoginPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(382, 183);
-            this.LoginPanel.TabIndex = 6;
+            this.ImportPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.ImportPanel.Controls.Add(this.panel3);
+            this.ImportPanel.Controls.Add(this.panel2);
+            this.ImportPanel.Location = new System.Drawing.Point(11, 108);
+            this.ImportPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ImportPanel.Name = "ImportPanel";
+            this.ImportPanel.Size = new System.Drawing.Size(382, 283);
+            this.ImportPanel.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.UserNameLbl);
-            this.panel3.Controls.Add(this.LoginButton);
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.CreateButton);
             this.panel3.Controls.Add(this.ImportButton);
             this.panel3.Controls.Add(this.usersBox);
             this.panel3.Location = new System.Drawing.Point(4, 39);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 140);
+            this.panel3.Size = new System.Drawing.Size(374, 241);
             this.panel3.TabIndex = 4;
-            // 
-            // UserNameLbl
-            // 
-            this.UserNameLbl.AutoSize = true;
-            this.UserNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.UserNameLbl.Location = new System.Drawing.Point(13, 23);
-            this.UserNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.UserNameLbl.Name = "UserNameLbl";
-            this.UserNameLbl.Size = new System.Drawing.Size(132, 26);
-            this.UserNameLbl.TabIndex = 4;
-            this.UserNameLbl.Text = "Коричтувач";
-            this.UserNameLbl.Visible = false;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(258, 77);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(98, 38);
-            this.LoginButton.TabIndex = 3;
-            this.LoginButton.Text = "Вхід";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Visible = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
             // 
             // CreateButton
             // 
@@ -285,7 +264,7 @@
             this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CreateButton.ForeColor = System.Drawing.Color.White;
-            this.CreateButton.Location = new System.Drawing.Point(161, 77);
+            this.CreateButton.Location = new System.Drawing.Point(159, 185);
             this.CreateButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(196, 38);
@@ -301,7 +280,7 @@
             this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ImportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.ImportButton.ForeColor = System.Drawing.Color.White;
-            this.ImportButton.Location = new System.Drawing.Point(18, 77);
+            this.ImportButton.Location = new System.Drawing.Point(16, 185);
             this.ImportButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ImportButton.Name = "ImportButton";
             this.ImportButton.Size = new System.Drawing.Size(126, 38);
@@ -315,7 +294,7 @@
             this.usersBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.usersBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.usersBox.FormattingEnabled = true;
-            this.usersBox.Location = new System.Drawing.Point(18, 23);
+            this.usersBox.Location = new System.Drawing.Point(16, 142);
             this.usersBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersBox.Name = "usersBox";
             this.usersBox.Size = new System.Drawing.Size(339, 32);
@@ -482,6 +461,91 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 13F);
+            this.textBox1.Location = new System.Drawing.Point(16, 9);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(339, 127);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Шановний користувачу! Якщо раніше з КОЗА-ДИСКами на цьому комп’ютері працювали кі" +
+    "лька користувачів, то оберіть один із наявних профілів. Надалі Ви працюватимете " +
+    "з даними саме цього профілю";
+            // 
+            // loginPanel
+            // 
+            this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.loginPanel.Controls.Add(this.main);
+            this.loginPanel.Controls.Add(this.panel11);
+            this.loginPanel.Location = new System.Drawing.Point(10, 156);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(382, 153);
+            this.loginPanel.TabIndex = 7;
+            this.loginPanel.Visible = false;
+            // 
+            // main
+            // 
+            this.main.BackColor = System.Drawing.Color.White;
+            this.main.Controls.Add(this.UserNameLbl);
+            this.main.Controls.Add(this.button2);
+            this.main.Location = new System.Drawing.Point(4, 39);
+            this.main.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.main.Name = "main";
+            this.main.Size = new System.Drawing.Size(374, 111);
+            this.main.TabIndex = 4;
+            // 
+            // UserNameLbl
+            // 
+            this.UserNameLbl.AutoSize = true;
+            this.UserNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.UserNameLbl.Location = new System.Drawing.Point(11, 19);
+            this.UserNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UserNameLbl.Name = "UserNameLbl";
+            this.UserNameLbl.Size = new System.Drawing.Size(132, 26);
+            this.UserNameLbl.TabIndex = 4;
+            this.UserNameLbl.Text = "Коричтувач";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(257, 60);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 38);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Вхід";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.LoginButton_Click_1);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.panel11.Controls.Add(this.label10);
+            this.panel11.Location = new System.Drawing.Point(2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(374, 38);
+            this.panel11.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(14, 5);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 22);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Користувач";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,7 +569,7 @@
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.LoginPanel.ResumeLayout(false);
+            this.ImportPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -520,6 +584,11 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.loginPanel.ResumeLayout(false);
+            this.main.ResumeLayout(false);
+            this.main.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -537,7 +606,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel LoginPanel;
+        private System.Windows.Forms.Panel ImportPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.Button ImportButton;
@@ -554,8 +623,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label UserNameLbl;
-        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.MaskedTextBox PhoneBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel loginPanel;
+        private System.Windows.Forms.Panel main;
+        private System.Windows.Forms.Label UserNameLbl;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label10;
     }
 }

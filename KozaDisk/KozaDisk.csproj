@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Class\Activator.cs" />
     <Compile Include="Class\Base64.cs" />
+    <Compile Include="Class\Components\MessageBoxManager.cs" />
     <Compile Include="Class\Constant.cs" />
     <Compile Include="Class\CryptAesCBC.cs" />
     <Compile Include="Class\Disk.cs" />
@@ -298,11 +299,10 @@
     <Content Include="koza %282%29.ico" />
     <None Include="Resources\error.png" />
     <None Include="Resources\ok.png" />
+    <None Include="Resources\documentDefaultMessage.txt" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.103\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net40\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

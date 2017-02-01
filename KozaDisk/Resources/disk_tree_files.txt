@@ -27,7 +27,6 @@
             color: black;
         }
     </style>
-    <div class="document_head">Назва</div>
     %templates%
 
     <script type="text/javascript">

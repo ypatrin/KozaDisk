@@ -148,7 +148,7 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.TabStop = false;
             this.textBox1.Text = "Шановний користувачу! Переконайтеся, що Ваш комп’ютер підключений до інтернету. В" +
-    "ідтак уведіть у порожнє поле код активації, розміщений у коробці диска.\r\n";
+    "ідтак уведіть у порожнє поле код активації, розміщений у коробці диска\r\n";
             // 
             // Activate
             // 
@@ -164,7 +164,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Activate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Активація диску";
+            this.Text = "Активація диска";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

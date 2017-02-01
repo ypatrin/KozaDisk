@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body bgcolor="" style="margin-top: 0; font-family: Arial">
+
+    <style>
+        .document_head {
+            width: 98%;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-bottom: 15px;
+        }
+
+        .document {
+            width: 98%;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-bottom: 15px;
+            cursor: pointer;
+            border: 1px solid #f4f4f4;
+        }
+
+        .document:hover {
+            border: 1px solid black;
+            /*font-weight: bolder;*/
+            color: black;
+        }
+    </style>
+    Шановний користувачу! Якщо Ви користуєтеся програмою вперше, перейдіть у розділ «Автозаповнення» та введіть інформацію про організацію або змініть наявну.<br />
+    Перед роботою з шаблонами ознайомтеся з інструкцією користувача програми, що розміщена в рубриці «Допомога»
+
+    <script type="text/javascript">
+        
+    </script>
+</body>
+</html>

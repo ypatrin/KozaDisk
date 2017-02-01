@@ -48,6 +48,12 @@ namespace KozaDisk.Forms
 
         public void prepareTree()
         {
+            this.FilesBrowser.Navigate("about:blank");
+            this.FilesBrowser.DocumentText = "0";
+            this.FilesBrowser.Document.OpenNew(true);
+            this.FilesBrowser.Document.Write(Properties.Resources.documentDefaultMessage.ToString());
+            this.FilesBrowser.Refresh();
+
             KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
             this.DiskTree.Nodes.Clear();
 
@@ -522,6 +528,7 @@ namespace KozaDisk.Forms
                     r.Read();
                     html = r["doc_html"].ToString();
                     html = Encrypt.Base64.Decode(html);
+                    template.name = r["doc_name"].ToString();
                 }
 
                 MyDocCmd.Dispose();
@@ -798,12 +805,6 @@ namespace KozaDisk.Forms
 
                 //this.isNoNavigation = true;
                 this.writeNavigation(new List<Class.Objects.Navigation>());
-
-                this.FilesBrowser.Navigate("about:blank");
-                this.FilesBrowser.DocumentText = "0";
-                this.FilesBrowser.Document.OpenNew(true);
-                this.FilesBrowser.Document.Write("");
-                this.FilesBrowser.Refresh();
             }
             if (this.view == "block")
             {
@@ -817,12 +818,6 @@ namespace KozaDisk.Forms
                 this.isNoNavigation = false;
 
                 this.writeNavigation(new List<Class.Objects.Navigation>());
-
-                this.FilesBrowser.Navigate("about:blank");
-                this.FilesBrowser.DocumentText = "0";
-                this.FilesBrowser.Document.OpenNew(true);
-                this.FilesBrowser.Document.Write("");
-                this.FilesBrowser.Refresh();
             }
 
             this.writeNavigation(new List<Class.Objects.Navigation>());
@@ -859,22 +854,17 @@ namespace KozaDisk.Forms
                     {
                         links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.MyDocsLink();\">{navigationLink.text}</a>";
                     }
+
+                    if (navigationLink.isSearch)
+                    {
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\">{navigationLink.text}</a>";
+                    }
                 }
             }
 
             try
             {
-                /*
-                NaviBrowser.Navigate("about:blank");
-                NaviBrowser.DocumentText = "0";
-                NaviBrowser.Document.OpenNew(true);
-                NaviBrowser.Document.Write(links);
-                NaviBrowser.Refresh();
-                */
-
                 NaviBrowser.DocumentText = links;
-                //NaviBrowser.Document.OpenNew(true);
-                //NaviBrowser.Document.Write(links);
             }
             catch(Exception ex) { }
         }
@@ -932,6 +922,15 @@ namespace KozaDisk.Forms
             this.SearchBrowser.Refresh();
 
             this.searchBox.Focus();
+
+            var Navigation = new List<Class.Objects.Navigation>();
+            var searchNavi = new Class.Objects.Navigation();
+            searchNavi.text = "Пошук";
+            searchNavi.isSearch = true;
+
+            Navigation.Add(searchNavi);
+
+            this.writeNavigation(Navigation);
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -984,7 +983,7 @@ namespace KozaDisk.Forms
                 this.FilesBrowser.Navigate("about:blank");
                 this.FilesBrowser.DocumentText = "0";
                 this.FilesBrowser.Document.OpenNew(true);
-                this.FilesBrowser.Document.Write("");
+                this.FilesBrowser.Document.Write(Properties.Resources.documentDefaultMessage.ToString());
                 this.FilesBrowser.Refresh();
 
                 //write navigation

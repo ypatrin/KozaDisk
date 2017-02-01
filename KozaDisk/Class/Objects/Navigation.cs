@@ -35,5 +35,10 @@ namespace KozaDisk.Class.Objects
         /// Флаг моих документов
         /// </summary>
         public bool isMyDocs { get; set; }
+
+        /// <summary>
+        /// Флаг поиска
+        /// </summary>
+        public bool isSearch { get; set; }
     }
 }
