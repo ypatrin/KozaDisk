@@ -53,7 +53,6 @@ namespace KozaDisk.Forms
             this.SubordinationBox.Text = user.Subordination;
             this.SubordinationGenitiveBox.Text = user.SubordinationGenitive;
             this.TelephoneBox.Text = user.Telephone;
-            this.UnitBox.Text = user.Unit;
 
             this.userData = user;
         }
@@ -129,7 +128,6 @@ namespace KozaDisk.Forms
             user.Subordination = this.SubordinationBox.Text;
             user.SubordinationGenitive = this.SubordinationGenitiveBox.Text;
             user.Telephone = this.TelephoneBox.Text;
-            user.Unit = this.UnitBox.Text;
 
             string xml = "";
 

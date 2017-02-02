@@ -33,23 +33,11 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.CancelButton = new System.Windows.Forms.Button();
-            this.CreateUserBtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.TabButton3 = new System.Windows.Forms.Button();
-            this.TabButton2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Tabs = new TablessControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.PlaceBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.CodeBox = new System.Windows.Forms.TextBox();
-            this.UnitBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.BankBox = new System.Windows.Forms.TextBox();
             this.FaxBox = new System.Windows.Forms.TextBox();
             this.EmailBox = new System.Windows.Forms.TextBox();
@@ -88,15 +76,25 @@
             this.metroLabel21 = new System.Windows.Forms.Label();
             this.metroLabel20 = new System.Windows.Forms.Label();
             this.metroLabel12 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.CreateUserBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.TabButton3 = new System.Windows.Forms.Button();
+            this.TabButton2 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.Tabs.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,87 +131,6 @@
             resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.CancelButton);
-            this.panel9.Controls.Add(this.CreateUserBtn);
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.BackColor = System.Drawing.Color.White;
-            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CancelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
-            resources.ApplyResources(this.CancelButton, "CancelButton");
-            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // CreateUserBtn
-            // 
-            this.CreateUserBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            this.CreateUserBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CreateUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
-            resources.ApplyResources(this.CreateUserBtn, "CreateUserBtn");
-            this.CreateUserBtn.ForeColor = System.Drawing.Color.White;
-            this.CreateUserBtn.Name = "CreateUserBtn";
-            this.CreateUserBtn.UseVisualStyleBackColor = false;
-            this.CreateUserBtn.Click += new System.EventHandler(this.CreateUserBtn_Click);
-            // 
-            // panel2
-            // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.TabButton3);
-            this.panel7.Controls.Add(this.TabButton2);
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
-            // 
-            // TabButton3
-            // 
-            this.TabButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
-            this.TabButton3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.TabButton3.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.TabButton3, "TabButton3");
-            this.TabButton3.ForeColor = System.Drawing.Color.White;
-            this.TabButton3.Name = "TabButton3";
-            this.TabButton3.UseVisualStyleBackColor = false;
-            this.TabButton3.Click += new System.EventHandler(this.TabButton3_Click);
-            // 
-            // TabButton2
-            // 
-            this.TabButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
-            this.TabButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.TabButton2.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.TabButton2, "TabButton2");
-            this.TabButton2.ForeColor = System.Drawing.Color.White;
-            this.TabButton2.Name = "TabButton2";
-            this.TabButton2.UseVisualStyleBackColor = false;
-            this.TabButton2.Click += new System.EventHandler(this.TabButton2_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.tabPage2);
@@ -228,8 +145,6 @@
             this.tabPage2.Controls.Add(this.PlaceBox);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.CodeBox);
-            this.tabPage2.Controls.Add(this.UnitBox);
-            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.BankBox);
             this.tabPage2.Controls.Add(this.FaxBox);
             this.tabPage2.Controls.Add(this.EmailBox);
@@ -270,17 +185,6 @@
             this.CodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             resources.ApplyResources(this.CodeBox, "CodeBox");
             this.CodeBox.Name = "CodeBox";
-            // 
-            // UnitBox
-            // 
-            this.UnitBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            resources.ApplyResources(this.UnitBox, "UnitBox");
-            this.UnitBox.Name = "UnitBox";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // BankBox
             // 
@@ -507,6 +411,87 @@
             resources.ApplyResources(this.metroLabel12, "metroLabel12");
             this.metroLabel12.Name = "metroLabel12";
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.CancelButton);
+            this.panel9.Controls.Add(this.CreateUserBtn);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.White;
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CancelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.CancelButton, "CancelButton");
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // CreateUserBtn
+            // 
+            this.CreateUserBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            this.CreateUserBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CreateUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(186)))), ((int)(((byte)(185)))));
+            resources.ApplyResources(this.CreateUserBtn, "CreateUserBtn");
+            this.CreateUserBtn.ForeColor = System.Drawing.Color.White;
+            this.CreateUserBtn.Name = "CreateUserBtn";
+            this.CreateUserBtn.UseVisualStyleBackColor = false;
+            this.CreateUserBtn.Click += new System.EventHandler(this.CreateUserBtn_Click);
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.TabButton3);
+            this.panel7.Controls.Add(this.TabButton2);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // TabButton3
+            // 
+            this.TabButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
+            this.TabButton3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TabButton3.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.TabButton3, "TabButton3");
+            this.TabButton3.ForeColor = System.Drawing.Color.White;
+            this.TabButton3.Name = "TabButton3";
+            this.TabButton3.UseVisualStyleBackColor = false;
+            this.TabButton3.Click += new System.EventHandler(this.TabButton3_Click);
+            // 
+            // TabButton2
+            // 
+            this.TabButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(168)))), ((int)(((byte)(139)))));
+            this.TabButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TabButton2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.TabButton2, "TabButton2");
+            this.TabButton2.ForeColor = System.Drawing.Color.White;
+            this.TabButton2.Name = "TabButton2";
+            this.TabButton2.UseVisualStyleBackColor = false;
+            this.TabButton2.Click += new System.EventHandler(this.TabButton2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(188)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
             // AutofillForm
             // 
             resources.ApplyResources(this, "$this");
@@ -521,13 +506,13 @@
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.Tabs.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -588,8 +573,6 @@
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button CreateUserBtn;
         private System.Windows.Forms.TextBox CodeBox;
-        private System.Windows.Forms.TextBox UnitBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox PlaceBox;
         private System.Windows.Forms.Label label2;
     }
