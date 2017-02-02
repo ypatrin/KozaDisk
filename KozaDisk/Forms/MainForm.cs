@@ -96,6 +96,8 @@ namespace KozaDisk
                         this.User = user;
                     }
 
+                    this.UsernameBox.Text = this.User.UserName;
+
                     this.NewUserPanel.Visible = true;
                     this.ImportPanel.Visible = false;
                     this.loginPanel.Visible = false;

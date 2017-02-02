@@ -261,8 +261,11 @@ namespace KozaDisk.Forms
                                 folderName = folderName.Substring(0, 55) + "...";
                             }
 
+                            if (folderName == folderNameFull)
+                                folderNameFull = String.Empty;
+
                             disksBlockHtml += $"<div class=\"block\" type=\"folder\" db=\"{disk.db}\" id=\"{folder.id}\" onClick=\"window.external.openFolder('{folder.id}', '{disk.db}');\">";
-                            disksBlockHtml += $"<div class=\"head\">{folderName}</div>";
+                            disksBlockHtml += $"<div class=\"head\" title=\"{folderNameFull}\">{folderName}</div>";
                             disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
                             disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
                             disksBlockHtml += "</div>";
@@ -369,11 +372,15 @@ namespace KozaDisk.Forms
                 {
                     docName = docName.Substring(0, 55) + "...";
                 }
+
+                if (docName == docNameFull)
+                    docNameFull = String.Empty;
+
                 // document
                 if (template.type == "0")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }
@@ -682,10 +689,13 @@ namespace KozaDisk.Forms
                         docName = docName.Substring(0, 55) + "...";
                     }
 
+                    if (docName == docNameFull)
+                        docNameFull = String.Empty;
+
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
                     disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"doc_{r["id"].ToString()}\">";
-                    disksBlockHtml += $"<div class=\"head\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
                     disksBlockHtml += $"<div class=\"btn\">";
                     disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
@@ -905,8 +915,11 @@ namespace KozaDisk.Forms
                     docName = docName.Substring(0, 55) + "...";
                 }
 
+                if (docName == docNameFull)
+                    docNameFull = String.Empty;
+
                 disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{template.dbName}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{template.dbName}');\">";
-                disksBlockHtml += $"<div class=\"head\">{docName}</div>";
+                disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\">{docName}</div>";
                 disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\doc.png\"/></div>";
                 disksBlockHtml += "</div>";
             }

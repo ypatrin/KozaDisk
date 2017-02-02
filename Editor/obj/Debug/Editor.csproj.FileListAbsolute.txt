@@ -1,6 +1,5 @@
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.exe
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.pdb
-D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.Form1.resources
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.Properties.Resources.resources
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache

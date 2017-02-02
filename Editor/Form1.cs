@@ -124,6 +124,8 @@ namespace Editor
         {
             if (e.KeyCode == Keys.Enter)
             {
+                this.ListDocuments.Items.Clear();
+
                 string link = this.LinkBox.Text;
                 string id = null;
 
@@ -169,6 +171,8 @@ namespace Editor
                         this.ListDocuments.Items.Add(lvi);
                     }
                 }
+
+                return;
             }
         }
 

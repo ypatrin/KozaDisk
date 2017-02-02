@@ -233,7 +233,7 @@ namespace templates
 
         public void showComment(String comment)
         {
-            string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body style=\"background: #F5F5F5\">{2}</body></html>",
+            string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body style=\"background: #F5F5F5; margin: 20px 3px 0 0;\">{2}</body></html>",
                 ApplicationPath + @"\js\jquery.js", ApplicationPath + @"\js\comment.js", comment
             );
 

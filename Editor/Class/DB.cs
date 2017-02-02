@@ -389,8 +389,8 @@ namespace Editor.Class
                         formula = formula.Replace("<", "&lt;");
                         formula = formula.Replace(">", "&gt;");
                         formula = formula.Replace("\"", "&quot;");
-                        formula = formula.Replace("\n", "");
-                        formula = formula.Replace("\t", "");
+                        formula = formula.Replace("\n", "&nbsp;");
+                        formula = formula.Replace("\t", "&nbsp;");
                         formula = System.Web.HttpUtility.HtmlEncode(formula);
 
                         xml += $"<marker name=\"{markerAlias}\" type=\"formula\" value=\"{formula}\" comment=\"{markerComment}\" />";
@@ -426,8 +426,8 @@ namespace Editor.Class
                         comment = comment.Replace("<", "&lt;");
                         comment = comment.Replace(">", "&gt;");
                         comment = comment.Replace("\"", "&quot;");
-                        comment = comment.Replace("\n", "");
-                        comment = comment.Replace("\t", "");
+                        comment = comment.Replace("\n", "&nbsp;");
+                        comment = comment.Replace("\t", "&nbsp;");
 
                         if (comment != "")
                             comment = System.Web.HttpUtility.HtmlEncode(comment);
