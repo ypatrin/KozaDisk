@@ -55,13 +55,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.NaviBrowser = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.FilesBrowser = new System.Windows.Forms.WebBrowser();
             this.panel9 = new System.Windows.Forms.Panel();
             this.DiskTree = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ListTab = new System.Windows.Forms.TabPage();
             this.DisksBlocksBrowser = new System.Windows.Forms.WebBrowser();
             this.MyDocsBlockTab = new System.Windows.Forms.TabPage();
@@ -181,10 +181,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
-            this.button1.Location = new System.Drawing.Point(580, 26);
+            this.button1.Location = new System.Drawing.Point(570, 26);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 38);
+            this.button1.Size = new System.Drawing.Size(39, 38);
             this.button1.TabIndex = 6;
             this.button1.TabStop = false;
             this.button1.Text = "?";
@@ -202,7 +202,7 @@
             this.button2.Location = new System.Drawing.Point(410, 26);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 38);
+            this.button2.Size = new System.Drawing.Size(130, 38);
             this.button2.TabIndex = 5;
             this.button2.TabStop = false;
             this.button2.Text = "Мої документи";
@@ -408,15 +408,6 @@
             this.panel8.Size = new System.Drawing.Size(1014, 472);
             this.panel8.TabIndex = 2;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "disk.png");
-            this.imageList1.Images.SetKeyName(1, "disk-op.png");
-            this.imageList1.Images.SetKeyName(2, "folder.png");
-            this.imageList1.Images.SetKeyName(3, "folder-open.png");
-            // 
             // Tabs
             // 
             this.Tabs.Controls.Add(this.TreeTab);
@@ -494,13 +485,22 @@
             this.DiskTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DiskTree_AfterSelect);
             this.DiskTree.Validating += new System.ComponentModel.CancelEventHandler(this.DiskTree_Validating);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "disk.png");
+            this.imageList1.Images.SetKeyName(1, "disk-op.png");
+            this.imageList1.Images.SetKeyName(2, "folder.png");
+            this.imageList1.Images.SetKeyName(3, "folder-open.png");
+            // 
             // ListTab
             // 
             this.ListTab.Controls.Add(this.DisksBlocksBrowser);
-            this.ListTab.Location = new System.Drawing.Point(4, 22);
+            this.ListTab.Location = new System.Drawing.Point(4, 27);
             this.ListTab.Name = "ListTab";
             this.ListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ListTab.Size = new System.Drawing.Size(1006, 446);
+            this.ListTab.Size = new System.Drawing.Size(1006, 441);
             this.ListTab.TabIndex = 1;
             this.ListTab.Text = "ListTab";
             this.ListTab.UseVisualStyleBackColor = true;
@@ -516,17 +516,17 @@
             this.DisksBlocksBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.DisksBlocksBrowser.Name = "DisksBlocksBrowser";
             this.DisksBlocksBrowser.ScriptErrorsSuppressed = true;
-            this.DisksBlocksBrowser.Size = new System.Drawing.Size(1000, 440);
+            this.DisksBlocksBrowser.Size = new System.Drawing.Size(1000, 435);
             this.DisksBlocksBrowser.TabIndex = 0;
             this.DisksBlocksBrowser.WebBrowserShortcutsEnabled = false;
             // 
             // MyDocsBlockTab
             // 
             this.MyDocsBlockTab.Controls.Add(this.MyDocsBlockBrowser);
-            this.MyDocsBlockTab.Location = new System.Drawing.Point(4, 22);
+            this.MyDocsBlockTab.Location = new System.Drawing.Point(4, 27);
             this.MyDocsBlockTab.Name = "MyDocsBlockTab";
             this.MyDocsBlockTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyDocsBlockTab.Size = new System.Drawing.Size(1006, 446);
+            this.MyDocsBlockTab.Size = new System.Drawing.Size(1006, 441);
             this.MyDocsBlockTab.TabIndex = 2;
             this.MyDocsBlockTab.Text = "MyDocsBlockTab";
             this.MyDocsBlockTab.UseVisualStyleBackColor = true;
@@ -539,17 +539,17 @@
             this.MyDocsBlockBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.MyDocsBlockBrowser.Name = "MyDocsBlockBrowser";
             this.MyDocsBlockBrowser.ScriptErrorsSuppressed = true;
-            this.MyDocsBlockBrowser.Size = new System.Drawing.Size(1000, 440);
+            this.MyDocsBlockBrowser.Size = new System.Drawing.Size(1000, 435);
             this.MyDocsBlockBrowser.TabIndex = 0;
             this.MyDocsBlockBrowser.WebBrowserShortcutsEnabled = false;
             // 
             // MyDocsListTab
             // 
             this.MyDocsListTab.Controls.Add(this.MyDocsListBrowser);
-            this.MyDocsListTab.Location = new System.Drawing.Point(4, 22);
+            this.MyDocsListTab.Location = new System.Drawing.Point(4, 27);
             this.MyDocsListTab.Name = "MyDocsListTab";
             this.MyDocsListTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyDocsListTab.Size = new System.Drawing.Size(1006, 446);
+            this.MyDocsListTab.Size = new System.Drawing.Size(1006, 441);
             this.MyDocsListTab.TabIndex = 3;
             this.MyDocsListTab.Text = "MyDocsListTab";
             this.MyDocsListTab.UseVisualStyleBackColor = true;
@@ -561,16 +561,16 @@
             this.MyDocsListBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.MyDocsListBrowser.Name = "MyDocsListBrowser";
             this.MyDocsListBrowser.ScriptErrorsSuppressed = true;
-            this.MyDocsListBrowser.Size = new System.Drawing.Size(1000, 440);
+            this.MyDocsListBrowser.Size = new System.Drawing.Size(1000, 435);
             this.MyDocsListBrowser.TabIndex = 0;
             // 
             // searchTab
             // 
             this.searchTab.Controls.Add(this.SearchBrowser);
-            this.searchTab.Location = new System.Drawing.Point(4, 22);
+            this.searchTab.Location = new System.Drawing.Point(4, 27);
             this.searchTab.Name = "searchTab";
             this.searchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.searchTab.Size = new System.Drawing.Size(1006, 446);
+            this.searchTab.Size = new System.Drawing.Size(1006, 441);
             this.searchTab.TabIndex = 4;
             this.searchTab.Text = "searchTab";
             this.searchTab.UseVisualStyleBackColor = true;
@@ -582,7 +582,7 @@
             this.SearchBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.SearchBrowser.Name = "SearchBrowser";
             this.SearchBrowser.ScriptErrorsSuppressed = true;
-            this.SearchBrowser.Size = new System.Drawing.Size(1000, 440);
+            this.SearchBrowser.Size = new System.Drawing.Size(1000, 435);
             this.SearchBrowser.TabIndex = 0;
             // 
             // TemplatesList

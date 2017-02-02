@@ -389,7 +389,7 @@ namespace KozaDisk.Forms
                 if (template.type == "1")
                 {
                     disksBlockHtml += $"<div class=\"block\" type=\"document\" db=\"{db}\" id=\"{template.id}\" onClick=\"window.external.openDocument('{template.id}', '{db}');\">";
-                    disksBlockHtml += $"<div class=\"head\">{docName}</div>";
+                    disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\">{docName}</div>";
                     disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\file.png\"/></div>";
                     disksBlockHtml += "</div>";
                 }

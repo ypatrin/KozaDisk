@@ -339,4 +339,3 @@ D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\Template.dll.csproj.Ge
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.dll.licenses
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.dll
 D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\templates.pdb
-D:\Data\C Sharp\Projects\KozaDisk\TemplateDll\obj\Release\Template.dll.csprojResolveAssemblyReference.cache

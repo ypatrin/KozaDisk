@@ -236,7 +236,6 @@
             this.ribbonPage1 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage();
             this.printPreviewRibbonPageGroup2 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.printPreviewRibbonPageGroup5 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
-            this.printPreviewRibbonPageGroup8 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.repositoryItemProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             ((System.ComponentModel.ISupportInitialize)(this.printingSystem1)).BeginInit();
@@ -609,7 +608,7 @@
             superToolTip14.FixedTooltipWidth = true;
             toolTipTitleItem14.Text = "Зменшити";
             toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Зменшить для перегляду кількох сторінок документа водночас.";
+            toolTipItem14.Text = "Зменшіть для перегляду кількох сторінок документа водночас";
             superToolTip14.Items.Add(toolTipTitleItem14);
             superToolTip14.Items.Add(toolTipItem14);
             superToolTip14.MaxWidth = 210;
@@ -1365,8 +1364,7 @@
             this.ribbonPage1.ContextSpecifier = this.documentViewerRibbonController1;
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.printPreviewRibbonPageGroup2,
-            this.printPreviewRibbonPageGroup5,
-            this.printPreviewRibbonPageGroup8});
+            this.printPreviewRibbonPageGroup5});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Перегляд та друк";
             // 
@@ -1393,26 +1391,13 @@
             this.printPreviewRibbonPageGroup5.ShowCaptionButton = false;
             this.printPreviewRibbonPageGroup5.Text = "Масштаб";
             // 
-            // printPreviewRibbonPageGroup8
-            // 
-            this.printPreviewRibbonPageGroup8.AllowTextClipping = false;
-            this.printPreviewRibbonPageGroup8.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup8.Glyph = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_ClosePreview;
-            this.printPreviewRibbonPageGroup8.ItemLinks.Add(this.printPreviewBarItem26);
-            this.printPreviewRibbonPageGroup8.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Close;
-            this.printPreviewRibbonPageGroup8.Name = "printPreviewRibbonPageGroup8";
-            this.printPreviewRibbonPageGroup8.ShowCaptionButton = false;
-            this.printPreviewRibbonPageGroup8.Text = "Закрити";
-            // 
             // repositoryItemProgressBar1
             // 
             this.repositoryItemProgressBar1.Name = "repositoryItemProgressBar1";
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem49);
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
@@ -1512,7 +1497,6 @@
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage ribbonPage1;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup2;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup5;
-        private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraPrinting.PrintingSystem printingSystem1;
     }

@@ -327,6 +327,46 @@ namespace templates
             document.BeginUpdate();
             try
             {
+                DocumentRange[] ranges = document.FindAll(from + ".", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges)
+                {
+                    document.Replace(range, to + ".");
+                }
+
+                DocumentRange[] ranges2 = document.FindAll(from + " ", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges2)
+                {
+                    document.Replace(range, to + " ");
+                }
+
+                DocumentRange[] ranges3 = document.FindAll(from + ",", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges3)
+                {
+                    document.Replace(range, to + ",");
+                }
+
+                DocumentRange[] ranges4 = document.FindAll(from + ";", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges4)
+                {
+                    document.Replace(range, to + ";");
+                }
+            }
+            finally
+            {
+                document.EndUpdate();
+            }
+            return document;
+        }
+
+        public Document replaceInDocument3(Document document, string from, string to)
+        {
+            document.BeginUpdate();
+            try
+            {
                 DocumentRange[] ranges = document.FindAll(from, SearchOptions.None);
 
                 foreach (DocumentRange range in ranges)

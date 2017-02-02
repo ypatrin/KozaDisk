@@ -105,7 +105,7 @@
             this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.loginPanel.Controls.Add(this.main);
             this.loginPanel.Controls.Add(this.panel11);
-            this.loginPanel.Location = new System.Drawing.Point(10, 156);
+            this.loginPanel.Location = new System.Drawing.Point(10, 164);
             this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(382, 153);
@@ -313,7 +313,7 @@
             this.ImportPanel.Location = new System.Drawing.Point(11, 108);
             this.ImportPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ImportPanel.Name = "ImportPanel";
-            this.ImportPanel.Size = new System.Drawing.Size(382, 283);
+            this.ImportPanel.Size = new System.Drawing.Size(382, 252);
             this.ImportPanel.TabIndex = 6;
             // 
             // panel3
@@ -326,17 +326,19 @@
             this.panel3.Location = new System.Drawing.Point(4, 39);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 241);
+            this.panel3.Size = new System.Drawing.Size(374, 210);
             this.panel3.TabIndex = 4;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 13F);
+            this.textBox1.Font = new System.Drawing.Font("Arial", 11F);
             this.textBox1.Location = new System.Drawing.Point(16, 9);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 127);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(339, 104);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Шановний користувачу! Якщо раніше з КОЗА-ДИСКами на цьому комп’ютері працювали кі" +
     "лька користувачів, то оберіть один із наявних профілів. Надалі Ви працюватимете " +
@@ -349,7 +351,7 @@
             this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CreateButton.ForeColor = System.Drawing.Color.White;
-            this.CreateButton.Location = new System.Drawing.Point(159, 185);
+            this.CreateButton.Location = new System.Drawing.Point(159, 158);
             this.CreateButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(196, 38);
@@ -365,7 +367,7 @@
             this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ImportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.ImportButton.ForeColor = System.Drawing.Color.White;
-            this.ImportButton.Location = new System.Drawing.Point(16, 185);
+            this.ImportButton.Location = new System.Drawing.Point(16, 158);
             this.ImportButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ImportButton.Name = "ImportButton";
             this.ImportButton.Size = new System.Drawing.Size(126, 38);
@@ -379,7 +381,7 @@
             this.usersBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.usersBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.usersBox.FormattingEnabled = true;
-            this.usersBox.Location = new System.Drawing.Point(16, 142);
+            this.usersBox.Location = new System.Drawing.Point(16, 115);
             this.usersBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersBox.Name = "usersBox";
             this.usersBox.Size = new System.Drawing.Size(339, 32);
