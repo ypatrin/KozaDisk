@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TemplatesList));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -54,7 +55,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.NaviBrowser = new System.Windows.Forms.WebBrowser();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Tabs = new TablessControl();
             this.TreeTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -446,9 +447,9 @@
             // 
             this.panel10.Controls.Add(this.FilesBrowser);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(344, 3);
+            this.panel10.Location = new System.Drawing.Point(376, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(659, 435);
+            this.panel10.Size = new System.Drawing.Size(627, 435);
             this.panel10.TabIndex = 1;
             // 
             // FilesBrowser
@@ -458,7 +459,7 @@
             this.FilesBrowser.MinimumSize = new System.Drawing.Size(22, 24);
             this.FilesBrowser.Name = "FilesBrowser";
             this.FilesBrowser.ScriptErrorsSuppressed = true;
-            this.FilesBrowser.Size = new System.Drawing.Size(659, 435);
+            this.FilesBrowser.Size = new System.Drawing.Size(627, 435);
             this.FilesBrowser.TabIndex = 0;
             // 
             // panel9
@@ -467,7 +468,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(341, 435);
+            this.panel9.Size = new System.Drawing.Size(373, 435);
             this.panel9.TabIndex = 0;
             // 
             // DiskTree
@@ -486,7 +487,7 @@
             this.DiskTree.ShowNodeToolTips = true;
             this.DiskTree.ShowPlusMinus = false;
             this.DiskTree.ShowRootLines = false;
-            this.DiskTree.Size = new System.Drawing.Size(341, 435);
+            this.DiskTree.Size = new System.Drawing.Size(373, 435);
             this.DiskTree.TabIndex = 0;
             this.DiskTree.TabStop = false;
             this.DiskTree.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.DiskTree_DrawNode);
@@ -668,7 +669,6 @@
         private System.Windows.Forms.PictureBox mdListViewDisabled;
         private System.Windows.Forms.WebBrowser MyDocsListBrowser;
         private System.Windows.Forms.WebBrowser SearchBrowser;
-        private System.Windows.Forms.TreeView DiskTree;
         private System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.WebBrowser DisksBlocksBrowser;
         public System.Windows.Forms.WebBrowser NaviBrowser;
@@ -677,5 +677,6 @@
         private System.Windows.Forms.PictureBox SearchBtn;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TreeView DiskTree;
     }
 }
