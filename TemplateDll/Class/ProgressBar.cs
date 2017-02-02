@@ -95,6 +95,7 @@ namespace templates
         {
             progressForm.Invoke(CloseFormDelegate);
             threadProgressForm.Abort();
+            threadProgressForm.Join();
         }
     }
 }

@@ -1077,5 +1077,33 @@ namespace KozaDisk.Forms
         {
 
         }
+
+        private void ListViewBtn_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.ListViewBtn, "Папки");
+            tt.SetToolTip(this.ListViewImg, "Папки");
+        }
+
+        private void BlockViewImg_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.BlockViewBtn, "Список");
+            tt.SetToolTip(this.BlockViewImg, "Список");
+        }
+
+        private void mdBlockViewEnabled_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.mdBlockViewEnabled, "За напрямами роботи");
+            tt.SetToolTip(this.mdBlockViewDisabled, "За напрямами роботи");
+        }
+
+        private void mdListViewDisabled_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.mdListViewEnabled, "За датою створення");
+            tt.SetToolTip(this.mdListViewDisabled, "За датою створення");
+        }
     }
 }

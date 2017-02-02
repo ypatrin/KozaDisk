@@ -275,6 +275,7 @@
             this.mdListViewDisabled.TabStop = false;
             this.mdListViewDisabled.Visible = false;
             this.mdListViewDisabled.Click += new System.EventHandler(this.mdListViewDisabled_Click);
+            this.mdListViewDisabled.MouseHover += new System.EventHandler(this.mdListViewDisabled_MouseHover);
             // 
             // mdListViewEnabled
             // 
@@ -286,17 +287,19 @@
             this.mdListViewEnabled.TabIndex = 10;
             this.mdListViewEnabled.TabStop = false;
             this.mdListViewEnabled.Visible = false;
+            this.mdListViewEnabled.MouseHover += new System.EventHandler(this.mdListViewDisabled_MouseHover);
             // 
             // mdBlockViewEnabled
             // 
             this.mdBlockViewEnabled.Image = global::KozaDisk.Properties.Resources.block;
-            this.mdBlockViewEnabled.Location = new System.Drawing.Point(15, 8);
+            this.mdBlockViewEnabled.Location = new System.Drawing.Point(15, 9);
             this.mdBlockViewEnabled.Name = "mdBlockViewEnabled";
             this.mdBlockViewEnabled.Size = new System.Drawing.Size(25, 25);
             this.mdBlockViewEnabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mdBlockViewEnabled.TabIndex = 9;
             this.mdBlockViewEnabled.TabStop = false;
             this.mdBlockViewEnabled.Visible = false;
+            this.mdBlockViewEnabled.MouseHover += new System.EventHandler(this.mdBlockViewEnabled_MouseHover);
             // 
             // mdBlockViewDisabled
             // 
@@ -309,6 +312,7 @@
             this.mdBlockViewDisabled.TabStop = false;
             this.mdBlockViewDisabled.Visible = false;
             this.mdBlockViewDisabled.Click += new System.EventHandler(this.mdBlockViewDisabled_Click);
+            this.mdBlockViewDisabled.MouseHover += new System.EventHandler(this.mdBlockViewEnabled_MouseHover);
             // 
             // panel11
             // 
@@ -332,11 +336,12 @@
             this.BlockViewImg.TabIndex = 6;
             this.BlockViewImg.TabStop = false;
             this.BlockViewImg.Visible = false;
+            this.BlockViewImg.MouseHover += new System.EventHandler(this.BlockViewImg_MouseHover);
             // 
             // ListViewBtn
             // 
             this.ListViewBtn.Image = global::KozaDisk.Properties.Resources.Listing;
-            this.ListViewBtn.Location = new System.Drawing.Point(35, 11);
+            this.ListViewBtn.Location = new System.Drawing.Point(36, 11);
             this.ListViewBtn.Name = "ListViewBtn";
             this.ListViewBtn.Size = new System.Drawing.Size(19, 20);
             this.ListViewBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,6 +349,7 @@
             this.ListViewBtn.TabStop = false;
             this.ListViewBtn.Visible = false;
             this.ListViewBtn.Click += new System.EventHandler(this.ListViewBtn_Click);
+            this.ListViewBtn.MouseHover += new System.EventHandler(this.ListViewBtn_MouseHover);
             // 
             // BlockViewBtn
             // 
@@ -355,6 +361,7 @@
             this.BlockViewBtn.TabIndex = 4;
             this.BlockViewBtn.TabStop = false;
             this.BlockViewBtn.Click += new System.EventHandler(this.BlockViewBtn_Click);
+            this.BlockViewBtn.MouseHover += new System.EventHandler(this.BlockViewImg_MouseHover);
             // 
             // ListViewImg
             // 
@@ -365,6 +372,7 @@
             this.ListViewImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ListViewImg.TabIndex = 3;
             this.ListViewImg.TabStop = false;
+            this.ListViewImg.MouseHover += new System.EventHandler(this.ListViewBtn_MouseHover);
             // 
             // panel7
             // 

@@ -174,9 +174,6 @@
             DevExpress.Utils.SuperToolTip superToolTip48 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem48 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem48 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip49 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem49 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem49 = new DevExpress.Utils.ToolTipItem();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.printingSystem1 = new DevExpress.XtraPrinting.PrintingSystem(this.components);
             this.documentViewerRibbonController1 = new DevExpress.XtraPrinting.Preview.DocumentViewerRibbonController(this.components);
@@ -231,7 +228,6 @@
             this.printPreviewBarItem48 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this.printPreviewStaticItem1 = new DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.progressBarEditItem1 = new DevExpress.XtraPrinting.Preview.ProgressBarEditItem();
             this.repositoryItemProgressBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemProgressBar();
             this.printPreviewBarItem49 = new DevExpress.XtraPrinting.Preview.PrintPreviewBarItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -240,8 +236,6 @@
             this.repositoryItemZoomTrackBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar();
             this.ribbonPage1 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage();
             this.printPreviewRibbonPageGroup2 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
-            this.printPreviewRibbonPageGroup3 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
-            this.printPreviewRibbonPageGroup4 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.printPreviewRibbonPageGroup5 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.printPreviewRibbonPageGroup8 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -325,7 +319,6 @@
             this.printPreviewBarItem48,
             this.printPreviewStaticItem1,
             this.barStaticItem1,
-            this.progressBarEditItem1,
             this.printPreviewBarItem49,
             this.barButtonItem1,
             this.printPreviewStaticItem2,
@@ -1314,16 +1307,6 @@
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime;
             // 
-            // progressBarEditItem1
-            // 
-            this.progressBarEditItem1.ContextSpecifier = this.documentViewerRibbonController1;
-            this.progressBarEditItem1.Edit = this.repositoryItemProgressBar1;
-            this.progressBarEditItem1.EditHeight = 12;
-            this.progressBarEditItem1.EditWidth = 150;
-            this.progressBarEditItem1.Id = 51;
-            this.progressBarEditItem1.Name = "progressBarEditItem1";
-            this.progressBarEditItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
             // repositoryItemProgressBar1
             // 
             this.repositoryItemProgressBar1.Name = "repositoryItemProgressBar1";
@@ -1385,8 +1368,6 @@
             this.ribbonPage1.ContextSpecifier = this.documentViewerRibbonController1;
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.printPreviewRibbonPageGroup2,
-            this.printPreviewRibbonPageGroup3,
-            this.printPreviewRibbonPageGroup4,
             this.printPreviewRibbonPageGroup5,
             this.printPreviewRibbonPageGroup8});
             this.ribbonPage1.Name = "ribbonPage1";
@@ -1398,60 +1379,16 @@
             this.printPreviewRibbonPageGroup2.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewRibbonPageGroup2.Glyph = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PrintDirect;
             this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem6);
-            this.printPreviewRibbonPageGroup2.ItemLinks.Add(this.printPreviewBarItem7);
             this.printPreviewRibbonPageGroup2.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Print;
             this.printPreviewRibbonPageGroup2.Name = "printPreviewRibbonPageGroup2";
             this.printPreviewRibbonPageGroup2.ShowCaptionButton = false;
             this.printPreviewRibbonPageGroup2.Text = "Друк";
-            // 
-            // printPreviewRibbonPageGroup3
-            // 
-            this.printPreviewRibbonPageGroup3.AllowTextClipping = false;
-            this.printPreviewRibbonPageGroup3.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup3.Glyph = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_PageMargins;
-            this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem9);
-            this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem10);
-            this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem29);
-            this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem27);
-            this.printPreviewRibbonPageGroup3.ItemLinks.Add(this.printPreviewBarItem28);
-            this.printPreviewRibbonPageGroup3.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.PageSetup;
-            this.printPreviewRibbonPageGroup3.Name = "printPreviewRibbonPageGroup3";
-            superToolTip49.FixedTooltipWidth = true;
-            toolTipTitleItem49.Text = "Настройки страницы";
-            toolTipItem49.LeftIndent = 6;
-            toolTipItem49.Text = "Вызов диалога настроек страницы.";
-            superToolTip49.Items.Add(toolTipTitleItem49);
-            superToolTip49.Items.Add(toolTipItem49);
-            superToolTip49.MaxWidth = 210;
-            this.printPreviewRibbonPageGroup3.SuperTip = superToolTip49;
-            this.printPreviewRibbonPageGroup3.Text = "Налаштування сторінки";
-            // 
-            // printPreviewRibbonPageGroup4
-            // 
-            this.printPreviewRibbonPageGroup4.AllowTextClipping = false;
-            this.printPreviewRibbonPageGroup4.ContextSpecifier = this.documentViewerRibbonController1;
-            this.printPreviewRibbonPageGroup4.Glyph = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_Find;
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem3);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem4);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem1);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem17, true);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem18);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem19);
-            this.printPreviewRibbonPageGroup4.ItemLinks.Add(this.printPreviewBarItem20);
-            this.printPreviewRibbonPageGroup4.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Navigation;
-            this.printPreviewRibbonPageGroup4.Name = "printPreviewRibbonPageGroup4";
-            this.printPreviewRibbonPageGroup4.ShowCaptionButton = false;
-            this.printPreviewRibbonPageGroup4.Text = "Керування";
             // 
             // printPreviewRibbonPageGroup5
             // 
             this.printPreviewRibbonPageGroup5.AllowTextClipping = false;
             this.printPreviewRibbonPageGroup5.ContextSpecifier = this.documentViewerRibbonController1;
             this.printPreviewRibbonPageGroup5.Glyph = global::templates.PrintRibbonControllerResources.RibbonPrintPreview_Zoom;
-            this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem11);
-            this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem12);
-            this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem13);
-            this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem21);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem14);
             this.printPreviewRibbonPageGroup5.ItemLinks.Add(this.printPreviewBarItem15);
             this.printPreviewRibbonPageGroup5.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Zoom;
@@ -1474,7 +1411,6 @@
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.progressBarEditItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem49);
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
@@ -1565,7 +1501,6 @@
         private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem48;
         private DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem printPreviewStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraPrinting.Preview.ProgressBarEditItem progressBarEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemProgressBar repositoryItemProgressBar1;
         private DevExpress.XtraPrinting.Preview.PrintPreviewBarItem printPreviewBarItem49;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
@@ -1574,8 +1509,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPage ribbonPage1;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup2;
-        private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup3;
-        private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup4;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup5;
         private DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup printPreviewRibbonPageGroup8;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;

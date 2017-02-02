@@ -206,25 +206,29 @@ namespace templates
 
         private void DownloadClick(object sender, EventArgs e)
         {
-            this.progress.Open();
-            this.progress.setMax(4);
-            this.progress.setCurrent(0);
+            try
+            {
+                this.progress.Open();
+                this.progress.setMax(4);
+                this.progress.setCurrent(0);
 
-            TmplDocument tmplDocument = TmplDocument.getInstance();
-            Markers markers = new Markers();
+                TmplDocument tmplDocument = TmplDocument.getInstance();
+                Markers markers = new Markers();
 
-            tmplDocument.prepareDocument();
-            this.progress.setCurrent(1);
+                tmplDocument.prepareDocument();
+                this.progress.setCurrent(1);
 
-            tmplDocument.setBrowser(webBrowser1);
-            this.progress.setCurrent(2);
+                tmplDocument.setBrowser(webBrowser1);
+                this.progress.setCurrent(2);
 
-            tmplDocument.processMarkers();
-            this.progress.setCurrent(3);
+                tmplDocument.processMarkers();
+                this.progress.setCurrent(3);
 
-            tmplDocument.setName(this.TemplateNameBox.Text);
-            tmplDocument.save();
-            this.progress.Close();
+                tmplDocument.setName(this.TemplateNameBox.Text);
+                tmplDocument.save();
+                this.progress.Close();
+            }
+            catch(Exception ex) { }
         }
 
         public void showComment(String comment)
