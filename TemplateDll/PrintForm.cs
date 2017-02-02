@@ -20,6 +20,8 @@ namespace templates
         public PrintForm(RichEditControl richEditControl)
         {
             InitializeComponent();
+            documentViewer1.PrintingSystem.AddCommandHandler(new MyCommandHandler());
+
             printingSystem1.ClearContent();
             link = new PrintableComponentLink(new PrintingSystem());
             link.Component = richEditControl;

@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Class\ChartArray.cs" />
     <Compile Include="Class\Markers.cs" />
+    <Compile Include="Class\MyCommandHandler.cs" />
     <Compile Include="Class\ProgressBar.cs" />
     <Compile Include="Class\TmplDocument.cs" />
     <Compile Include="Main.cs" />
