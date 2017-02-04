@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActivateErrorForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,11 +50,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F);
+            this.label1.Font = new System.Drawing.Font("Arial", 16F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.label1.Location = new System.Drawing.Point(55, 90);
+            this.label1.Location = new System.Drawing.Point(58, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 27);
+            this.label1.Size = new System.Drawing.Size(214, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Диск не активовано";
             // 
@@ -64,7 +65,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 11F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(83, 150);
+            this.button1.Location = new System.Drawing.Point(78, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 35);
             this.button1.TabIndex = 7;
@@ -80,7 +81,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 206);
+            this.panel1.Size = new System.Drawing.Size(330, 191);
             this.panel1.TabIndex = 8;
             // 
             // ActivateErrorForm
@@ -88,12 +89,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(334, 208);
+            this.ClientSize = new System.Drawing.Size(330, 191);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ActivateErrorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ActivateErrorForm";
+            this.Text = "Помилка";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

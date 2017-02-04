@@ -37,6 +37,7 @@ namespace KozaDisk.Class
         /// <returns></returns>
         public bool isActivated(string db)
         {
+            this._loadConfig();
             XmlElement root = this.Config.DocumentElement;
 
             try
@@ -56,7 +57,7 @@ namespace KozaDisk.Class
 
                 //create db node
                 XmlElement dbElem = this.Config.CreateElement("db_"+db);
-                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><key></key>";
+                dbElem.InnerXml = $"<activeStatus>inactive</activeStatus><startDate>{startDate.ToString(@"yyyy/MM/dd")}</startDate><key></key>";
 
                 //add db to config xml
                 root.AppendChild(dbElem);
@@ -80,8 +81,11 @@ namespace KozaDisk.Class
 
             if (db.Trim() == "2017.1.db")
             {
-                DateTime startDate = Convert.ToDateTime("07/02/2017");
-                DateTime endDate = startDate.AddDays(30);
+                XmlNode disk = root.SelectSingleNode($"db_{db}");
+                string startDay = disk.SelectSingleNode("startDate").InnerText;
+
+                DateTime startDate = Convert.ToDateTime(startDay);
+                DateTime endDate = startDate.AddDays(31);
                 DateTime now = DateTime.Now;
 
                 days = (endDate - now).TotalDays.ToString();

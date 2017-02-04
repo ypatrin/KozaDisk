@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
+  <data name="tabPage1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -145,7 +145,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PlaceBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;PlaceBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -175,7 +175,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -199,7 +199,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CodeBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;CodeBox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -223,106 +223,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BankBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;BankBox.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="FaxBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 691</value>
-  </data>
-  <data name="FaxBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="FaxBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 25</value>
-  </data>
-  <data name="FaxBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;FaxBox.Name" xml:space="preserve">
-    <value>FaxBox</value>
-  </data>
-  <data name="&gt;&gt;FaxBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FaxBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;FaxBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="EmailBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 756</value>
-  </data>
-  <data name="EmailBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="EmailBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 25</value>
-  </data>
-  <data name="EmailBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;EmailBox.Name" xml:space="preserve">
-    <value>EmailBox</value>
-  </data>
-  <data name="&gt;&gt;EmailBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EmailBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;EmailBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TelephoneBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 626</value>
-  </data>
-  <data name="TelephoneBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="TelephoneBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 25</value>
-  </data>
-  <data name="TelephoneBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;TelephoneBox.Name" xml:space="preserve">
-    <value>TelephoneBox</value>
-  </data>
-  <data name="&gt;&gt;TelephoneBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TelephoneBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;TelephoneBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="LegalAddressBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 561</value>
-  </data>
-  <data name="LegalAddressBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="LegalAddressBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>778, 25</value>
-  </data>
-  <data name="LegalAddressBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;LegalAddressBox.Name" xml:space="preserve">
-    <value>LegalAddressBox</value>
-  </data>
-  <data name="&gt;&gt;LegalAddressBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LegalAddressBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;LegalAddressBox.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="SubordinationGenitiveBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 300</value>
@@ -343,10 +247,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SubordinationGenitiveBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SubordinationGenitiveBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="SubordinationBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 235</value>
@@ -367,10 +271,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SubordinationBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;SubordinationBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>5</value>
   </data>
   <data name="AbbreviationBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 170</value>
@@ -391,10 +295,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AbbreviationBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;AbbreviationBox.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>6</value>
   </data>
   <data name="FullNameGenitiveBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 105</value>
@@ -415,10 +319,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FullNameGenitiveBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;FullNameGenitiveBox.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="FullNameBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 44</value>
@@ -439,10 +343,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FullNameBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;FullNameBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>8</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -469,10 +373,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>9</value>
   </data>
   <data name="metroLabel8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -499,130 +403,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel8.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;metroLabel8.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="metroLabel27.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="metroLabel27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 670</value>
-  </data>
-  <data name="metroLabel27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 17</value>
-  </data>
-  <data name="metroLabel27.TabIndex" type="System.Int32, mscorlib">
-    <value>313</value>
-  </data>
-  <data name="metroLabel27.Text" xml:space="preserve">
-    <value>Факс</value>
-  </data>
-  <data name="&gt;&gt;metroLabel27.Name" xml:space="preserve">
-    <value>metroLabel27</value>
-  </data>
-  <data name="&gt;&gt;metroLabel27.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroLabel27.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel27.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="metroLabel26.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="metroLabel26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 735</value>
-  </data>
-  <data name="metroLabel26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 17</value>
-  </data>
-  <data name="metroLabel26.TabIndex" type="System.Int32, mscorlib">
-    <value>310</value>
-  </data>
-  <data name="metroLabel26.Text" xml:space="preserve">
-    <value>Електронна адреса</value>
-  </data>
-  <data name="&gt;&gt;metroLabel26.Name" xml:space="preserve">
-    <value>metroLabel26</value>
-  </data>
-  <data name="&gt;&gt;metroLabel26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroLabel26.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel26.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="metroLabel28.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="metroLabel28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 605</value>
-  </data>
-  <data name="metroLabel28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="metroLabel28.TabIndex" type="System.Int32, mscorlib">
-    <value>308</value>
-  </data>
-  <data name="metroLabel28.Text" xml:space="preserve">
-    <value>Телефон</value>
-  </data>
-  <data name="&gt;&gt;metroLabel28.Name" xml:space="preserve">
-    <value>metroLabel28</value>
-  </data>
-  <data name="&gt;&gt;metroLabel28.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroLabel28.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel28.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="metroLabel15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="metroLabel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 540</value>
-  </data>
-  <data name="metroLabel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 17</value>
-  </data>
-  <data name="metroLabel15.TabIndex" type="System.Int32, mscorlib">
-    <value>306</value>
-  </data>
-  <data name="metroLabel15.Text" xml:space="preserve">
-    <value>Юридична адреса</value>
-  </data>
-  <data name="&gt;&gt;metroLabel15.Name" xml:space="preserve">
-    <value>metroLabel15</value>
-  </data>
-  <data name="&gt;&gt;metroLabel15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroLabel15.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel15.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>10</value>
   </data>
   <data name="metroLabel7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -649,10 +433,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel7.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;metroLabel7.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>11</value>
   </data>
   <data name="metroLabel6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -679,10 +463,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel6.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;metroLabel6.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>12</value>
   </data>
   <data name="metroLabel4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -709,10 +493,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel4.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;metroLabel4.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>13</value>
   </data>
   <data name="metroLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -739,10 +523,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel3.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;metroLabel3.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>14</value>
   </data>
   <data name="metroLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -769,45 +553,45 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel2.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;metroLabel2.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="tabPage2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11.25pt</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 27</value>
-  </data>
-  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>892, 441</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;metroLabel2.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+  <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>892, 441</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>Tabs</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabPage3.AutoScroll" type="System.Boolean, mscorlib">
+  <data name="tabPage2.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="ChiefPositionBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -829,7 +613,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefPositionBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefPositionBox.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -853,7 +637,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefInitialsBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefInitialsBox.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -877,7 +661,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefSurnameDativeBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefSurnameDativeBox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -901,7 +685,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefNameGenitiveBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefNameGenitiveBox.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -925,7 +709,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefNameBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefNameBox.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -949,7 +733,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefSurnameBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefSurnameBox.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -973,7 +757,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefPositionLowerBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefPositionLowerBox.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -997,7 +781,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ChiefPositionDativeBox.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;ChiefPositionDativeBox.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -1027,7 +811,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel17.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel17.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1057,7 +841,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel18.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel18.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -1087,7 +871,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel19.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel19.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -1117,7 +901,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel13.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel13.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -1147,7 +931,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel14.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel14.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1177,7 +961,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel21.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel21.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -1207,7 +991,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel20.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel20.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -1237,31 +1021,298 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;metroLabel12.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;metroLabel12.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="tabPage3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="tabPage2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 11.25pt</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 27</value>
+  </data>
+  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>892, 441</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>Tabs</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FaxBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="FaxBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 171</value>
+  </data>
+  <data name="FaxBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="FaxBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 25</value>
+  </data>
+  <data name="FaxBox.TabIndex" type="System.Int32, mscorlib">
+    <value>316</value>
+  </data>
+  <data name="&gt;&gt;FaxBox.Name" xml:space="preserve">
+    <value>FaxBox</value>
+  </data>
+  <data name="&gt;&gt;FaxBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FaxBox.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;FaxBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EmailBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="EmailBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 236</value>
+  </data>
+  <data name="EmailBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="EmailBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 25</value>
+  </data>
+  <data name="EmailBox.TabIndex" type="System.Int32, mscorlib">
+    <value>317</value>
+  </data>
+  <data name="&gt;&gt;EmailBox.Name" xml:space="preserve">
+    <value>EmailBox</value>
+  </data>
+  <data name="&gt;&gt;EmailBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EmailBox.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;EmailBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TelephoneBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="TelephoneBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 106</value>
+  </data>
+  <data name="TelephoneBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TelephoneBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 25</value>
+  </data>
+  <data name="TelephoneBox.TabIndex" type="System.Int32, mscorlib">
+    <value>315</value>
+  </data>
+  <data name="&gt;&gt;TelephoneBox.Name" xml:space="preserve">
+    <value>TelephoneBox</value>
+  </data>
+  <data name="&gt;&gt;TelephoneBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TelephoneBox.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;TelephoneBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LegalAddressBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="LegalAddressBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 43</value>
+  </data>
+  <data name="LegalAddressBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="LegalAddressBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 25</value>
+  </data>
+  <data name="LegalAddressBox.TabIndex" type="System.Int32, mscorlib">
+    <value>314</value>
+  </data>
+  <data name="&gt;&gt;LegalAddressBox.Name" xml:space="preserve">
+    <value>LegalAddressBox</value>
+  </data>
+  <data name="&gt;&gt;LegalAddressBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LegalAddressBox.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;LegalAddressBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="metroLabel27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="metroLabel27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="metroLabel27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 150</value>
+  </data>
+  <data name="metroLabel27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 17</value>
+  </data>
+  <data name="metroLabel27.TabIndex" type="System.Int32, mscorlib">
+    <value>321</value>
+  </data>
+  <data name="metroLabel27.Text" xml:space="preserve">
+    <value>Факс</value>
+  </data>
+  <data name="&gt;&gt;metroLabel27.Name" xml:space="preserve">
+    <value>metroLabel27</value>
+  </data>
+  <data name="&gt;&gt;metroLabel27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;metroLabel27.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;metroLabel27.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="metroLabel26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="metroLabel26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="metroLabel26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 215</value>
+  </data>
+  <data name="metroLabel26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 17</value>
+  </data>
+  <data name="metroLabel26.TabIndex" type="System.Int32, mscorlib">
+    <value>320</value>
+  </data>
+  <data name="metroLabel26.Text" xml:space="preserve">
+    <value>Електронна адреса</value>
+  </data>
+  <data name="&gt;&gt;metroLabel26.Name" xml:space="preserve">
+    <value>metroLabel26</value>
+  </data>
+  <data name="&gt;&gt;metroLabel26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;metroLabel26.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;metroLabel26.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="metroLabel28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="metroLabel28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="metroLabel28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 85</value>
+  </data>
+  <data name="metroLabel28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="metroLabel28.TabIndex" type="System.Int32, mscorlib">
+    <value>319</value>
+  </data>
+  <data name="metroLabel28.Text" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="&gt;&gt;metroLabel28.Name" xml:space="preserve">
+    <value>metroLabel28</value>
+  </data>
+  <data name="&gt;&gt;metroLabel28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;metroLabel28.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;metroLabel28.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="metroLabel15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 11.25pt</value>
+  </data>
+  <data name="metroLabel15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="metroLabel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 22</value>
+  </data>
+  <data name="metroLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="metroLabel15.TabIndex" type="System.Int32, mscorlib">
+    <value>318</value>
+  </data>
+  <data name="metroLabel15.Text" xml:space="preserve">
+    <value>Юридична адреса</value>
+  </data>
+  <data name="&gt;&gt;metroLabel15.Name" xml:space="preserve">
+    <value>metroLabel15</value>
+  </data>
+  <data name="&gt;&gt;metroLabel15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;metroLabel15.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;metroLabel15.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 27</value>
   </data>
-  <data name="tabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
   <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
     <value>892, 441</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>tabPage2</value>
+    <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
     <value>tabPage3</value>
@@ -1273,7 +1324,7 @@
     <value>Tabs</value>
   </data>
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Tabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1510,19 +1561,19 @@
     <value>NoControl</value>
   </data>
   <data name="TabButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 12</value>
+    <value>450, 12</value>
   </data>
   <data name="TabButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="TabButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 44</value>
+    <value>228, 44</value>
   </data>
   <data name="TabButton3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="TabButton3.Text" xml:space="preserve">
-    <value>Керівник</value>
+    <value>Контактна інформація</value>
   </data>
   <data name="&gt;&gt;TabButton3.Name" xml:space="preserve">
     <value>TabButton3</value>
@@ -1543,19 +1594,19 @@
     <value>NoControl</value>
   </data>
   <data name="TabButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 12</value>
+    <value>286, 12</value>
   </data>
   <data name="TabButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="TabButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 44</value>
+    <value>158, 44</value>
   </data>
   <data name="TabButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="TabButton2.Text" xml:space="preserve">
-    <value>Інформація про організацію</value>
+    <value>Керівник</value>
   </data>
   <data name="&gt;&gt;TabButton2.Name" xml:space="preserve">
     <value>TabButton2</value>
@@ -1568,6 +1619,39 @@
   </data>
   <data name="&gt;&gt;TabButton2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="TabButton1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="TabButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="TabButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 12</value>
+  </data>
+  <data name="TabButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="TabButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 44</value>
+  </data>
+  <data name="TabButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabButton1.Text" xml:space="preserve">
+    <value>Інформація про організацію</value>
+  </data>
+  <data name="&gt;&gt;TabButton1.Name" xml:space="preserve">
+    <value>TabButton1</value>
+  </data>
+  <data name="&gt;&gt;TabButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabButton1.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TabButton1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

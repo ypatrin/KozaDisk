@@ -19,6 +19,7 @@ namespace templates
         private int docId;
         private int myDocId = 0;
         private string orientation = "portrait";
+        private string folderName;
 
         private TmplDocument tmplDocument = TmplDocument.getInstance();
         private Markers markers = new Markers();
@@ -57,6 +58,11 @@ namespace templates
             this.orientation = orientation;
         }
 
+        public void setFolderName(string folderName)
+        {
+            this.folderName = folderName;
+        }
+
         public void open()
         {
             openProc();
@@ -86,6 +92,7 @@ namespace templates
             this.progress.Open();
             TemplateForm template = new TemplateForm();
             template.setTemplateName(this.templateName);
+            template.setFolderName(this.folderName);
 
             this.progress.setMax(12);
             this.progress.setCurrent(0);
@@ -173,6 +180,7 @@ namespace templates
             this.progress.Open();
             TemplateForm template = new TemplateForm();
             template.setTemplateName(this.templateName);
+            template.setFolderName(this.folderName);
 
             this.progress.setMax(12);
             this.progress.setCurrent(0);

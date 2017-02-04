@@ -39,7 +39,12 @@ namespace KozaDisk.Forms
         private void ActivateButton_Click(object sender, EventArgs e)
         {
             ActivateErrorForm activateError = new ActivateErrorForm();
+            ActivateError2Form activateError2 = new ActivateError2Form();
             ActivateOkForm activateOk = new ActivateOkForm();
+
+            //prepare key
+            DateTime now = DateTime.Now;
+            string encKey = this.key + now.ToString("ddMMyyyy");
 
             //check code
 
@@ -64,10 +69,6 @@ namespace KozaDisk.Forms
                 return;
             }
 
-            //prepare key
-            DateTime now = DateTime.Now;
-            this.key = this.key + now.ToString("ddMMyyyy");
-
             string cpuID = string.Empty;
             string mbID = String.Empty;
 
@@ -91,6 +92,11 @@ namespace KozaDisk.Forms
 
             string secret = KozaDisk.Encrypt.Base64.Encode($"processor:{cpuID};mainboard:{mbID}");
 
+            string userPhone = userData.UserPhone;
+
+            if (userPhone == "+38(   )   -  -")
+                userPhone = "";
+
             string xmlRequest = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>";
             xmlRequest += "<activation>";
             xmlRequest += "     <disk>";
@@ -101,19 +107,19 @@ namespace KozaDisk.Forms
             xmlRequest += "     <user>";
             xmlRequest += $"        <email>{userData.UserEmail}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
-            xmlRequest += $"        <phone>{userData.UserPhone}</phone>"; // ФИО юзера
+            xmlRequest += $"        <phone>{userPhone}</phone>"; // ФИО юзера
             xmlRequest += $"        <app_code>{secret}</app_code>"; // ID приложения (уникальное для каждого юзера)
             xmlRequest += "     </user>";
             xmlRequest += "</activation>";
 
-            string xmlEncoded = Class.CryptAes.Encrypt(xmlRequest, this.key);
+            string xmlEncoded = Class.CryptAes.Encrypt(xmlRequest, encKey);
 
             try
             {
                 //send request
                 string activeAnswer = Class.Request.POST(@"http://kozaonline.com.ua/kozadisc/activation", "XML_DATA=" + xmlEncoded);
                 //decrypt answer
-                string activeAnswerDecode = Class.CryptAes.Decrypt(activeAnswer, this.key);
+                string activeAnswerDecode = Class.CryptAes.Decrypt(activeAnswer, encKey);
 
                 //parse xml
                 XmlDocument answerXml = new XmlDocument();
@@ -134,7 +140,7 @@ namespace KozaDisk.Forms
                 if (activateStatus == "Activated")
                 {
                     this.Visible = false;
-                    activateError.ShowDialog();
+                    activateError2.ShowDialog();
                     this.Visible = true;
                 }
                 if (activateStatus == "OK")

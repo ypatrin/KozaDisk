@@ -83,6 +83,12 @@
     <Compile Include="Forms\Activate.Designer.cs">
       <DependentUpon>Activate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ActivateError2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActivateError2Form.Designer.cs">
+      <DependentUpon>ActivateError2Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ActivateErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="Forms\PopupOkForm.Designer.cs">
       <DependentUpon>PopupOkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuestionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuestionDialog.Designer.cs">
+      <DependentUpon>QuestionDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TemplatesList.cs">
       <SubType>Form</SubType>
@@ -203,6 +215,9 @@
     <EmbeddedResource Include="Forms\Activate.resx">
       <DependentUpon>Activate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActivateError2Form.resx">
+      <DependentUpon>ActivateError2Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ActivateErrorForm.resx">
       <DependentUpon>ActivateErrorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PopupOkForm.resx">
       <DependentUpon>PopupOkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuestionDialog.resx">
+      <DependentUpon>QuestionDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TemplatesList.resx">
       <DependentUpon>TemplatesList.cs</DependentUpon>
@@ -300,6 +318,7 @@
     <None Include="Resources\error.png" />
     <None Include="Resources\ok.png" />
     <None Include="Resources\documentDefaultMessage.txt" />
+    <None Include="Resources\ques-del.png" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <ItemGroup />

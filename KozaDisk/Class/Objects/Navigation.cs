@@ -32,6 +32,11 @@ namespace KozaDisk.Class.Objects
         public bool isFolder { get; set; }
 
         /// <summary>
+        /// Флаг если это папка поих документов
+        /// </summary>
+        public bool isMyFolder { get; set; }
+
+        /// <summary>
         /// Флаг моих документов
         /// </summary>
         public bool isMyDocs { get; set; }

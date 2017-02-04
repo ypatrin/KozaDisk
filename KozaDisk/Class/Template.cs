@@ -48,6 +48,16 @@ namespace KozaDisk
 
         public string orientation { get; set; }
 
+        /// <summary>
+        /// ID папки, которой принадлежит шаблон
+        /// </summary>
+        public string folderId { get; set; }
+
+        /// <summary>
+        /// Имя папки, которой принадлежит шаблон
+        /// </summary>
+        public string folderName { get; set; }
+
         internal void setDbName(string databaseName)
         {
             throw new NotImplementedException();

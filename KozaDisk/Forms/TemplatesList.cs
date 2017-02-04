@@ -23,8 +23,6 @@ namespace KozaDisk.Forms
         Disks disks = new Disks();
         string view = "tree";
 
-        bool isNoNavigation = false;
-
         public TemplatesList()
         {
             InitializeComponent();
@@ -71,6 +69,7 @@ namespace KozaDisk.Forms
                 
                 if (!activator.isActivated(disk.db) && !activator.isTrial(disk.db))
                 {
+                    this.DiskTree.Nodes.Add(diskTreeNode);
                     continue;
                 }    
 
@@ -438,7 +437,7 @@ namespace KozaDisk.Forms
                 SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
                 connection.Open();
 
-                SQLiteCommand command = new SQLiteCommand($"SELECT * FROM templates WHERE id = {documentId}", connection);
+                SQLiteCommand command = new SQLiteCommand($"SELECT templates.id as id, structure_id, file_ext, templates.name as name, markers_xml, template, type, orientation, structure.id as folder_id, structure.name as folder_name FROM templates JOIN structure ON (templates.structure_id = structure.id) WHERE templates.id = {documentId}", connection);
                 SQLiteDataReader reader = command.ExecuteReader();
 
                 reader.Read();
@@ -453,6 +452,8 @@ namespace KozaDisk.Forms
                 template.type = (string)reader["type"].ToString();
                 template.fileExt = (string)reader["file_ext"].ToString();
                 template.orientation = (string)reader["orientation"].ToString();
+                template.folderId = (string)reader["folder_id"].ToString();
+                template.folderName = (string)reader["folder_name"].ToString();
 
                 string templateFileContent = KozaDisk.Encrypt.Base64.Decode(template.template);
                 string markersFileContent = KozaDisk.Encrypt.Base64.Decode(template.markersXML);
@@ -471,6 +472,7 @@ namespace KozaDisk.Forms
                     templates.setDbName(databaseName);
                     templates.setDocId(Int32.Parse(template.id));
                     templates.setOrientation(template.orientation);
+                    templates.setFolderName(template.folderName);
                     templates.open();
                 }
                 if (template.type == "1")
@@ -526,7 +528,7 @@ namespace KozaDisk.Forms
                 SQLiteConnection myDocCn = new SQLiteConnection(string.Format("Data Source={0};", myDocsDb));
                 myDocCn.Open();
 
-                string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE id = '{documentId}'";
+                string sql = $"SELECT id, db_name, doc_id, doc_name, folder_name, doc_html, created_at FROM documents WHERE id = '{documentId}'";
                 string html = "";
 
                 SQLiteCommand MyDocCmd = new SQLiteCommand(sql, myDocCn);
@@ -536,6 +538,7 @@ namespace KozaDisk.Forms
                     html = r["doc_html"].ToString();
                     html = Encrypt.Base64.Decode(html);
                     template.name = r["doc_name"].ToString();
+                    template.folderName = r["folder_name"].ToString();
                 }
 
                 MyDocCmd.Dispose();
@@ -554,6 +557,7 @@ namespace KozaDisk.Forms
                 templates.setDocId(Int32.Parse(template.id));
                 templates.setMyDocId(Int32.Parse(documentId));
                 templates.setOrientation(template.orientation);
+                templates.setFolderName(template.folderName); 
                 templates.open(html);
 
                 this.WindowState = FormWindowState.Maximized;
@@ -581,7 +585,6 @@ namespace KozaDisk.Forms
             this.BlockViewBtn.Visible = false;
 
             this.Tabs.SelectedIndex = 1;
-            this.isNoNavigation = false;
 
             this.writeNavigation(new List<Class.Objects.Navigation>());
 
@@ -604,7 +607,6 @@ namespace KozaDisk.Forms
 
             this.Tabs.SelectedIndex = 0;
 
-            this.isNoNavigation = true;
             //this.writeNavigation(new List<Class.Objects.Navigation>());
             this.NaviMainLink();
         }
@@ -663,7 +665,7 @@ namespace KozaDisk.Forms
             }
             else
             {
-                //load documents
+                //load documents tree
                 SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
                 connection.Open();
 
@@ -672,11 +674,8 @@ namespace KozaDisk.Forms
                 SQLiteCommand command = new SQLiteCommand(sql, connection);
                 SQLiteDataReader r = command.ExecuteReader();
 
-                string blocksHtml = Properties.Resources.disk_blocks;
                 string treeHtml = Properties.Resources.mydocs_tree;
-
                 string disksTreeHtml = "";
-                string disksBlockHtml = "";
 
                 while (r.Read())
                 {
@@ -694,37 +693,15 @@ namespace KozaDisk.Forms
 
                     string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
 
-                    disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"doc_{r["id"].ToString()}\">";
-                    disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{docName}</div>";
-                    disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
-                    disksBlockHtml += $"<div class=\"btn\">";
-                    disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
-                    disksBlockHtml += $"<div class=\"date\">{createdAt.ToString("dd.MM.yyyy")}</div>";
-                    disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
-                    disksBlockHtml += $"</div>";
-                    disksBlockHtml += "</div>";
-
                     disksTreeHtml += $"<tr id=\"doc_{r["id"].ToString()}\">";
                     disksTreeHtml += $"<td class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{r["doc_name"].ToString()}</td>";
                     disksTreeHtml += $"<td>{r["created_at"].ToString()}</td>";
                     disksTreeHtml += $"<td class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\">&nbsp;&nbsp;&nbsp;<img src=\"{Constant.ApplcationPath}icon\\iface\\delete-list.png\"/></td>";
                     disksTreeHtml += "</tr>";
-
-                    //disksTreeHtml += $"<div class=\"document\" id=\"{r["doc_id"].ToString()}\" db=\"{db}\"></div>";
                 }
-
-                blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
-                blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
-                blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
 
                 treeHtml = treeHtml.Replace("%AppPath%", Constant.ApplcationPath);
                 treeHtml = treeHtml.Replace("%templates%", disksTreeHtml);
-
-                MyDocsBlockBrowser.Navigate("about:blank");
-                MyDocsBlockBrowser.DocumentText = "0";
-                MyDocsBlockBrowser.Document.OpenNew(true);
-                MyDocsBlockBrowser.Document.Write(blocksHtml);
-                MyDocsBlockBrowser.Refresh();
 
                 MyDocsListBrowser.Navigate("about:blank");
                 MyDocsListBrowser.DocumentText = "0";
@@ -732,16 +709,140 @@ namespace KozaDisk.Forms
                 MyDocsListBrowser.Document.Write(treeHtml);
                 MyDocsListBrowser.Refresh();
 
+                //load my documents folders
+
+                string sql2 = "SELECT DISTINCT folder_name FROM documents ORDER BY id";
+
+                SQLiteCommand command2 = new SQLiteCommand(sql2, connection);
+                SQLiteDataReader r2 = command2.ExecuteReader();
+
+                string blocksHtml = Properties.Resources.disk_blocks;
+                string disksBlockHtml = "";
+
+                while (r2.Read())
+                {
+                    string folderName = r2["folder_name"].ToString();
+                    string folderNameFull = r2["folder_name"].ToString();
+                    string folderNameTitle = r2["folder_name"].ToString();
+
+                    if (folderNameTitle.Length > 55)
+                    {
+                        folderNameTitle = folderName.Substring(0, 55) + "...";
+                    }
+
+                    if (folderNameTitle == folderNameFull)
+                        folderNameTitle = String.Empty;
+
+                    disksBlockHtml += $"<div class=\"block\" type=\"folder\" onClick=\"window.external.openMyFolder('{folderNameFull}');\">";
+                    disksBlockHtml += $"<div class=\"head\" title=\"{folderNameTitle}\">{folderName}</div>";
+                    disksBlockHtml += $"<div class=\"image\"><img src=\"{Constant.ApplcationPath}icon\\iface\\folder_big.png\"/></div>";
+                    //disksBlockHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";
+                    disksBlockHtml += "</div>";
+                }
+
+                command2.Dispose();
+                connection.Close();
+
+                blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+                blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+                blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+                MyDocsBlockBrowser.Navigate("about:blank");
+                MyDocsBlockBrowser.DocumentText = "0";
+                MyDocsBlockBrowser.Document.OpenNew(true);
+                MyDocsBlockBrowser.Document.Write(blocksHtml);
+                MyDocsBlockBrowser.Refresh();
+
                 //open page
                 this.Tabs.SelectedIndex = TabIndex;
             }
+        }
+
+        public void openMyFolder(string folderName)
+        {
+            string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
+
+            SQLiteConnection connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            string sql = $"SELECT id, db_name, doc_id, doc_name, doc_html, created_at FROM documents WHERE folder_name = '{folderName}' ORDER BY created_at";
+
+            SQLiteCommand command = new SQLiteCommand(sql, connection);
+            SQLiteDataReader r = command.ExecuteReader();
+
+            string blocksHtml = Properties.Resources.disk_blocks;
+            string disksBlockHtml = "";
+
+            while (r.Read())
+            {
+                DateTime createdAt = DateTime.Parse(r["created_at"].ToString());
+                string docName = r["doc_name"].ToString();
+                string docNameFull = r["doc_name"].ToString();
+
+                if (docName.Length > 55)
+                {
+                    docName = docName.Substring(0, 55) + "...";
+                }
+
+                if (docName == docNameFull)
+                    docNameFull = String.Empty;
+
+                string db = r["db_name"].ToString().Replace(Constant.ApplcationStorage + @"db\cd\", "");
+
+                disksBlockHtml += $"<div class=\"block mydoc\" type=\"document\" db=\"{db}\" id=\"doc_{r["id"].ToString()}\">";
+                disksBlockHtml += $"<div class=\"head\" title=\"{docNameFull}\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\">{docName}</div>";
+                disksBlockHtml += $"<div class=\"image\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\mydoc.png\"/></div>";
+                disksBlockHtml += $"<div class=\"btn\">";
+                disksBlockHtml += $"<div class=\"edit\" onClick=\"window.external.openMyDocument('{r["doc_id"].ToString()}', '{r["id"].ToString()}', '{db}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\edit.png\"/></div>";
+                disksBlockHtml += $"<div class=\"date\">{createdAt.ToString("dd.MM.yyyy")}</div>";
+                disksBlockHtml += $"<div class=\"delete\" id=\"{r["id"].ToString()}\" onClick=\"window.external.deleteDocument('{r["id"].ToString()}');\"><img src=\"{Constant.ApplcationPath}icon\\iface\\delete.png\"/></div>";
+                disksBlockHtml += $"</div>";
+                disksBlockHtml += "</div>";
+                
+            }
+
+            blocksHtml = blocksHtml.Replace("%disks_blocks%", disksBlockHtml);
+            blocksHtml = blocksHtml.Replace("%AppPath%", Constant.ApplcationPath);
+            blocksHtml = blocksHtml.Replace("%AppPathUrl%", Constant.ApplcationPath.Replace(@"\", @"/"));
+
+            MyDocsBlockBrowser.Navigate("about:blank");
+            MyDocsBlockBrowser.DocumentText = "0";
+            MyDocsBlockBrowser.Document.OpenNew(true);
+            MyDocsBlockBrowser.Document.Write(blocksHtml);
+            MyDocsBlockBrowser.Refresh();
+
+            command.Dispose();
+            connection.Close();
+
+            //write navigation
+            List<KozaDisk.Class.Objects.Navigation> navi = new List<Class.Objects.Navigation>();
+            KozaDisk.Class.Objects.Navigation myDoc; 
+            
+            myDoc = new Class.Objects.Navigation();
+            myDoc.text = "Мої документи";
+            myDoc.isDisk = false;
+            myDoc.isFolder = false;
+            myDoc.isMyDocs = true;
+            navi.Add(myDoc);
+
+            myDoc = new Class.Objects.Navigation();
+            myDoc.text = folderName;
+            myDoc.isDisk = false;
+            myDoc.isFolder = false;
+            myDoc.isMyDocs = false;
+            myDoc.isMyFolder = true;
+            navi.Add(myDoc);
+
+            writeNavigation(navi);
         }
  
         public void deleteDocument(string id)
         {
             try
             {
-                if (MessageBox.Show("Видалити документ?", "Видалення", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                QuestionDialog questionDlg = new QuestionDialog("Видалити документ?");
+
+                if (questionDlg.ShowDialog() == DialogResult.Yes)
                 {
 
                     string databaseName = Constant.ApplcationStorage + $"users\\{this.userData.UserName}\\documents.db";
@@ -754,7 +855,6 @@ namespace KozaDisk.Forms
                     SQLiteCommand command = new SQLiteCommand(sql, connection);
                     command.ExecuteNonQuery();
 
-                    //this.loadMyDocuments(Constant.MyDocumentsBlockTab);
                     this.MyDocsBlockBrowser.Document.InvokeScript("removeDocument", new string[] { id });
                     this.MyDocsListBrowser.Document.InvokeScript("removeDocument", new string[] { id });
                 }
@@ -825,7 +925,6 @@ namespace KozaDisk.Forms
                 this.BlockViewBtn.Visible = false;
 
                 this.Tabs.SelectedIndex = 1;
-                this.isNoNavigation = false;
 
                 this.writeNavigation(new List<Class.Objects.Navigation>());
             }
@@ -863,6 +962,11 @@ namespace KozaDisk.Forms
                     if (navigationLink.isMyDocs)
                     {
                         links += $"<a name=\"home\" class=\"navi\" style=\"{style}\" onClick=\"window.external.MyDocsLink();\">{navigationLink.text}</a>";
+                    }
+
+                    if (navigationLink.isMyFolder)
+                    {
+                        links += $"<a name=\"home\" class=\"navi\" style=\"{style}\">{navigationLink.text}</a>";
                     }
 
                     if (navigationLink.isSearch)
@@ -970,11 +1074,11 @@ namespace KozaDisk.Forms
             this.searchBox.Focus();
 
             Class.Objects.DiskTreeNode selectedNode = (Class.Objects.DiskTreeNode)this.DiskTree.SelectedNode;
-            selectedNode.Expand();
+            
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
-                if (!activator.isActivated(selectedNode.db))
+                if (!activator.isActivated(selectedNode.db) && !activator.isTrial(selectedNode.db))
                 {
                     //display activation message
                     string days = activator.getTrialDays(selectedNode.db);
@@ -984,10 +1088,36 @@ namespace KozaDisk.Forms
                     activateForm.db = selectedNode.db;
 
                     activateForm.ShowDialog();
+                    this.DiskTree.SelectedNode = null;
+
+                    if (activator.isActivated(selectedNode.db))
+                    {
+                        this.prepareTree();
+                    }
+                    else
+                    {
+                        selectedNode = null;
+                        return;
+                    }
                 }
 
-                if (selectedNode.ImageIndex == 0)
+                if (!activator.isActivated(selectedNode.db) && activator.isTrial(selectedNode.db))
                 {
+                    //display activation message
+                    string days = activator.getTrialDays(selectedNode.db);
+                    KozaDisk.Forms.Activate activateForm = new KozaDisk.Forms.Activate(days);
+                    activateForm.setDiskName(selectedNode.description);
+                    activateForm.userData = this.userData;
+                    activateForm.db = selectedNode.db;
+
+                    activateForm.ShowDialog();
+                    selectedNode.Expand();
+                    selectedNode.ImageIndex = 1;
+                }
+
+                if (activator.isActivated(selectedNode.db))
+                {
+                    selectedNode.Expand();
                     selectedNode.ImageIndex = 1;
                 }
 

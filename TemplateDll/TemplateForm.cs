@@ -32,6 +32,7 @@ namespace templates
         int docId = 0;
         int myDocId = 0;
         string orientation = "portrait";
+        string folderName;
 
         public TemplateForm()
         {
@@ -79,6 +80,11 @@ namespace templates
         public void setTemplateOrientation(string orientation)
         {
             this.orientation = orientation;
+        }
+
+        public void setFolderName(string folderName)
+        {
+            this.folderName = folderName;
         }
 
         public void loadHTML(string html)
@@ -347,7 +353,7 @@ namespace templates
                     SQLiteConnection.CreateFile(DocumentsDB);
                     SQLiteConnection con = new SQLiteConnection(string.Format("Data Source={0};", DocumentsDB));
                     con.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("CREATE TABLE documents (id INTEGER PRIMARY KEY AUTOINCREMENT, db_name STRING(255), doc_id INTEGER(13), doc_name STRING(255), doc_html TEXT, created_at DATETIME); ", con);
+                    SQLiteCommand cmd = new SQLiteCommand("CREATE TABLE documents (id INTEGER PRIMARY KEY AUTOINCREMENT, db_name STRING(255), doc_id INTEGER(13), doc_name STRING(255), folder_name STRING(255), doc_html TEXT, created_at DATETIME); ", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
@@ -363,12 +369,16 @@ namespace templates
                 }
 
                 //add
-                string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{encHtml}', datetime('now'))";
+                string sql = $"INSERT INTO documents (db_name, doc_id, doc_name, folder_name, doc_html, created_at) values ('{db}', '{docId}', '{this.TemplateNameBox.Text}', '{this.folderName}', '{encHtml}', datetime('now'))";
 
                 SQLiteCommand command = new SQLiteCommand(sql, connection);
                 command.ExecuteNonQuery();
 
-                MessageBox.Show("Збережено в розділі «Мої документи»", "КОЗА-ДИСК", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Dialog.InformationDialog informationDlg = new Dialog.InformationDialog();
+                informationDlg.ShowDialog();
+
+
+                //MessageBox.Show("Збережено в розділі «Мої документи»", "КОЗА-ДИСК", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {

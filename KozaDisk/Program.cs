@@ -81,6 +81,9 @@ namespace KozaDisk
                                         case "Скорочена назва організації у родовому відмінку":
                                             user.AbbreviationGenitive = constVal;
                                             break;
+                                        case "Скорочена назва організації":
+                                            user.AbbreviationGenitive = constVal;
+                                            break;
                                         case "Назва організації вищого рівня":
                                             user.Subordination = constVal;
                                             break;
@@ -90,8 +93,23 @@ namespace KozaDisk
                                         case "Місце складання документів":
                                             user.Place = constVal;
                                             break;
+                                        case "Код ЄДРПОУ":
+                                            user.Code = constVal;
+                                            break;
+                                        case "Банківські реквізити":
+                                            user.Bank = constVal;
+                                            break;
+                                        case "Юридична адреса":
+                                            user.LegalAddress = constVal;
+                                            break;
+                                        case "Прізвище, ім’я, по батькові керівника":
+                                            user.ChiefName = constVal;
+                                            break;
                                         case "Прізвище та ініціали керівника":
                                             user.ChiefSurname = constVal;
+                                            break;
+                                        case "Прізвище та ініціали керівника у давальному відмінку":
+                                            user.ChiefSurnameDative = constVal;
                                             break;
                                         case "Ініціали та прізвище керівника":
                                             user.ChiefInitials = constVal;
@@ -99,8 +117,26 @@ namespace KozaDisk
                                         case "Посада керівника з великої літери":
                                             user.ChiefPosition = constVal;
                                             break;
+                                        case "Посада керівника у давальному відмінку з великої літери":
+                                            user.ChiefPositionDative = constVal;
+                                            break;
+                                        case "Посада керівника у родовому відмінку з малої літери":
+                                            user.ChiefPositionLower = constVal;
+                                            break;
                                         case "Посада керівника з малої літери в родовому відмінку":
                                             user.ChiefPositionLower = constVal;
+                                            break;
+                                        case "Поштова адреса організації":
+                                            user.Address = constVal;
+                                            break;
+                                        case "Телефон":
+                                            user.Telephone = constVal;
+                                            break;
+                                        case "Факс":
+                                            user.Fax = constVal;
+                                            break;
+                                        case "Електронна адреса":
+                                            user.Email = constVal;
                                             break;
                                     }
                                 }

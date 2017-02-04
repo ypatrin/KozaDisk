@@ -4859,9 +4859,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]KozaDisk.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{B6736B08-BC90-4D74-81F2-8A595440BAF8}</td><td/></row>
+		<row><td>ProductCode</td><td>{50202662-F335-481A-854F-35FD1B57BB66}</td><td/></row>
 		<row><td>ProductName</td><td>КОЗА-ДИСК</td><td/></row>
-		<row><td>ProductVersion</td><td>2.0.7</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.10</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4874,7 +4874,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL;ISACTIONPROP2;ISACTIONPROP1;ISACTIONPROP3;ISACTIONPROP5;ISACTIONPROP4;ISACTIONPROP6;ISACTIONPROP7</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL;ISACTIONPROP2;ISACTIONPROP1;ISACTIONPROP3;ISACTIONPROP5;ISACTIONPROP4;ISACTIONPROP6;ISACTIONPROP7;ISACTIONPROP8;ISACTIONPROP9;ISACTIONPROP10</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td/></row>
@@ -5157,6 +5157,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.4</td><td>2.0.5</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP4</td><td>Update to 2.0.5</td></row>
 		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.5</td><td>2.0.6</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP6</td><td>Update to 2.0.6</td></row>
 		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.6</td><td>2.0.7</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP7</td><td>Update to 2.0.7</td></row>
+		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.7</td><td>2.0.8</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP8</td><td>Update to 2.0.8</td></row>
+		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.8</td><td>2.0.9</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP9</td><td>Update to 2.0.9</td></row>
+		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.9</td><td>2.0.10</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP10</td><td>Гзвфеу ещ 2.0.10</td></row>
 	</table>
 
 	<table name="Verb">

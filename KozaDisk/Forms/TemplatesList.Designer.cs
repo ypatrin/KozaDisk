@@ -181,10 +181,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(227)))), ((int)(((byte)(229)))));
-            this.button1.Location = new System.Drawing.Point(570, 26);
+            this.button1.Location = new System.Drawing.Point(566, 26);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 38);
+            this.button1.Size = new System.Drawing.Size(48, 38);
             this.button1.TabIndex = 6;
             this.button1.TabStop = false;
             this.button1.Text = "?";

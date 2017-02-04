@@ -146,8 +146,11 @@
         function removeDocument(id)
         {
             var element = document.getElementById("doc_" + id);
-            element.outerHTML = "";
-            delete element;
+            if (element)
+            {
+                element.outerHTML = "";
+                delete element;
+            }
         }
     </script>
 </body>

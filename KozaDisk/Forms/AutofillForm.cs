@@ -33,7 +33,7 @@ namespace KozaDisk.Forms
 
         public void setUser(User user)
         {
-            this.AbbreviationBox.Text = user.Abbreviation ;
+            this.AbbreviationBox.Text = user.AbbreviationGenitive;
             this.BankBox.Text = user.Bank;
             this.ChiefInitialsBox.Text = user.ChiefInitials;
             this.ChiefNameBox.Text = user.ChiefName;
@@ -70,16 +70,20 @@ namespace KozaDisk.Forms
         private void TabButton2_Click(object sender, EventArgs e)
         {
             this.Tabs.SelectedIndex = 0;
-            TabButton2.Enabled = false;
+            TabButton1.Enabled = false;
+            TabButton2.Enabled = true;
             TabButton3.Enabled = true;
 
-            TabButton2.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton1.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton2.ForeColor = Color.White;
             TabButton3.ForeColor = Color.White;
 
-            TabButton2.BackColor = Color.White;
+            TabButton1.BackColor = Color.White;
+            TabButton2.BackColor = Color.FromArgb(21, 168, 139);
             TabButton3.BackColor = Color.FromArgb(21, 168, 139);
 
-            TabButton2.FlatAppearance.BorderSize = 1;
+            TabButton1.FlatAppearance.BorderSize = 1;
+            TabButton2.FlatAppearance.BorderSize = 0;
             TabButton3.FlatAppearance.BorderSize = 0;
         }
 
@@ -87,15 +91,40 @@ namespace KozaDisk.Forms
         {
             this.Tabs.SelectedIndex = 1;
 
+            TabButton1.Enabled = true;
+            TabButton2.Enabled = false;
+            TabButton3.Enabled = true;
+
+            TabButton1.ForeColor = Color.White;
+            TabButton2.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton3.ForeColor = Color.White;
+
+            TabButton1.BackColor = Color.FromArgb(21, 168, 139);
+            TabButton2.BackColor = Color.White;
+            TabButton3.BackColor = Color.FromArgb(21, 168, 139);
+
+            TabButton1.FlatAppearance.BorderSize = 0;
+            TabButton2.FlatAppearance.BorderSize = 1;
+            TabButton3.FlatAppearance.BorderSize = 0;
+        }
+
+        private void TabButton3_Click_1(object sender, EventArgs e)
+        {
+            this.Tabs.SelectedIndex = 2;
+
+            TabButton1.Enabled = true;
             TabButton2.Enabled = true;
             TabButton3.Enabled = false;
 
+            TabButton1.ForeColor = Color.White;
             TabButton2.ForeColor = Color.White;
-            TabButton3.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton3.ForeColor = Color.FromArgb(27, 188, 155); 
 
+            TabButton1.BackColor = Color.FromArgb(21, 168, 139);
             TabButton2.BackColor = Color.FromArgb(21, 168, 139);
             TabButton3.BackColor = Color.White;
 
+            TabButton1.FlatAppearance.BorderSize = 0;
             TabButton2.FlatAppearance.BorderSize = 0;
             TabButton3.FlatAppearance.BorderSize = 1;
         }
@@ -108,7 +137,7 @@ namespace KozaDisk.Forms
             user.UserEmail = this.userData.UserEmail;
             user.UserPhone = this.userData.UserPhone;
 
-            user.Abbreviation = this.AbbreviationBox.Text;
+            user.AbbreviationGenitive = this.AbbreviationBox.Text;
             user.Bank = this.BankBox.Text;
             user.ChiefInitials = this.ChiefInitialsBox.Text;
             user.ChiefName = this.ChiefNameBox.Text;
@@ -161,17 +190,19 @@ namespace KozaDisk.Forms
         private void AutofillForm_Load(object sender, EventArgs e)
         {
             this.Tabs.SelectedIndex = 0;
-            TabButton2.Enabled = false;
-            TabButton3.Enabled = true;
+            TabButton1.Enabled = false;
+            TabButton2.Enabled = true;
 
-            TabButton2.ForeColor = Color.FromArgb(27, 188, 155);
-            TabButton3.ForeColor = Color.White;
+            TabButton1.ForeColor = Color.FromArgb(27, 188, 155);
+            TabButton2.ForeColor = Color.White;
 
-            TabButton2.BackColor = Color.White;
-            TabButton3.BackColor = Color.FromArgb(21, 168, 139);
+            TabButton1.BackColor = Color.White;
+            TabButton2.BackColor = Color.FromArgb(21, 168, 139);
 
-            TabButton2.FlatAppearance.BorderSize = 1;
-            TabButton3.FlatAppearance.BorderSize = 0;
+            TabButton1.FlatAppearance.BorderSize = 1;
+            TabButton2.FlatAppearance.BorderSize = 0;
         }
+
+       
     }
 }

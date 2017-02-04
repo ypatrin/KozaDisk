@@ -167,4 +167,6 @@ D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.ActivateErro
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.ActivateOkForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.TrialForm.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.PopupOkForm.resources
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.QuestionDialog.resources
 D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.csprojResolveAssemblyReference.cache
+D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\obj\Debug\KozaDisk.Forms.ActivateError2Form.resources
