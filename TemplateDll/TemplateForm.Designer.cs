@@ -50,20 +50,21 @@
             this.TemplateNameBox = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.panel14 = new System.Windows.Forms.Panel();
             this.ShowCommentBtn = new System.Windows.Forms.PictureBox();
             this.HideCommentBtn = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.chartRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.HeadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,6 +75,7 @@
             this.panel8.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -81,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HideCommentBtn)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // HeadPanel
@@ -316,6 +317,16 @@
             this.panel9.Size = new System.Drawing.Size(75, 62);
             this.panel9.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::templates.Properties.Resources.pencil_gray;
+            this.pictureBox2.Location = new System.Drawing.Point(50, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(14, 14);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -364,23 +375,12 @@
             // panel15
             // 
             this.panel15.Controls.Add(this.webBrowser2);
+            this.panel15.Controls.Add(this.panel10);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(29, 61);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(269, 466);
             this.panel15.TabIndex = 2;
-            // 
-            // webBrowser2
-            // 
-            this.webBrowser2.AllowNavigation = false;
-            this.webBrowser2.AllowWebBrowserDrop = false;
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(269, 466);
-            this.webBrowser2.TabIndex = 1;
             // 
             // panel14
             // 
@@ -434,15 +434,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "КОМЕНТАРІ";
             // 
-            // pictureBox2
+            // panel10
             // 
-            this.pictureBox2.Image = global::templates.Properties.Resources.pencil_gray;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(14, 14);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 451);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(269, 15);
+            this.panel10.TabIndex = 0;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.AllowNavigation = false;
+            this.webBrowser2.AllowWebBrowserDrop = false;
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 22);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(269, 451);
+            this.webBrowser2.TabIndex = 2;
             // 
             // TemplateForm
             // 
@@ -470,6 +480,7 @@
             this.panel23.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
@@ -478,7 +489,6 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRecordBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,7 +511,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label1;
@@ -519,5 +528,7 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox TemplateNameBox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.Panel panel10;
     }
 }

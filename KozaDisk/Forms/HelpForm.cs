@@ -58,6 +58,7 @@ namespace KozaDisk.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.FileName = "instruction.pdf";
             sfd.Filter = "PDF Файл|*.pdf";
@@ -70,6 +71,14 @@ namespace KozaDisk.Forms
                 File.Copy(Constant.ApplcationPath + "instruction.pdf", sfd.FileName);
                 MessageBox.Show("Файл успішно збережений!", "Допомога", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            */
+
+            System.Diagnostics.Process.Start(Constant.ApplcationPath + "instruction.pdf");
+        }
+
+        private void HelpForm_Load(object sender, EventArgs e)
+        {
+            this.richTextBox1.LoadFile(Constant.ApplcationPath + "manual.rtf");
         }
     }
 }

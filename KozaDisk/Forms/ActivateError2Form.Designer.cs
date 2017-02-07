@@ -82,9 +82,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.label2.Location = new System.Drawing.Point(48, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 25);
+            this.label2.Size = new System.Drawing.Size(230, 25);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Код вже використано";
+            this.label2.Text = "Код уже використано";
             // 
             // label1
             // 

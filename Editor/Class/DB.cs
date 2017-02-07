@@ -372,8 +372,12 @@ namespace Editor.Class
                     markerComment = markerComment.Replace("<", "&lt;");
                     markerComment = markerComment.Replace(">", "&gt;");
                     markerComment = markerComment.Replace("\"", "&quot;");
-                    markerComment = markerComment.Replace("\n", "");
-                    markerComment = markerComment.Replace("\t", "");
+                    markerComment = markerComment.Replace("\n", "&nbsp;");
+                    markerComment = markerComment.Replace("\t", "&nbsp;");
+                    markerComment = markerComment.Replace("text-align:justify", "");
+                    markerComment = markerComment.Replace("text-align: justify", "");
+                    markerComment = markerComment.Replace("text-align:&nbsp;justify", "");
+                    markerComment = markerComment.Replace(";;", ";");
 
                     if (markerComment != "")
                     markerComment = System.Web.HttpUtility.HtmlEncode(markerComment);
@@ -391,6 +395,8 @@ namespace Editor.Class
                         formula = formula.Replace("\"", "&quot;");
                         formula = formula.Replace("\n", "&nbsp;");
                         formula = formula.Replace("\t", "&nbsp;");
+                        formula = formula.Replace("rn","n");
+
                         formula = System.Web.HttpUtility.HtmlEncode(formula);
 
                         xml += $"<marker name=\"{markerAlias}\" type=\"formula\" value=\"{formula}\" comment=\"{markerComment}\" />";
@@ -423,11 +429,17 @@ namespace Editor.Class
                         Dictionary<System.Object, System.Object> args = (Dictionary<System.Object, System.Object>)phpFormula["args"];
                         string comment = (string)args["commernt"];
 
+                        comment = comment.Replace("rn", "n");
+
                         comment = comment.Replace("<", "&lt;");
                         comment = comment.Replace(">", "&gt;");
                         comment = comment.Replace("\"", "&quot;");
                         comment = comment.Replace("\n", "&nbsp;");
                         comment = comment.Replace("\t", "&nbsp;");
+                        comment = comment.Replace("text-align:justify","");
+                        comment = comment.Replace("text-align: justify", "");
+                        comment = comment.Replace("text-align:&nbsp;justify", "");
+                        comment = comment.Replace(";;", ";");
 
                         if (comment != "")
                             comment = System.Web.HttpUtility.HtmlEncode(comment);

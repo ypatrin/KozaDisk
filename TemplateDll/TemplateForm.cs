@@ -48,7 +48,7 @@ namespace templates
             webBrowser2.WebBrowserShortcutsEnabled = false;
             webBrowser2.ObjectForScripting = this;
             webBrowser2.ScriptErrorsSuppressed = true;
-            webBrowser2.IsWebBrowserContextMenuEnabled = false;
+            webBrowser2.IsWebBrowserContextMenuEnabled = true;
         }
 
         public void setTemplateName(String templateName)
@@ -240,7 +240,7 @@ namespace templates
         public void showComment(String comment)
         {
             string html = string.Format("<html><head><script type=\"text/javascript\" src=\"{0}\"></script><script type=\"text/javascript\" src=\"{1}\"></script></head><body style=\"background: #F5F5F5; margin: 20px 3px 0 0;\">{2}</body></html>",
-                ApplicationPath + @"\js\jquery.js", ApplicationPath + @"\js\comment.js", comment
+                ApplicationPath + @"\js\jquery.js", ApplicationPath + @"\js\comment.js", comment.Replace("rn","n")
             );
 
             webBrowser2.Navigate("about:blank");

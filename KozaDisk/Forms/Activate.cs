@@ -170,5 +170,10 @@ namespace KozaDisk.Forms
             trial.ShowDialog();
             this.Close();
         }
+
+        private void Activate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

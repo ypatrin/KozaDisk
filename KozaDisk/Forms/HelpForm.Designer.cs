@@ -33,8 +33,8 @@
             this.CloseBtn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,30 +88,30 @@
             this.panel2.Size = new System.Drawing.Size(427, 456);
             this.panel2.TabIndex = 3;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.richTextBox1.Location = new System.Drawing.Point(7, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(413, 392);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Font = new System.Drawing.Font("Arial", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(221, 410);
+            this.button1.Location = new System.Drawing.Point(197, 410);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 38);
+            this.button1.Size = new System.Drawing.Size(223, 38);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Скачати інструкцію";
+            this.button1.Text = "Завантажити інструкцію";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Arial", 12F);
+            this.richTextBox1.Location = new System.Drawing.Point(7, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(420, 390);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
             // 
             // HelpForm
             // 
@@ -126,6 +126,7 @@
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Допомога";
+            this.Load += new System.EventHandler(this.HelpForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelpForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HelpForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HelpForm_MouseUp);

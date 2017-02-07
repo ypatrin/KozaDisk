@@ -461,6 +461,8 @@ namespace templates
                     }
                 }
             }
+
+            this.markers.replaceNewLines(this.newDoc.Document);
         }
 
         private string getRandomString(int length)

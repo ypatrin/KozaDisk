@@ -18,3 +18,4 @@ D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\EntityFramework.SqlServer.xml
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\System.Data.SQLite.xml
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\Renci.SshNet.dll
 D:\Data\C Sharp\Projects\KozaDisk\Editor\bin\Debug\Renci.SshNet.xml
+D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache

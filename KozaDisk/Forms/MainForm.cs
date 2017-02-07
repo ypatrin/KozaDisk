@@ -23,7 +23,7 @@ namespace KozaDisk
             InitializeComponent();
         }
 
-        public void sendStatistic()
+        public void sendStatistic(string userName, string userEmail, string userPhone)
         {
             string cpuID = string.Empty;
             string mbID = String.Empty;
@@ -48,7 +48,7 @@ namespace KozaDisk
 
             string secret = KozaDisk.Encrypt.Base64.Encode($"processor:{cpuID};mainboard:{mbID}");
 
-            string url = $"http://mcfr.ua/index/koza/?pcid={secret}";
+            string url = $"http://mcfr.ua/index/koza/?pcid={secret}&username={userName}&useremail={userEmail}&userphone={userPhone}";
 
             try
             {
@@ -136,7 +136,7 @@ namespace KozaDisk
             this.ImportPanel.Visible = false;
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void ImportButton_Click(object sender, EventArgs e)
         {
             string userName = usersBox.Text;
 
@@ -151,7 +151,7 @@ namespace KozaDisk
             this.ImportPanel.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Create_Click(object sender, EventArgs e)
         {
             //check if all required fild s are filled
             if (this.UsernameBox.Text.Trim() == "" || this.EmailBox.Text.Trim() == "")
@@ -205,7 +205,7 @@ namespace KozaDisk
             }
         }
 
-        private void LoginButton_Click_1(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             string userName = File.ReadAllText(Constant.ApplcationStorage + @"app\login.cfg");
 
@@ -214,7 +214,7 @@ namespace KozaDisk
             User user = users.getUser(userName.Trim());
 
             //send statistic
-            this.sendStatistic();
+            this.sendStatistic(user.UserName, user.UserEmail, user.UserPhone);
 
             //load application
             TemplatesList templatesList = new TemplatesList();
@@ -248,8 +248,9 @@ namespace KozaDisk
             pictureBox.Parent.BackColor = Color.FromArgb(26, 188, 156);
         }
 
-        private void rightButton_Maunal_Click(object sender, MouseEventArgs e)
+        private void Manual_Click(object sender, MouseEventArgs e)
         {
+            /*
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.FileName = "instruction.pdf";
             sfd.Filter = "PDF Файл|*.pdf";
@@ -262,6 +263,9 @@ namespace KozaDisk
                 File.Copy(Constant.ApplcationPath + "instruction.pdf", sfd.FileName);
                 MessageBox.Show("Файл успішно збережений!", "Допомога", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            */
+
+            System.Diagnostics.Process.Start(Constant.ApplcationPath + "instruction.pdf");
         }
 
         private void rightButton_Help_Click(object sender, MouseEventArgs e)

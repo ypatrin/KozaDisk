@@ -134,7 +134,7 @@ namespace KozaDisk.Forms
                 }
 
                 //blocks
-                nodeHtml += $"<div class=\"block\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\" >";
+                nodeHtml += $"<div class=\"block\" title=\"{disk.description}\" type=\"disk\" db=\"{disk.db}\" onClick=\"window.external.openDisk('{disk.db}');\" >";
                 nodeHtml += $"<div class=\"head\">{diskName}</div>";
                 nodeHtml += $"<div class=\"image\"><img id=\"img_{disk.db}\" src=\"{Constant.ApplcationPath}icon\\iface\\disk_big.png\"/></div>";
                 nodeHtml += $"<div class=\"tmpl_name\">Шаблонів:</div><div class=\"tmpl_count\">{countTemplates.ToString()}</div>";

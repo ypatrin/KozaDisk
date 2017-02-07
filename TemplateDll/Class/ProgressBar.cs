@@ -93,9 +93,14 @@ namespace templates
 
         public void Close()
         {
-            progressForm.Invoke(CloseFormDelegate);
-            threadProgressForm.Abort();
-            threadProgressForm.Join();
+            try
+            {
+                progressForm.Invoke(CloseFormDelegate);
+                //threadProgressForm.Abort();
+                threadProgressForm.Join();
+            }
+            catch (ThreadAbortException tae) { }
+            catch (Exception e) { }
         }
     }
 }

@@ -2114,7 +2114,7 @@
 		<row><td>formula.png</td><td>ISX_DEFAULTCOMPONENT23</td><td>formula.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\icon\comments\formula.png</td><td>1</td><td/></row>
 		<row><td>formula_h.png</td><td>ISX_DEFAULTCOMPONENT23</td><td>FORMUL~1.PNG|formula-h.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\icon\comments\formula-h.png</td><td>1</td><td/></row>
 		<row><td>icons.less1</td><td>ISX_DEFAULTCOMPONENT39</td><td>ICONS~1.LES|icons.less</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_awesome\less\icons.less</td><td>1</td><td/></row>
-		<row><td>instruction.pdf</td><td>ISX_DEFAULTCOMPONENT21</td><td>INSTRU~1.PDF|instruction.pdf</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\instruction.pdf</td><td>1</td><td/></row>
+		<row><td>instruction.pdf</td><td>ISX_DEFAULTCOMPONENT21</td><td>INSTRU~1.PDF|instruction.pdf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Desktop\instruction.pdf</td><td>1</td><td/></row>
 		<row><td>jquery.js1</td><td>ISX_DEFAULTCOMPONENT32</td><td>jquery.js</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\jquery.js</td><td>1</td><td/></row>
 		<row><td>kozadisk.exe</td><td>KozaDisk.exe</td><td>KozaDisk.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe</td><td>1</td><td/></row>
 		<row><td>kozadisk.exe.config</td><td>ISX_DEFAULTCOMPONENT21</td><td>KOZADI~1.CON|KozaDisk.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Release\KozaDisk.exe.config</td><td>1</td><td/></row>
@@ -2122,6 +2122,7 @@
 		<row><td>larger.less1</td><td>ISX_DEFAULTCOMPONENT39</td><td>LARGER~1.LES|larger.less</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_awesome\less\larger.less</td><td>1</td><td/></row>
 		<row><td>license_2.0.txt1</td><td>ISX_DEFAULTCOMPONENT41</td><td>LICENS~1.TXT|LICENSE-2.0.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_roboto\LICENSE-2.0.txt</td><td>1</td><td/></row>
 		<row><td>list.less1</td><td>ISX_DEFAULTCOMPONENT39</td><td>LIST~1.LES|list.less</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_awesome\less\list.less</td><td>1</td><td/></row>
+		<row><td>manual.rtf</td><td>ISX_DEFAULTCOMPONENT21</td><td>manual.rtf</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Data\C Sharp\Projects\KozaDisk\KozaDisk\bin\Debug\manual.rtf</td><td>1</td><td/></row>
 		<row><td>mervlbyg_cxg3rlvuskt_feszw2x1</td><td>ISX_DEFAULTCOMPONENT41</td><td>MERVLB~1.WOF|mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_roboto\mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2</td><td>1</td><td/></row>
 		<row><td>mixins.less1</td><td>ISX_DEFAULTCOMPONENT39</td><td>MIXINS~1.LES|mixins.less</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\js\lib\calendar\fonts\font_awesome\less\mixins.less</td><td>1</td><td/></row>
 		<row><td>mydoc.png</td><td>ISX_DEFAULTCOMPONENT24</td><td>mydoc.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\MCFR\Koza Disk\App\icon\iface\mydoc.png</td><td>1</td><td/></row>
@@ -4859,9 +4860,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]KozaDisk.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{50202662-F335-481A-854F-35FD1B57BB66}</td><td/></row>
+		<row><td>ProductCode</td><td>{09931C47-D222-4BB2-9B9A-48F288B59E8A}</td><td/></row>
 		<row><td>ProductName</td><td>КОЗА-ДИСК</td><td/></row>
-		<row><td>ProductVersion</td><td>2.0.10</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.0</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4874,10 +4875,10 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL;ISACTIONPROP2;ISACTIONPROP1;ISACTIONPROP3;ISACTIONPROP5;ISACTIONPROP4;ISACTIONPROP6;ISACTIONPROP7;ISACTIONPROP8;ISACTIONPROP9;ISACTIONPROP10</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{143CFBDD-C352-4BFA-9B7B-A0D96DB16F48}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -5150,16 +5151,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td></td><td>2.0.1</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP2</td><td>Update to 2.0.1</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.1</td><td>2.0.2</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP1</td><td>Update to 2.0.2</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.2</td><td>2.0.3</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP3</td><td>Update to 2.0.3</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.3</td><td>2.0.4</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP5</td><td>Update to 2.0.4</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.4</td><td>2.0.5</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP4</td><td>Update to 2.0.5</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.5</td><td>2.0.6</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP6</td><td>Update to 2.0.6</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.6</td><td>2.0.7</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP7</td><td>Update to 2.0.7</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.7</td><td>2.0.8</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP8</td><td>Update to 2.0.8</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.8</td><td>2.0.9</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP9</td><td>Update to 2.0.9</td></row>
-		<row><td>{78306BFC-A242-4DE7-A5F4-D0C12A0C4999}</td><td>2.0.9</td><td>2.0.10</td><td>1049</td><td>768</td><td/><td>ISACTIONPROP10</td><td>Гзвфеу ещ 2.0.10</td></row>
 	</table>
 
 	<table name="Verb">

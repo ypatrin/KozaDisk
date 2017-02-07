@@ -235,7 +235,7 @@ namespace templates
                             "<span class='marker comment' comment=\"{4}\"></span>" +
                             "{2}"+
                             "<input type='text' style='display:none' disabled='disabled' name='{1}' id='{1}' value='{5}'>"
-                        , ApplicationPath, markerName, val, markerComment, markerCommentDyn, val.Replace("$$",""))
+                        , ApplicationPath, markerName, System.Web.HttpUtility.HtmlDecode(val), markerComment, markerCommentDyn, val.Replace("$$","").Replace("&lt;br/&gt;", "$new_line$"))
                     );
                 }
 
@@ -353,6 +353,26 @@ namespace templates
                 foreach (DocumentRange range in ranges4)
                 {
                     document.Replace(range, to + ";");
+                }
+            }
+            finally
+            {
+                document.EndUpdate();
+            }
+            return document;
+        }
+
+        public Document replaceNewLines(Document document)
+        {
+            document.BeginUpdate();
+
+            try
+            {
+                DocumentRange[] ranges = document.FindAll("$new_line$", SearchOptions.None);
+
+                foreach (DocumentRange range in ranges)
+                {
+                    document.Replace(range, Environment.NewLine);
                 }
             }
             finally

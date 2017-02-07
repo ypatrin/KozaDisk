@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(5, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 323);
+            this.panel1.Size = new System.Drawing.Size(379, 348);
             this.panel1.TabIndex = 1;
             // 
             // DiskNameLabel
@@ -74,7 +74,7 @@
             this.DiskNameLabel.Location = new System.Drawing.Point(10, 148);
             this.DiskNameLabel.Multiline = true;
             this.DiskNameLabel.Name = "DiskNameLabel";
-            this.DiskNameLabel.Size = new System.Drawing.Size(354, 49);
+            this.DiskNameLabel.Size = new System.Drawing.Size(354, 81);
             this.DiskNameLabel.TabIndex = 7;
             // 
             // button1
@@ -83,7 +83,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(14, 268);
+            this.button1.Location = new System.Drawing.Point(12, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 35);
             this.button1.TabIndex = 6;
@@ -97,7 +97,7 @@
             this.ActivateButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ActivateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ActivateButton.ForeColor = System.Drawing.Color.White;
-            this.ActivateButton.Location = new System.Drawing.Point(247, 268);
+            this.ActivateButton.Location = new System.Drawing.Point(245, 300);
             this.ActivateButton.Name = "ActivateButton";
             this.ActivateButton.Size = new System.Drawing.Size(120, 35);
             this.ActivateButton.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             this.ActivateCodeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ActivateCodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ActivateCodeBox.Location = new System.Drawing.Point(14, 221);
+            this.ActivateCodeBox.Location = new System.Drawing.Point(12, 253);
             this.ActivateCodeBox.Name = "ActivateCodeBox";
             this.ActivateCodeBox.Size = new System.Drawing.Size(351, 26);
             this.ActivateCodeBox.TabIndex = 4;
@@ -117,7 +117,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 200);
+            this.label4.Location = new System.Drawing.Point(8, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 17);
             this.label4.TabIndex = 3;
@@ -155,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(189)))), ((int)(((byte)(156)))));
-            this.ClientSize = new System.Drawing.Size(389, 371);
+            this.ClientSize = new System.Drawing.Size(389, 397);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -165,6 +165,7 @@
             this.Name = "Activate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Активація диска";
+            this.Load += new System.EventHandler(this.Activate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
