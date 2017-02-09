@@ -32,6 +32,11 @@ namespace KozaDisk
         public string db { get; set; }
 
         /// <summary>
+        /// Связанный диск
+        /// </summary>
+        public Disk relationCd { get; set; }
+
+        /// <summary>
         /// Получает список папок
         /// </summary>
         public List<Folder> getFolders()

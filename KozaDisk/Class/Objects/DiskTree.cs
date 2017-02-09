@@ -10,6 +10,7 @@ namespace KozaDisk.Class.Objects
         public string id { get; set; }
         public string db { get; set; }
         public string description { get; set; }
+        public Disk relationDisk { get; set; }
 
         public bool isAtivateWindowDisplayed { get; set; }
 

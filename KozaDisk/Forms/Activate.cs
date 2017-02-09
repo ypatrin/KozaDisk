@@ -18,6 +18,10 @@ namespace KozaDisk.Forms
         public string key = "fbv8295_";
         public string remainingDays = "0";
 
+        //relation
+        protected string _relationDiskName = null;
+        protected string _relationDiskDb = null;
+
         public Activate(string days)
         {
             InitializeComponent();
@@ -34,6 +38,16 @@ namespace KozaDisk.Forms
         public void setDiskName(string diskName)
         {
             this.DiskNameLabel.Text = diskName;
+        }
+
+        public void setRelationDiskName(string diskName)
+        {
+            this._relationDiskName = diskName;
+        }
+
+        public void setRelationDiskDb(string diskDb)
+        {
+            this._relationDiskDb = diskDb;
         }
 
         private void ActivateButton_Click(object sender, EventArgs e)
@@ -104,6 +118,15 @@ namespace KozaDisk.Forms
             xmlRequest += $"        <id>{this.db}</id>"; // ID диска
             xmlRequest += $"        <key>{this.ActivateCodeBox.Text.Replace("-","")}</key>"; // ключ диска, который ввел юзер в окне активации
             xmlRequest += "     </disk>";
+
+            if (this._relationDiskDb != null && this._relationDiskName != null)
+            {
+                xmlRequest += "     <relation_disk>";
+                xmlRequest += $"        <name>{this._relationDiskName}</name>"; //имя диска
+                xmlRequest += $"        <id>{this._relationDiskDb}</id>"; // ID диска
+                xmlRequest += "     </relation_disk>";
+            }
+
             xmlRequest += "     <user>";
             xmlRequest += $"        <email>{userData.UserEmail}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
@@ -149,6 +172,7 @@ namespace KozaDisk.Forms
 
                     KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
                     activator.activate(this.db, activationKey.InnerText);
+                    activator.activate(this._relationDiskDb, activationKey.InnerText);
 
                     this.Visible = false;
                     activateOk.ShowDialog();

@@ -30,6 +30,22 @@ namespace KozaDisk
                 disk.edition = doc.DocumentElement.SelectSingleNode("/disk/edition").InnerText; ;
                 disk.db = doc.DocumentElement.SelectSingleNode("/disk/db").InnerText;
 
+                if (doc.DocumentElement.SelectSingleNode("/disk/relation") != null)
+                {
+                    string relationDiskXml = Constant.ApplcationStorage + @"db\xml\" + doc.DocumentElement.SelectSingleNode("/disk/relation").InnerText;
+
+                    XmlDocument relationDoc = new XmlDocument();
+                    relationDoc.Load(relationDiskXml.Trim());
+
+                    Disk relationDisk = new Disk();
+                    relationDisk.name = relationDoc.DocumentElement.SelectSingleNode("/disk/name").InnerText;
+                    relationDisk.description = relationDoc.DocumentElement.SelectSingleNode("/disk/description").InnerText;
+                    relationDisk.edition = relationDoc.DocumentElement.SelectSingleNode("/disk/edition").InnerText; ;
+                    relationDisk.db = relationDoc.DocumentElement.SelectSingleNode("/disk/db").InnerText;
+
+                    disk.relationCd = relationDisk;
+                }
+
                 disks.Add(disk);
                 disk = null;
             }

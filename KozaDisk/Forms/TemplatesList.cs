@@ -61,6 +61,7 @@ namespace KozaDisk.Forms
             {
                 Class.Objects.DiskTreeNode diskTreeNode = new Class.Objects.DiskTreeNode();
                 diskTreeNode.db = disk.db;
+                diskTreeNode.relationDisk = disk.relationCd;
                 diskTreeNode.Name = disk.name;
                 diskTreeNode.description = disk.description;
                 diskTreeNode.Text = disk.name;
@@ -237,6 +238,12 @@ namespace KozaDisk.Forms
                         activateForm.setDiskName(disk.description);
                         activateForm.userData = this.userData;
                         activateForm.db = disk.db;
+
+                        if (disk.relationCd != null)
+                        {
+                            activateForm.setRelationDiskDb(disk.relationCd.db);
+                            activateForm.setRelationDiskName(disk.relationCd.name);
+                        }
 
                         activateForm.ShowDialog();
                     }
@@ -1087,6 +1094,12 @@ namespace KozaDisk.Forms
                     activateForm.userData = this.userData;
                     activateForm.db = selectedNode.db;
 
+                    if (selectedNode.relationDisk != null)
+                    {
+                        activateForm.setRelationDiskName(selectedNode.relationDisk.description);
+                        activateForm.setRelationDiskDb(selectedNode.relationDisk.db);
+                    }
+
                     activateForm.ShowDialog();
                     this.DiskTree.SelectedNode = null;
 
@@ -1109,6 +1122,12 @@ namespace KozaDisk.Forms
                     activateForm.setDiskName(selectedNode.description);
                     activateForm.userData = this.userData;
                     activateForm.db = selectedNode.db;
+
+                    if (selectedNode.relationDisk != null)
+                    {
+                        activateForm.setRelationDiskName(selectedNode.relationDisk.description);
+                        activateForm.setRelationDiskDb(selectedNode.relationDisk.db);
+                    }
 
                     activateForm.ShowDialog();
                     selectedNode.Expand();
