@@ -482,6 +482,7 @@
             this.DiskTree.TabIndex = 0;
             this.DiskTree.TabStop = false;
             this.DiskTree.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.DiskTree_DrawNode);
+            this.DiskTree.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.DiskTree_BeforeSelect);
             this.DiskTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DiskTree_AfterSelect);
             this.DiskTree.Validating += new System.ComponentModel.CancelEventHandler(this.DiskTree_Validating);
             // 

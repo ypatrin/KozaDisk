@@ -165,6 +165,7 @@
             this.Name = "Activate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Активація диска";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Activate_FormClosed);
             this.Load += new System.EventHandler(this.Activate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

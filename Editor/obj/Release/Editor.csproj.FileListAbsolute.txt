@@ -18,3 +18,22 @@ D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.Properties.Resources
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\Editor.csproj.GenerateResource.Cache
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\КозаДиск 2.0 Editor.exe
 D:\Data\C Sharp\Projects\KozaDisk\Editor\obj\Release\КозаДиск 2.0 Editor.pdb
+E:\KozaDisk\Editor\bin\Release\КозаДиск 2.0 Editor.exe.config
+E:\KozaDisk\Editor\bin\Release\КозаДиск 2.0 Editor.exe
+E:\KozaDisk\Editor\bin\Release\КозаДиск 2.0 Editor.pdb
+E:\KozaDisk\Editor\bin\Release\EntityFramework.dll
+E:\KozaDisk\Editor\bin\Release\EntityFramework.SqlServer.dll
+E:\KozaDisk\Editor\bin\Release\Renci.SshNet.dll
+E:\KozaDisk\Editor\bin\Release\System.Data.SQLite.dll
+E:\KozaDisk\Editor\bin\Release\System.Data.SQLite.EF6.dll
+E:\KozaDisk\Editor\bin\Release\System.Data.SQLite.Linq.dll
+E:\KozaDisk\Editor\bin\Release\EntityFramework.xml
+E:\KozaDisk\Editor\bin\Release\EntityFramework.SqlServer.xml
+E:\KozaDisk\Editor\bin\Release\Renci.SshNet.xml
+E:\KozaDisk\Editor\bin\Release\System.Data.SQLite.xml
+E:\KozaDisk\Editor\obj\Release\Editor.csprojResolveAssemblyReference.cache
+E:\KozaDisk\Editor\obj\Release\Editor.Form1.resources
+E:\KozaDisk\Editor\obj\Release\Editor.Properties.Resources.resources
+E:\KozaDisk\Editor\obj\Release\Editor.csproj.GenerateResource.Cache
+E:\KozaDisk\Editor\obj\Release\КозаДиск 2.0 Editor.exe
+E:\KozaDisk\Editor\obj\Release\КозаДиск 2.0 Editor.pdb

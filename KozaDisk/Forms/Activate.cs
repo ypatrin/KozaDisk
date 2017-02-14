@@ -118,15 +118,6 @@ namespace KozaDisk.Forms
             xmlRequest += $"        <id>{this.db}</id>"; // ID диска
             xmlRequest += $"        <key>{this.ActivateCodeBox.Text.Replace("-","")}</key>"; // ключ диска, который ввел юзер в окне активации
             xmlRequest += "     </disk>";
-
-            if (this._relationDiskDb != null && this._relationDiskName != null)
-            {
-                xmlRequest += "     <relation_disk>";
-                xmlRequest += $"        <name>{this._relationDiskName}</name>"; //имя диска
-                xmlRequest += $"        <id>{this._relationDiskDb}</id>"; // ID диска
-                xmlRequest += "     </relation_disk>";
-            }
-
             xmlRequest += "     <user>";
             xmlRequest += $"        <email>{userData.UserEmail}</email>"; // Мыло юзера
             xmlRequest += $"        <full_name>{userData.UserName}</full_name>"; // ФИО юзера
@@ -172,7 +163,9 @@ namespace KozaDisk.Forms
 
                     KozaDisk.Class.Activator activator = new KozaDisk.Class.Activator();
                     activator.activate(this.db, activationKey.InnerText);
-                    activator.activate(this._relationDiskDb, activationKey.InnerText);
+
+                    if (this._relationDiskDb != null)
+                        activator.activate(this._relationDiskDb, activationKey.InnerText);
 
                     this.Visible = false;
                     activateOk.ShowDialog();
@@ -196,6 +189,11 @@ namespace KozaDisk.Forms
         }
 
         private void Activate_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Activate_FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }

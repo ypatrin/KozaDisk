@@ -1078,10 +1078,19 @@ namespace KozaDisk.Forms
 
         private void DiskTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            this.searchBox.Focus();
-
             Class.Objects.DiskTreeNode selectedNode = (Class.Objects.DiskTreeNode)this.DiskTree.SelectedNode;
-            
+
+            if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
+            {
+                foreach (Class.Objects.DiskTreeNode diskNode in this.DiskTree.Nodes)
+                {
+                    if (diskNode.getType() == Class.Objects.DiskTreeType.Disk)
+                    {
+                        diskNode.ImageIndex = 0;
+                        diskNode.Collapse();
+                    }
+                }
+            }
 
             if (selectedNode.getType() == Class.Objects.DiskTreeType.Disk)
             {
@@ -1101,15 +1110,15 @@ namespace KozaDisk.Forms
                     }
 
                     activateForm.ShowDialog();
-                    this.DiskTree.SelectedNode = null;
 
                     if (activator.isActivated(selectedNode.db))
                     {
                         this.prepareTree();
+                        return;
                     }
                     else
                     {
-                        selectedNode = null;
+                        this.DiskTree.SelectedNode = null;                        
                         return;
                     }
                 }
@@ -1266,6 +1275,11 @@ namespace KozaDisk.Forms
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.mdListViewEnabled, "За датою створення");
             tt.SetToolTip(this.mdListViewDisabled, "За датою створення");
+        }
+
+        private void DiskTree_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            
         }
     }
 }

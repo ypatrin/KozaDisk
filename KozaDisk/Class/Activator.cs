@@ -79,8 +79,8 @@ namespace KozaDisk.Class
 
             XmlElement root = this.Config.DocumentElement;
 
-            if (db.Trim() == "2017.1.db")
-            {
+            //if (db.Trim() == "2017.1.db")
+            //{
                 XmlNode disk = root.SelectSingleNode($"db_{db}");
                 string startDay = disk.SelectSingleNode("startDate").InnerText;
 
@@ -95,7 +95,7 @@ namespace KozaDisk.Class
 
                 if (days.IndexOf('.') != -1)
                     days = days.Remove(days.IndexOf(','));
-            }
+            //}
 
             return days;
         }

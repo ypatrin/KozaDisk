@@ -267,7 +267,7 @@ namespace Editor
             string diskXml = "";
             diskXml += "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
             diskXml += "<disk>\n";
-            diskXml += $"    <name>{this.DiskNameBox.Text}, {this.DiskRevisionBox.Text}</name>\n";
+            diskXml += $"    <name>{this.DiskNameBox.Text}</name>\n";
             diskXml += $"    <description>{this.DiskDescriptionBox.Text}</description>\n";
             diskXml += $"    <edition>{this.DiskRevisionBox.Text}</edition>\n";
             diskXml += $"    <db>{dbName}</db>\n";
@@ -283,7 +283,7 @@ namespace Editor
 
             string sql = "";
 
-            sql = "CREATE TABLE templates (id INTEGER PRIMARY KEY AUTOINCREMENT, structure_id INTEGER(10) NOT NULL, file_ext VARCHAR (255), name STRING(255), name_lower STRING(255), markers_xml TEXT, template TEXT, type INTEGER(1) NOT NULL DEFAULT(0));";
+            sql = "CREATE TABLE templates (id INTEGER PRIMARY KEY AUTOINCREMENT, structure_id INTEGER(10) NOT NULL, file_ext VARCHAR (255), name STRING(255), name_lower STRING(255), markers_xml TEXT, template TEXT, type INTEGER(1) NOT NULL DEFAULT(0), orientation  VARCHAR (255) DEFAULT portrait);";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
 

@@ -295,7 +295,6 @@ E:\KozaDisk\KozaDisk\bin\Release\de\DevExpress.XtraNavBar.v16.2.resources.dll
 E:\KozaDisk\KozaDisk\bin\Release\es\DevExpress.XtraNavBar.v16.2.resources.dll
 E:\KozaDisk\KozaDisk\bin\Release\ja\DevExpress.XtraNavBar.v16.2.resources.dll
 E:\KozaDisk\KozaDisk\bin\Release\ru\DevExpress.XtraNavBar.v16.2.resources.dll
-E:\KozaDisk\KozaDisk\obj\Release\KozaDisk.csprojResolveAssemblyReference.cache
 E:\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.Activate.resources
 E:\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateError2Form.resources
 E:\KozaDisk\KozaDisk\obj\Release\KozaDisk.Forms.ActivateErrorForm.resources
