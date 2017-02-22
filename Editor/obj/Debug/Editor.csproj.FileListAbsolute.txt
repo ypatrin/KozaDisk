@@ -39,3 +39,4 @@ E:\KozaDisk\Editor\obj\Debug\Editor.Properties.Resources.resources
 E:\KozaDisk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
 E:\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.exe
 E:\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.pdb
+E:\KozaDisk\Editor\obj\Debug\Editor.MainForm.resources
