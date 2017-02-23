@@ -11,12 +11,19 @@ namespace Editor
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            string fileName = "";
+
+            if (args != null && args.Length > 0)
+            {
+                fileName = args[0];
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new DiskForm());
+            Application.Run(new DiskForm(fileName));
         }
     }
 }

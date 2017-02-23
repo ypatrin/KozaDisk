@@ -127,9 +127,9 @@
             this.DoubleDiskCheckbox.AutoSize = true;
             this.DoubleDiskCheckbox.Location = new System.Drawing.Point(14, 65);
             this.DoubleDiskCheckbox.Name = "DoubleDiskCheckbox";
-            this.DoubleDiskCheckbox.Size = new System.Drawing.Size(179, 20);
+            this.DoubleDiskCheckbox.Size = new System.Drawing.Size(174, 20);
             this.DoubleDiskCheckbox.TabIndex = 6;
-            this.DoubleDiskCheckbox.Text = "Два виртуальних диска";
+            this.DoubleDiskCheckbox.Text = "Два віртуальних диска";
             this.DoubleDiskCheckbox.UseVisualStyleBackColor = true;
             this.DoubleDiskCheckbox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -513,7 +513,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 25);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Удалить";
+            this.button2.Text = "Видалити";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -524,7 +524,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 25);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Добавить";
+            this.button1.Text = "Додати";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -540,9 +540,9 @@
             this.NewFolderLabel.AutoSize = true;
             this.NewFolderLabel.Location = new System.Drawing.Point(8, 7);
             this.NewFolderLabel.Name = "NewFolderLabel";
-            this.NewFolderLabel.Size = new System.Drawing.Size(112, 16);
+            this.NewFolderLabel.Size = new System.Drawing.Size(97, 16);
             this.NewFolderLabel.TabIndex = 0;
-            this.NewFolderLabel.Text = "Добавить папку";
+            this.NewFolderLabel.Text = "Додати папку";
             // 
             // panel20
             // 

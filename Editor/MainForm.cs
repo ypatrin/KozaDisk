@@ -18,9 +18,9 @@ namespace Editor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DiskForm sdf = new DiskForm();
-            sdf.Show();
-            this.Hide();
+            //DiskForm sdf = new DiskForm();
+            //sdf.Show();
+            //this.Hide();
         }
     }
 }

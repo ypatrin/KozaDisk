@@ -21,9 +21,22 @@ namespace Editor
         Editor.Class.DB DataBase = new Editor.Class.DB();
         SQLiteConnection m_dbConnection;
 
-        public DiskForm()
+        public DiskForm(string fileName)
         {
             InitializeComponent();
+
+            if (fileName != "")
+            {
+                if (File.Exists(fileName))
+                {
+                    this.openStructure(fileName);
+                }
+                else
+                {
+                    MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }
         }
 
         private void SingleDiskForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -191,14 +204,14 @@ namespace Editor
             }
             else
             {
-                MessageBox.Show("Имя папки не может быть пустым!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
         private void DiskTree_AfterSelect(object sender, TreeViewEventArgs e)
         {
             TreeNode parentNode = this.DiskTree.SelectedNode;
-            NewFolderLabel.Text = "Добавить папку в " + parentNode.Text;
+            NewFolderLabel.Text = "Додати папку в " + parentNode.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -231,7 +244,7 @@ namespace Editor
 
             if (Directory.Exists(ApplcationStorage))
             {
-                MessageBox.Show("Такой диск уже создан. Измените имя выпуска", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Такий диск вже створений. Будь ласка, змініть ім'я випуска.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -588,7 +601,7 @@ namespace Editor
                 infoXml += "</info>\n";
 
                 File.AppendAllText(FileName, infoXml);
-                MessageBox.Show("Успешно сохранено!", "Сохранение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Структура диску успішно збережена!", "Збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -759,124 +772,136 @@ namespace Editor
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.FileName = "disk_info.kd";
-            ofd.Filter = "КОЗА-ДИСК Инфо|*.kd";
+            ofd.Filter = "Структура диска|*.kd|Файл импорта|*.xlsx";
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                try
+                if (Path.GetExtension(ofd.FileName) == ".kd")
                 {
-                    XmlDocument xml = new XmlDocument();
-                    xml.Load(ofd.FileName);
-
-                    XmlNode xmlDisk1 = xml.SelectSingleNode("/info/disk_1");
-                    XmlNode xmlDisk2 = xml.SelectSingleNode("/info/disk_2");
-
-                    if (xmlDisk2 == null)
-                    {
-                        this.DoubleDiskCheckbox.Checked = false;
-                        this.Disk2Group.Enabled = false;
-                    }
-                    else
-                    {
-                        this.DoubleDiskCheckbox.Checked = true;
-                        this.Disk2Group.Enabled = true;
-                    }
-
-                    //process disk1
-                    if (xmlDisk1 != null)
-                    {
-                        //clear nodes
-                        this.DiskTree.Nodes.Clear();
-
-                        this.DiskNameBox.Text = xmlDisk1.Attributes["name"].Value;
-                        this.DiskDescriptionBox.Text = xmlDisk1.Attributes["description"].Value;
-                        this.RevisionBox.Text = xmlDisk1.Attributes["edition"].Value;
-
-                        //add disk1 node
-                        TreeNode disk1 = new TreeNode();
-
-                        disk1.Text = xmlDisk1.Attributes["name"].Value;
-                        disk1.ImageIndex = 3;
-                        disk1.SelectedImageIndex = 3;
-
-                        //add directories
-                        foreach (XmlNode xmlDir in xml.SelectNodes("/info/disk_1/directory"))
-                        {
-                            DocumentNode directory = new DocumentNode();
-                            directory.Name = xmlDir.Attributes["name"].Value;
-                            directory.Text = xmlDir.Attributes["text"].Value;
-                            directory.ImageIndex = 1;
-                            directory.SelectedImageIndex = 2;
-
-                            //add documents
-                            foreach (XmlNode xmlDoc in xmlDir.SelectNodes("document"))
-                            {
-                                DocumentNode document = new DocumentNode();
-                                document.id = xmlDoc.Attributes["id"].Value;
-                                document.Name = xmlDoc.Attributes["name"].Value;
-                                document.Text = xmlDoc.Attributes["text"].Value;
-                                document.documentType = xmlDoc.Attributes["orientation"].Value;
-                                document.ImageIndex = 4;
-                                document.SelectedImageIndex = 4;
-
-                                directory.Nodes.Add(document);
-                            }
-
-                            disk1.Nodes.Add(directory);
-                        }
-
-                        this.DiskTree.Nodes.Add(disk1);
-                    }
-
-                    //process disk2
-                    if (xmlDisk2 != null)
-                    {
-                        this.Disk2NameBox.Text = xmlDisk2.Attributes["name"].Value;
-                        this.Disk2DescriptionBox.Text = xmlDisk2.Attributes["description"].Value;
-
-                        //add disk2 node
-                        TreeNode disk2 = new TreeNode();
-
-                        disk2.Text = xmlDisk2.Attributes["name"].Value;
-                        disk2.ImageIndex = 3;
-                        disk2.SelectedImageIndex = 3;
-
-                        //add directories
-                        foreach (XmlNode xmlDir in xml.SelectNodes("/info/disk_2/directory"))
-                        {
-                            DocumentNode directory = new DocumentNode();
-                            directory.Name = xmlDir.Attributes["name"].Value;
-                            directory.Text = xmlDir.Attributes["text"].Value;
-                            directory.ImageIndex = 1;
-                            directory.SelectedImageIndex = 2;
-
-                            //add documents
-                            foreach (XmlNode xmlDoc in xmlDir.SelectNodes("document"))
-                            {
-                                DocumentNode document = new DocumentNode();
-                                document.id = xmlDoc.Attributes["id"].Value;
-                                document.Name = xmlDoc.Attributes["name"].Value;
-                                document.Text = xmlDoc.Attributes["text"].Value;
-                                document.documentType = xmlDoc.Attributes["orientation"].Value;
-                                document.ImageIndex = 4;
-                                document.SelectedImageIndex = 4;
-
-                                directory.Nodes.Add(document);
-                            }
-
-                            disk2.Nodes.Add(directory);
-                        }
-
-                        this.DiskTree.Nodes.Add(disk2);
-                    }
+                    this.openStructure(ofd.FileName);
                 }
-                catch(Exception ex)
+                if (Path.GetExtension(ofd.FileName) == ".xlsx")
                 {
-                    MessageBox.Show("Помилка відкриття файлу!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
 
-                this.DiskTree.ExpandAll();
+                }
             }
+        }
+
+        public void openStructure(string fileName)
+        {
+            try
+            {
+                XmlDocument xml = new XmlDocument();
+                xml.Load(fileName);
+
+                XmlNode xmlDisk1 = xml.SelectSingleNode("/info/disk_1");
+                XmlNode xmlDisk2 = xml.SelectSingleNode("/info/disk_2");
+
+                if (xmlDisk2 == null)
+                {
+                    this.DoubleDiskCheckbox.Checked = false;
+                    this.Disk2Group.Enabled = false;
+                }
+                else
+                {
+                    this.DoubleDiskCheckbox.Checked = true;
+                    this.Disk2Group.Enabled = true;
+                }
+
+                //process disk1
+                if (xmlDisk1 != null)
+                {
+                    //clear nodes
+                    this.DiskTree.Nodes.Clear();
+
+                    this.DiskNameBox.Text = xmlDisk1.Attributes["name"].Value;
+                    this.DiskDescriptionBox.Text = xmlDisk1.Attributes["description"].Value;
+                    this.RevisionBox.Text = xmlDisk1.Attributes["edition"].Value;
+
+                    //add disk1 node
+                    TreeNode disk1 = new TreeNode();
+
+                    disk1.Text = xmlDisk1.Attributes["name"].Value;
+                    disk1.ImageIndex = 3;
+                    disk1.SelectedImageIndex = 3;
+
+                    //add directories
+                    foreach (XmlNode xmlDir in xml.SelectNodes("/info/disk_1/directory"))
+                    {
+                        DocumentNode directory = new DocumentNode();
+                        directory.Name = xmlDir.Attributes["name"].Value;
+                        directory.Text = xmlDir.Attributes["text"].Value;
+                        directory.ImageIndex = 1;
+                        directory.SelectedImageIndex = 2;
+
+                        //add documents
+                        foreach (XmlNode xmlDoc in xmlDir.SelectNodes("document"))
+                        {
+                            DocumentNode document = new DocumentNode();
+                            document.id = xmlDoc.Attributes["id"].Value;
+                            document.Name = xmlDoc.Attributes["name"].Value;
+                            document.Text = xmlDoc.Attributes["text"].Value;
+                            document.documentType = xmlDoc.Attributes["orientation"].Value;
+                            document.ImageIndex = 4;
+                            document.SelectedImageIndex = 4;
+
+                            directory.Nodes.Add(document);
+                        }
+
+                        disk1.Nodes.Add(directory);
+                    }
+
+                    this.DiskTree.Nodes.Add(disk1);
+                }
+
+                //process disk2
+                if (xmlDisk2 != null)
+                {
+                    this.Disk2NameBox.Text = xmlDisk2.Attributes["name"].Value;
+                    this.Disk2DescriptionBox.Text = xmlDisk2.Attributes["description"].Value;
+
+                    //add disk2 node
+                    TreeNode disk2 = new TreeNode();
+
+                    disk2.Text = xmlDisk2.Attributes["name"].Value;
+                    disk2.ImageIndex = 3;
+                    disk2.SelectedImageIndex = 3;
+
+                    //add directories
+                    foreach (XmlNode xmlDir in xml.SelectNodes("/info/disk_2/directory"))
+                    {
+                        DocumentNode directory = new DocumentNode();
+                        directory.Name = xmlDir.Attributes["name"].Value;
+                        directory.Text = xmlDir.Attributes["text"].Value;
+                        directory.ImageIndex = 1;
+                        directory.SelectedImageIndex = 2;
+
+                        //add documents
+                        foreach (XmlNode xmlDoc in xmlDir.SelectNodes("document"))
+                        {
+                            DocumentNode document = new DocumentNode();
+                            document.id = xmlDoc.Attributes["id"].Value;
+                            document.Name = xmlDoc.Attributes["name"].Value;
+                            document.Text = xmlDoc.Attributes["text"].Value;
+                            document.documentType = xmlDoc.Attributes["orientation"].Value;
+                            document.ImageIndex = 4;
+                            document.SelectedImageIndex = 4;
+
+                            directory.Nodes.Add(document);
+                        }
+
+                        disk2.Nodes.Add(directory);
+                    }
+
+                    this.DiskTree.Nodes.Add(disk2);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Помилка відкриття файлу!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            this.DiskTree.ExpandAll();
         }
     }
 }
