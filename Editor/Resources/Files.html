@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body style="margin: 0; font-family: Arial; font-size: 14px;">
+    <style>
+        .block
+        {
+            width: 150px;
+            height: 250px;
+            border: 1px solid #f4f4f4;
+            margin: 10px;
+            display:inline-block;
+            float: left;
+            border-bottom: 3px; border-bottom-color: #DFDFDF
+        }
+
+        .block:hover
+        {
+            border: 1px solid #DFDFDF;
+            cursor: pointer;
+            border-bottom: 3px; border-bottom-color: #DFDFDF
+        }
+
+        .block[type=document]
+        {
+            border: 1px solid #00bd9a;
+        }
+
+        .block[type=document]:hover
+        {
+            border: 1px solid #057F68;
+        }
+
+        .block .head
+        {
+            width: 140px;
+            height: 55px;
+            background-color: #f4f4f4;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .block .image
+        {
+            width: 100%;
+            height: 103px;
+            padding-top: 25px;
+        }
+
+        .block .image img
+        {
+            height: 88px;
+            display: block;
+            margin: auto;
+            vertical-align: middle;
+        }
+
+        .block .tmpl_name
+        {
+            float: left;
+            width: 100px;
+            font-size: 12px;
+            padding: 5px;
+            color: gray;
+        }
+        .block .tmpl_count
+        {
+            
+            width: 25px;
+            font-size: 12px;
+            padding: 5px;
+            color: gray;
+            text-align: center;
+        }
+
+        .block .tmpl_count select
+        {
+            width: 140px;
+            
+        }
+
+        .btn
+        {
+            height: 20px;
+            padding: 5px;
+        }
+
+        .btn .edit
+        {
+            float: left;
+            width: 16px;
+            padding: 4px;
+            height: 15px;
+            margin-left: 5px;
+            background-color: #bebebe;
+            border-radius: 5px;
+        }
+
+        .btn .edit:hover
+        {
+            background-color: #00be9b;
+        }
+
+        .btn .edit img {
+            width: 14px;
+            margin: 1px;
+        }
+
+        .btn .date
+        {
+            float: left;
+            width: 133px;
+            height: 21px;
+            line-height: 21px;
+            color: #7a7a7a;
+            text-align:center;
+            font-size: 11px;
+        }
+
+        .btn .delete
+        {
+            float: right;
+            width: 11px;
+            padding: 6px;
+            margin-right: 5px;
+            height: 11px;
+            background-color: #bebebe;
+        }
+
+        .btn .delete:hover
+        {
+            background-color: red;
+        }
+    </style>
+    %disks_blocks%
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

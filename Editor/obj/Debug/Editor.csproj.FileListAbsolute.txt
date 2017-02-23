@@ -40,3 +40,24 @@ E:\KozaDisk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
 E:\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.exe
 E:\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.pdb
 E:\KozaDisk\Editor\obj\Debug\Editor.MainForm.resources
+D:\Data\C#\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.exe.config
+D:\Data\C#\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.exe
+D:\Data\C#\KozaDisk\Editor\obj\Debug\КозаДиск 2.0 Editor.pdb
+D:\Data\C#\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.exe
+D:\Data\C#\KozaDisk\Editor\bin\Debug\КозаДиск 2.0 Editor.pdb
+D:\Data\C#\KozaDisk\Editor\bin\Debug\EntityFramework.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\Renci.SshNet.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\System.Data.SQLite.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Data\C#\KozaDisk\Editor\bin\Debug\EntityFramework.xml
+D:\Data\C#\KozaDisk\Editor\bin\Debug\EntityFramework.SqlServer.xml
+D:\Data\C#\KozaDisk\Editor\bin\Debug\Renci.SshNet.xml
+D:\Data\C#\KozaDisk\Editor\bin\Debug\System.Data.SQLite.xml
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.Form1.resources
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.MainForm.resources
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.Properties.Resources.resources
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+D:\Data\C#\KozaDisk\Editor\obj\Debug\Editor.DiskForm.resources

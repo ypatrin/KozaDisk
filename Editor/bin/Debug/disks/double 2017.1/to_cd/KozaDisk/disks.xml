@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<disks>
+    <disk>
+       <name>Диск 1</name>
+       <description>тестовый диск</description>
+       <edition>double 2017.1</edition>
+       <db>f7d73f3e3952786f0c30d1e89dae5e4d.db</db>
+    </disk>
+    <disk>
+       <name>Диск 2</name>
+       <description>тестовый диск 2</description>
+       <edition>double 2017.1</edition>
+       <db>4dc0dce3963b2af59d7edbaee0118414.db</db>
+    </disk>
+</disks>

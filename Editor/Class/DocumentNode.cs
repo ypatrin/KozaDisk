@@ -12,6 +12,7 @@ namespace Editor.Class
 
     class DocumentNode : System.Windows.Forms.TreeNode
     {
-        public int documentType { get; set; }
+        public string documentType { get; set; }
+        public string id { get; set; }
     }
 }

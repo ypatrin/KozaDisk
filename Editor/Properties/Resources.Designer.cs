@@ -63,9 +63,49 @@ namespace Editor.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap default_release_cd {
+        internal static System.Drawing.Bitmap cdbg {
             get {
-                object obj = ResourceManager.GetObject("default-release-cd", resourceCulture);
+                object obj = ResourceManager.GetObject("cdbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &lt;!doctype html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///&lt;/head&gt;
+        ///&lt;body style=&quot;margin: 0; font-family: Arial; font-size: 14px;&quot;&gt;
+        ///    &lt;style&gt;
+        ///        .block
+        ///        {
+        ///            width: 150px;
+        ///            height: 250px;
+        ///            border: 1px solid #f4f4f4;
+        ///            margin: 10px;
+        ///            display:inline-block;
+        ///            float: left;
+        ///            border-bottom: 3px; border-bottom-color: #DFDFDF
+        ///        }
+        ///
+        ///        .block:hover
+        ///        {
+        ///            border: 1px solid #DFDFDF;
+        ///            cursor: pointer;
+        ///      [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string Files {
+            get {
+                return ResourceManager.GetString("Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap import_icon {
+            get {
+                object obj = ResourceManager.GetObject("import_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +113,19 @@ namespace Editor.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap disc_icon {
+        internal static System.Drawing.Bitmap open_icon {
             get {
-                object obj = ResourceManager.GetObject("disc-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("open_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_icon {
+            get {
+                object obj = ResourceManager.GetObject("save_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

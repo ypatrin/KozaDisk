@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Catalog.cs" />
+    <Compile Include="Class\CatalogNode.cs" />
+    <Compile Include="Class\Constant.cs" />
     <Compile Include="Class\DB.cs" />
     <Compile Include="Class\Document.cs" />
     <Compile Include="Class\DocumentNode.cs" />
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DiskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskForm.Designer.cs">
+      <DependentUpon>DiskForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,20 +115,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="DiskForm.resx">
+      <DependentUpon>DiskForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -129,8 +140,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="koza %282%29.ico" />
-    <None Include="Resources\default-release-cd.png" />
-    <None Include="Resources\disc-icon.png" />
+    <None Include="Resources\Compact_Disc_grayscale-2.png" />
+    <None Include="Resources\Files.html" />
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\import_icon.png" />
+    <None Include="Resources\078522-blue-jelly-icon-business-folder.png" />
     <Content Include="Коза48.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
